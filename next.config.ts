@@ -1,7 +1,108 @@
 import type { NextConfig } from "next";
 
+const blogSlugs = [
+  "beat-the-heat-smart-ways-to-stay-cool-all-summer-long",
+  "bikes-kayaks-and-rooftop-gear-what-your-insurance-covers",
+  "breaking-down-home-auto-and-life-coverage",
+  "breathe-easy-the-surprising-benefits-of-houseplants-in-your-home",
+  "concierge-medical-care-a-new-way-to-better-health",
+  "coverage-for-college-students-are-they-still-protected-under-your-plan",
+  "discover-the-advantages-of-independent-insurance-agents",
+  "do-healthy-people-really-need-health-insurance",
+  "does-your-health-insurance-cover-mental-health-services",
+  "does-your-health-insurance-cover-nutrition-counseling",
+  "er-urgent-care-or-virtual-visit-where-to-go-and-what-itll-cost-you",
+  "flexible-spending-accounts-a-smart-tool-to-save-on-health-and-dependent-care-costs",
+  "funding-a-business-buyout-with-life-insurance-what-every-partner-should-know",
+  "health-insurance-for-self-employed-professionals-what-are-your-options",
+  "healthcare-sharing-ministries-vs-health-insurance-whats-the-difference",
+  "healthy-living-its-impact-on-insurance-rates",
+  "how-does-medicare-part-c-compare-to-original-medicare-in-florida",
+  "how-one-life-insurance-feature-saved-a-financial-plan",
+  "how-a-medicare-broker-near-me-helped-local-seniors-find-better-coverage",
+  "key-man-insurance-explained-coverage-structure-and-tax-implications",
+  "life-insurance-myths-debunked-what-you-really-need-to-know",
+  "life-insurance-for-a-non-working-spouse-or-partner-protecting-the-priceless",
+  "medicare-advantage-vs-medicare-supplement-plans-in-florida-which-is-right-for-you",
+  "medicare-advantage-vs-private-health-insurance-in-florida",
+  "new-year-new-coverage-why-january-is-the-perfect-time-to-reassess-your-health-insurance-needs",
+  "ocean-lakes-and-pools-oh-my-tips-for-a-safe-summer-around-water",
+  "questions-to-ask-before-choosing-an-insurance-policy",
+  "rip-tides-what-they-are-how-to-spot-them-and-what-to-do-if-youre-caught-in-one",
+  "safe-travels-how-to-prepare-your-family-for-an-international-vacation",
+  "smart-ways-to-cut-insurance-costs-without-sacrificing-protection",
+  "spring-into-wellness-how-to-boost-your-health-and-energy-this-season",
+  "term-insurance-a-smart-way-to-secure-your-familys-future",
+  "term-life-insurance-vs-accidental-death-and-dismemberment-whats-the-difference",
+  "the-benefits-of-visiting-your-farmers-market-this-summer",
+  "the-hidden-benefits-of-health-insurance-you-may-not-be-using",
+  "the-overlooked-connection-between-dental-visits-and-overall-health",
+  "the-ultimate-spring-bucket-list-fun-activities-to-enjoy-the-season",
+  "top-10-u-s-roadside-attractions-to-visit-this-summer",
+  "top-5-common-insurance-myths-and-the-truth-behind-them",
+  "understanding-term-life-insurance-convertibility-your-future-self-may-thank-you",
+  "understanding-universal-life-insurance-is-it-right-for-you",
+  "understanding-your-insurance-options",
+  "understanding-the-eob-what-is-it-and-why-should-you-care",
+  "understanding-the-unique-challenge",
+  "walk-first-wander-later-the-travel-hack-youll-wish-youd-known-sooner",
+  "what-happens-if-i-outlive-my-term-life-insurance-policy",
+  "what-happens-if-you-get-hurt-on-vacation",
+  "what-type-of-life-insurance-should-miami-small-business-owners-choose",
+  "what-to-do-if-you-get-a-surprise-medical-bill",
+  "what-to-know-about-medicares-new-wiser-model-aiming-for-smarter-spending-not-less-care",
+  "whats-the-difference-between-medigap-plan-g-vs-plan-n-in-florida",
+  "when-life-happens-building-a-family-emergency-plan-that-actually-works",
+  "which-medicare-option-works-best-for-snowbirds",
+  "which-medicare-plan-has-lower-out-of-pocket-costs",
+  "which-medicare-plan-is-best-for-people-with-chronic-conditions-in-florida",
+  "which-medicare-plan-is-better-for-dental-and-vision-coverage",
+  "which-medicare-plan-is-better-for-frequent-doctor-visits-in-florida",
+  "why-dental-isnt-covered-by-health-insurance-plans-and-why-that-matters",
+  "why-insurance-should-be-part-of-your-2025-resolutions",
+  "why-some-doctors-prefer-patients-with-medicare-supplement-plans",
+  "why-your-dentist-might-be-your-most-important-healthcare-provider",
+  "why-a-medicare-agent-near-me-may-be-better-than-insurance-comparison-websites",
+  "why-the-lowest-premium-might-cost-you-more-in-the-long-run",
+  "would-you-bet-7-000-on-your-health-this-year",
+  "year-end-insurance-checklist-ensure-youre-covered-for-the-year-ahead",
+  "your-spouse-isnt-eligible-for-medicare-yet--now-what",
+  "youre-retiring-at-68--did-you-miss-your-medigap-enrollment-window",
+  "which-medicare-plan-is-better-for-specialist-visits",
+  "what-is-the-difference-between-hmo-and-ppo-medicare-advantage-plans",
+  "what-is-the-difference-between-medicare-part-a-and-part-b",
+  "how-does-medicare-advantage-compare-to-medigap-for-travel-coverage",
+  "how-to-find-the-right-medicare-broker-near-me-in-florida",
+  "turning-65-in-florida-your-complete-medicare-enrollment-checklist",
+  "medicare-enrollment-and-costs-faq-2026",
+  "medicare-in-miami-2026",
+];
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.prod.website-files.com",
+      },
+    ],
+  },
+  async redirects() {
+    return [
+      // Blog redirects: old Webflow /blog/[slug] → new /blogs/[slug]
+      ...blogSlugs.map((slug) => ({
+        source: `/blog/${slug}`,
+        destination: `/blogs/${slug}`,
+        permanent: true,
+      })),
+      // Webflow root /blog → /blogs
+      { source: "/blog", destination: "/blogs", permanent: true },
+      // Alternate /our-blog/ path found in GSC
+      { source: "/our-blog/:slug*", destination: "/blogs/:slug*", permanent: true },
+      // Webflow broken nested URL pattern found in GSC
+      { source: "/blog-your-spouse-isnt-eligible-for-medicare-yet-now-what/:slug*", destination: "/blogs/:slug*", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;
