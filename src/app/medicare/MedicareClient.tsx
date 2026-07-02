@@ -1,69 +1,279 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { PHONE, WEBINAR_URL, WEBINAR_LABEL_SHORT } from "@/lib/constants";
+import { PHONE } from "@/lib/constants";
 
-const STEPS = [
+// ── Visual: 7-Month Enrollment Timeline ──────────────────────────────────
+
+function EnrollmentTimeline() {
+  const bars = [
+    { label: "3 mo.\nbefore", dim: true },
+    { label: "2 mo.\nbefore", dim: true },
+    { label: "1 mo.\nbefore", dim: true },
+    { label: "Birthday\nmonth", dim: false },
+    { label: "1 mo.\nafter", dim: true },
+    { label: "2 mo.\nafter", dim: true },
+    { label: "3 mo.\nafter", dim: true },
+  ];
+  return (
+    <div className="my-7 p-5 bg-[#EFF6FF] rounded-xl border border-[#BFDBFE]">
+      <p className="text-[10px] font-bold uppercase tracking-widest text-[#6B7280] mb-4">
+        Your 7-Month Initial Enrollment Period
+      </p>
+      <div className="flex gap-1.5">
+        {bars.map((b, i) => (
+          <div key={i} className="flex-1 flex flex-col items-center gap-2">
+            <div
+              className={`h-8 w-full rounded ${b.dim ? "bg-[#1A72C0]/40" : "bg-[#1A72C0]"}`}
+            />
+            <span
+              className={`text-[9px] text-center leading-tight whitespace-pre-line hidden sm:block ${
+                b.dim ? "text-[#6B7280]" : "font-bold text-[#1A1A2E]"
+              }`}
+            >
+              {b.label}
+            </span>
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-between mt-1 sm:hidden">
+        <span className="text-[10px] text-[#6B7280]">3 months before</span>
+        <span className="text-[10px] font-bold text-[#1A1A2E]">Birthday month</span>
+        <span className="text-[10px] text-[#6B7280]">3 months after</span>
+      </div>
+      <p className="text-xs text-[#4B5563] mt-3 leading-relaxed">
+        Missing this window without a qualifying reason results in a{" "}
+        <strong>permanent late-enrollment penalty</strong> added to your monthly premium — for as long as you have Medicare.{" "}
+        <Link
+          href="/tools/part-b-penalty-calculator"
+          className="text-[#1A72C0] font-semibold hover:underline"
+        >
+          Calculate your potential Part B penalty →
+        </Link>
+      </p>
+    </div>
+  );
+}
+
+// ── Visual: The 20% Coverage Gap ─────────────────────────────────────────
+
+function CoverageGapVisual() {
+  return (
+    <div className="my-7 rounded-xl border border-[#E5E7EB] overflow-hidden">
+      <div className="px-5 py-3 bg-[#F3F4F6] border-b border-[#E5E7EB]">
+        <p className="text-[10px] font-bold uppercase tracking-widest text-[#6B7280]">
+          What Original Medicare Actually Covers
+        </p>
+      </div>
+      <div className="p-5">
+        <div className="flex h-12 rounded-lg overflow-hidden mb-2 font-bold text-xs md:text-sm">
+          <div
+            className="flex items-center justify-center text-white bg-[#1A72C0]"
+            style={{ width: "80%" }}
+          >
+            Medicare pays 80%
+          </div>
+          <div
+            className="flex items-center justify-center text-white bg-[#DC2626]"
+            style={{ width: "20%" }}
+          >
+            You owe 20%
+          </div>
+        </div>
+        <div className="flex justify-between text-[11px] text-[#6B7280] mb-4">
+          <span>of all approved medical costs</span>
+          <span className="text-[#DC2626] font-semibold">with no annual cap</span>
+        </div>
+        <div className="p-4 bg-[#FEF2F2] rounded-lg border-l-4 border-[#DC2626]">
+          <p className="text-sm text-[#374151] leading-relaxed">
+            <strong className="text-[#DC2626]">There is no out-of-pocket maximum.</strong>{" "}
+            A $200,000 hospital stay means you personally owe $40,000 — with nothing to stop the bill from growing. That gap is exactly why supplemental coverage exists.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Visual: Supplement vs. Advantage Comparison Table ────────────────────
+
+const COMPARISON_ROWS = [
+  {
+    feature: "Monthly Premium",
+    supplement: "Higher (varies by plan)",
+    advantage: "Often $0",
+  },
+  {
+    feature: "Out-of-Pocket Costs",
+    supplement: "Very low — most gaps covered",
+    advantage: "Deductibles & copays apply",
+  },
+  {
+    feature: "Doctor Choice",
+    supplement: "Any Medicare-accepting doctor in the U.S.",
+    advantage: "Network-based (HMO or PPO)",
+  },
+  {
+    feature: "Referrals Required",
+    supplement: "No",
+    advantage: "Often yes (HMO plans)",
+  },
+  {
+    feature: "Rx Coverage",
+    supplement: "Separate Part D plan required",
+    advantage: "Usually built in",
+  },
+  {
+    feature: "Extra Benefits",
+    supplement: "Medical coverage only",
+    advantage: "May include dental, vision, gym",
+  },
+  {
+    feature: "Best For",
+    supplement: "Maximum freedom & predictability",
+    advantage: "Lower monthly cost",
+  },
+];
+
+function ComparisonTable() {
+  return (
+    <div className="my-7 overflow-x-auto rounded-xl border border-[#E5E7EB]">
+      <table className="w-full text-sm border-collapse min-w-[500px]">
+        <thead>
+          <tr>
+            <th className="text-left p-4 bg-[#F3F4F6] text-[10px] font-bold uppercase tracking-widest text-[#6B7280] border-b border-[#E5E7EB] w-[28%]">
+              Feature
+            </th>
+            <th className="p-4 bg-white text-center font-extrabold text-[#1A1A2E] border-b border-l border-[#E5E7EB]">
+              Medicare Supplement
+            </th>
+            <th className="p-4 bg-[#1A72C0] text-center font-extrabold text-white border-b border-[#1557A0]">
+              Medicare Advantage
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {COMPARISON_ROWS.map((row, i) => (
+            <tr key={row.feature} className={i % 2 === 0 ? "bg-white" : "bg-[#F9FAFB]"}>
+              <td className="p-4 text-[10px] font-bold uppercase tracking-wider text-[#6B7280] border-b border-[#E5E7EB]">
+                {row.feature}
+              </td>
+              <td className="p-4 text-center text-[#374151] border-b border-l border-[#E5E7EB]">
+                {row.supplement}
+              </td>
+              <td className="p-4 text-center text-[#374151] border-b border-[#E5E7EB]">
+                {row.advantage}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+// ── Step Data ─────────────────────────────────────────────────────────────
+
+type Bullet = { label: string; body: string };
+
+type Step = {
+  number: string;
+  title: string;
+  subtitle: string;
+  color: string;
+  bullets: Bullet[];
+  bottomLine: string;
+};
+
+const STEPS: Step[] = [
   {
     number: "01",
-    title: "Timing Is Everything",
-    subtitle: "Know your enrollment window before it closes.",
+    title: "Medicare Enrollment Timing",
+    subtitle: "Know your enrollment window — missing it carries a permanent penalty.",
     color: "#1A72C0",
     bullets: [
-      { label: "Initial Enrollment Period", body: "You have a 7-month window to sign up for Medicare — starting 3 months before your 65th birthday month, the month you turn 65, and 3 months after. Missing this window can result in a permanent late-enrollment penalty added to your monthly premium." },
-      { label: "Still Working?", body: "If you or your spouse have qualifying employer coverage, you may be able to delay Medicare enrollment penalty-free. Every situation is different — this is one of the most important calls to make before you turn 65." },
-      { label: "Start Early", body: "We recommend starting your Medicare research at least 6 months before your 65th birthday. The earlier you plan, the more options you have and the less stressful the transition will be." },
+      {
+        label: "Initial Enrollment Period (IEP)",
+        body: "You have a 7-month window to sign up for Medicare — starting 3 months before your 65th birthday month, including the month you turn 65, and ending 3 months after. Missing this window without a qualifying reason results in a permanent late-enrollment penalty.",
+      },
+      {
+        label: "Still working? You may be able to wait.",
+        body: "If you or your spouse have qualifying employer coverage from an active job, you may delay Medicare enrollment penalty-free. This is one of the most frequently misunderstood rules in Medicare — and the details matter. Always verify before making this decision.",
+      },
+      {
+        label: "Start planning 6 months early.",
+        body: "We recommend beginning your Medicare research at least 6 months before your 65th birthday. The earlier you start, the more plan options are available to you and the less stressful the transition.",
+      },
     ],
-    bottomLine: "Missing your enrollment window can cost you for life. Don't wait — let's review your timeline together.",
+    bottomLine:
+      "Missing your enrollment window can cost you for life. Plan early — and call us before you decide to delay.",
   },
   {
     number: "02",
-    title: "The Foundation",
-    subtitle: "Medicare Parts A & B are where it all begins.",
+    title: "Original Medicare: Parts A & B",
+    subtitle: "Where every Medicare journey begins — and the gap most people don't see coming.",
     color: "#1A1A2E",
     bullets: [
-      { label: "Part A — Hospital Coverage", body: "Part A covers inpatient hospital stays, skilled nursing facility care, hospice, and some home health services. Most people pay $0 in premiums for Part A if they or their spouse worked and paid Medicare taxes for at least 10 years." },
-      { label: "Part B — Medical Coverage", body: "Part B covers doctor visits, outpatient services, preventive care, and durable medical equipment. Part B has a standard monthly premium set by the government each year and covers 80% of approved medical costs." },
-      { label: "The 20% Gap", body: "Here's what surprises most people: Medicare Parts A and B alone leave you personally responsible for the remaining 20% of your medical bills — with no out-of-pocket maximum. That gap is exactly why supplemental coverage is so important." },
+      {
+        label: "Part A — Hospital Coverage",
+        body: "Part A covers inpatient hospital stays, skilled nursing facility care, hospice, and some home health services. Most people pay $0 in Part A premiums if they or their spouse paid Medicare taxes for at least 10 years. However, Part A carries a per-benefit-period deductible that can catch people off guard.",
+      },
+      {
+        label: "Part B — Medical Coverage",
+        body: "Part B covers doctor visits, outpatient services, preventive care, and durable medical equipment. Part B charges a standard monthly premium set by the government each year. It covers 80% of approved medical costs after your annual deductible — which means you are responsible for the remaining 20%.",
+      },
+      {
+        label: "The 20% gap — with no cap",
+        body: "Here's what surprises most people: Original Medicare leaves you personally responsible for 20% of every approved medical cost — with no out-of-pocket maximum. That gap is exactly why supplemental coverage is so important.",
+      },
     ],
-    bottomLine: "Original Medicare is a strong foundation — but it was never designed to stand alone.",
+    bottomLine:
+      "Original Medicare is a strong foundation — but it was never designed to stand alone.",
   },
   {
     number: "03",
-    title: "The Big Choice",
-    subtitle: "Medicare Supplement or Medicare Advantage — which path is right for you?",
+    title: "Medicare Supplement vs. Medicare Advantage",
+    subtitle: "Two paths to closing the coverage gap. Here's how they compare.",
     color: "#E8A020",
-    bullets: [
-      { label: "Path A — Medicare Supplement (Medigap)", body: "These plans pay most or all of the 20% gap that Original Medicare leaves behind. You keep the freedom to see any doctor or specialist in the United States who accepts Medicare — no networks, no referrals, no prior authorizations." },
-      { label: "Path B — Medicare Advantage (Part C)", body: "Medicare Advantage bundles your Part A, Part B, and usually Part D coverage into one plan — often with $0 monthly premiums and added benefits like dental, vision, and gym memberships. Plans operate within a provider network and require referrals for specialists in most cases." },
-      { label: "Which Is Right for You?", body: "The right choice depends on your doctors, health needs, prescription drugs, travel habits, and budget. There's no universal answer — and that's exactly why working with an independent broker who represents over 25 carriers makes all the difference." },
-    ],
-    bottomLine: "We'll compare your real options side by side so you can choose with confidence — not confusion.",
+    bullets: [],
+    bottomLine:
+      "We'll compare your real options side by side — including your doctors, prescriptions, and budget — so you can choose with confidence.",
   },
   {
     number: "04",
-    title: "Prescription Protection",
-    subtitle: "Don't overlook Part D — the drug coverage piece.",
+    title: "Medicare Part D: Prescription Drug Coverage",
+    subtitle: "Don't overlook the prescription piece — the late-enrollment penalty is permanent.",
     color: "#1A72C0",
     bullets: [
-      { label: "What Part D Covers", body: "Part D plans cover prescription drugs. If you choose Original Medicare with a Supplement, you'll need a standalone Part D plan. Most Medicare Advantage plans include prescription drug coverage built in." },
-      { label: "Late Enrollment Penalty", body: "If you don't enroll in Part D when first eligible and don't have other creditable drug coverage, you may face a permanent penalty added to your monthly premium — for as long as you have Medicare." },
-      { label: "Annual Reviews Matter", body: "Part D formularies — the list of covered drugs and their costs — change every year. We review your plan each year at no cost to make sure your medications are still covered at the best available price." },
+      {
+        label: "What Part D covers",
+        body: "Part D plans cover prescription drugs. If you choose Original Medicare with a Supplement plan, you'll need a standalone Part D plan. Most Medicare Advantage plans include prescription drug coverage built in.",
+      },
+      {
+        label: "The late-enrollment penalty",
+        body: "If you go 63 or more days without creditable drug coverage and didn't enroll in Part D when first eligible, you'll pay a permanent penalty — 1% of the national base beneficiary premium per month without coverage. This is added to your Part D premium for as long as you have Medicare.",
+      },
+      {
+        label: "Annual plan reviews protect your wallet",
+        body: "Part D formularies — the list of covered drugs and their cost tiers — change every single year. A plan that covered your medications affordably this year may not next year. We review your coverage every fall at no cost to make sure your prescriptions are covered at the best available price.",
+      },
     ],
-    bottomLine: "The right drug plan can save you hundreds of dollars a year. We review it for you every single year.",
+    bottomLine:
+      "The right drug plan can save you hundreds of dollars a year. We review yours every year — at no cost to you.",
   },
 ];
+
+// ── Page Component ────────────────────────────────────────────────────────
 
 export default function MedicareClient() {
   return (
     <div className="bg-white min-h-screen">
 
-      {/* ── Page intro ── */}
+      {/* ── Hero ─────────────────────────────────────────────────────── */}
       <section className="pt-14 pb-10 px-4 border-b border-[#E5E7EB]">
         <div className="max-w-5xl mx-auto">
-
-          {/* Text + photo side by side on desktop */}
           <div className="flex flex-col lg:flex-row items-center gap-10">
 
             {/* Text */}
@@ -74,21 +284,24 @@ export default function MedicareClient() {
               transition={{ duration: 0.5 }}
             >
               <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">
-                Your Medicare Guide
+                Your Complete Medicare Guide · A&E Insurance Agency
               </span>
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#1A1A2E] leading-tight mb-4">
-                Everything You Need to Know,<br className="hidden md:block" /> All in One Place
+                Medicare Explained:<br className="hidden md:block" /> Parts A, B, C & D
               </h1>
-              <p className="text-[#4B5563] text-lg mb-8 leading-relaxed">
-                Medicare doesn't have to be complicated. Here's a plain-English breakdown of how it works — and how to make it work for you.
+              <p className="text-[#4B5563] text-lg mb-2 leading-relaxed">
+                A plain-English, step-by-step guide to how Medicare works — from enrollment timing and Original Medicare to plan options and prescription coverage.
+              </p>
+              <p className="text-[#6B7280] text-sm mb-8 leading-relaxed">
+                Written by licensed Medicare broker Steve Germain. Serving South Florida families since 2009.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <a
-                  href={WEBINAR_URL}
+                <Link
+                  href="/contact"
                   className="inline-flex items-center justify-center text-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                 >
-                  {WEBINAR_LABEL_SHORT}
-                </a>
+                  Schedule a Free Consultation
+                </Link>
                 <a
                   href={`tel:${PHONE.replace(/\D/g, "")}`}
                   className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A72C0] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
@@ -108,7 +321,7 @@ export default function MedicareClient() {
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="/Steve and Mr Heinrich.JPG"
-                  alt="Steve Germain with a Medicare client at A&E Insurance Agency"
+                  alt="Steve Germain reviewing Medicare plan options with a client at A&E Insurance Agency"
                   className="w-full h-[420px] object-cover object-top"
                 />
               </div>
@@ -118,72 +331,239 @@ export default function MedicareClient() {
         </div>
       </section>
 
-      {/* ── Steps ── */}
+      {/* ── Educational Steps ─────────────────────────────────────────── */}
       <section className="py-4 px-4">
         <div className="max-w-3xl mx-auto divide-y divide-[#E5E7EB]">
           {STEPS.map((step, i) => (
-            <AnimatedSection key={step.number} delay={0.05} className="py-16">
+            <AnimatedSection key={step.number} delay={0.05} className="py-14">
+
               {/* Step header */}
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-4 mb-5">
                 <span
-                  className="text-4xl font-extrabold leading-none"
+                  className="text-4xl font-extrabold leading-none flex-shrink-0"
                   style={{ color: step.color }}
                 >
                   {step.number}
                 </span>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-[#9CA3AF] mb-0.5">
-                    Step {i + 1}
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#6B7280] mb-0.5">
+                    Step {i + 1} of 4
                   </p>
                   <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1A2E]">
                     {step.title}
                   </h2>
                 </div>
               </div>
-              <p className="text-[#1A72C0] font-semibold mb-8 text-base">{step.subtitle}</p>
 
-              {/* Bullets */}
-              <div className="space-y-6 mb-8">
-                {step.bullets.map((b) => (
-                  <div key={b.label}>
-                    <p className="font-extrabold text-[#1A1A2E] mb-1">{b.label}</p>
-                    <p className="text-[#4B5563] leading-relaxed">{b.body}</p>
+              <p className="text-[#1A72C0] font-semibold mb-7 text-base leading-relaxed">
+                {step.subtitle}
+              </p>
+
+              {/* Step 1: bullets + enrollment timeline */}
+              {i === 0 && (
+                <>
+                  <div className="space-y-5 mb-0">
+                    {step.bullets.map((b) => (
+                      <div key={b.label}>
+                        <p className="font-extrabold text-[#1A1A2E] mb-1">{b.label}</p>
+                        <p className="text-[#4B5563] leading-relaxed">{b.body}</p>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                  <EnrollmentTimeline />
+                  <p className="text-sm text-[#6B7280] mb-7 leading-relaxed">
+                    Already 65 and missed your window?{" "}
+                    <Link
+                      href="/resources"
+                      className="text-[#1A72C0] font-semibold hover:underline"
+                    >
+                      See our Medicare FAQ
+                    </Link>{" "}
+                    — or call us directly at{" "}
+                    <a
+                      href={`tel:${PHONE.replace(/\D/g, "")}`}
+                      className="text-[#1A72C0] font-semibold hover:underline"
+                    >
+                      {PHONE}
+                    </a>
+                    . Special Enrollment Periods exist, and you may have more options than you think.
+                  </p>
+                </>
+              )}
 
-              {/* Bottom line */}
+              {/* Step 2: bullets + coverage gap visual + mid-page CTA */}
+              {i === 1 && (
+                <>
+                  <div className="space-y-5 mb-0">
+                    {step.bullets.map((b) => (
+                      <div key={b.label}>
+                        <p className="font-extrabold text-[#1A1A2E] mb-1">{b.label}</p>
+                        <p className="text-[#4B5563] leading-relaxed">{b.body}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <CoverageGapVisual />
+                  <p className="text-sm text-[#6B7280] mb-7 leading-relaxed">
+                    Higher-income beneficiaries may also pay an additional surcharge called{" "}
+                    <Link
+                      href="/tools/irmaa-calculator"
+                      className="text-[#1A72C0] font-semibold hover:underline"
+                    >
+                      IRMAA
+                    </Link>{" "}
+                    on top of their Part B and Part D premiums. Use our free calculator to see if it applies to you.
+                  </p>
+                </>
+              )}
+
+              {/* Step 3: comparison table */}
+              {i === 2 && (
+                <>
+                  <p className="text-[#4B5563] leading-relaxed mb-0">
+                    Once you understand the 20% gap, the next question is: how do you close it? There are two primary paths. Here's an honest comparison:
+                  </p>
+                  <ComparisonTable />
+                  <p className="text-[#4B5563] leading-relaxed mb-7">
+                    The right path depends on your doctors, health history, prescriptions, travel habits, and budget. There is no universal answer — and that's exactly why working with an independent broker who represents over 25 carriers makes all the difference.{" "}
+                    <Link
+                      href="/contact"
+                      className="text-[#1A72C0] font-semibold hover:underline"
+                    >
+                      Talk with a licensed advisor →
+                    </Link>
+                  </p>
+                </>
+              )}
+
+              {/* Step 4: bullets + Part D penalty tool link */}
+              {i === 3 && (
+                <>
+                  <div className="space-y-5 mb-7">
+                    {step.bullets.map((b) => (
+                      <div key={b.label}>
+                        <p className="font-extrabold text-[#1A1A2E] mb-1">{b.label}</p>
+                        <p className="text-[#4B5563] leading-relaxed">{b.body}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="text-sm text-[#6B7280] mb-7 leading-relaxed">
+                    Not sure if you'll owe a penalty?{" "}
+                    <Link
+                      href="/tools/part-d-penalty-calculator"
+                      className="text-[#1A72C0] font-semibold hover:underline"
+                    >
+                      Use our free Part D penalty calculator →
+                    </Link>
+                  </p>
+                </>
+              )}
+
+              {/* Bottom Line */}
               <div
                 className="rounded-xl px-6 py-4 border-l-4"
-                style={{ borderColor: step.color, backgroundColor: step.color + "10" }}
+                style={{
+                  borderColor: step.color,
+                  backgroundColor: step.color + "10",
+                }}
               >
-                <p className="font-bold text-[#1A1A2E] text-sm">
+                <p className="font-bold text-[#1A1A2E] text-sm leading-relaxed">
                   <span style={{ color: step.color }}>The Bottom Line: </span>
                   {step.bottomLine}
                 </p>
               </div>
+
+              {/* Mid-page CTA — appears after Step 2 */}
+              {i === 1 && (
+                <div className="mt-10 p-6 bg-[#F9FAFB] rounded-xl border border-[#E5E7EB] text-center">
+                  <p className="font-bold text-[#1A1A2E] text-lg mb-2">
+                    Not sure which option is right for you?
+                  </p>
+                  <p className="text-[#4B5563] text-base mb-5 leading-relaxed">
+                    Every Medicare situation is different. Schedule a free, no-pressure review — we'll compare your specific options using your doctors, medications, and budget.
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-bold uppercase tracking-wide text-sm px-7 py-3.5 rounded-lg transition-colors"
+                  >
+                    Schedule a Free Medicare Consultation
+                  </Link>
+                </div>
+              )}
+
             </AnimatedSection>
           ))}
         </div>
       </section>
 
-      {/* ── CTA ── */}
+      {/* ── Resources Strip ───────────────────────────────────────────── */}
+      <section className="bg-[#F3F4F6] py-10 px-4 border-t border-[#E5E7EB]">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#6B7280] mb-5 text-center">
+            Free Medicare Tools & Resources
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              {
+                label: "Medicare Enrollment Date Calculator",
+                href: "/tools/medicare-enrollment-calculator",
+                desc: "Find your exact enrollment window based on your birthday.",
+              },
+              {
+                label: "Part B Late-Enrollment Penalty Calculator",
+                href: "/tools/part-b-penalty-calculator",
+                desc: "Estimate your permanent penalty if you missed your IEP.",
+              },
+              {
+                label: "Part D Penalty Calculator",
+                href: "/tools/part-d-penalty-calculator",
+                desc: "See if you owe a drug coverage late-enrollment penalty.",
+              },
+              {
+                label: "IRMAA Surcharge Calculator",
+                href: "/tools/irmaa-calculator",
+                desc: "Check whether your income triggers higher Part B or Part D premiums.",
+              },
+            ].map((tool) => (
+              <Link
+                key={tool.href}
+                href={tool.href}
+                className="flex flex-col gap-1 bg-white rounded-xl p-4 border border-[#E5E7EB] hover:shadow-sm transition-shadow"
+              >
+                <span className="font-bold text-[#1A1A2E] text-sm">{tool.label}</span>
+                <span className="text-[#6B7280] text-xs leading-relaxed">{tool.desc}</span>
+              </Link>
+            ))}
+          </div>
+          <p className="text-center mt-5">
+            <Link
+              href="/resources"
+              className="text-[#1A72C0] font-semibold text-sm hover:underline"
+            >
+              Browse all Medicare FAQs & resources →
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* ── Bottom CTA ────────────────────────────────────────────────── */}
       <section className="bg-[#1A72C0] py-16 px-4 text-center">
         <AnimatedSection className="max-w-xl mx-auto">
-          <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">No Cost. No Pressure. No Bias.</p>
+          <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">
+            No Cost. No Pressure. No Bias.
+          </p>
           <h2 className="text-3xl font-extrabold text-white mb-4">
-            Ready to Find Your Perfect Medicare Plan?
+            Ready to Choose Your Medicare Plan?
           </h2>
-          <p className="text-white/60 text-sm mb-8 leading-relaxed">
-            We work with over 25 top-rated carriers and our help is 100% free. You pay the exact same price whether you use us or go it alone.
+          <p className="text-white/90 text-base mb-8 leading-relaxed">
+            We compare plans from over 25 top-rated carriers and help you choose the one that fits your doctors, your prescriptions, and your budget. Our guidance is always 100% free — you pay the exact same price whether you use us or not.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href={WEBINAR_URL}
-              className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-white font-extrabold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors"
+            <Link
+              href="/contact"
+              className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors"
             >
-              {WEBINAR_LABEL_SHORT}
-            </a>
+              Schedule a Free Consultation
+            </Link>
             <a
               href={`tel:${PHONE.replace(/\D/g, "")}`}
               className="inline-block border-2 border-white text-white hover:bg-white hover:text-[#1A1A2E] font-bold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors"
