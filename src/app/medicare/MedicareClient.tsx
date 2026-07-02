@@ -47,10 +47,10 @@ function EnrollmentTimeline() {
         Missing this window without a qualifying reason results in a{" "}
         <strong>permanent late-enrollment penalty</strong> added to your monthly premium — for as long as you have Medicare.{" "}
         <Link
-          href="/tools/part-b-penalty-calculator"
+          href="/tools/medicare-enrollment-calculator"
           className="text-[#1A72C0] font-semibold hover:underline"
         >
-          Calculate your potential Part B penalty →
+          Find your enrollment dates →
         </Link>
       </p>
     </div>
