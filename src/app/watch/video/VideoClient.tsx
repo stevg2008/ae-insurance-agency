@@ -16,7 +16,7 @@ export default function VideoClient() {
       {/* ── Minimal Header ── */}
       <header className="bg-[#1A72C0] py-4 px-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <img src="/logo.jpg" alt="A&E Insurance Agency" className="h-10 w-auto brightness-0 invert" />
+          <span className="text-white font-extrabold text-lg tracking-wide">A&amp;E Insurance Agency</span>
           <a
             href={`tel:${PHONE.replace(/\D/g, "")}`}
             className="flex items-center gap-2 text-white font-bold hover:text-[#E8A020] transition-colors text-sm"
@@ -135,7 +135,7 @@ export default function VideoClient() {
             href={`tel:${PHONE.replace(/\D/g, "")}`}
             className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-white font-bold uppercase tracking-wide text-sm px-10 py-4 rounded-lg transition-colors"
           >
-            📞 Call {PHONE} — It&apos;s Free
+            📞 Call {PHONE}
           </a>
         </div>
       </section>
