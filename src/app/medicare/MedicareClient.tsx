@@ -322,7 +322,7 @@ export default function MedicareClient() {
                 <img
                   src="/slideshow/s11.jpg"
                   alt="Steve Germain presenting at a Medicare educational seminar for South Florida families — A&E Insurance Agency"
-                  className="w-full h-[420px] object-cover object-center"
+                  className="w-full h-auto"
                 />
               </div>
             </motion.div>
