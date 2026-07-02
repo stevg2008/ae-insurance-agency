@@ -70,7 +70,7 @@ export default function Hero() {
               </a>
               <a
                 href={`tel:${PHONE.replace(/\D/g, "")}`}
-                className="inline-block border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A72C0] hover:text-white font-bold uppercase tracking-wide text-sm px-7 py-3.5 rounded transition-colors text-center whitespace-nowrap"
+                className="inline-flex items-center justify-center border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A72C0] hover:text-white font-bold uppercase tracking-wide text-base px-7 py-3.5 rounded transition-colors text-center whitespace-nowrap"
               >
                 Call {PHONE}
               </a>
