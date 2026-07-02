@@ -127,9 +127,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <a
-            href="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact"
             className="hidden lg:inline-flex items-center px-4 py-2 bg-[#E8A020] text-white text-sm font-semibold rounded-lg hover:bg-[#D4911B] transition-colors shadow-md whitespace-nowrap"
           >
             Schedule a Consultation
@@ -178,9 +176,7 @@ export default function Header() {
                 </div>
               ))}
               <a
-                href="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/contact"
                 className="block mt-4 px-4 py-3 bg-[#E8A020] text-white text-center font-semibold rounded-lg"
                 onClick={() => setMobileOpen(false)}
               >
