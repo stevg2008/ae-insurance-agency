@@ -16,9 +16,9 @@ export default function AnnouncementBar() {
           {PHONE}
         </a>
 
-        {/* Center: trust statement */}
+        {/* Center: serving statement */}
         <span className="text-white/90 text-center font-medium">
-          Independent Medicare Brokers — No Fees &nbsp;·&nbsp; No Bias &nbsp;·&nbsp; Same Price
+          Trusted Medicare Guidance — No Cost to You
         </span>
 
         {/* Right: email */}

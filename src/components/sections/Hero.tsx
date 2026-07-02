@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { TAGLINE, WEBINAR_URL, WEBINAR_LABEL_SHORT, PHONE } from "@/lib/constants";
+import { TAGLINE, PHONE } from "@/lib/constants";
 
 const SLIDES = [
   { src: "/slideshow/s01.jpg",  alt: "A&E client meeting — Jonathan and Elaine",  pos: "top center" },
@@ -37,48 +37,39 @@ export default function Hero() {
     <section className="bg-white pt-10 pb-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* ── Top row: headline left, benefit + CTAs right ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start mb-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <h1 className="text-3xl md:text-4xl lg:text-[2.6rem] font-extrabold text-[#1A1A2E] leading-tight">
-              {TAGLINE}
-            </h1>
-          </motion.div>
+        {/* ── Headline + CTA ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="mb-10"
+        >
+          <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-3">
+            South Florida's Trusted Medicare Experts — Serving Families Since 2009
+          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A1A2E] leading-tight mb-5">
+            {TAGLINE}
+          </h1>
+          <p className="text-[#4B5563] text-lg leading-relaxed mb-8 max-w-2xl">
+            Get expert Medicare guidance at no cost to you. We compare every plan, answer every question, and stay with you for life.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href={`tel:${PHONE.replace(/\D/g, "")}`}
+              className="inline-flex items-center justify-center bg-[#E8A020] hover:bg-[#D4911B] text-white font-extrabold uppercase tracking-wide text-base px-10 py-4 rounded-lg transition-colors shadow-lg whitespace-nowrap"
+            >
+              📞 Call {PHONE}
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A1A2E] hover:text-white font-bold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors text-center whitespace-nowrap"
+            >
+              Schedule a Consultation
+            </a>
+          </div>
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="lg:pt-2"
-          >
-            <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-2">
-              Lifetime Support
-            </p>
-            <p className="text-[#4B5563] text-lg leading-relaxed mb-7">
-              Comprehensive, no-cost support for every chapter of your Medicare journey — from first enrollment to annual plan reviews.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="/watch"
-                className="inline-block bg-[#1A72C0] hover:bg-[#155fa0] text-white font-bold uppercase tracking-wide text-sm px-7 py-3.5 rounded transition-colors text-center"
-              >
-                Watch Our Free Medicare Workshop
-              </a>
-              <a
-                href={`tel:${PHONE.replace(/\D/g, "")}`}
-                className="inline-flex items-center justify-center border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A72C0] hover:text-white font-bold uppercase tracking-wide text-base px-7 py-3.5 rounded transition-colors text-center whitespace-nowrap"
-              >
-                Call {PHONE}
-              </a>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* ── Compact slideshow (matches Gruening video area height) ── */}
+        {/* ── Slideshow ── */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -88,7 +79,6 @@ export default function Hero() {
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-          {/* Slides */}
           <AnimatePresence mode="sync">
             <motion.img
               key={current}
@@ -103,7 +93,6 @@ export default function Hero() {
             />
           </AnimatePresence>
 
-          {/* Prev / Next */}
           <button
             onClick={prev}
             aria-label="Previous slide"
@@ -119,7 +108,6 @@ export default function Hero() {
             <ChevronRight size={18} />
           </button>
 
-          {/* Dot navigation */}
           <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex gap-1.5">
             {SLIDES.map((_, i) => (
               <button
