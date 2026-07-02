@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #1A72C0;
+  --color-primary: #0071BB;
   --color-accent: #E8A020;
   --color-dark: #1A1A2E;
   --color-light-bg: #F8F9FC;
@@ -38,7 +38,7 @@ body {
 
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #f1f1f1; }
-::-webkit-scrollbar-thumb { background: #1A72C0; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #0071BB; border-radius: 3px; }
 
 /* Blog post body styles */
 .blog-content { font-size: 1.0625rem; line-height: 1.75; color: #4B5563; }
@@ -47,12 +47,12 @@ body {
 .blog-content h3 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; }
 .blog-content h4 { font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
 .blog-content p { margin-bottom: 1.25rem; }
-.blog-content a { color: #1A72C0; text-decoration: none; }
+.blog-content a { color: #0071BB; text-decoration: none; }
 .blog-content a:hover { text-decoration: underline; }
 .blog-content strong { color: #1A1A2E; font-weight: 700; }
 .blog-content ul, .blog-content ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
 .blog-content li { margin-bottom: 0.4rem; }
 .blog-content figure { margin: 1.5rem 0; }
 .blog-content figure img { width: 100%; border-radius: 0.75rem; height: auto; }
-.blog-content blockquote { border-left: 4px solid #1A72C0; padding-left: 1rem; margin: 1.5rem 0; color: #6B7280; font-style: italic; }
+.blog-content blockquote { border-left: 4px solid #0071BB; padding-left: 1rem; margin: 1.5rem 0; color: #6B7280; font-style: italic; }
 .blog-content div[data-rt-embed-type] { display: none; }

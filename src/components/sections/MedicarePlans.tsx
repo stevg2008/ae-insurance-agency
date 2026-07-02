@@ -8,7 +8,7 @@ export default function MedicarePlans() {
     <section id="medicare-plans" className="py-20 bg-[#F3F4F6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-12">
-          <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-3">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#0071BB] mb-3">
             Finding the Right Fit for Your Healthcare Needs
           </p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E]">
@@ -37,7 +37,7 @@ export default function MedicarePlans() {
 
           {/* Medicare Advantage — dark navy card */}
           <AnimatedSection delay={0.2}>
-            <div className="bg-[#1A72C0] rounded-xl p-8 h-full">
+            <div className="bg-[#0071BB] rounded-xl p-8 h-full">
               <div className="flex gap-4 mb-5">
                 <span className="text-2xl">🏥</span>
                 <span className="text-2xl">💲</span>
@@ -56,7 +56,7 @@ export default function MedicarePlans() {
         <AnimatedSection className="text-center" delay={0.3}>
           <a
             href={WEBINAR_URL}
-            className="inline-block bg-[#1A72C0] hover:bg-[#155fa0] text-white font-bold uppercase tracking-wide text-sm px-8 py-3.5 rounded transition-colors"
+            className="inline-block bg-[#0071BB] hover:bg-[#155fa0] text-white font-bold uppercase tracking-wide text-sm px-8 py-3.5 rounded transition-colors"
           >
             {WEBINAR_LABEL_SHORT}
           </a>

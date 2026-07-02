@@ -16,7 +16,7 @@ const STEPS = [
       "These expenses can quickly drain a retirement nest egg because they fall outside of traditional medical coverage.",
   },
   {
-    color: "#1A72C0",
+    color: "#0071BB",
     title: "The Solution",
     description:
       "We recommend Umbrella Coverage for every client. These plans pay a tax-free cash benefit directly to you, giving you the freedom to focus on healing instead of finances.",

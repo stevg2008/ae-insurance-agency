@@ -4,7 +4,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export default function MedicareParts() {
   return (
-    <section className="py-20 bg-[#1A72C0]">
+    <section className="py-20 bg-[#0071BB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
           <p className="text-xs font-bold uppercase tracking-widest text-[#E8A020] mb-3">

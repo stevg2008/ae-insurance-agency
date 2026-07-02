@@ -42,7 +42,7 @@ export default async function FAQDetailPage({
     <div className="bg-white min-h-screen">
 
       {/* ── Hero ── */}
-      <section className="bg-[#1A72C0] py-16 px-4">
+      <section className="bg-[#0071BB] py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <Link
             href="/resources"
@@ -61,14 +61,14 @@ export default async function FAQDetailPage({
         <div className="max-w-3xl mx-auto">
 
           {/* Key Takeaways */}
-          <div className="bg-[#EBF5FF] border-l-4 border-[#1A72C0] rounded-xl p-6 mb-10">
-            <h2 className="text-[#1A72C0] font-bold text-sm uppercase tracking-widest mb-3">
+          <div className="bg-[#EBF5FF] border-l-4 border-[#0071BB] rounded-xl p-6 mb-10">
+            <h2 className="text-[#0071BB] font-bold text-sm uppercase tracking-widest mb-3">
               Key Points
             </h2>
             <ul className="space-y-2">
               {faq.keyTakeaways.map((point, i) => (
                 <li key={i} className="flex items-start gap-2 text-[#1A1A2E] text-sm leading-relaxed">
-                  <span className="mt-1 w-2 h-2 rounded-full bg-[#1A72C0] flex-shrink-0" />
+                  <span className="mt-1 w-2 h-2 rounded-full bg-[#0071BB] flex-shrink-0" />
                   {point}
                 </li>
               ))}
@@ -99,7 +99,7 @@ export default async function FAQDetailPage({
           </div>
 
           {/* CTA */}
-          <div className="mt-14 bg-[#1A72C0] rounded-2xl p-8 text-center">
+          <div className="mt-14 bg-[#0071BB] rounded-2xl p-8 text-center">
             <h3 className="text-xl font-bold text-white mb-2">
               Still Have Questions?
             </h3>
@@ -126,7 +126,7 @@ export default async function FAQDetailPage({
           <div className="mt-8 text-center">
             <Link
               href="/resources"
-              className="inline-flex items-center gap-1 text-[#1A72C0] font-semibold text-sm hover:underline"
+              className="inline-flex items-center gap-1 text-[#0071BB] font-semibold text-sm hover:underline"
             >
               <ChevronLeft size={16} /> View All FAQs
             </Link>

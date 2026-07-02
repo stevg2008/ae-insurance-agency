@@ -46,7 +46,7 @@ export default function MedicareBrokerNearMePage() {
             <div className="flex flex-col lg:flex-row items-center gap-10">
 
               <div className="flex-1 text-center lg:text-left">
-                <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">
+                <span className="inline-block text-[#0071BB] font-bold text-xs uppercase tracking-widest mb-3">
                   In-Person in South Florida · Virtual Nationwide
                 </span>
                 <h1 className="text-4xl md:text-5xl font-extrabold text-[#1A1A2E] leading-tight mb-4">
@@ -58,13 +58,13 @@ export default function MedicareBrokerNearMePage() {
                 <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
+                    className="inline-flex items-center justify-center bg-[#0071BB] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                   >
                     Schedule a Free Consultation
                   </Link>
                   <a
                     href={`tel:${PHONE.replace(/\D/g, "")}`}
-                    className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A72C0] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
+                    className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#0071BB] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                   >
                     Call {PHONE}
                   </a>
@@ -94,7 +94,7 @@ export default function MedicareBrokerNearMePage() {
 
             <div className="py-14">
               <div className="flex items-center gap-4 mb-5">
-                <span className="text-4xl font-extrabold leading-none text-[#1A72C0]">01</span>
+                <span className="text-4xl font-extrabold leading-none text-[#0071BB]">01</span>
                 <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1A2E]">Independent, Not Captive</h2>
               </div>
               <p className="text-[#4B5563] leading-relaxed mb-3">
@@ -103,7 +103,7 @@ export default function MedicareBrokerNearMePage() {
               <p className="text-[#4B5563] leading-relaxed">
                 A&E Insurance Agency works with 25+ top-rated carriers. We have no financial incentive to push one plan over another — we get paid by whichever carrier you choose, and the rates are the same either way.
               </p>
-              <div className="mt-6 border-l-4 border-[#1A72C0] pl-4 bg-[#F3F4F6] py-3 pr-4 rounded-r-lg">
+              <div className="mt-6 border-l-4 border-[#0071BB] pl-4 bg-[#F3F4F6] py-3 pr-4 rounded-r-lg">
                 <p className="text-sm text-[#1A1A2E] font-semibold">The Bottom Line:</p>
                 <p className="text-sm text-[#4B5563]">Only an independent broker can honestly compare all your options.</p>
               </div>
@@ -149,18 +149,18 @@ export default function MedicareBrokerNearMePage() {
         {/* ── Local links ── */}
         <section className="py-10 px-4 border-t border-[#E5E7EB] bg-[#F3F4F6]">
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-4">Browse by Location</p>
+            <p className="text-[#0071BB] font-bold text-xs uppercase tracking-widest mb-4">Browse by Location</p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/medicare-broker-miami" className="bg-white border border-[#E5E7EB] rounded-lg px-4 py-2 text-sm font-medium text-[#1A72C0] hover:border-[#1A72C0] transition-colors">
+              <Link href="/medicare-broker-miami" className="bg-white border border-[#E5E7EB] rounded-lg px-4 py-2 text-sm font-medium text-[#0071BB] hover:border-[#0071BB] transition-colors">
                 Medicare Broker Miami
               </Link>
-              <Link href="/medicare-broker-south-florida" className="bg-white border border-[#E5E7EB] rounded-lg px-4 py-2 text-sm font-medium text-[#1A72C0] hover:border-[#1A72C0] transition-colors">
+              <Link href="/medicare-broker-south-florida" className="bg-white border border-[#E5E7EB] rounded-lg px-4 py-2 text-sm font-medium text-[#0071BB] hover:border-[#0071BB] transition-colors">
                 Medicare Broker South Florida
               </Link>
-              <Link href="/medicare-broker-kendall" className="bg-white border border-[#E5E7EB] rounded-lg px-4 py-2 text-sm font-medium text-[#1A72C0] hover:border-[#1A72C0] transition-colors">
+              <Link href="/medicare-broker-kendall" className="bg-white border border-[#E5E7EB] rounded-lg px-4 py-2 text-sm font-medium text-[#0071BB] hover:border-[#0071BB] transition-colors">
                 Medicare Broker Kendall
               </Link>
-              <Link href="/health-insurance-broker-miami" className="bg-white border border-[#E5E7EB] rounded-lg px-4 py-2 text-sm font-medium text-[#1A72C0] hover:border-[#1A72C0] transition-colors">
+              <Link href="/health-insurance-broker-miami" className="bg-white border border-[#E5E7EB] rounded-lg px-4 py-2 text-sm font-medium text-[#0071BB] hover:border-[#0071BB] transition-colors">
                 Health Insurance Broker Miami
               </Link>
             </div>
@@ -170,7 +170,7 @@ export default function MedicareBrokerNearMePage() {
         {/* ── FAQ ── */}
         <section className="py-14 px-4 border-t border-[#E5E7EB]">
           <div className="max-w-3xl mx-auto">
-            <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">Common Questions</span>
+            <span className="inline-block text-[#0071BB] font-bold text-xs uppercase tracking-widest mb-3">Common Questions</span>
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1A2E] mb-8">Medicare Broker Near Me — FAQ</h2>
             <div className="space-y-4">
               {FAQS.map((faq) => (
@@ -193,7 +193,7 @@ export default function MedicareBrokerNearMePage() {
             <div>
               <p className="font-extrabold text-[#1A1A2E] mb-1">Phone / Virtual</p>
               <p className="text-[#6B7280]">
-                <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="text-[#1A72C0] hover:underline">{PHONE}</a>
+                <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="text-[#0071BB] hover:underline">{PHONE}</a>
                 <br /><span className="text-xs">Available across 35+ states</span>
               </p>
             </div>

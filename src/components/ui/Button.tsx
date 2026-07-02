@@ -33,8 +33,8 @@ export default function Button({
     primary:
       "bg-[#E8A020] text-white hover:scale-[1.02] hover:bg-[#D4911B] focus:ring-[#E8A020] shadow-md",
     secondary:
-      "border-2 border-[#1A72C0] text-[#1A72C0] hover:bg-[#1A72C0] hover:text-white focus:ring-[#1A72C0]",
-    ghost: "text-[#1A72C0] hover:underline focus:ring-[#1A72C0]",
+      "border-2 border-[#0071BB] text-[#0071BB] hover:bg-[#0071BB] hover:text-white focus:ring-[#0071BB]",
+    ghost: "text-[#0071BB] hover:underline focus:ring-[#0071BB]",
   };
 
   const classes = clsx(base, sizes[size], variants[variant], className);

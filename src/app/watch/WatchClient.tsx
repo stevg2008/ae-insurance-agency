@@ -80,12 +80,12 @@ export default function WatchClient() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block bg-[#DBEAFE] text-[#1A72C0] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5">
+            <span className="inline-block bg-[#DBEAFE] text-[#0071BB] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5">
               Free Webinar — Instant Access
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A1A2E] leading-tight mb-5">
               Learn How to Make Medicare<br className="hidden md:block" />
-              <span className="text-[#1A72C0]"> Work For You, Not Against You</span>
+              <span className="text-[#0071BB]"> Work For You, Not Against You</span>
             </h1>
             <p className="text-lg text-[#4B5563] mb-8 leading-relaxed">
               Watch our free workshop and discover how to choose the right plan, avoid costly mistakes, and get expert guidance — all at zero cost to you.
@@ -97,7 +97,7 @@ export default function WatchClient() {
             <ul className="space-y-3 mb-8">
               {LEARN_POINTS.map((point) => (
                 <li key={point} className="flex items-start gap-3">
-                  <CheckCircle2 size={18} className="text-[#1A72C0] flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 size={18} className="text-[#0071BB] flex-shrink-0 mt-0.5" />
                   <span className="text-[#4B5563] text-sm leading-relaxed">{point}</span>
                 </li>
               ))}
@@ -112,7 +112,7 @@ export default function WatchClient() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <div className="bg-[#1A72C0] rounded-2xl p-7 shadow-xl sticky top-6">
+            <div className="bg-[#0071BB] rounded-2xl p-7 shadow-xl sticky top-6">
               <div className="text-center mb-6">
                 <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-2">You Also Receive — 100% Free</p>
                 <h2 className="text-white text-xl font-extrabold leading-snug">
@@ -161,9 +161,9 @@ export default function WatchClient() {
                     onChange={set("months")}
                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#E8A020] transition-colors"
                   >
-                    <option value="" className="bg-[#1A72C0]">Select one...</option>
+                    <option value="" className="bg-[#0071BB]">Select one...</option>
                     {MONTHS_OPTIONS.map((o) => (
-                      <option key={o} value={o} className="bg-[#1A72C0]">{o}</option>
+                      <option key={o} value={o} className="bg-[#0071BB]">{o}</option>
                     ))}
                   </select>
                 </div>
@@ -213,7 +213,7 @@ export default function WatchClient() {
               return (
                 <div key={r.title} className="bg-[#F3F4F6] rounded-xl p-6 text-left flex gap-4 items-start">
                   <div className="w-10 h-10 rounded-full bg-[#DBEAFE] flex items-center justify-center flex-shrink-0">
-                    <Icon size={18} className="text-[#1A72C0]" />
+                    <Icon size={18} className="text-[#0071BB]" />
                   </div>
                   <div>
                     <p className="font-bold text-[#1A1A2E] mb-1">{r.title}</p>
@@ -239,11 +239,11 @@ export default function WatchClient() {
               />
             </div>
             <div>
-              <span className="inline-block bg-[#DBEAFE] text-[#1A72C0] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
+              <span className="inline-block bg-[#DBEAFE] text-[#0071BB] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
                 Your Host
               </span>
               <h2 className="text-2xl font-extrabold text-[#1A1A2E] mb-1">Steve Germain</h2>
-              <p className="text-[#1A72C0] font-semibold text-sm mb-4">Founder & Licensed Medicare Broker · A&E Insurance Agency</p>
+              <p className="text-[#0071BB] font-semibold text-sm mb-4">Founder & Licensed Medicare Broker · A&E Insurance Agency</p>
               <p className="text-[#4B5563] text-sm leading-relaxed mb-5">
                 Steve Germain has helped over 500 South Florida families navigate Medicare with clarity and confidence. As the author of <em>Medicare Decoded</em>, Steve believes in education-first guidance — no pressure, no bias, no fees.
               </p>
@@ -255,7 +255,7 @@ export default function WatchClient() {
                   "Author of Medicare Decoded",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-[#4B5563]">
-                    <CheckCircle2 size={15} className="text-[#1A72C0] flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 size={15} className="text-[#0071BB] flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
@@ -266,7 +266,7 @@ export default function WatchClient() {
       </section>
 
       {/* ── Final CTA ── */}
-      <section className="py-12 px-4 bg-[#1A72C0] text-center">
+      <section className="py-12 px-4 bg-[#0071BB] text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-2xl font-extrabold text-white mb-3">Have Questions? Call Us Directly.</h2>
           <p className="text-white/60 text-sm mb-6">No pressure, no fees — ever.</p>

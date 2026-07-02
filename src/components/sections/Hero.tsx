@@ -44,7 +44,7 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="mb-10"
         >
-          <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-3">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#0071BB] mb-3">
             South Florida's Trusted Medicare Experts — Serving Families Since 2009
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A1A2E] leading-tight mb-5">

@@ -11,7 +11,7 @@ const PRODUCTS = [
     number: "01",
     title: "Term Life Insurance",
     subtitle: "Affordable protection for the years you need it most.",
-    color: "#1A72C0",
+    color: "#0071BB",
     bullets: [
       { label: "What It Is", body: "Term Life Insurance provides coverage for a specific period of time — typically 10, 20, or 30 years. If you pass away during the policy term, your loved ones receive a tax-free death benefit." },
       { label: "Who It's For", body: "It's often the most affordable way to protect your family's income, help pay off a mortgage, cover outstanding debts, or provide financial security while your children are growing up." },
@@ -35,7 +35,7 @@ const PRODUCTS = [
     number: "03",
     title: "Universal Life Insurance",
     subtitle: "Flexible coverage that grows with your changing needs.",
-    color: "#1A72C0",
+    color: "#0071BB",
     bullets: [
       { label: "What It Is", body: "Universal Life Insurance offers permanent life insurance with greater flexibility than whole life. Depending on the policy, you may be able to adjust your premium payments and death benefit as your financial needs change over time." },
       { label: "Cash Value", body: "Universal Life also builds cash value over time, though the growth rate is typically tied to current interest rates rather than being fully guaranteed like whole life." },
@@ -71,7 +71,7 @@ const PRODUCTS = [
     number: "06",
     title: "Annuities",
     subtitle: "Turn your retirement savings into lasting income.",
-    color: "#1A72C0",
+    color: "#0071BB",
     bullets: [
       { label: "What They Are", body: "Annuities are designed to help you grow your retirement savings and create a reliable source of income during retirement. Depending on the type, your money can earn a guaranteed interest rate or grow based on the performance of a market index." },
       { label: "Principal Protection", body: "Many annuities protect your principal from market losses, meaning you won't lose what you put in even if the market drops. This makes them a powerful tool for preserving retirement savings." },
@@ -97,7 +97,7 @@ export default function LifeInsuranceClient() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">
+              <span className="inline-block text-[#0071BB] font-bold text-xs uppercase tracking-widest mb-3">
                 Life Insurance & Retirement Solutions
               </span>
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#1A1A2E] leading-tight mb-4">
@@ -109,13 +109,13 @@ export default function LifeInsuranceClient() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <a
                   href={NEEDS_ASSESSMENT_URL}
-                  className="inline-flex items-center justify-center text-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
+                  className="inline-flex items-center justify-center text-center bg-[#0071BB] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                 >
                   Schedule Your Needs Assessment
                 </a>
                 <a
                   href={`tel:${PHONE.replace(/\D/g, "")}`}
-                  className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A72C0] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
+                  className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#0071BB] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                 >
                   Call {PHONE}
                 </a>
@@ -157,7 +157,7 @@ export default function LifeInsuranceClient() {
                   </h2>
                 </div>
               </div>
-              <p className="text-[#1A72C0] font-semibold mb-8 text-base">{product.subtitle}</p>
+              <p className="text-[#0071BB] font-semibold mb-8 text-base">{product.subtitle}</p>
 
               <div className="space-y-6 mb-8">
                 {product.bullets.map((b) => (
@@ -183,7 +183,7 @@ export default function LifeInsuranceClient() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#1A72C0] py-16 px-4 text-center">
+      <section className="bg-[#0071BB] py-16 px-4 text-center">
         <AnimatedSection className="max-w-xl mx-auto">
           <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">No Cost. No Pressure. No Obligation.</p>
           <h2 className="text-3xl font-extrabold text-white mb-4">

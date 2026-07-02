@@ -9,7 +9,7 @@ const STEPS = [
     number: "01",
     title: "Timing Is Everything",
     subtitle: "Know your enrollment window before it closes.",
-    color: "#1A72C0",
+    color: "#0071BB",
     bullets: [
       { label: "Initial Enrollment Period", body: "You have a 7-month window to sign up for Medicare — starting 3 months before your 65th birthday month, the month you turn 65, and 3 months after. Missing this window can result in a permanent late-enrollment penalty added to your monthly premium." },
       { label: "Still Working?", body: "If you or your spouse have qualifying employer coverage, you may be able to delay Medicare enrollment penalty-free. Every situation is different — this is one of the most important calls to make before you turn 65." },
@@ -45,7 +45,7 @@ const STEPS = [
     number: "04",
     title: "Prescription Protection",
     subtitle: "Don't overlook Part D — the drug coverage piece.",
-    color: "#1A72C0",
+    color: "#0071BB",
     bullets: [
       { label: "What Part D Covers", body: "Part D plans cover prescription drugs. If you choose Original Medicare with a Supplement, you'll need a standalone Part D plan. Most Medicare Advantage plans include prescription drug coverage built in." },
       { label: "Late Enrollment Penalty", body: "If you don't enroll in Part D when first eligible and don't have other creditable drug coverage, you may face a permanent penalty added to your monthly premium — for as long as you have Medicare." },
@@ -73,7 +73,7 @@ export default function MedicareClient() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">
+              <span className="inline-block text-[#0071BB] font-bold text-xs uppercase tracking-widest mb-3">
                 Your Medicare Guide
               </span>
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#1A1A2E] leading-tight mb-4">
@@ -85,13 +85,13 @@ export default function MedicareClient() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <a
                   href={WEBINAR_URL}
-                  className="inline-flex items-center justify-center text-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
+                  className="inline-flex items-center justify-center text-center bg-[#0071BB] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                 >
                   {WEBINAR_LABEL_SHORT}
                 </a>
                 <a
                   href={`tel:${PHONE.replace(/\D/g, "")}`}
-                  className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A72C0] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
+                  className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#0071BB] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                 >
                   Call {PHONE}
                 </a>
@@ -140,7 +140,7 @@ export default function MedicareClient() {
                   </h2>
                 </div>
               </div>
-              <p className="text-[#1A72C0] font-semibold mb-8 text-base">{step.subtitle}</p>
+              <p className="text-[#0071BB] font-semibold mb-8 text-base">{step.subtitle}</p>
 
               {/* Bullets */}
               <div className="space-y-6 mb-8">
@@ -168,7 +168,7 @@ export default function MedicareClient() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#1A72C0] py-16 px-4 text-center">
+      <section className="bg-[#0071BB] py-16 px-4 text-center">
         <AnimatedSection className="max-w-xl mx-auto">
           <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">No Cost. No Pressure. No Bias.</p>
           <h2 className="text-3xl font-extrabold text-white mb-4">

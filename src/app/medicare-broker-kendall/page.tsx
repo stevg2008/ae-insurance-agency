@@ -46,7 +46,7 @@ export default function KendallBrokerPage() {
             <div className="flex flex-col lg:flex-row items-center gap-10">
 
               <div className="flex-1 text-center lg:text-left">
-                <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">
+                <span className="inline-block text-[#0071BB] font-bold text-xs uppercase tracking-widest mb-3">
                   In-Person Office · Kendall / West Miami-Dade
                 </span>
                 <h1 className="text-4xl md:text-5xl font-extrabold text-[#1A1A2E] leading-tight mb-4">
@@ -58,13 +58,13 @@ export default function KendallBrokerPage() {
                 <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
+                    className="inline-flex items-center justify-center bg-[#0071BB] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                   >
                     Book a Free Consultation
                   </Link>
                   <a
                     href={`tel:${PHONE.replace(/\D/g, "")}`}
-                    className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A72C0] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
+                    className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#0071BB] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                   >
                     Call {PHONE}
                   </a>
@@ -94,7 +94,7 @@ export default function KendallBrokerPage() {
 
             <div className="py-14">
               <div className="flex items-center gap-4 mb-5">
-                <span className="text-4xl font-extrabold leading-none text-[#1A72C0]">01</span>
+                <span className="text-4xl font-extrabold leading-none text-[#0071BB]">01</span>
                 <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1A2E]">Right in Your Neighborhood</h2>
               </div>
               <p className="text-[#4B5563] leading-relaxed mb-3">
@@ -103,7 +103,7 @@ export default function KendallBrokerPage() {
               <p className="text-[#4B5563] leading-relaxed">
                 We also serve clients across Pinecrest, Palmetto Bay, Cutler Bay, and West Kendall by phone and video if in-person doesn't fit your schedule.
               </p>
-              <div className="mt-6 border-l-4 border-[#1A72C0] pl-4 bg-[#F3F4F6] py-3 pr-4 rounded-r-lg">
+              <div className="mt-6 border-l-4 border-[#0071BB] pl-4 bg-[#F3F4F6] py-3 pr-4 rounded-r-lg">
                 <p className="text-sm text-[#1A1A2E] font-semibold">The Bottom Line:</p>
                 <p className="text-sm text-[#4B5563]">Local office. Local knowledge. Same ZIP code as you.</p>
               </div>
@@ -149,7 +149,7 @@ export default function KendallBrokerPage() {
         {/* ── FAQ ── */}
         <section className="py-14 px-4 border-t border-[#E5E7EB] bg-[#F3F4F6]">
           <div className="max-w-3xl mx-auto">
-            <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">Common Questions</span>
+            <span className="inline-block text-[#0071BB] font-bold text-xs uppercase tracking-widest mb-3">Common Questions</span>
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1A2E] mb-8">Medicare in Kendall — FAQ</h2>
             <div className="space-y-4">
               {FAQS.map((faq) => (
@@ -171,7 +171,7 @@ export default function KendallBrokerPage() {
             </div>
             <div>
               <p className="font-extrabold text-[#1A1A2E] mb-1">Phone</p>
-              <p className="text-[#6B7280]"><a href={`tel:${PHONE.replace(/\D/g, "")}`} className="text-[#1A72C0] hover:underline">{PHONE}</a></p>
+              <p className="text-[#6B7280]"><a href={`tel:${PHONE.replace(/\D/g, "")}`} className="text-[#0071BB] hover:underline">{PHONE}</a></p>
             </div>
             <div>
               <p className="font-extrabold text-[#1A1A2E] mb-1">Hours</p>

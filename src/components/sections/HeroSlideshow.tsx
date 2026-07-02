@@ -78,7 +78,7 @@ export default function HeroSlideshow() {
       </AnimatePresence>
 
       {/* ── Fallback background when images haven't loaded yet ────────────── */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1A72C0] to-[#0D4A8A] -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0071BB] to-[#0D4A8A] -z-10" />
 
       {/* ── Content overlay ───────────────────────────────────────────────── */}
       <div className="relative z-10 h-full flex flex-col justify-center">
@@ -117,7 +117,7 @@ export default function HeroSlideshow() {
               </a>
               <a
                 href="#medicare-plans"
-                className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#1A72C0] transition-all text-base text-center"
+                className="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#0071BB] transition-all text-base text-center"
               >
                 Learn More
               </a>

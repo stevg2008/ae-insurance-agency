@@ -70,7 +70,7 @@ export default function PartDPenaltyClient() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#1A72C0] mb-5">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#0071BB] mb-5">
             <Pill size={26} className="text-white" />
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-3">
@@ -94,7 +94,7 @@ export default function PartDPenaltyClient() {
           </p>
 
           {/* Key difference from Part B */}
-          <div className="bg-[#DBEAFE] border border-[#1A72C0] rounded-xl px-5 py-4 mb-4">
+          <div className="bg-[#DBEAFE] border border-[#0071BB] rounded-xl px-5 py-4 mb-4">
             <p className="text-sm text-[#1A1A2E] font-bold mb-1">Part D penalty works differently than Part B</p>
             <p className="text-sm text-[#1A1A2E]/80 leading-relaxed">
               Part D is <strong>1% per uncovered month</strong> — based on the national base beneficiary premium, not your actual plan premium. The more months you wait, the higher the permanent penalty.
@@ -128,11 +128,11 @@ export default function PartDPenaltyClient() {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleCalculate()}
               placeholder="e.g. 18"
-              className="flex-1 border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0]"
+              className="flex-1 border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#0071BB]"
             />
             <button
               onClick={handleCalculate}
-              className="bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-3 rounded-lg transition-colors whitespace-nowrap"
+              className="bg-[#0071BB] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-3 rounded-lg transition-colors whitespace-nowrap"
             >
               Calculate Penalty
             </button>
@@ -157,7 +157,7 @@ export default function PartDPenaltyClient() {
               transition={{ duration: 0.4 }}
             >
               {/* Main result */}
-              <div className="bg-[#1A72C0] rounded-2xl p-8 mb-4 text-center">
+              <div className="bg-[#0071BB] rounded-2xl p-8 mb-4 text-center">
                 <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">
                   Estimated Monthly Penalty for 2026
                 </p>
@@ -198,7 +198,7 @@ export default function PartDPenaltyClient() {
                       className={`flex justify-between items-center py-3 border-b border-[#F3F4F6] last:border-0 ${row.highlight ? "bg-[#DBEAFE] -mx-4 px-4 rounded-lg" : ""}`}
                     >
                       <span className={`text-sm ${row.highlight ? "font-extrabold text-[#1A1A2E]" : "text-[#4B5563]"}`}>{row.label}</span>
-                      <span className={`text-sm font-bold ${row.highlight ? "text-[#1A72C0]" : "text-[#1A1A2E]"}`}>{row.value}</span>
+                      <span className={`text-sm font-bold ${row.highlight ? "text-[#0071BB]" : "text-[#1A1A2E]"}`}>{row.value}</span>
                     </div>
                   ))}
                 </div>
@@ -221,7 +221,7 @@ export default function PartDPenaltyClient() {
                     <thead>
                       <tr className="border-b border-[#E5E7EB]">
                         <th className="text-left py-2 pr-4 text-[#6B7280] font-semibold"></th>
-                        <th className="text-left py-2 pr-4 text-[#1A72C0] font-extrabold">Part D</th>
+                        <th className="text-left py-2 pr-4 text-[#0071BB] font-extrabold">Part D</th>
                         <th className="text-left py-2 text-[#1A1A2E] font-extrabold">Part B</th>
                       </tr>
                     </thead>
@@ -254,7 +254,7 @@ export default function PartDPenaltyClient() {
                   {[
                     {
                       num: "01",
-                      color: "#1A72C0",
+                      color: "#0071BB",
                       stage: "Deductible Stage",
                       threshold: `Up to $${PART_D_MAX_DEDUCTIBLE_2026.toLocaleString()}/year maximum`,
                       body: "If your plan has a deductible, you pay 100% of covered drug costs until you reach it. No Medicare drug plan may charge more than $615 in 2026. Many plans have a $0 deductible.",
@@ -297,7 +297,7 @@ export default function PartDPenaltyClient() {
               </div>
 
               {/* CTA */}
-              <div className="bg-[#1A72C0] rounded-2xl p-8 text-center mb-4">
+              <div className="bg-[#0071BB] rounded-2xl p-8 text-center mb-4">
                 <p className="text-white font-extrabold text-lg mb-2">Don't Pay More Than You Have To</p>
                 <p className="text-white/70 text-sm mb-6 leading-relaxed">
                   A licensed broker can review your coverage history, determine if the penalty applies, and find you the best Part D plan to minimize your total cost going forward.
@@ -311,7 +311,7 @@ export default function PartDPenaltyClient() {
                   </a>
                   <a
                     href={`tel:${PHONE.replace(/\D/g, "")}`}
-                    className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-[#1A72C0] font-bold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
+                    className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-[#0071BB] font-bold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
                   >
                     <Phone size={13} />
                     Call {PHONE}
@@ -320,7 +320,7 @@ export default function PartDPenaltyClient() {
               </div>
 
               <div className="text-center">
-                <button onClick={handleReset} className="text-[#1A72C0] text-sm font-semibold hover:underline">
+                <button onClick={handleReset} className="text-[#0071BB] text-sm font-semibold hover:underline">
                   ← Calculate a different amount
                 </button>
               </div>

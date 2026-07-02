@@ -11,7 +11,7 @@ const GAPS = [
     number: "01",
     title: "The 20% Exposure",
     subtitle: "Original Medicare only covers 80% of your medical bills — with no cap on what you owe.",
-    color: "#1A72C0",
+    color: "#0071BB",
     bullets: [
       { label: "The Gap", body: "Original Medicare pays 80% of approved medical costs. That leaves you personally responsible for the remaining 20% — with no out-of-pocket maximum. A $100,000 surgery means $20,000 coming out of your pocket." },
       { label: "It Adds Up Fast", body: "Most people assume Medicare will cover most of their medical bills. The reality is that without supplemental coverage, a single hospitalization or serious diagnosis can result in tens of thousands of dollars in out-of-pocket costs." },
@@ -79,7 +79,7 @@ export default function CriticalIllnessClient() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">
+              <span className="inline-block text-[#0071BB] font-bold text-xs uppercase tracking-widest mb-3">
                 Major Exposures
               </span>
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#1A1A2E] leading-tight mb-4">
@@ -91,13 +91,13 @@ export default function CriticalIllnessClient() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <a
                   href={NEEDS_ASSESSMENT_URL}
-                  className="inline-flex items-center justify-center text-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
+                  className="inline-flex items-center justify-center text-center bg-[#0071BB] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                 >
                   Schedule Your Needs Assessment
                 </a>
                 <a
                   href={`tel:${PHONE.replace(/\D/g, "")}`}
-                  className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A72C0] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
+                  className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#0071BB] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                 >
                   Call {PHONE}
                 </a>
@@ -142,7 +142,7 @@ export default function CriticalIllnessClient() {
                   </h2>
                 </div>
               </div>
-              <p className="text-[#1A72C0] font-semibold mb-8 text-base">{gap.subtitle}</p>
+              <p className="text-[#0071BB] font-semibold mb-8 text-base">{gap.subtitle}</p>
 
               <div className="space-y-6 mb-8">
                 {gap.bullets.map((b) => (
@@ -171,7 +171,7 @@ export default function CriticalIllnessClient() {
       <section className="bg-[#F3F4F6] py-16 px-4">
         <AnimatedSection className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">Critical Illness Coverage</span>
+            <span className="inline-block text-[#0071BB] font-bold text-xs uppercase tracking-widest mb-3">Critical Illness Coverage</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-4">
               The Reality of "The Big 3"
             </h2>
@@ -184,13 +184,13 @@ export default function CriticalIllnessClient() {
             {BIG_THREE.map((item) => (
               <div key={item.name} className="bg-white rounded-xl p-7 shadow-sm">
                 <h3 className="text-xl font-extrabold text-[#1A1A2E] mb-2">{item.name}</h3>
-                <p className="text-[#1A72C0] font-semibold text-sm mb-3">{item.stat}</p>
+                <p className="text-[#0071BB] font-semibold text-sm mb-3">{item.stat}</p>
                 <p className="text-[#4B5563] text-sm leading-relaxed">{item.impact}</p>
               </div>
             ))}
           </div>
 
-          <div className="bg-[#1A72C0] rounded-2xl p-8 text-center">
+          <div className="bg-[#0071BB] rounded-2xl p-8 text-center">
             <h3 className="text-xl font-extrabold text-white mb-3">Simple, Affordable Protection</h3>
             <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-lg mx-auto">
               A critical illness plan pays a <strong className="text-white">tax-free lump sum directly to you</strong> upon diagnosis. No restrictions — use it for treatment, bills, travel, or anything your family needs. A health crisis should never become a wealth crisis.
@@ -212,7 +212,7 @@ export default function CriticalIllnessClient() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#1A72C0] py-16 px-4 text-center">
+      <section className="bg-[#0071BB] py-16 px-4 text-center">
         <AnimatedSection className="max-w-xl mx-auto">
           <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">No Cost. No Pressure. No Obligation.</p>
           <h2 className="text-3xl font-extrabold text-white mb-4">

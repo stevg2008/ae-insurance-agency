@@ -48,13 +48,13 @@ export default function ServiceCards() {
                   className="bg-white rounded-2xl shadow-md p-8 h-full flex flex-col"
                 >
                   <div className="w-14 h-14 rounded-2xl bg-[#EBF5FF] flex items-center justify-center mb-5">
-                    <Icon size={28} className="text-[#1A72C0]" />
+                    <Icon size={28} className="text-[#0071BB]" />
                   </div>
                   <h3 className="text-xl font-bold text-[#1A1A2E] mb-3">{service.title}</h3>
                   <p className="text-[#6B7280] leading-relaxed flex-grow">{service.description}</p>
                   <Link
                     href={service.href}
-                    className="inline-flex items-center gap-2 text-[#1A72C0] font-semibold mt-6 hover:gap-3 transition-all"
+                    className="inline-flex items-center gap-2 text-[#0071BB] font-semibold mt-6 hover:gap-3 transition-all"
                   >
                     Learn More <ArrowRight size={16} />
                   </Link>

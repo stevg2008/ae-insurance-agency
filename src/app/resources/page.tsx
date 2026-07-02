@@ -21,7 +21,7 @@ export default function ResourcesPage() {
     <div className="bg-white min-h-screen">
 
       {/* ── Hero ── */}
-      <section className="bg-[#1A72C0] py-20 px-4 text-center">
+      <section className="bg-[#0071BB] py-20 px-4 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
           Medicare FAQ
         </h1>
@@ -47,7 +47,7 @@ export default function ResourcesPage() {
                 </p>
                 <Link
                   href={`/resources/faq/${faq.slug}`}
-                  className="inline-flex items-center gap-1 text-[#1A72C0] font-semibold text-sm hover:underline"
+                  className="inline-flex items-center gap-1 text-[#0071BB] font-semibold text-sm hover:underline"
                 >
                   Read More <ChevronRight size={16} />
                 </Link>
