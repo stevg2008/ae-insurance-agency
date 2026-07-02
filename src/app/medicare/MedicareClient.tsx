@@ -132,8 +132,8 @@ const COMPARISON_ROWS = [
   },
   {
     feature: "Best For",
-    supplement: "Maximum freedom & predictability",
-    advantage: "Lower monthly cost",
+    supplement: "People who want to see any doctor and have predictable, low out-of-pocket costs",
+    advantage: "People who prefer lower monthly premiums and don't mind a provider network",
   },
 ];
 
@@ -320,9 +320,9 @@ export default function MedicareClient() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="/Steve and Mr Heinrich.JPG"
-                  alt="Steve Germain reviewing Medicare plan options with a client at A&E Insurance Agency"
-                  className="w-full h-[420px] object-cover object-top"
+                  src="/slideshow/s11.jpg"
+                  alt="Steve Germain presenting at a Medicare educational seminar for South Florida families — A&E Insurance Agency"
+                  className="w-full h-[420px] object-cover object-center"
                 />
               </div>
             </motion.div>
@@ -340,7 +340,7 @@ export default function MedicareClient() {
               {/* Step header */}
               <div className="flex items-center gap-4 mb-5">
                 <span
-                  className="text-4xl font-extrabold leading-none flex-shrink-0"
+                  className="text-5xl font-extrabold leading-none flex-shrink-0"
                   style={{ color: step.color }}
                 >
                   {step.number}
@@ -507,30 +507,35 @@ export default function MedicareClient() {
                 label: "Medicare Enrollment Date Calculator",
                 href: "/tools/medicare-enrollment-calculator",
                 desc: "Find your exact enrollment window based on your birthday.",
+                cta: "Find My Dates →",
               },
               {
                 label: "Part B Late-Enrollment Penalty Calculator",
                 href: "/tools/part-b-penalty-calculator",
                 desc: "Estimate your permanent penalty if you missed your IEP.",
+                cta: "Calculate Penalty →",
               },
               {
                 label: "Part D Penalty Calculator",
                 href: "/tools/part-d-penalty-calculator",
                 desc: "See if you owe a drug coverage late-enrollment penalty.",
+                cta: "Calculate Penalty →",
               },
               {
                 label: "IRMAA Surcharge Calculator",
                 href: "/tools/irmaa-calculator",
                 desc: "Check whether your income triggers higher Part B or Part D premiums.",
+                cta: "Check My IRMAA →",
               },
             ].map((tool) => (
               <Link
                 key={tool.href}
                 href={tool.href}
-                className="flex flex-col gap-1 bg-white rounded-xl p-4 border border-[#E5E7EB] hover:shadow-sm transition-shadow"
+                className="flex flex-col gap-1.5 bg-white rounded-xl p-4 border border-[#E5E7EB] hover:border-[#1A72C0] hover:shadow-sm transition-all group"
               >
                 <span className="font-bold text-[#1A1A2E] text-sm">{tool.label}</span>
-                <span className="text-[#6B7280] text-xs leading-relaxed">{tool.desc}</span>
+                <span className="text-[#6B7280] text-xs leading-relaxed flex-1">{tool.desc}</span>
+                <span className="text-[#1A72C0] text-xs font-semibold mt-1">{tool.cta}</span>
               </Link>
             ))}
           </div>
