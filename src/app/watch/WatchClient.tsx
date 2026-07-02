@@ -103,17 +103,6 @@ export default function WatchClient() {
               ))}
             </ul>
 
-            <div className="flex flex-wrap gap-3">
-              {TRUST_BADGES.map((b) => {
-                const Icon = b.icon;
-                return (
-                  <div key={b.label} className="flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-sm text-xs font-semibold text-[#1A1A2E]">
-                    <Icon size={13} className="text-[#1A72C0]" />
-                    {b.label}
-                  </div>
-                );
-              })}
-            </div>
           </motion.div>
 
           {/* Right — native form */}
@@ -193,6 +182,18 @@ export default function WatchClient() {
               <p className="text-white/40 text-xs text-center mt-4">
                 🔒 Your info is 100% secure. No spam, ever.
               </p>
+
+              <div className="flex flex-wrap justify-center gap-2 mt-5">
+                {TRUST_BADGES.map((b) => {
+                  const Icon = b.icon;
+                  return (
+                    <div key={b.label} className="flex items-center gap-1.5 bg-white/10 rounded-full px-3 py-1.5 text-white/80 text-xs font-semibold">
+                      <Icon size={12} className="text-[#E8A020]" />
+                      {b.label}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </motion.div>
 
