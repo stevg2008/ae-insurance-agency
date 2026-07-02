@@ -44,9 +44,9 @@ export default function ContactClient() {
       </section>
 
       {/* ── Booking Calendar ── */}
-      <section className="py-16 px-4 border-b border-[#E5E7EB]">
+      <section className="py-8 px-4 border-b border-[#E5E7EB]">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">Free · No Pressure · No Obligation</span>
             <h2 className="text-3xl font-extrabold text-[#1A1A2E] mb-3">Pick a Time That Works for You</h2>
             <p className="text-[#4B5563]">In person at our Kendall office or by phone — whichever is easiest.</p>
@@ -54,7 +54,7 @@ export default function ContactClient() {
           <div className="rounded-2xl overflow-hidden shadow-lg border border-[#E5E7EB]">
             <iframe
               src="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"
-              style={{ width: "100%", border: "none", overflow: "hidden", height: "580px" }}
+              style={{ width: "100%", border: "none", overflow: "hidden", height: "520px" }}
               scrolling="no"
               id="gnH26nD1h46Zd5rO88gz_contact"
             />
