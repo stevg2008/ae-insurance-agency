@@ -63,12 +63,10 @@ export default function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/watch"
                 className="inline-block bg-[#1A72C0] hover:bg-[#155fa0] text-white font-bold uppercase tracking-wide text-sm px-7 py-3.5 rounded transition-colors text-center"
               >
-                Schedule a Free Consultation
+                Register for Online Workshop
               </a>
               <a
                 href={`tel:${PHONE.replace(/\D/g, "")}`}
