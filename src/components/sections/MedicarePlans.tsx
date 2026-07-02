@@ -46,7 +46,7 @@ export default function MedicarePlans() {
           <p className="text-[#4B5563] text-base mb-4">Not sure which plan is right for you? We'll walk you through it — at no cost.</p>
           <a
             href={`tel:${PHONE.replace(/\D/g, "")}`}
-            className="inline-block bg-[#E8A020] hover:bg-[#D4911B] text-white font-bold uppercase tracking-wide text-sm px-8 py-3.5 rounded-lg transition-colors shadow-md"
+            className="inline-block bg-[#E8A020] hover:bg-[#D4911B] text-[#1A1A2E] font-bold uppercase tracking-wide text-sm px-8 py-3.5 rounded-lg transition-colors shadow-md"
           >
             Speak With a Licensed Advisor — {PHONE}
           </a>

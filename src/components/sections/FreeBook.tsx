@@ -27,7 +27,7 @@ export default function FreeBook() {
               </p>
               <button
                 onClick={() => setModalOpen(true)}
-                className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-white font-bold uppercase tracking-wide text-sm px-7 py-4 rounded-lg transition-colors text-center"
+                className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-[#1A1A2E] font-bold uppercase tracking-wide text-sm px-7 py-4 rounded-lg transition-colors text-center"
               >
                 Download Free PDF
               </button>
