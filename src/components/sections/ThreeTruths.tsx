@@ -25,7 +25,7 @@ export default function ThreeTruths() {
     <section className="py-20 bg-white border-t border-[#E5E7EB]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-14">
-          <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-3">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#1558A0] mb-3">
             Our Commitment to You
           </p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E]">
@@ -40,7 +40,7 @@ export default function ThreeTruths() {
                 <h3 className="text-lg font-extrabold text-[#1A1A2E] sm:w-72 shrink-0">
                   {truth.title}
                 </h3>
-                <p className="text-[#6B7280] text-base leading-relaxed">{truth.description}</p>
+                <p className="text-[#4B5563] text-base leading-relaxed">{truth.description}</p>
               </div>
             </AnimatedSection>
           ))}

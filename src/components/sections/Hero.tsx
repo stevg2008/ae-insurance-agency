@@ -44,16 +44,16 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
           className="mb-10"
         >
-          <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-3">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#1558A0] mb-3">
             Independent Medicare Brokers — Serving South Florida Since 2009
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A1A2E] leading-tight mb-5">
             Get Your Medicare Right<br className="hidden sm:block" /> the First Time.
           </h1>
-          <p className="text-[#4B5563] text-lg leading-relaxed mb-3 max-w-2xl">
+          <p className="text-[#374151] text-xl leading-relaxed mb-5 max-w-2xl">
             As an independent Medicare broker, we compare Medicare Supplement, Medicare Advantage, and Prescription Drug Plans from over 25 carriers — then recommend the one that fits your doctors, your budget, and your life. Expert guidance, at no cost to you.
           </p>
-          <p className="text-[#6B7280] text-sm mb-8 max-w-xl">
+          <p className="text-[#4B5563] text-base mb-10 max-w-xl leading-relaxed">
             Licensed Independent Broker · Author of <em>Medicare Decoded</em> · 4,200+ South Florida Families Helped
           </p>
           <div className="flex flex-col sm:flex-row gap-4">

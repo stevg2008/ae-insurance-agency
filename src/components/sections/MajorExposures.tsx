@@ -36,7 +36,7 @@ export default function MajorExposures() {
             <p className="text-[#1A72C0] text-sm font-semibold mb-5">
               Original Medicare covers the essentials — but it has gaps that can become costly when it matters most.
             </p>
-            <p className="text-[#4B5563] mb-8 leading-relaxed">
+            <p className="text-[#374151] text-lg mb-8 leading-relaxed">
               Medicare is designed to pay your doctors and hospitals, but it wasn't built to cover the personal financial toll of a major illness.
             </p>
             <ul className="space-y-7">
@@ -53,7 +53,7 @@ export default function MajorExposures() {
                     <p className="font-bold text-base mb-1" style={{ color: step.color }}>
                       {step.title}
                     </p>
-                    <p className="text-[#4B5563] text-sm leading-relaxed">{step.description}</p>
+                    <p className="text-[#374151] text-base leading-relaxed">{step.description}</p>
                   </div>
                 </li>
               ))}

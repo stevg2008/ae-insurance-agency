@@ -22,7 +22,7 @@ export default function FreeBook() {
                 Get Your Free Copy of<br />
                 <span className="text-[#1A72C0]">Medicare Decoded</span>
               </h2>
-              <p className="text-[#4B5563] text-lg leading-relaxed mb-8">
+              <p className="text-[#374151] text-lg leading-relaxed mb-8">
                 Steve Germain's plain-English guide to understanding Medicare Supplement, Medicare Advantage, and Prescription Drug Plans — written specifically for people turning 65 in South Florida.
               </p>
               <button
@@ -31,7 +31,7 @@ export default function FreeBook() {
               >
                 Download Free PDF
               </button>
-              <p className="text-[#9CA3AF] text-sm mt-5">
+              <p className="text-[#4B5563] text-sm mt-5">
                 Prefer a physical copy? Call <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="text-[#1A72C0] font-semibold hover:underline">{PHONE}</a> and we'll mail one to your door — free.
               </p>
             </AnimatedSection>

@@ -30,7 +30,7 @@ export default function MedicareParts() {
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">Part A (Hospital)</h3>
             <hr className="border-white/20 mb-5 mx-auto w-40" />
-            <p className="text-white/70 text-base leading-relaxed">
+            <p className="text-white text-base leading-relaxed">
               Covers inpatient stays. For most, the premium is $0.
             </p>
           </AnimatedSection>
@@ -49,7 +49,7 @@ export default function MedicareParts() {
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">Part B (Medical)</h3>
             <hr className="border-white/20 mb-5 mx-auto w-40" />
-            <p className="text-white/70 text-base leading-relaxed">
+            <p className="text-white text-base leading-relaxed">
               Covers doctor visits and outpatient care. The standard monthly premium is $202.90 in 2026.
             </p>
           </AnimatedSection>

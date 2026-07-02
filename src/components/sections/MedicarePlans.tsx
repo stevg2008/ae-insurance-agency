@@ -8,7 +8,7 @@ export default function MedicarePlans() {
     <section id="medicare-plans" className="py-20 bg-[#F3F4F6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-12">
-          <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-3">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#1558A0] mb-3">
             Finding the Right Fit for Your Healthcare Needs
           </p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E]">
@@ -21,7 +21,7 @@ export default function MedicarePlans() {
           <AnimatedSection delay={0.1}>
             <div className="bg-white rounded-xl p-8 h-full shadow-sm">
               <h3 className="text-xl font-bold text-[#1A1A2E] mb-5">Medicare Supplement</h3>
-              <ul className="space-y-3 text-sm text-[#4B5563]">
+              <ul className="space-y-3 text-base text-[#374151]">
                 <li><span className="font-bold text-[#1A1A2E]">Freedom:</span> See any doctor in the USA that accepts Medicare.</li>
                 <li><span className="font-bold text-[#1A1A2E]">Predictability:</span> The lowest out-of-pocket costs when seeing doctors.</li>
                 <li><span className="font-bold text-[#1A1A2E]">Simplicity:</span> No referrals needed to see a specialist.</li>
@@ -33,7 +33,7 @@ export default function MedicarePlans() {
           <AnimatedSection delay={0.2}>
             <div className="bg-[#1A72C0] rounded-xl p-8 h-full">
               <h3 className="text-xl font-bold text-white mb-5">Medicare Advantage</h3>
-              <ul className="space-y-3 text-sm text-white/80">
+              <ul className="space-y-3 text-base text-white">
                 <li><span className="font-bold text-white">Value:</span> Plans as low as $0 monthly premium.</li>
                 <li><span className="font-bold text-white">Extras:</span> May include dental, vision, gym, and OTC benefits.</li>
                 <li><span className="font-bold text-white">All-in-One:</span> Typically includes Part D prescription coverage.</li>
@@ -43,7 +43,7 @@ export default function MedicarePlans() {
         </div>
 
         <AnimatedSection className="text-center" delay={0.3}>
-          <p className="text-[#6B7280] text-sm mb-4">Not sure which plan is right for you? We'll walk you through it — at no cost.</p>
+          <p className="text-[#4B5563] text-base mb-4">Not sure which plan is right for you? We'll walk you through it — at no cost.</p>
           <a
             href={`tel:${PHONE.replace(/\D/g, "")}`}
             className="inline-block bg-[#E8A020] hover:bg-[#D4911B] text-white font-bold uppercase tracking-wide text-sm px-8 py-3.5 rounded-lg transition-colors shadow-md"
