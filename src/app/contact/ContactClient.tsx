@@ -43,6 +43,25 @@ export default function ContactClient() {
         </div>
       </section>
 
+      {/* ── Booking Calendar ── */}
+      <section className="py-16 px-4 border-b border-[#E5E7EB]">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">Free · No Pressure · No Obligation</span>
+            <h2 className="text-3xl font-extrabold text-[#1A1A2E] mb-3">Pick a Time That Works for You</h2>
+            <p className="text-[#4B5563]">In person at our Kendall office or by phone — whichever is easiest.</p>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg border border-[#E5E7EB]">
+            <iframe
+              src="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"
+              style={{ width: "100%", border: "none", overflow: "hidden", minHeight: "700px" }}
+              scrolling="no"
+              id="gnH26nD1h46Zd5rO88gz_contact"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ── Info + Team Photo ── */}
       <section className="py-16 px-4 bg-[#F3F4F6]">
         <div className="max-w-5xl mx-auto flex flex-col lg:flex-row gap-12 items-start">
@@ -134,7 +153,7 @@ export default function ContactClient() {
 
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="/A&E Team Picture .jpg"
+                src="/slideshow/s10.jpg"
                 alt="The A&E Insurance Agency team"
                 className="w-full object-cover object-center"
               />
