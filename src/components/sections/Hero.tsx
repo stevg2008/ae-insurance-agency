@@ -44,7 +44,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-[#1A1A2E] leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-[2.6rem] font-extrabold text-[#1A1A2E] leading-tight">
               {TAGLINE}
             </h1>
           </motion.div>
