@@ -70,7 +70,7 @@ export default function PartBPenaltyClient() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#0071BB] mb-5">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#1A72C0] mb-5">
             <DollarSign size={26} className="text-white" />
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-3">
@@ -119,11 +119,11 @@ export default function PartBPenaltyClient() {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleCalculate()}
               placeholder="e.g. 24"
-              className="flex-1 border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#0071BB]"
+              className="flex-1 border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0]"
             />
             <button
               onClick={handleCalculate}
-              className="bg-[#0071BB] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-3 rounded-lg transition-colors whitespace-nowrap"
+              className="bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-3 rounded-lg transition-colors whitespace-nowrap"
             >
               Calculate Penalty
             </button>
@@ -148,7 +148,7 @@ export default function PartBPenaltyClient() {
               transition={{ duration: 0.4 }}
             >
               {/* Main result */}
-              <div className={`rounded-2xl p-8 mb-4 text-center ${noPenalty ? "bg-green-700" : "bg-[#0071BB]"}`}>
+              <div className={`rounded-2xl p-8 mb-4 text-center ${noPenalty ? "bg-green-700" : "bg-[#1A72C0]"}`}>
                 <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">
                   Estimated Monthly Penalty for 2026
                 </p>
@@ -198,7 +198,7 @@ export default function PartBPenaltyClient() {
                         className={`flex justify-between items-center py-3 border-b border-[#F3F4F6] last:border-0 ${row.highlight ? "bg-[#DBEAFE] -mx-4 px-4 rounded-lg" : ""}`}
                       >
                         <span className={`text-sm ${row.highlight ? "font-extrabold text-[#1A1A2E]" : "text-[#4B5563]"}`}>{row.label}</span>
-                        <span className={`text-sm font-bold ${row.highlight ? "text-[#0071BB]" : "text-[#1A1A2E]"}`}>{row.value}</span>
+                        <span className={`text-sm font-bold ${row.highlight ? "text-[#1A72C0]" : "text-[#1A1A2E]"}`}>{row.value}</span>
                       </div>
                     ))}
                   </div>
@@ -234,7 +234,7 @@ export default function PartBPenaltyClient() {
               </div>
 
               {/* CTA */}
-              <div className="bg-[#0071BB] rounded-2xl p-8 text-center mb-4">
+              <div className="bg-[#1A72C0] rounded-2xl p-8 text-center mb-4">
                 <p className="text-white font-extrabold text-lg mb-2">
                   {noPenalty ? "Ready to Enroll the Right Way?" : "Don't Pay More Than You Have To"}
                 </p>
@@ -252,7 +252,7 @@ export default function PartBPenaltyClient() {
                   </a>
                   <a
                     href={`tel:${PHONE.replace(/\D/g, "")}`}
-                    className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-[#0071BB] font-bold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
+                    className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-[#1A72C0] font-bold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
                   >
                     <Phone size={13} />
                     Call {PHONE}
@@ -261,7 +261,7 @@ export default function PartBPenaltyClient() {
               </div>
 
               <div className="text-center">
-                <button onClick={handleReset} className="text-[#0071BB] text-sm font-semibold hover:underline">
+                <button onClick={handleReset} className="text-[#1A72C0] text-sm font-semibold hover:underline">
                   ← Calculate a different amount
                 </button>
               </div>

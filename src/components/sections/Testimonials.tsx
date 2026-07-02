@@ -48,7 +48,7 @@ export default function Testimonials() {
           {TESTIMONIALS.map((testimonial, i) => (
             <AnimatedSection key={testimonial.name} delay={i * 0.1}>
               <div className="bg-white rounded-2xl shadow-md p-8 h-full flex flex-col">
-                <span className="text-6xl text-[#0071BB] opacity-20 leading-none font-serif mb-2">&ldquo;</span>
+                <span className="text-6xl text-[#1A72C0] opacity-20 leading-none font-serif mb-2">&ldquo;</span>
                 <StarRating />
                 <p className="text-[#1A1A2E] leading-relaxed flex-grow italic">
                   &ldquo;{testimonial.quote}&rdquo;

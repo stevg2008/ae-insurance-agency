@@ -72,7 +72,7 @@ export default function BookModal({ isOpen, onClose }: Props) {
                 value={form.firstName}
                 onChange={handleChange}
                 required
-                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-2.5 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#0071BB] transition-colors"
+                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-2.5 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
               />
             </div>
             <div>
@@ -82,7 +82,7 @@ export default function BookModal({ isOpen, onClose }: Props) {
                 placeholder="Doe"
                 value={form.lastName}
                 onChange={handleChange}
-                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-2.5 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#0071BB] transition-colors"
+                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-2.5 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
               />
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function BookModal({ isOpen, onClose }: Props) {
               value={form.email}
               onChange={handleChange}
               required
-              className="w-full border border-[#D1D5DB] rounded-lg px-3 py-2.5 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#0071BB] transition-colors"
+              className="w-full border border-[#D1D5DB] rounded-lg px-3 py-2.5 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
             />
           </div>
 
@@ -109,7 +109,7 @@ export default function BookModal({ isOpen, onClose }: Props) {
               value={form.phone}
               onChange={handleChange}
               required
-              className="w-full border border-[#D1D5DB] rounded-lg px-3 py-2.5 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#0071BB] transition-colors"
+              className="w-full border border-[#D1D5DB] rounded-lg px-3 py-2.5 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
             />
           </div>
 
@@ -120,7 +120,7 @@ export default function BookModal({ isOpen, onClose }: Props) {
               placeholder="12345"
               value={form.zip}
               onChange={handleChange}
-              className="w-full border border-[#D1D5DB] rounded-lg px-3 py-2.5 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#0071BB] transition-colors"
+              className="w-full border border-[#D1D5DB] rounded-lg px-3 py-2.5 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
             />
           </div>
 

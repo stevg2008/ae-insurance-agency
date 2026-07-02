@@ -22,7 +22,7 @@ export default function BlogsClient() {
   return (
     <div className="bg-[#F3F4F6] min-h-screen">
       {/* Header */}
-      <div className="bg-[#0071BB] py-14 px-4 text-center">
+      <div className="bg-[#1A72C0] py-14 px-4 text-center">
         <span className="inline-block text-[#E8A020] font-bold text-xs uppercase tracking-widest mb-3">
           A&E Insurance Agency
         </span>
@@ -72,11 +72,11 @@ export default function BlogsClient() {
                       </>
                     )}
                   </div>
-                  <h2 className="text-[#1A1A2E] font-extrabold text-lg leading-snug mb-3 group-hover:text-[#0071BB] transition-colors">
+                  <h2 className="text-[#1A1A2E] font-extrabold text-lg leading-snug mb-3 group-hover:text-[#1A72C0] transition-colors">
                     {post.title}
                   </h2>
                   <p className="text-[#6B7280] text-sm leading-relaxed flex-1">{post.excerpt}</p>
-                  <span className="mt-4 text-[#0071BB] text-sm font-semibold group-hover:underline">
+                  <span className="mt-4 text-[#1A72C0] text-sm font-semibold group-hover:underline">
                     Read more →
                   </span>
                 </div>
@@ -101,7 +101,7 @@ export default function BlogsClient() {
                 onClick={() => setPage(n)}
                 className={`w-9 h-9 rounded-lg text-sm font-bold transition-colors ${
                   n === page
-                    ? "bg-[#0071BB] text-white"
+                    ? "bg-[#1A72C0] text-white"
                     : "bg-white border border-[#E5E7EB] text-[#1A1A2E] hover:bg-[#F3F4F6]"
                 }`}
               >

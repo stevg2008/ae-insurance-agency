@@ -18,7 +18,7 @@ export default function SteveBioClient() {
 
       {/* Back link */}
       <div className="max-w-5xl mx-auto px-4 pt-8">
-        <Link href="/about" className="inline-flex items-center gap-2 text-[#0071BB] text-sm font-semibold hover:underline">
+        <Link href="/about" className="inline-flex items-center gap-2 text-[#1A72C0] text-sm font-semibold hover:underline">
           <ArrowLeft size={15} />
           Back to Team
         </Link>
@@ -46,14 +46,14 @@ export default function SteveBioClient() {
             <div className="mt-6 flex flex-col gap-3">
               <a
                 href={`tel:${PHONE.replace(/\D/g, "")}`}
-                className="flex items-center gap-3 bg-[#0071BB] hover:bg-[#155fa0] text-white font-bold px-5 py-3.5 rounded-lg transition-colors text-sm"
+                className="flex items-center gap-3 bg-[#1A72C0] hover:bg-[#155fa0] text-white font-bold px-5 py-3.5 rounded-lg transition-colors text-sm"
               >
                 <Phone size={16} />
                 Call {PHONE}
               </a>
               <a
                 href={`mailto:${EMAIL}`}
-                className="flex items-center gap-3 border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#0071BB] hover:text-white font-bold px-5 py-3.5 rounded-lg transition-colors text-sm"
+                className="flex items-center gap-3 border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A72C0] hover:text-white font-bold px-5 py-3.5 rounded-lg transition-colors text-sm"
               >
                 <Mail size={16} />
                 {EMAIL}
@@ -67,11 +67,11 @@ export default function SteveBioClient() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <span className="inline-block bg-[#DBEAFE] text-[#0071BB] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
+            <span className="inline-block bg-[#DBEAFE] text-[#1A72C0] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
               Founder & Licensed Medicare Broker
             </span>
             <h1 className="text-4xl font-extrabold text-[#1A1A2E] mb-2">Steve Germain</h1>
-            <p className="text-[#0071BB] font-semibold mb-6">A&E Insurance Agency, LLC · Miami, FL</p>
+            <p className="text-[#1A72C0] font-semibold mb-6">A&E Insurance Agency, LLC · Miami, FL</p>
 
             <div className="w-12 h-1 bg-[#E8A020] rounded mb-6" />
 
@@ -96,7 +96,7 @@ export default function SteveBioClient() {
                 const Icon = c.icon;
                 return (
                   <div key={c.label} className="flex items-center gap-3 bg-[#F3F4F6] rounded-lg px-4 py-3">
-                    <Icon size={16} className="text-[#0071BB] flex-shrink-0" />
+                    <Icon size={16} className="text-[#1A72C0] flex-shrink-0" />
                     <span className="text-sm font-semibold text-[#1A1A2E]">{c.label}</span>
                   </div>
                 );
@@ -114,7 +114,7 @@ export default function SteveBioClient() {
       </section>
 
       {/* Free book CTA */}
-      <section className="bg-[#0071BB] py-14 px-4 text-center">
+      <section className="bg-[#1A72C0] py-14 px-4 text-center">
         <div className="max-w-xl mx-auto">
           <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">Free Resource</p>
           <h2 className="text-2xl font-extrabold text-white mb-3">Get Steve&apos;s Medicare Decoded Book</h2>

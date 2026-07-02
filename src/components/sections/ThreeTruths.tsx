@@ -29,7 +29,7 @@ export default function ThreeTruths() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <AnimatedSection>
-          <p className="text-xs font-bold uppercase tracking-widest text-[#0071BB] mb-3">
+          <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-3">
             Our Commitment to Your Peace of Mind
           </p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-12">

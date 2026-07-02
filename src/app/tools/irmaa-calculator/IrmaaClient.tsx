@@ -136,7 +136,7 @@ export default function IrmaaClient() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#0071BB] mb-5">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#1A72C0] mb-5">
             <TrendingUp size={26} className="text-white" />
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-3">
@@ -188,7 +188,7 @@ export default function IrmaaClient() {
                   value={s.value}
                   checked={filingStatus === s.value}
                   onChange={() => { setFilingStatus(s.value); resetSelections(); }}
-                  className="accent-[#0071BB] w-4 h-4"
+                  className="accent-[#1A72C0] w-4 h-4"
                 />
                 <span className="text-sm font-semibold text-[#1A1A2E]">{s.label}</span>
               </label>
@@ -214,7 +214,7 @@ export default function IrmaaClient() {
               <select
                 value={bracketIndex}
                 onChange={(e) => handleBracketChange(e.target.value)}
-                className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#0071BB] bg-white mb-1"
+                className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white mb-1"
               >
                 <option value="">— Select Income Bracket —</option>
                 {BRACKETS.map((b, i) => (
@@ -236,7 +236,7 @@ export default function IrmaaClient() {
               <select
                 value={mfsBracketIndex}
                 onChange={(e) => { setMfsBracketIndex(e.target.value === "" ? "" : Number(e.target.value)); setKnowsPartD(""); setPartDPremiumInput(""); }}
-                className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#0071BB] bg-white mb-1"
+                className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white mb-1"
               >
                 <option value="">— Select Income Bracket —</option>
                 {MFS_PART_D_BRACKETS.map((b, i) => (
@@ -258,7 +258,7 @@ export default function IrmaaClient() {
               transition={{ duration: 0.4 }}
             >
               {/* Part B result */}
-              <div className="bg-[#0071BB] rounded-2xl p-8 mb-4">
+              <div className="bg-[#1A72C0] rounded-2xl p-8 mb-4">
                 <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-4">
                   Your 2026 Part B Premium
                 </p>
@@ -312,7 +312,7 @@ export default function IrmaaClient() {
                         value={v}
                         checked={knowsPartD === v}
                         onChange={() => { setKnowsPartD(v); setPartDPremiumInput(""); setPartDError(""); }}
-                        className="accent-[#0071BB] w-4 h-4"
+                        className="accent-[#1A72C0] w-4 h-4"
                       />
                       <span className="text-sm font-semibold text-[#1A1A2E] capitalize">{v === "yes" ? "Yes" : "No / Not sure"}</span>
                     </label>
@@ -332,7 +332,7 @@ export default function IrmaaClient() {
                       value={partDPremiumInput}
                       onChange={(e) => handlePartDInput(e.target.value)}
                       placeholder="e.g. 42.50"
-                      className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#0071BB]"
+                      className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0]"
                     />
                     {partDError && (
                       <div className="flex items-center gap-2 text-red-600 text-xs mt-2">
@@ -362,7 +362,7 @@ export default function IrmaaClient() {
                       <p className="text-[#9CA3AF] text-xl">=</p>
                       <div className="text-center bg-[#DBEAFE] rounded-xl px-4 py-3">
                         <p className="text-[#6B7280] text-xs mb-1">Total Part D</p>
-                        <p className="text-[#0071BB] text-xl font-extrabold">
+                        <p className="text-[#1A72C0] text-xl font-extrabold">
                           {knowsPartD === "yes" && partDPremiumInput && !partDError
                             ? fmt$(partDTotal)
                             : `${fmt$(activeSurcharge)} + your plan premium`}
@@ -386,7 +386,7 @@ export default function IrmaaClient() {
 
               {/* Combined total (only if individual/joint with Part D premium entered) */}
               {!isMfs && knowsPartD === "yes" && partDPremiumInput && !partDError && bracket && (
-                <div className="bg-[#0071BB] rounded-2xl p-8 mb-4 text-center">
+                <div className="bg-[#1A72C0] rounded-2xl p-8 mb-4 text-center">
                   <p className="text-white/70 text-xs font-bold uppercase tracking-widest mb-2">
                     Total Estimated Monthly Medicare Cost
                   </p>
@@ -420,9 +420,9 @@ export default function IrmaaClient() {
                         const isActive = i === bracketIndex;
                         return (
                           <tr key={i} className={isActive ? "bg-[#DBEAFE]" : ""}>
-                            <td className={`py-3 pr-3 font-medium ${isActive ? "text-[#0071BB] font-bold" : "text-[#4B5563]"}`}>
+                            <td className={`py-3 pr-3 font-medium ${isActive ? "text-[#1A72C0] font-bold" : "text-[#4B5563]"}`}>
                               {filingStatus === "individual" ? b.individual : b.joint}
-                              {isActive && <span className="ml-1 text-[10px] font-bold text-[#0071BB]">← YOU</span>}
+                              {isActive && <span className="ml-1 text-[10px] font-bold text-[#1A72C0]">← YOU</span>}
                             </td>
                             <td className={`py-3 pr-3 text-right font-semibold ${b.partBSurcharge === 0 ? "text-green-600" : "text-[#E8A020]"}`}>
                               {b.partBSurcharge === 0 ? "None" : `+${fmt$(b.partBSurcharge)}`}
@@ -460,9 +460,9 @@ export default function IrmaaClient() {
                         const isActive = i === mfsBracketIndex;
                         return (
                           <tr key={i} className={isActive ? "bg-[#DBEAFE]" : ""}>
-                            <td className={`py-3 pr-4 font-medium ${isActive ? "text-[#0071BB] font-bold" : "text-[#4B5563]"}`}>
+                            <td className={`py-3 pr-4 font-medium ${isActive ? "text-[#1A72C0] font-bold" : "text-[#4B5563]"}`}>
                               {b.label}
-                              {isActive && <span className="ml-1 text-[10px] font-bold text-[#0071BB]">← YOU</span>}
+                              {isActive && <span className="ml-1 text-[10px] font-bold text-[#1A72C0]">← YOU</span>}
                             </td>
                             <td className={`py-3 text-right font-semibold ${b.partDSurcharge === 0 ? "text-green-600" : "text-[#E8A020]"}`}>
                               {b.partDSurcharge === 0 ? "None" : `+${fmt$(b.partDSurcharge)}`}
@@ -481,7 +481,7 @@ export default function IrmaaClient() {
               {/* IRMAA appeal info */}
               <div className="bg-white rounded-2xl shadow-lg p-8 mb-4">
                 <div className="flex gap-3 items-start">
-                  <Info size={16} className="text-[#0071BB] flex-shrink-0 mt-0.5" />
+                  <Info size={16} className="text-[#1A72C0] flex-shrink-0 mt-0.5" />
                   <div>
                     <h3 className="font-extrabold text-[#1A1A2E] text-sm mb-2">Can I Appeal My IRMAA?</h3>
                     <p className="text-[#4B5563] text-sm leading-relaxed mb-3">
@@ -510,7 +510,7 @@ export default function IrmaaClient() {
               </div>
 
               {/* CTA */}
-              <div className="bg-[#0071BB] rounded-2xl p-8 text-center mb-4">
+              <div className="bg-[#1A72C0] rounded-2xl p-8 text-center mb-4">
                 <p className="text-white font-extrabold text-lg mb-2">Surprised by Your IRMAA?</p>
                 <p className="text-white/70 text-sm mb-6 leading-relaxed">
                   IRMAA can add hundreds of dollars a month to your Medicare costs. Steve can help you understand your notice, explore an appeal if you qualify, and plan your retirement income to minimize future surcharges.
@@ -524,7 +524,7 @@ export default function IrmaaClient() {
                   </a>
                   <a
                     href={`tel:${PHONE.replace(/\D/g, "")}`}
-                    className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-[#0071BB] font-bold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
+                    className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-[#1A72C0] font-bold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
                   >
                     <Phone size={13} />
                     Call {PHONE}
@@ -535,7 +535,7 @@ export default function IrmaaClient() {
               <div className="text-center">
                 <button
                   onClick={resetSelections}
-                  className="text-[#0071BB] text-sm font-semibold hover:underline"
+                  className="text-[#1A72C0] text-sm font-semibold hover:underline"
                 >
                   ← Start over
                 </button>

@@ -18,7 +18,7 @@ export default function SectionHeader({
   return (
     <AnimatedSection className={clsx("mb-12", centered && "text-center")}>
       {label && (
-        <span className="text-sm font-semibold uppercase tracking-widest text-[#0071BB] mb-2 block">
+        <span className="text-sm font-semibold uppercase tracking-widest text-[#1A72C0] mb-2 block">
           {label}
         </span>
       )}

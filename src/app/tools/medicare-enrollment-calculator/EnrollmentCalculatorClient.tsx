@@ -127,7 +127,7 @@ export default function EnrollmentCalculatorClient() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#0071BB] mb-5">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#1A72C0] mb-5">
             <CalendarDays size={26} className="text-white" />
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-3">
@@ -156,7 +156,7 @@ export default function EnrollmentCalculatorClient() {
               <select
                 value={month}
                 onChange={(e) => { setMonth(e.target.value); setDay(""); }}
-                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#0071BB] bg-white"
+                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white"
               >
                 <option value="">Month</option>
                 {MONTHS.map((m, i) => (
@@ -172,7 +172,7 @@ export default function EnrollmentCalculatorClient() {
                 value={day}
                 onChange={(e) => setDay(e.target.value)}
                 disabled={!month}
-                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#0071BB] bg-white disabled:opacity-40"
+                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white disabled:opacity-40"
               >
                 <option value="">Day</option>
                 {availableDays.map((d) => (
@@ -187,7 +187,7 @@ export default function EnrollmentCalculatorClient() {
               <select
                 value={year}
                 onChange={(e) => setYear(e.target.value)}
-                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#0071BB] bg-white"
+                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white"
               >
                 <option value="">Year</option>
                 {YEARS.map((y) => (
@@ -206,7 +206,7 @@ export default function EnrollmentCalculatorClient() {
 
           <button
             onClick={handleCalculate}
-            className="w-full bg-[#0071BB] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm py-4 rounded-lg transition-colors"
+            className="w-full bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm py-4 rounded-lg transition-colors"
           >
             Calculate My Enrollment Period
           </button>
@@ -232,7 +232,7 @@ export default function EnrollmentCalculatorClient() {
               )}
 
               {/* Main result */}
-              <div className="bg-[#0071BB] rounded-2xl p-8 mb-4 text-center">
+              <div className="bg-[#1A72C0] rounded-2xl p-8 mb-4 text-center">
                 <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">
                   Your Initial Enrollment Period
                 </p>
@@ -263,15 +263,15 @@ export default function EnrollmentCalculatorClient() {
                     return (
                       <div
                         key={p.offset}
-                        className={`flex gap-4 items-start rounded-xl p-4 ${isbirthMonth ? "bg-[#DBEAFE] border border-[#0071BB]" : "bg-[#F3F4F6]"}`}
+                        className={`flex gap-4 items-start rounded-xl p-4 ${isbirthMonth ? "bg-[#DBEAFE] border border-[#1A72C0]" : "bg-[#F3F4F6]"}`}
                       >
                         <CheckCircle2
                           size={16}
-                          className={`flex-shrink-0 mt-0.5 ${isbirthMonth ? "text-[#0071BB]" : "text-[#9CA3AF]"}`}
+                          className={`flex-shrink-0 mt-0.5 ${isbirthMonth ? "text-[#1A72C0]" : "text-[#9CA3AF]"}`}
                         />
                         <div className="flex-1 min-w-0">
                           <div className="flex flex-wrap items-center gap-2 mb-0.5">
-                            <span className={`text-xs font-bold uppercase tracking-wide ${isbirthMonth ? "text-[#0071BB]" : "text-[#6B7280]"}`}>
+                            <span className={`text-xs font-bold uppercase tracking-wide ${isbirthMonth ? "text-[#1A72C0]" : "text-[#6B7280]"}`}>
                               {p.label}
                             </span>
                             <span className={`font-extrabold text-sm ${isbirthMonth ? "text-[#1A1A2E]" : "text-[#1A1A2E]"}`}>
@@ -310,7 +310,7 @@ export default function EnrollmentCalculatorClient() {
               </div>
 
               {/* CTA */}
-              <div className="bg-[#0071BB] rounded-2xl p-8 text-center mb-4">
+              <div className="bg-[#1A72C0] rounded-2xl p-8 text-center mb-4">
                 <p className="text-white font-extrabold text-lg mb-2">Have Questions About Your Enrollment?</p>
                 <p className="text-white/70 text-sm mb-6 leading-relaxed">
                   Don't navigate Medicare alone. Steve will review your timeline, compare your options, and make sure you enroll at exactly the right time — for free.
@@ -324,7 +324,7 @@ export default function EnrollmentCalculatorClient() {
                   </a>
                   <a
                     href={`tel:${PHONE.replace(/\D/g, "")}`}
-                    className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-[#0071BB] font-bold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
+                    className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-[#1A72C0] font-bold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
                   >
                     <Phone size={13} />
                     Call {PHONE}
@@ -336,7 +336,7 @@ export default function EnrollmentCalculatorClient() {
               <div className="text-center">
                 <button
                   onClick={handleReset}
-                  className="text-[#0071BB] text-sm font-semibold hover:underline"
+                  className="text-[#1A72C0] text-sm font-semibold hover:underline"
                 >
                   ← Calculate a different birthday
                 </button>

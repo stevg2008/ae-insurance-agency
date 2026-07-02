@@ -14,7 +14,7 @@ export default function VideoClient() {
     <div className="min-h-screen bg-white">
 
       {/* ── Minimal Header ── */}
-      <header className="bg-[#0071BB] py-4 px-4">
+      <header className="bg-[#1A72C0] py-4 px-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <span className="text-white font-extrabold text-lg tracking-wide">A&amp;E Insurance Agency</span>
           <a
@@ -41,13 +41,13 @@ export default function VideoClient() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <span className="inline-block bg-[#DBEAFE] text-[#0071BB] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
+            <span className="inline-block bg-[#DBEAFE] text-[#1A72C0] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
               Your Free Workshop
             </span>
             <h1 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-3">
               Medicare Made Simple
             </h1>
-            <p className="text-[#4B5563]">Watch the full workshop below. Have questions? Call us at <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="text-[#0071BB] font-bold">{PHONE}</a>.</p>
+            <p className="text-[#4B5563]">Watch the full workshop below. Have questions? Call us at <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="text-[#1A72C0] font-bold">{PHONE}</a>.</p>
           </motion.div>
 
           {/* Video embed */}
@@ -93,7 +93,7 @@ export default function VideoClient() {
                   className="bg-[#F3F4F6] rounded-2xl p-7 flex flex-col gap-4"
                 >
                   <div className="w-12 h-12 rounded-full bg-[#DBEAFE] flex items-center justify-center">
-                    <Icon size={20} className="text-[#0071BB]" />
+                    <Icon size={20} className="text-[#1A72C0]" />
                   </div>
                   <div>
                     <h3 className="font-extrabold text-[#1A1A2E] mb-2">{step.title}</h3>
@@ -101,7 +101,7 @@ export default function VideoClient() {
                     <a
                       href={step.action.href}
                       {...(step.action.download ? { download: true } : {})}
-                      className="inline-block bg-[#0071BB] hover:bg-[#155fa0] text-white font-bold uppercase tracking-wide text-xs px-5 py-3 rounded-lg transition-colors"
+                      className="inline-block bg-[#1A72C0] hover:bg-[#155fa0] text-white font-bold uppercase tracking-wide text-xs px-5 py-3 rounded-lg transition-colors"
                     >
                       {step.action.label}
                     </a>
@@ -114,7 +114,7 @@ export default function VideoClient() {
       </section>
 
       {/* ── What to expect on your call ── */}
-      <section className="py-14 px-4 bg-[#0071BB]">
+      <section className="py-14 px-4 bg-[#1A72C0]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-2xl font-extrabold text-white mb-3">What to Expect on Your Free Call</h2>
           <p className="text-white/60 text-sm mb-8">A typical first call with Steve takes 20–30 minutes and covers:</p>

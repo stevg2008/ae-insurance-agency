@@ -31,7 +31,7 @@ export default function AboutClient() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero banner */}
-      <section className="bg-gradient-to-br from-[#0071BB] to-[#0D4A8A] py-20 px-4 text-center">
+      <section className="bg-gradient-to-br from-[#1A72C0] to-[#0D4A8A] py-20 px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ export default function AboutClient() {
                     className="w-full object-cover aspect-[3/4] group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-[#0071BB]/0 group-hover:bg-[#0071BB]/20 transition-colors duration-300 flex items-end">
+                  <div className="absolute inset-0 bg-[#1A72C0]/0 group-hover:bg-[#1A72C0]/20 transition-colors duration-300 flex items-end">
                     <div className="w-full p-4 bg-gradient-to-t from-black/60 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                       <p className="text-white text-sm font-semibold text-center">
                         {member.bioLink ? "View Full Bio →" : "Click to get in touch"}
@@ -84,7 +84,7 @@ export default function AboutClient() {
                 <h2 className="text-2xl font-bold text-[#1A1A2E]">
                   {member.name}
                 </h2>
-                <p className="text-[#0071BB] font-semibold mt-1">
+                <p className="text-[#1A72C0] font-semibold mt-1">
                   {member.title}
                 </p>
 

@@ -11,7 +11,7 @@ const STEPS = [
     number: "01",
     title: "Know What You Have",
     subtitle: "A clear picture of your finances is the foundation of every retirement plan.",
-    color: "#0071BB",
+    color: "#1A72C0",
     bullets: [
       { label: "Social Security", body: "Most people don't realize how much the timing of when you claim Social Security affects your lifetime income. Claiming at 62 vs. 70 can mean a difference of hundreds of dollars per month — permanently. We help you find your optimal claiming age based on your health, work history, and income needs." },
       { label: "Pensions & 401(k)s", body: "If you have a pension, you'll face decisions about lump-sum vs. monthly payments, survivor benefits, and more. For 401(k) and IRA accounts, we review your current allocation, tax exposure, and distribution strategy so your money lasts as long as you do." },
@@ -47,7 +47,7 @@ const STEPS = [
     number: "04",
     title: "Leave a Legacy",
     subtitle: "Make sure what you've built goes to the people and causes you care about.",
-    color: "#0071BB",
+    color: "#1A72C0",
     bullets: [
       { label: "Beneficiary Reviews", body: "Outdated beneficiary designations are one of the most common and costly estate planning mistakes. An old designation on a 401(k) or life insurance policy overrides your will. We help you review and update these so your assets go exactly where you intend." },
       { label: "Life Insurance in Retirement", body: "Life insurance isn't just for when you're young. In retirement, it can be used to replace income for a surviving spouse, cover final expenses, or create a tax-free inheritance for your children. We review whether your current coverage still fits your current goals." },
@@ -73,7 +73,7 @@ export default function RetirementClient() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-block text-[#0071BB] font-bold text-xs uppercase tracking-widest mb-3">
+              <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">
                 Retirement Planning
               </span>
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#1A1A2E] leading-tight mb-4">
@@ -85,13 +85,13 @@ export default function RetirementClient() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <a
                   href={NEEDS_ASSESSMENT_URL}
-                  className="inline-flex items-center justify-center text-center bg-[#0071BB] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
+                  className="inline-flex items-center justify-center text-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                 >
                   Schedule Your Needs Assessment
                 </a>
                 <a
                   href={`tel:${PHONE.replace(/\D/g, "")}`}
-                  className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#0071BB] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
+                  className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A72C0] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                 >
                   Call {PHONE}
                 </a>
@@ -140,7 +140,7 @@ export default function RetirementClient() {
                   </h2>
                 </div>
               </div>
-              <p className="text-[#0071BB] font-semibold mb-8 text-base">{step.subtitle}</p>
+              <p className="text-[#1A72C0] font-semibold mb-8 text-base">{step.subtitle}</p>
 
               {/* Bullets */}
               <div className="space-y-6 mb-8">
@@ -168,7 +168,7 @@ export default function RetirementClient() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#0071BB] py-16 px-4 text-center">
+      <section className="bg-[#1A72C0] py-16 px-4 text-center">
         <AnimatedSection className="max-w-xl mx-auto">
           <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">No Cost. No Pressure. No Obligation.</p>
           <h2 className="text-3xl font-extrabold text-white mb-4">

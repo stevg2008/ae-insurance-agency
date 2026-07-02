@@ -41,7 +41,7 @@ export default function RetirementPlanning() {
                 <AnimatedSection key={pillar.title} delay={i * 0.1}>
                   <div className="flex items-start gap-4 p-6 rounded-xl hover:bg-[#F8F9FC] transition-colors">
                     <div className="w-12 h-12 rounded-xl bg-[#EBF5FF] flex items-center justify-center flex-shrink-0">
-                      <Icon size={22} className="text-[#0071BB]" />
+                      <Icon size={22} className="text-[#1A72C0]" />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-[#1A1A2E] mb-1">{pillar.title}</h3>
@@ -54,7 +54,7 @@ export default function RetirementPlanning() {
 
             {/* Callout stat */}
             <AnimatedSection delay={0.35}>
-              <div className="mt-4 p-6 bg-[#0071BB] rounded-2xl text-white">
+              <div className="mt-4 p-6 bg-[#1A72C0] rounded-2xl text-white">
                 <p className="text-4xl font-bold text-[#E8A020] mb-1">South Florida&apos;s Trusted Agency</p>
                 <p className="text-blue-100">Helping Miami families build retirement clarity for over a decade</p>
               </div>

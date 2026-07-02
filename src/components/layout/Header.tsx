@@ -82,7 +82,7 @@ export default function Header() {
                   onMouseEnter={() => handleMouseEnter(link.label)}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <button className="flex items-center gap-1 text-[#1A1A2E] hover:text-[#0071BB] font-medium text-sm transition-colors">
+                  <button className="flex items-center gap-1 text-[#1A1A2E] hover:text-[#1A72C0] font-medium text-sm transition-colors">
                     {link.label}
                     <ChevronDown
                       size={14}
@@ -104,7 +104,7 @@ export default function Header() {
                           <Link
                             key={child.label}
                             href={child.href}
-                            className="block px-4 py-2.5 text-sm text-[#1A1A2E] hover:bg-[#EBF5FF] hover:text-[#0071BB] transition-colors"
+                            className="block px-4 py-2.5 text-sm text-[#1A1A2E] hover:bg-[#EBF5FF] hover:text-[#1A72C0] transition-colors"
                           >
                             {child.label}
                           </Link>
@@ -117,7 +117,7 @@ export default function Header() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-[#1A1A2E] hover:text-[#0071BB] font-medium text-sm transition-colors whitespace-nowrap"
+                  className="text-[#1A1A2E] hover:text-[#1A72C0] font-medium text-sm transition-colors whitespace-nowrap"
                 >
                   {link.label}
                 </Link>
@@ -158,7 +158,7 @@ export default function Header() {
                 <div key={link.label}>
                   <Link
                     href={link.href}
-                    className="block py-2 text-[#1A1A2E] hover:text-[#0071BB] font-medium"
+                    className="block py-2 text-[#1A1A2E] hover:text-[#1A72C0] font-medium"
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}
@@ -167,7 +167,7 @@ export default function Header() {
                     <Link
                       key={child.label}
                       href={child.href}
-                      className="block py-1.5 pl-4 text-sm text-[#6B7280] hover:text-[#0071BB]"
+                      className="block py-1.5 pl-4 text-sm text-[#6B7280] hover:text-[#1A72C0]"
                       onClick={() => setMobileOpen(false)}
                     >
                       {child.label}
