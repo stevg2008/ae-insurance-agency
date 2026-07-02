@@ -6,19 +6,19 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { TAGLINE, PHONE } from "@/lib/constants";
 
 const SLIDES = [
-  { src: "/slideshow/s01.jpg",  alt: "A&E client meeting — Jonathan and Elaine",  pos: "top center" },
-  { src: "/slideshow/s02.jpg",  alt: "Medicare Decoded book by Steve Germain",     pos: "center center" },
-  { src: "/slideshow/s03.jpg",  alt: "Steve with Jos and Marie",                   pos: "center center" },
-  { src: "/slideshow/s06.jpg",  alt: "Steve and Annabella laughing",               pos: "top center" },
-  { src: "/slideshow/s07.jpg",  alt: "Steve helping Eleonora at home",             pos: "top center" },
-  { src: "/slideshow/s08.jpg",  alt: "Steve with Leslie and Jennifer",             pos: "center center" },
-  { src: "/slideshow/s09.jpg",  alt: "Steve holding Medicare Decoded book",        pos: "top center" },
-  { src: "/slideshow/s10.jpg",  alt: "A&E Insurance Agency team photo",            pos: "center center" },
-  { src: "/slideshow/s11.jpg",  alt: "Steve at the seminar",                       pos: "top center" },
-  { src: "/slideshow/s13.jpg",  alt: "Wide view of Medicare seminar",              pos: "center center" },
+  { src: "/slideshow/s01.jpg",  alt: "A&E Insurance Agency Medicare consultation with South Florida client",  pos: "top center" },
+  { src: "/slideshow/s03.jpg",  alt: "Steve Germain meeting with Medicare clients Jos and Marie in Miami",    pos: "center center" },
+  { src: "/slideshow/s06.jpg",  alt: "Steve Germain laughing with Medicare client Annabella",                pos: "top center" },
+  { src: "/slideshow/s07.jpg",  alt: "Steve Germain helping Medicare client Eleonora at home in South Florida", pos: "top center" },
+  { src: "/slideshow/s08.jpg",  alt: "Steve Germain reviewing Medicare plans with clients Leslie and Jennifer", pos: "center center" },
+  { src: "/slideshow/s09.jpg",  alt: "Steve Germain holding Medicare Decoded book — A&E Insurance Agency",   pos: "top center" },
+  { src: "/slideshow/s02.jpg",  alt: "Medicare Decoded — A clear guide for people turning 65 by Steve Germain", pos: "center center" },
+  { src: "/slideshow/s10.jpg",  alt: "A&E Insurance Agency team — independent Medicare brokers in Miami FL", pos: "center center" },
+  { src: "/slideshow/s11.jpg",  alt: "Steve Germain presenting at a Medicare educational seminar in South Florida", pos: "top center" },
+  { src: "/slideshow/s13.jpg",  alt: "Attendees at an A&E Insurance Agency Medicare workshop in Miami",      pos: "center center" },
 ];
 
-const INTERVAL = 2000;
+const INTERVAL = 4000;
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
@@ -48,13 +48,13 @@ export default function Hero() {
             Independent Medicare Brokers — Serving South Florida Since 2009
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A1A2E] leading-tight mb-5">
-            The Right Medicare Plan.<br className="hidden sm:block" /> At No Cost to You.
+            Get Your Medicare Right<br className="hidden sm:block" /> the First Time.
           </h1>
           <p className="text-[#4B5563] text-lg leading-relaxed mb-3 max-w-2xl">
-            We compare Medicare Supplement and Medicare Advantage plans from 25+ carriers — so you get the coverage that fits your doctors, your budget, and your life.
+            As an independent Medicare broker, we compare Medicare Supplement, Medicare Advantage, and Prescription Drug Plans from over 25 carriers — then recommend the one that fits your doctors, your budget, and your life. Expert guidance, at no cost to you.
           </p>
           <p className="text-[#6B7280] text-sm mb-8 max-w-xl">
-            Licensed Independent Broker · Author of <em>Medicare Decoded</em> · 4,200+ Clients Enrolled
+            Licensed Independent Broker · Author of <em>Medicare Decoded</em> · 4,200+ South Florida Families Helped
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a

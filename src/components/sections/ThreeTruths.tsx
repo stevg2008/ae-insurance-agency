@@ -4,19 +4,19 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const TRUTHS = [
   {
-    title: "No Fees. Ever.",
+    title: "You Pay Nothing for Our Help.",
     description:
       "We never charge you a fee of any kind for our education or enrollment services.",
   },
   {
-    title: "Same Price as Going Alone.",
+    title: "Your Premium Is the Same Whether You Use Us or Not.",
     description:
       "You pay the exact same price for your insurance whether you use our expert help or go it alone.",
   },
   {
-    title: "We Work for You — Not the Carriers.",
+    title: "We Recommend What's Best for You — Not What Pays Us More.",
     description:
-      "We work with over 25 top-rated companies. We don't work for them — we work for you.",
+      "We work with over 25 top-rated carriers. We don't work for them — we work for you.",
   },
 ];
 

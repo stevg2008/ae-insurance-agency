@@ -11,7 +11,7 @@ export default function MedicareParts() {
             The Essentials of Part A and Part B Explained
           </p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-            Understanding Your Base Coverage
+            Understanding Your Base Medicare Coverage
           </h2>
         </AnimatedSection>
 

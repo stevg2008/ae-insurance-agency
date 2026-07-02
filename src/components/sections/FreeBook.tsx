@@ -18,19 +18,16 @@ export default function FreeBook() {
 
             {/* Left: text + CTAs */}
             <AnimatedSection>
-              <span className="inline-block bg-[#DBEAFE] text-[#1A72C0] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-5">
-                Free Resource
-              </span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] leading-tight mb-4">
                 Get Your Free Copy of<br />
                 <span className="text-[#1A72C0]">Medicare Decoded</span>
               </h2>
               <p className="text-[#4B5563] text-lg leading-relaxed mb-8">
-                Steve Germain's comprehensive guide to understanding your Medicare options — written in plain English. Learn about plans, costs, and how to make the right choice for your healthcare needs.
+                Steve Germain's plain-English guide to understanding Medicare Supplement, Medicare Advantage, and Prescription Drug Plans — written specifically for people turning 65 in South Florida.
               </p>
               <button
                 onClick={() => setModalOpen(true)}
-                className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-white font-bold uppercase tracking-wide text-sm px-7 py-4 rounded transition-colors text-center"
+                className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-white font-bold uppercase tracking-wide text-sm px-7 py-4 rounded-lg transition-colors text-center"
               >
                 Download Free PDF
               </button>

@@ -19,7 +19,7 @@ const STEPS = [
     color: "#1A72C0",
     title: "The Solution",
     description:
-      "We recommend Umbrella Coverage for every client. These plans pay a tax-free cash benefit directly to you, giving you the freedom to focus on healing instead of finances.",
+      "We recommend Critical Illness coverage for every client. These plans pay a tax-free cash benefit directly to you, giving you the freedom to focus on healing instead of finances.",
   },
 ];
 
@@ -30,9 +30,12 @@ export default function MajorExposures() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: heading + icon list */}
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-10 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-5 leading-tight">
               Closing The Gaps In<br className="hidden md:block" /> Your Coverage
             </h2>
+            <p className="text-[#1A72C0] text-sm font-semibold mb-5">
+              Original Medicare covers the essentials — but it has gaps that can become costly when it matters most.
+            </p>
             <p className="text-[#4B5563] mb-8 leading-relaxed">
               Medicare is designed to pay your doctors and hospitals, but it wasn't built to cover the personal financial toll of a major illness.
             </p>
