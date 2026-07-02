@@ -54,7 +54,7 @@ export default function ContactClient() {
           <div className="rounded-2xl overflow-hidden shadow-lg border border-[#E5E7EB]">
             <iframe
               src="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"
-              style={{ width: "100%", border: "none", overflow: "hidden", minHeight: "700px" }}
+              style={{ width: "100%", border: "none", overflow: "hidden", height: "580px" }}
               scrolling="no"
               id="gnH26nD1h46Zd5rO88gz_contact"
             />
