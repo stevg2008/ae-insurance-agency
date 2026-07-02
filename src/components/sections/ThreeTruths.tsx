@@ -1,24 +1,20 @@
 "use client";
 
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { WEBINAR_URL, WEBINAR_LABEL_SHORT } from "@/lib/constants";
 
 const TRUTHS = [
   {
-    number: "1",
-    title: "No Fees",
+    title: "No Fees. Ever.",
     description:
       "We never charge you a fee of any kind for our education or enrollment services.",
   },
   {
-    number: "2",
-    title: "Same Price",
+    title: "Same Price as Going Alone.",
     description:
       "You pay the exact same price for your insurance whether you use our expert help or go it alone.",
   },
   {
-    number: "3",
-    title: "No Bias",
+    title: "We Work for You — Not the Carriers.",
     description:
       "We work with over 25 top-rated companies. We don't work for them — we work for you.",
   },
@@ -26,33 +22,29 @@ const TRUTHS = [
 
 export default function ThreeTruths() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <AnimatedSection>
+    <section className="py-20 bg-white border-t border-[#E5E7EB]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimatedSection className="text-center mb-14">
           <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-3">
-            Our Commitment to Your Peace of Mind
+            Our Commitment to You
           </p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-12">
-            Our Three Truths: Total Transparency For You
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E]">
+            Total Transparency. No Exceptions.
           </h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="divide-y divide-[#E5E7EB]">
           {TRUTHS.map((truth, i) => (
-            <AnimatedSection key={truth.number} delay={i * 0.1}>
-              <div className="bg-[#F3F4F6] rounded-xl p-8 h-full text-left">
-                <div className="w-12 h-12 rounded-full bg-[#E8A020] flex items-center justify-center mb-5">
-                  <span className="text-white font-extrabold text-lg">{truth.number}</span>
-                </div>
-                <h3 className="text-base font-extrabold text-[#1A1A2E] uppercase tracking-wide mb-3">
+            <AnimatedSection key={truth.title} delay={i * 0.1}>
+              <div className="py-8 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-10">
+                <h3 className="text-lg font-extrabold text-[#1A1A2E] sm:w-72 shrink-0">
                   {truth.title}
                 </h3>
-                <p className="text-[#6B7280] text-sm leading-relaxed">{truth.description}</p>
+                <p className="text-[#6B7280] text-base leading-relaxed">{truth.description}</p>
               </div>
             </AnimatedSection>
           ))}
         </div>
-
       </div>
     </section>
   );

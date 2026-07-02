@@ -1,7 +1,7 @@
 "use client";
 
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { WEBINAR_URL, WEBINAR_LABEL_SHORT } from "@/lib/constants";
+import { PHONE } from "@/lib/constants";
 
 export default function MedicarePlans() {
   return (
@@ -20,12 +20,6 @@ export default function MedicarePlans() {
           {/* Medicare Supplement — white card */}
           <AnimatedSection delay={0.1}>
             <div className="bg-white rounded-xl p-8 h-full shadow-sm">
-              <div className="flex gap-4 mb-5">
-                {/* simple icons as text/emoji stand-ins */}
-                <span className="text-2xl">🏥</span>
-                <span className="text-2xl">💲</span>
-                <span className="text-2xl">🏢</span>
-              </div>
               <h3 className="text-xl font-bold text-[#1A1A2E] mb-5">Medicare Supplement</h3>
               <ul className="space-y-3 text-sm text-[#4B5563]">
                 <li><span className="font-bold text-[#1A1A2E]">Freedom:</span> See any doctor in the USA that accepts Medicare.</li>
@@ -38,11 +32,6 @@ export default function MedicarePlans() {
           {/* Medicare Advantage — dark navy card */}
           <AnimatedSection delay={0.2}>
             <div className="bg-[#1A72C0] rounded-xl p-8 h-full">
-              <div className="flex gap-4 mb-5">
-                <span className="text-2xl">🏥</span>
-                <span className="text-2xl">💲</span>
-                <span className="text-2xl">🏢</span>
-              </div>
               <h3 className="text-xl font-bold text-white mb-5">Medicare Advantage</h3>
               <ul className="space-y-3 text-sm text-white/80">
                 <li><span className="font-bold text-white">Value:</span> Plans as low as $0 monthly premium.</li>
@@ -54,11 +43,12 @@ export default function MedicarePlans() {
         </div>
 
         <AnimatedSection className="text-center" delay={0.3}>
+          <p className="text-[#6B7280] text-sm mb-4">Not sure which plan is right for you? We'll walk you through it — at no cost.</p>
           <a
-            href={WEBINAR_URL}
-            className="inline-block bg-[#1A72C0] hover:bg-[#155fa0] text-white font-bold uppercase tracking-wide text-sm px-8 py-3.5 rounded transition-colors"
+            href={`tel:${PHONE.replace(/\D/g, "")}`}
+            className="inline-block bg-[#E8A020] hover:bg-[#D4911B] text-white font-bold uppercase tracking-wide text-sm px-8 py-3.5 rounded-lg transition-colors shadow-md"
           >
-            {WEBINAR_LABEL_SHORT}
+            Speak With a Licensed Advisor — {PHONE}
           </a>
         </AnimatedSection>
       </div>

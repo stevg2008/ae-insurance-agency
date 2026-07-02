@@ -45,20 +45,23 @@ export default function Hero() {
           className="mb-10"
         >
           <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-3">
-            South Florida's Trusted Medicare Experts — Serving Families Since 2009
+            Independent Medicare Brokers — Serving South Florida Since 2009
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A1A2E] leading-tight mb-5">
-            {TAGLINE}
+            The Right Medicare Plan.<br className="hidden sm:block" /> At No Cost to You.
           </h1>
-          <p className="text-[#4B5563] text-lg leading-relaxed mb-8 max-w-2xl">
-            Get expert Medicare guidance at no cost to you. We compare every plan, answer every question, and stay with you for life.
+          <p className="text-[#4B5563] text-lg leading-relaxed mb-3 max-w-2xl">
+            We compare Medicare Supplement and Medicare Advantage plans from 25+ carriers — so you get the coverage that fits your doctors, your budget, and your life.
+          </p>
+          <p className="text-[#6B7280] text-sm mb-8 max-w-xl">
+            Licensed Independent Broker · Author of <em>Medicare Decoded</em> · 4,200+ Clients Enrolled
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href={`tel:${PHONE.replace(/\D/g, "")}`}
               className="inline-flex items-center justify-center bg-[#E8A020] hover:bg-[#D4911B] text-white font-extrabold uppercase tracking-wide text-base px-10 py-4 rounded-lg transition-colors shadow-lg whitespace-nowrap"
             >
-              📞 Call {PHONE}
+              Call {PHONE}
             </a>
             <a
               href="/contact"
