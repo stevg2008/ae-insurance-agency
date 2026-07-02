@@ -66,7 +66,7 @@ export default function Hero() {
                 href="/watch"
                 className="inline-block bg-[#1A72C0] hover:bg-[#155fa0] text-white font-bold uppercase tracking-wide text-sm px-7 py-3.5 rounded transition-colors text-center"
               >
-                Register for Online Workshop
+                Watch Our Free Medicare Workshop
               </a>
               <a
                 href={`tel:${PHONE.replace(/\D/g, "")}`}
