@@ -43,22 +43,20 @@ export default function ContactClient() {
         </div>
       </section>
 
-      {/* ── Booking Calendar ── */}
-      <section className="py-8 px-4 border-b border-[#E5E7EB]">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-6">
-            <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">Free · No Pressure · No Obligation</span>
-            <h2 className="text-3xl font-extrabold text-[#1A1A2E] mb-3">Pick a Time That Works for You</h2>
-            <p className="text-[#4B5563]">In person at our Kendall office or by phone — whichever is easiest.</p>
-          </div>
-          <div className="rounded-2xl overflow-hidden shadow-lg border border-[#E5E7EB]">
-            <iframe
-              src="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"
-              style={{ width: "100%", border: "none", overflow: "hidden", height: "520px" }}
-              scrolling="no"
-              id="gnH26nD1h46Zd5rO88gz_contact"
-            />
-          </div>
+      {/* ── Book a Consultation CTA ── */}
+      <section className="py-14 px-4 border-b border-[#E5E7EB]">
+        <div className="max-w-2xl mx-auto text-center">
+          <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">Free · No Pressure · No Obligation</span>
+          <h2 className="text-3xl font-extrabold text-[#1A1A2E] mb-3">Ready to Get Started?</h2>
+          <p className="text-[#4B5563] mb-8">Pick a time that works for you — in person at our Kendall office or by phone, whichever is easiest.</p>
+          <a
+            href="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-[#E8A020] hover:bg-[#D4911B] text-white font-bold text-base uppercase tracking-wide px-10 py-4 rounded-lg shadow-md transition-colors"
+          >
+            Book a Free Consultation
+          </a>
         </div>
       </section>
 
