@@ -7,7 +7,10 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 
-  const webhookUrl = process.env.GHL_WEBHOOK_URL || "https://services.leadconnectorhq.com/hooks/KQ2C7PNRgoxVKqxmCXlN/webhook-trigger/7bfef2d4-88c1-45ce-a81a-03f7e9e5dea6";
+  const webhookUrl = process.env.GHL_WEBHOOK_URL;
+  if (!webhookUrl) {
+    return NextResponse.json({ error: "Webhook not configured" }, { status: 500 });
+  }
 
   try {
     const res = await fetch(webhookUrl, {

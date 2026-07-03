@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { TAGLINE, PHONE } from "@/lib/constants";
+import { TAGLINE, PHONE, WEBINAR_URL } from "@/lib/constants";
 
 const SLIDES = [
   { src: "/slideshow/s01.jpg",  alt: "A&E Insurance Agency Medicare consultation with South Florida client",  pos: "top center" },
@@ -64,10 +64,10 @@ export default function Hero() {
               Call {PHONE}
             </a>
             <Link
-              href="/contact"
+              href={WEBINAR_URL}
               className="inline-flex items-center justify-center border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A1A2E] hover:text-white font-bold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors text-center whitespace-nowrap"
             >
-              Schedule a Consultation
+              Watch Free Medicare Workshop
             </Link>
           </div>
         </motion.div>
