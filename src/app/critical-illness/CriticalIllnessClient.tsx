@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { PHONE } from "@/lib/constants";
 
-const NEEDS_ASSESSMENT_URL = "/contact";
+const CONTACT_URL = "/contact";
 
 const GAPS = [
   {
@@ -15,7 +16,13 @@ const GAPS = [
     bullets: [
       { label: "The Gap", body: "Original Medicare pays 80% of approved medical costs. That leaves you personally responsible for the remaining 20% — with no out-of-pocket maximum. A $100,000 surgery means $20,000 coming out of your pocket." },
       { label: "It Adds Up Fast", body: "Most people assume Medicare will cover most of their medical bills. The reality is that without supplemental coverage, a single hospitalization or serious diagnosis can result in tens of thousands of dollars in out-of-pocket costs." },
-      { label: "The Solution", body: "A Medicare Supplement (Medigap) plan or a Medicare Advantage plan with a built-in out-of-pocket maximum can close this gap entirely. We compare your options and find the right fit — at no cost to you." },
+      {
+        label: "The Solution", body: (
+          <>
+            A <Link href="/medicare" className="text-[#1A72C0] underline hover:text-[#155fa0]">Medicare Supplement (Medigap) plan</Link> or a Medicare Advantage plan with a built-in out-of-pocket maximum can close this gap entirely. We compare your options and find the right fit — at no cost to you.
+          </>
+        )
+      },
     ],
     bottomLine: "The 20% gap isn't small. Without coverage to close it, one health event can become a financial emergency.",
   },
@@ -27,7 +34,15 @@ const GAPS = [
     bullets: [
       { label: "What Medicare Covers", body: "Medicare covers short-term skilled nursing care — typically up to 100 days following a qualifying hospital stay. After that, you're on your own. It does not cover custodial care, assisted living, or long-term in-home care." },
       { label: "The Real Cost", body: "The average cost of a private nursing home room exceeds $100,000 per year. In-home care can run $50,000–$75,000 annually. Without a plan, these costs can wipe out a lifetime of savings in just a few years." },
-      { label: "The Solution", body: "Long-term care insurance and hybrid life/LTC products can protect your assets and preserve your options — but they must be put in place before you need them. We help you evaluate what makes sense for your situation and budget." },
+      {
+        label: "The Solution", body: (
+          <>
+            Long-term care insurance and hybrid life/LTC products can protect your assets and preserve your options — but they must be put in place before you need them. Learn more about{" "}
+            <Link href="/retirement" className="text-[#1A72C0] underline hover:text-[#155fa0]">protecting your retirement savings</Link>{" "}
+            from healthcare costs.
+          </>
+        )
+      },
     ],
     bottomLine: "Long-term care is the single greatest financial threat to your retirement savings. Planning ahead is the only way to protect against it.",
   },
@@ -80,21 +95,24 @@ export default function CriticalIllnessClient() {
               transition={{ duration: 0.5 }}
             >
               <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">
-                Major Exposures
+                Critical Illness Insurance · A&E Insurance Agency
               </span>
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#1A1A2E] leading-tight mb-4">
                 The 3 Gaps Medicare<br className="hidden md:block" /> Doesn't Close
               </h1>
-              <p className="text-[#4B5563] text-lg mb-8 leading-relaxed">
+              <p className="text-[#4B5563] text-lg mb-3 leading-relaxed">
                 Medicare is excellent coverage — but it was never designed to cover everything. Here are the three biggest financial exposures that catch people off guard, and how to protect yourself from each one.
               </p>
+              <p className="text-[#6B7280] text-sm mb-8">
+                Guidance from licensed insurance specialist Steve Germain. Serving South Florida families since 2009.
+              </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <a
-                  href={NEEDS_ASSESSMENT_URL}
+                <Link
+                  href={CONTACT_URL}
                   className="inline-flex items-center justify-center text-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                 >
-                  Schedule Your Needs Assessment
-                </a>
+                  Find Your Coverage Gaps
+                </Link>
                 <a
                   href={`tel:${PHONE.replace(/\D/g, "")}`}
                   className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A72C0] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
@@ -106,7 +124,7 @@ export default function CriticalIllnessClient() {
 
             {/* Photo */}
             <motion.div
-              className="w-full lg:w-[520px] flex-shrink-0"
+              className="w-full lg:w-[440px] flex-shrink-0"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
@@ -114,8 +132,8 @@ export default function CriticalIllnessClient() {
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="/Steve & Ms Eleonora .JPG"
-                  alt="Steve Germain with Ms. Eleonora at A&E Insurance Agency"
-                  className="w-full h-auto"
+                  alt="Steve Germain meeting with a client at A&E Insurance Agency — South Florida critical illness coverage"
+                  className="w-full h-[420px] object-cover object-top"
                 />
               </div>
             </motion.div>
@@ -128,14 +146,14 @@ export default function CriticalIllnessClient() {
       <section className="py-4 px-4">
         <div className="max-w-3xl mx-auto divide-y divide-[#E5E7EB]">
           {GAPS.map((gap, i) => (
-            <AnimatedSection key={gap.number} delay={0.05} className="py-16">
+            <AnimatedSection key={gap.number} delay={0.05} className="py-14">
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-4xl font-extrabold leading-none" style={{ color: gap.color }}>
+                <span className="text-5xl font-extrabold leading-none" style={{ color: gap.color }}>
                   {gap.number}
                 </span>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-[#9CA3AF] mb-0.5">
-                    Gap {i + 1}
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#6B7280] mb-0.5">
+                    Gap {i + 1} of 3
                   </p>
                   <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1A2E]">
                     {gap.title}
@@ -192,7 +210,7 @@ export default function CriticalIllnessClient() {
 
           <div className="bg-[#1A72C0] rounded-2xl p-8 text-center">
             <h3 className="text-xl font-extrabold text-white mb-3">Simple, Affordable Protection</h3>
-            <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-lg mx-auto">
+            <p className="text-white/90 text-sm leading-relaxed mb-6 max-w-lg mx-auto">
               A critical illness plan pays a <strong className="text-white">tax-free lump sum directly to you</strong> upon diagnosis. No restrictions — use it for treatment, bills, travel, or anything your family needs. A health crisis should never become a wealth crisis.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
@@ -203,7 +221,7 @@ export default function CriticalIllnessClient() {
               ].map((f) => (
                 <div key={f.title} className="bg-white/10 rounded-xl p-5 text-left">
                   <p className="text-[#E8A020] font-extrabold text-sm mb-2">{f.title}</p>
-                  <p className="text-white/70 text-xs leading-relaxed">{f.body}</p>
+                  <p className="text-white/90 text-xs leading-relaxed">{f.body}</p>
                 </div>
               ))}
             </div>
@@ -218,16 +236,16 @@ export default function CriticalIllnessClient() {
           <h2 className="text-3xl font-extrabold text-white mb-4">
             Don't Wait for a Diagnosis to Find Out What You're Missing
           </h2>
-          <p className="text-white/60 text-sm mb-8 leading-relaxed">
+          <p className="text-white/90 text-sm mb-8 leading-relaxed">
             We'll review your current coverage, identify your gaps, and show you exactly what it would cost to close them. Most people are surprised by how affordable the protection is.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href={NEEDS_ASSESSMENT_URL}
-              className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-white font-extrabold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors"
+            <Link
+              href={CONTACT_URL}
+              className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors"
             >
-              Schedule Your Needs Assessment
-            </a>
+              Find Your Coverage Gaps
+            </Link>
             <a
               href={`tel:${PHONE.replace(/\D/g, "")}`}
               className="inline-block border-2 border-white text-white hover:bg-white hover:text-[#1A1A2E] font-bold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors"
