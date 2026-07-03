@@ -113,7 +113,7 @@ export default function RetirementClient() {
                 <img
                   src="/Steve and Leslie and Jennifer .jpg"
                   alt="Steve Germain with clients at A&E Insurance Agency — South Florida retirement planning"
-                  className="w-full h-[420px] object-cover object-top"
+                  className="w-full h-[420px] object-cover object-center"
                 />
               </div>
             </motion.div>
