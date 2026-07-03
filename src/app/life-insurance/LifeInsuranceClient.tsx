@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { PHONE } from "@/lib/constants";
 
-const NEEDS_ASSESSMENT_URL = "/contact";
+const CONTACT_URL = "/contact";
 
 const PRODUCTS = [
   {
@@ -98,21 +99,24 @@ export default function LifeInsuranceClient() {
               transition={{ duration: 0.5 }}
             >
               <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">
-                Life Insurance & Retirement Solutions
+                Life Insurance · A&E Insurance Agency
               </span>
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#1A1A2E] leading-tight mb-4">
-                Protecting Your Family's Future
+                Life Insurance & Annuities<br className="hidden md:block" /> for South Florida Families
               </h1>
-              <p className="text-[#4B5563] text-lg mb-8 leading-relaxed">
-                Whether you're looking for affordable life insurance, permanent protection, or retirement income solutions, we'll help you understand your options and make a confident decision — in plain English, at zero cost to you.
+              <p className="text-[#4B5563] text-lg mb-3 leading-relaxed">
+                Whether you need affordable term coverage, permanent protection, or a guaranteed income stream in retirement — we'll help you understand every option and make a confident decision, in plain English, at no cost to you.
+              </p>
+              <p className="text-[#6B7280] text-sm mb-8">
+                Guidance from licensed life insurance specialist Steve Germain. Serving South Florida families since 2009.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <a
-                  href={NEEDS_ASSESSMENT_URL}
+                <Link
+                  href={CONTACT_URL}
                   className="inline-flex items-center justify-center text-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                 >
-                  Schedule Your Needs Assessment
-                </a>
+                  Get Your Free Quote
+                </Link>
                 <a
                   href={`tel:${PHONE.replace(/\D/g, "")}`}
                   className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A72C0] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
@@ -124,7 +128,7 @@ export default function LifeInsuranceClient() {
 
             {/* Photo */}
             <motion.div
-              className="w-full lg:w-[380px] flex-shrink-0"
+              className="w-full lg:w-[440px] flex-shrink-0"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
@@ -132,8 +136,8 @@ export default function LifeInsuranceClient() {
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="/Steve and Irving .jpeg"
-                  alt="Steve Germain with Irving at A&E Insurance Agency"
-                  className="w-full h-[420px] object-cover object-top"
+                  alt="Steve Germain meeting with a client at A&E Insurance Agency — South Florida life insurance"
+                  className="w-full h-[420px] object-cover object-center"
                 />
               </div>
             </motion.div>
@@ -145,13 +149,16 @@ export default function LifeInsuranceClient() {
       {/* ── Products ── */}
       <section className="py-4 px-4">
         <div className="max-w-3xl mx-auto divide-y divide-[#E5E7EB]">
-          {PRODUCTS.map((product) => (
-            <AnimatedSection key={product.number} delay={0.05} className="py-16">
+          {PRODUCTS.map((product, i) => (
+            <AnimatedSection key={product.number} delay={0.05} className="py-14">
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-4xl font-extrabold leading-none" style={{ color: product.color }}>
+                <span className="text-5xl font-extrabold leading-none" style={{ color: product.color }}>
                   {product.number}
                 </span>
                 <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#6B7280] mb-0.5">
+                    Product {i + 1} of 6
+                  </p>
                   <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1A2E]">
                     {product.title}
                   </h2>
@@ -163,10 +170,44 @@ export default function LifeInsuranceClient() {
                 {product.bullets.map((b) => (
                   <div key={b.label}>
                     <p className="font-extrabold text-[#1A1A2E] mb-1">{b.label}</p>
-                    <p className="text-[#4B5563] leading-relaxed">{b.body}</p>
+                    <p className="text-[#4B5563] leading-relaxed">
+                      {product.number === "06" && b.label === "Who They're For" ? (
+                        <>
+                          Many people use annuities to supplement Social Security, reduce the risk of outliving their savings, and create the retirement income confidence they need to truly enjoy their retirement years. Learn more about{" "}
+                          <Link href="/retirement" className="text-[#1A72C0] underline hover:text-[#155fa0]">retirement income planning</Link>.
+                        </>
+                      ) : product.number === "05" && b.label === "Easy to Qualify For" ? (
+                        <>
+                          Coverage amounts are typically smaller than traditional life insurance, making premiums affordable. Because it often requires no medical exam and uses simplified underwriting, it may be easier to qualify for — even with health conditions. This makes it a common choice for{" "}
+                          <Link href="/medicare" className="text-[#1A72C0] underline hover:text-[#155fa0]">Medicare-eligible seniors</Link>{" "}
+                          looking to protect their families.
+                        </>
+                      ) : (
+                        b.body
+                      )}
+                    </p>
                   </div>
                 ))}
               </div>
+
+              {/* Mid-page CTA after product 3 */}
+              {i === 2 && (
+                <div className="my-8 bg-[#F3F4F6] rounded-2xl px-6 py-7 text-center border border-[#E5E7EB]">
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-2">Free · No Obligation</p>
+                  <p className="text-[#1A1A2E] font-extrabold text-lg mb-2">
+                    Not sure which type of coverage is right for you?
+                  </p>
+                  <p className="text-[#4B5563] text-sm mb-5 leading-relaxed">
+                    Term, whole, universal, IUL — the differences matter. A free 30-minute conversation gives you a clear answer based on your goals and budget.
+                  </p>
+                  <Link
+                    href={CONTACT_URL}
+                    className="inline-flex items-center justify-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-3 rounded-lg transition-colors"
+                  >
+                    Get Your Free Quote →
+                  </Link>
+                </div>
+              )}
 
               <div
                 className="rounded-xl px-6 py-4 border-l-4"
@@ -189,16 +230,16 @@ export default function LifeInsuranceClient() {
           <h2 className="text-3xl font-extrabold text-white mb-4">
             Not Sure Which Option Is Right for You?
           </h2>
-          <p className="text-white/60 text-sm mb-8 leading-relaxed">
+          <p className="text-white/90 text-sm mb-8 leading-relaxed">
             Every person's situation is different. We'll take the time to understand your goals, answer your questions, and explain your options in plain English — so you can protect what matters most.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href={NEEDS_ASSESSMENT_URL}
-              className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-white font-extrabold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors"
+            <Link
+              href={CONTACT_URL}
+              className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors"
             >
-              Schedule Your Needs Assessment
-            </a>
+              Get Your Free Quote
+            </Link>
             <a
               href={`tel:${PHONE.replace(/\D/g, "")}`}
               className="inline-block border-2 border-white text-white hover:bg-white hover:text-[#1A1A2E] font-bold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors"
