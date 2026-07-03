@@ -91,7 +91,7 @@ export default function RetirementClient() {
                   href={NEEDS_ASSESSMENT_URL}
                   className="inline-flex items-center justify-center text-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                 >
-                  Schedule Your Free Assessment
+                  Get Your Free Assessment
                 </Link>
                 <a
                   href={`tel:${PHONE.replace(/\D/g, "")}`}
@@ -104,7 +104,7 @@ export default function RetirementClient() {
 
             {/* Photo */}
             <motion.div
-              className="w-full lg:w-[520px] flex-shrink-0"
+              className="w-full lg:w-[440px] flex-shrink-0"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
@@ -187,7 +187,7 @@ export default function RetirementClient() {
                     href={NEEDS_ASSESSMENT_URL}
                     className="inline-flex items-center justify-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-3 rounded-lg transition-colors"
                   >
-                    Schedule Your Free Assessment →
+                    Get Your Free Assessment →
                   </Link>
                 </div>
               )}
@@ -222,7 +222,7 @@ export default function RetirementClient() {
               href={NEEDS_ASSESSMENT_URL}
               className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors"
             >
-              Schedule Your Free Assessment
+              Get Your Free Assessment
             </Link>
             <a
               href={`tel:${PHONE.replace(/\D/g, "")}`}
