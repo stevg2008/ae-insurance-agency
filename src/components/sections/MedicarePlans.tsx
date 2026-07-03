@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { PHONE } from "@/lib/constants";
 
@@ -43,13 +44,21 @@ export default function MedicarePlans() {
         </div>
 
         <AnimatedSection className="text-center" delay={0.3}>
-          <p className="text-[#4B5563] text-base mb-4">Not sure which plan is right for you? We'll walk you through it — at no cost.</p>
-          <a
-            href={`tel:${PHONE.replace(/\D/g, "")}`}
-            className="inline-block bg-[#E8A020] hover:bg-[#D4911B] text-[#1A1A2E] font-bold uppercase tracking-wide text-sm px-8 py-3.5 rounded-lg transition-colors shadow-md"
-          >
-            Speak With a Licensed Advisor — {PHONE}
-          </a>
+          <p className="text-[#4B5563] text-base mb-6">Not sure which plan is right for you? We'll walk you through it — at no cost.</p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href={`tel:${PHONE.replace(/\D/g, "")}`}
+              className="inline-flex items-center justify-center bg-[#E8A020] hover:bg-[#D4911B] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-sm px-8 py-3.5 rounded-lg transition-colors shadow-md whitespace-nowrap"
+            >
+              Call {PHONE}
+            </a>
+            <Link
+              href="/medicare"
+              className="inline-flex items-center justify-center border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A1A2E] hover:text-white font-bold uppercase tracking-wide text-sm px-8 py-3.5 rounded-lg transition-colors whitespace-nowrap"
+            >
+              Read the Full Medicare Guide
+            </Link>
+          </div>
         </AnimatedSection>
       </div>
     </section>

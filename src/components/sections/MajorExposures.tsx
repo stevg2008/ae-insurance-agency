@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const STEPS = [
@@ -46,7 +47,6 @@ export default function MajorExposures() {
                     className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                     style={{ backgroundColor: step.color + "18" }}
                   >
-                    {/* Simple colored dot */}
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: step.color }} />
                   </div>
                   <div>
@@ -58,6 +58,14 @@ export default function MajorExposures() {
                 </li>
               ))}
             </ul>
+            <div className="mt-8">
+              <Link
+                href="/critical-illness"
+                className="inline-flex items-center text-[#1A72C0] font-semibold hover:underline text-sm"
+              >
+                Learn how critical illness coverage protects you →
+              </Link>
+            </div>
           </AnimatedSection>
 
           {/* Right: image */}
