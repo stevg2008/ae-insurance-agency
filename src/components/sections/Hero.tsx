@@ -15,8 +15,7 @@ const SLIDES = [
   { src: "/slideshow/s09.jpg",  alt: "Steve Germain holding Medicare Decoded book — A&E Insurance Agency",   pos: "top center" },
   { src: "/slideshow/s02.jpg",  alt: "Medicare Decoded — A clear guide for people turning 65 by Steve Germain", pos: "center center" },
   { src: "/slideshow/s10.jpg",  alt: "A&E Insurance Agency team — independent Medicare brokers in Miami FL", pos: "center center" },
-  { src: "/slideshow/s11.jpg",  alt: "Steve Germain presenting at a Medicare educational seminar in South Florida", pos: "top center" },
-  { src: "/slideshow/s13.jpg",  alt: "Attendees at an A&E Insurance Agency Medicare workshop in Miami",      pos: "center center" },
+{ src: "/slideshow/s13.jpg",  alt: "Attendees at an A&E Insurance Agency Medicare workshop in Miami",      pos: "center center" },
 ];
 
 const INTERVAL = 4000;
