@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
-  const { firstName, lastName, email, phone, zip } = await req.json();
+  const { firstName, lastName, email, phone, bestTime, message } = await req.json();
 
-  if (!firstName || !email || !phone) {
+  if (!firstName || !phone) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 
-  const webhookUrl = process.env.GHL_BOOK_WEBHOOK_URL;
+  const webhookUrl = process.env.GHL_CONTACT_WEBHOOK_URL;
   if (!webhookUrl) {
     return NextResponse.json({ error: "Webhook not configured" }, { status: 500 });
   }
@@ -20,10 +20,11 @@ export async function POST(req: NextRequest) {
         first_name: firstName,
         last_name: lastName || "",
         name: `${firstName} ${lastName || ""}`.trim(),
-        email,
+        email: email || "",
         phone,
-        zip: zip || "",
-        source: "Website — Medicare Decoded Book",
+        best_time: bestTime || "",
+        message: message || "",
+        source: "Website — Contact Page",
       }),
     });
 
