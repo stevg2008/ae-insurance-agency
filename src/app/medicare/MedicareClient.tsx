@@ -157,7 +157,7 @@ function ComparisonTable() {
         <tbody>
           {COMPARISON_ROWS.map((row, i) => (
             <tr key={row.feature} className={i % 2 === 0 ? "bg-white" : "bg-[#F9FAFB]"}>
-              <td className="p-4 text-[10px] font-bold uppercase tracking-wider text-[#6B7280] border-b border-[#E5E7EB]">
+              <td className="p-4 text-xs font-bold uppercase tracking-wider text-[#6B7280] border-b border-[#E5E7EB]">
                 {row.feature}
               </td>
               <td className="p-4 text-center text-[#374151] border-b border-l border-[#E5E7EB]">
