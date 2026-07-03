@@ -5,8 +5,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { AlertTriangle, Phone, Pill, AlertCircle } from "lucide-react";
 import { PHONE, WEBINAR_URL } from "@/lib/constants";
 
-// 2026 figures — update each January when CMS announces new rates
-// Source: CMS.gov / Medicare.gov
+// ─── ANNUAL UPDATE REQUIRED — every November ───────────────────────────────
+// Update all three constants below + rename them to the new year.
+// Then find-and-replace "2026" → "2027" (or next year) across this file.
+// Sources:
+//   Base premium:        https://www.cms.gov (Part D National Base Beneficiary Premium)
+//   Deductible max:      https://www.cms.gov (Part D Standard Parameters)
+//   Catastrophic OOP:    https://www.cms.gov (Part D Standard Parameters)
+// Last verified: November 2025 for plan year 2026
+// ───────────────────────────────────────────────────────────────────────────
 const PART_D_BASE_PREMIUM_2026 = 38.99;  // national base beneficiary premium
 const PART_D_MAX_DEDUCTIBLE_2026 = 615;  // no plan may exceed this
 const PART_D_CATASTROPHIC_THRESHOLD_2026 = 2100; // out-of-pocket threshold for catastrophic coverage
@@ -142,7 +149,7 @@ export default function PartDPenaltyClient() {
               <AlertCircle size={14} /> {error}
             </div>
           )}
-          <p className="text-[#9CA3AF] text-xs mt-3">
+          <p className="text-[#6B7280] text-xs mt-3">
             Based on the 2026 national base beneficiary premium of {fmt$(PART_D_BASE_PREMIUM_2026)}/month.
           </p>
         </motion.div>
@@ -164,7 +171,7 @@ export default function PartDPenaltyClient() {
                 <p className="text-white text-5xl font-extrabold mb-1">
                   {fmtPenalty(result.monthlyPenalty)}
                 </p>
-                <p className="text-white/60 text-sm mb-5">added to your Part D premium every month, permanently</p>
+                <p className="text-white/90 text-sm mb-5">added to your Part D premium every month, permanently</p>
                 <div className="grid grid-cols-3 gap-4">
                   {[
                     { label: "Penalty %", value: `${result.penaltyPct}%` },
@@ -172,7 +179,7 @@ export default function PartDPenaltyClient() {
                     { label: "20-Year Cost", value: fmt$(result.lifetimeCost) },
                   ].map((s) => (
                     <div key={s.label} className="bg-white/10 rounded-xl p-4">
-                      <p className="text-white/60 text-xs mb-1">{s.label}</p>
+                      <p className="text-white/90 text-xs mb-1">{s.label}</p>
                       <p className="text-white font-extrabold text-base">{s.value}</p>
                     </div>
                   ))}
@@ -299,13 +306,13 @@ export default function PartDPenaltyClient() {
               {/* CTA */}
               <div className="bg-[#1A72C0] rounded-2xl p-8 text-center mb-4">
                 <p className="text-white font-extrabold text-lg mb-2">Don't Pay More Than You Have To</p>
-                <p className="text-white/70 text-sm mb-6 leading-relaxed">
+                <p className="text-white/90 text-sm mb-6 leading-relaxed">
                   A licensed broker can review your coverage history, determine if the penalty applies, and find you the best Part D plan to minimize your total cost going forward.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <a
                     href={WEBINAR_URL}
-                    className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-white font-extrabold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
+                    className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
                   >
                     Watch Free Medicare Workshop
                   </a>
@@ -328,7 +335,7 @@ export default function PartDPenaltyClient() {
           )}
         </AnimatePresence>
 
-        <p className="text-center text-[#9CA3AF] text-xs mt-8 leading-relaxed max-w-lg mx-auto">
+        <p className="text-center text-[#6B7280] text-xs mt-8 leading-relaxed max-w-lg mx-auto">
           This calculator is an estimate based on the 2026 national base beneficiary premium of {fmt$(PART_D_BASE_PREMIUM_2026)}/month set by CMS. The base premium changes annually and so will the dollar amount of your penalty. Actual amounts may vary. This tool is for educational purposes only.
         </p>
       </div>

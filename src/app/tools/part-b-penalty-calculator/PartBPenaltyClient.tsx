@@ -5,7 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { AlertTriangle, Phone, DollarSign, AlertCircle } from "lucide-react";
 import { PHONE, WEBINAR_URL } from "@/lib/constants";
 
-// 2026 standard Part B monthly premium — update each January
+// ─── ANNUAL UPDATE REQUIRED — every November ───────────────────────────────
+// 1. Update PART_B_PREMIUM_XXXX to the new standard Part B premium
+// 2. Rename the constant to match the new year (e.g. PART_B_PREMIUM_2027)
+// 3. Find-and-replace the old year string "2026" → "2027" across this file
+// Source: https://www.medicare.gov/your-medicare-costs/part-b-costs
+// Last verified: November 2025 for plan year 2026
+// ───────────────────────────────────────────────────────────────────────────
 const PART_B_PREMIUM_2026 = 202.90;
 
 interface Result {
@@ -133,7 +139,7 @@ export default function PartBPenaltyClient() {
               <AlertCircle size={14} /> {error}
             </div>
           )}
-          <p className="text-[#9CA3AF] text-xs mt-3">
+          <p className="text-[#6B7280] text-xs mt-3">
             Based on the 2026 standard Part B premium of {fmt$(PART_B_PREMIUM_2026)}/month.
           </p>
         </motion.div>
@@ -156,14 +162,14 @@ export default function PartBPenaltyClient() {
                 {noPenalty ? (
                   <>
                     <p className="text-white text-4xl font-extrabold mb-2">No Penalty</p>
-                    <p className="text-white/70 text-sm">
+                    <p className="text-white/90 text-sm">
                       {result.months} month{result.months !== 1 ? "s" : ""} is less than 12 full months — no penalty applies.
                     </p>
                   </>
                 ) : (
                   <>
                     <p className="text-white text-5xl font-extrabold mb-1">{fmt$(result.monthlyPenalty)}</p>
-                    <p className="text-white/60 text-sm mb-5">added to your Part B premium every month, permanently</p>
+                    <p className="text-white/90 text-sm mb-5">added to your Part B premium every month, permanently</p>
                     <div className="grid grid-cols-3 gap-4">
                       {[
                         { label: "Penalty %", value: `${result.penaltyPct}%` },
@@ -171,7 +177,7 @@ export default function PartBPenaltyClient() {
                         { label: "20-Year Cost", value: fmt$(result.lifetimeCost) },
                       ].map((s) => (
                         <div key={s.label} className="bg-white/10 rounded-xl p-4">
-                          <p className="text-white/60 text-xs mb-1">{s.label}</p>
+                          <p className="text-white/90 text-xs mb-1">{s.label}</p>
                           <p className="text-white font-extrabold text-base">{s.value}</p>
                         </div>
                       ))}
@@ -238,7 +244,7 @@ export default function PartBPenaltyClient() {
                 <p className="text-white font-extrabold text-lg mb-2">
                   {noPenalty ? "Ready to Enroll the Right Way?" : "Don't Pay More Than You Have To"}
                 </p>
-                <p className="text-white/70 text-sm mb-6 leading-relaxed">
+                <p className="text-white/90 text-sm mb-6 leading-relaxed">
                   {noPenalty
                     ? "Let Steve review your situation and make sure you enroll at the right time with the right plan — at no cost to you."
                     : "A licensed Medicare broker can review your coverage history, verify whether a penalty applies, and help you minimize the financial impact."}
@@ -246,7 +252,7 @@ export default function PartBPenaltyClient() {
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <a
                     href={WEBINAR_URL}
-                    className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-white font-extrabold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
+                    className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
                   >
                     Watch Free Medicare Workshop
                   </a>
@@ -269,7 +275,7 @@ export default function PartBPenaltyClient() {
           )}
         </AnimatePresence>
 
-        <p className="text-center text-[#9CA3AF] text-xs mt-8 leading-relaxed max-w-lg mx-auto">
+        <p className="text-center text-[#6B7280] text-xs mt-8 leading-relaxed max-w-lg mx-auto">
           This calculator is an estimate based on the 2026 standard Part B premium of {fmt$(PART_B_PREMIUM_2026)}/month. The Part B premium changes annually. Actual penalty amounts may vary based on your specific enrollment history. This tool is for educational purposes only.
         </p>
       </div>

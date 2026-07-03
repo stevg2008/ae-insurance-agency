@@ -5,15 +5,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CalendarDays, AlertCircle, Phone, CheckCircle2 } from "lucide-react";
 import { PHONE, WEBINAR_URL } from "@/lib/constants";
 
+// ─── NO ANNUAL UPDATE NEEDED ───────────────────────────────────────────────
+// IEP rules are set by federal law and have not changed since 1966.
+// The only logic change would be if CMS ever alters the 7-month window.
+// Last verified: July 2025
+// ───────────────────────────────────────────────────────────────────────────
+
 const MONTHS = [
   "January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December",
 ];
 
-const MONTH_DAYS: Record<number, number> = {
-  1:31, 2:29, 3:31, 4:30, 5:31, 6:30,
-  7:31, 8:31, 9:30, 10:31, 11:30, 12:31,
-};
+function getDaysInMonth(month: number, year: number): number {
+  return new Date(year, month, 0).getDate();
+}
 
 const currentYear = new Date().getFullYear();
 const YEARS = Array.from({ length: 80 }, (_, i) => currentYear - 64 + i - 15).reverse();
@@ -92,8 +97,9 @@ export default function EnrollmentCalculatorClient() {
   const [result, setResult] = useState<Result | null>(null);
   const [error, setError] = useState("");
 
+  const selectedYear = year ? Number(year) : currentYear;
   const availableDays = month
-    ? Array.from({ length: MONTH_DAYS[Number(month)] }, (_, i) => i + 1)
+    ? Array.from({ length: getDaysInMonth(Number(month), selectedYear) }, (_, i) => i + 1)
     : [];
 
   const handleCalculate = () => {
@@ -312,13 +318,13 @@ export default function EnrollmentCalculatorClient() {
               {/* CTA */}
               <div className="bg-[#1A72C0] rounded-2xl p-8 text-center mb-4">
                 <p className="text-white font-extrabold text-lg mb-2">Have Questions About Your Enrollment?</p>
-                <p className="text-white/70 text-sm mb-6 leading-relaxed">
+                <p className="text-white/90 text-sm mb-6 leading-relaxed">
                   Don't navigate Medicare alone. Steve will review your timeline, compare your options, and make sure you enroll at exactly the right time — for free.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <a
                     href={WEBINAR_URL}
-                    className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-white font-extrabold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
+                    className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
                   >
                     Watch Free Medicare Workshop
                   </a>
@@ -346,7 +352,7 @@ export default function EnrollmentCalculatorClient() {
         </AnimatePresence>
 
         {/* Disclaimer */}
-        <p className="text-center text-[#9CA3AF] text-xs mt-8 leading-relaxed max-w-lg mx-auto">
+        <p className="text-center text-[#6B7280] text-xs mt-8 leading-relaxed max-w-lg mx-auto">
           This calculator is for educational purposes only. Enrollment rules may vary based on your specific situation, including whether you have employer coverage. Always confirm your dates with a licensed Medicare broker.
         </p>
       </div>

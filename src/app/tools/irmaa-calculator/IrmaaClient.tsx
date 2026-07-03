@@ -5,9 +5,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { TrendingUp, Phone, AlertCircle, Info } from "lucide-react";
 import { PHONE, WEBINAR_URL } from "@/lib/constants";
 
-// ─────────────────────────────────────────────────────────────────────────────
-// 2026 IRMAA DATA — Source: CMS Medicare Parts B & D Premium Announcement
-// Income used = 2024 MAGI (two years prior). Update each fall when CMS announces.
+// ─── ANNUAL UPDATE REQUIRED — every November ───────────────────────────────
+// 1. Update PART_B_STANDARD_XXXX to the new standard Part B premium
+// 2. Update all 6 bracket income thresholds in BRACKETS[]
+//    (individual + joint fields, partBSurcharge, partBTotal, partDSurcharge)
+// 3. Update MFS_PART_D_BRACKETS[] (3 rows, Part D surcharges only)
+// 4. Find-and-replace "2026" → "2027" and "2024 MAGI" → "2025 MAGI" across file
+//    (IRMAA always uses income from 2 years prior)
+// Sources:
+//   Part B premium + IRMAA brackets: https://www.ssa.gov/benefits/medicare/medicare-premiums.html
+//   Official CMS announcement:        https://www.cms.gov (search "IRMAA 20XX")
+// Last verified: November 2025 for plan year 2026 (based on 2024 MAGI)
 // ─────────────────────────────────────────────────────────────────────────────
 
 const PART_B_STANDARD_2026 = 202.90;
@@ -223,7 +231,7 @@ export default function IrmaaClient() {
                   </option>
                 ))}
               </select>
-              <p className="text-[#9CA3AF] text-xs">Based on your 2024 Modified Adjusted Gross Income (MAGI).</p>
+              <p className="text-[#6B7280] text-xs">Based on your 2024 Modified Adjusted Gross Income (MAGI).</p>
             </>
           )}
 
@@ -243,7 +251,7 @@ export default function IrmaaClient() {
                   <option key={i} value={i}>{b.label}</option>
                 ))}
               </select>
-              <p className="text-[#9CA3AF] text-xs">Based on your 2024 Modified Adjusted Gross Income (MAGI).</p>
+              <p className="text-[#6B7280] text-xs">Based on your 2024 Modified Adjusted Gross Income (MAGI).</p>
             </>
           )}
         </motion.div>
@@ -264,7 +272,7 @@ export default function IrmaaClient() {
                 </p>
                 {isMfs ? (
                   <div className="text-center">
-                    <p className="text-white/70 text-sm leading-relaxed mb-3">
+                    <p className="text-white/90 text-sm leading-relaxed mb-3">
                       Married filing separately beneficiaries use the <strong className="text-white">individual income brackets</strong> for Part B IRMAA. Select your bracket above under the individual scale to see your Part B premium.
                     </p>
                     <p className="text-white/50 text-xs">Standard Part B premium: {fmt$(PART_B_STANDARD_2026)}/month</p>
@@ -273,17 +281,17 @@ export default function IrmaaClient() {
                   <>
                     <div className="flex items-center justify-center gap-3 flex-wrap mb-5">
                       <div className="text-center">
-                        <p className="text-white/60 text-xs mb-1">Standard Premium</p>
+                        <p className="text-white/90 text-xs mb-1">Standard Premium</p>
                         <p className="text-white text-2xl font-extrabold">{fmt$(PART_B_STANDARD_2026)}</p>
                       </div>
                       <p className="text-white/40 text-2xl font-light">+</p>
                       <div className="text-center">
-                        <p className="text-white/60 text-xs mb-1">IRMAA Surcharge</p>
+                        <p className="text-white/90 text-xs mb-1">IRMAA Surcharge</p>
                         <p className="text-[#E8A020] text-2xl font-extrabold">{fmt$(bracket.partBSurcharge)}</p>
                       </div>
                       <p className="text-white/40 text-2xl font-light">=</p>
                       <div className="text-center bg-white/10 rounded-xl px-5 py-3">
-                        <p className="text-white/60 text-xs mb-1">Your Monthly Part B</p>
+                        <p className="text-white/90 text-xs mb-1">Your Monthly Part B</p>
                         <p className="text-white text-3xl font-extrabold">{fmt$(partBTotal)}</p>
                       </div>
                     </div>
@@ -292,7 +300,7 @@ export default function IrmaaClient() {
                         ✓ Your income is below the IRMAA threshold — you pay the standard premium only.
                       </p>
                     ) : (
-                      <p className="text-center text-white/60 text-xs">
+                      <p className="text-center text-white/90 text-xs">
                         IRMAA surcharge of {fmt$(bracket.partBSurcharge)}/month is billed separately by Medicare.
                       </p>
                     )}
@@ -354,12 +362,12 @@ export default function IrmaaClient() {
                           {knowsPartD === "yes" && partDPremiumInput ? fmt$(partDPremium) : "$—"}
                         </p>
                       </div>
-                      <p className="text-[#9CA3AF] text-xl">+</p>
+                      <p className="text-[#6B7280] text-xl">+</p>
                       <div className="text-center">
                         <p className="text-[#6B7280] text-xs mb-1">IRMAA Surcharge</p>
                         <p className="text-[#E8A020] text-xl font-extrabold">{fmt$(activeSurcharge)}</p>
                       </div>
-                      <p className="text-[#9CA3AF] text-xl">=</p>
+                      <p className="text-[#6B7280] text-xl">=</p>
                       <div className="text-center bg-[#DBEAFE] rounded-xl px-4 py-3">
                         <p className="text-[#6B7280] text-xs mb-1">Total Part D</p>
                         <p className="text-[#1A72C0] text-xl font-extrabold">
@@ -370,7 +378,7 @@ export default function IrmaaClient() {
                       </div>
                     </div>
                     {knowsPartD === "no" && (
-                      <p className="text-[#9CA3AF] text-xs mt-3 text-center">
+                      <p className="text-[#6B7280] text-xs mt-3 text-center">
                         *Add your plan's monthly premium to the IRMAA surcharge above to get your total Part D cost.
                       </p>
                     )}
@@ -387,13 +395,13 @@ export default function IrmaaClient() {
               {/* Combined total (only if individual/joint with Part D premium entered) */}
               {!isMfs && knowsPartD === "yes" && partDPremiumInput && !partDError && bracket && (
                 <div className="bg-[#1A72C0] rounded-2xl p-8 mb-4 text-center">
-                  <p className="text-white/70 text-xs font-bold uppercase tracking-widest mb-2">
+                  <p className="text-white/90 text-xs font-bold uppercase tracking-widest mb-2">
                     Total Estimated Monthly Medicare Cost
                   </p>
                   <p className="text-white text-5xl font-extrabold mb-1">
                     {fmt$(partBTotal + partDTotal)}
                   </p>
-                  <p className="text-white/60 text-sm">Part B ({fmt$(partBTotal)}) + Part D ({fmt$(partDTotal)})</p>
+                  <p className="text-white/80 text-sm">Part B ({fmt$(partBTotal)}) + Part D ({fmt$(partDTotal)})</p>
                 </div>
               )}
 
@@ -403,7 +411,7 @@ export default function IrmaaClient() {
                   <h3 className="font-extrabold text-[#1A1A2E] text-base uppercase tracking-wide mb-1">
                     2026 Full IRMAA Bracket Table
                   </h3>
-                  <p className="text-[#9CA3AF] text-xs mb-5">
+                  <p className="text-[#6B7280] text-xs mb-5">
                     Based on 2024 MAGI · {filingStatus === "individual" ? "Individual filer" : "Married filing jointly"}
                   </p>
                   <table className="w-full text-xs min-w-[480px]">
@@ -447,7 +455,7 @@ export default function IrmaaClient() {
                   <h3 className="font-extrabold text-[#1A1A2E] text-base uppercase tracking-wide mb-1">
                     2026 Part D IRMAA — Married Filing Separately
                   </h3>
-                  <p className="text-[#9CA3AF] text-xs mb-5">Based on 2024 MAGI</p>
+                  <p className="text-[#6B7280] text-xs mb-5">Based on 2024 MAGI</p>
                   <table className="w-full text-sm">
                     <thead>
                       <tr className="border-b-2 border-[#E5E7EB]">
@@ -472,7 +480,7 @@ export default function IrmaaClient() {
                       })}
                     </tbody>
                   </table>
-                  <p className="text-[#9CA3AF] text-xs mt-4">
+                  <p className="text-[#6B7280] text-xs mt-4">
                     Part B IRMAA for married filing separately follows the individual income brackets. Contact Medicare or a licensed broker to confirm your specific Part B premium.
                   </p>
                 </div>
@@ -512,13 +520,13 @@ export default function IrmaaClient() {
               {/* CTA */}
               <div className="bg-[#1A72C0] rounded-2xl p-8 text-center mb-4">
                 <p className="text-white font-extrabold text-lg mb-2">Surprised by Your IRMAA?</p>
-                <p className="text-white/70 text-sm mb-6 leading-relaxed">
+                <p className="text-white/90 text-sm mb-6 leading-relaxed">
                   IRMAA can add hundreds of dollars a month to your Medicare costs. Steve can help you understand your notice, explore an appeal if you qualify, and plan your retirement income to minimize future surcharges.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <a
                     href={WEBINAR_URL}
-                    className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-white font-extrabold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
+                    className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-xs px-6 py-3.5 rounded-lg transition-colors"
                   >
                     Watch Free Medicare Workshop
                   </a>
@@ -544,7 +552,7 @@ export default function IrmaaClient() {
           )}
         </AnimatePresence>
 
-        <p className="text-center text-[#9CA3AF] text-xs mt-8 leading-relaxed max-w-lg mx-auto">
+        <p className="text-center text-[#6B7280] text-xs mt-8 leading-relaxed max-w-lg mx-auto">
           This calculator is for educational purposes only. IRMAA surcharge amounts are based on 2024 MAGI and are set annually by CMS. Figures may vary. Always confirm your IRMAA with your Medicare notice or a licensed broker.
         </p>
       </div>
