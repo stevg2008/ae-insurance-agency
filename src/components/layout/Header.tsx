@@ -21,7 +21,7 @@ const navLinks = [
     label: "Learn",
     href: "#",
     children: [
-      { label: "Blog", href: "/blogs" },
+      { label: "Medicare Blog", href: "/blogs" },
       { label: "FAQ", href: "/resources" },
       { label: "Enrollment Calculator", href: "/tools/medicare-enrollment-calculator" },
       { label: "Part B Penalty Calculator", href: "/tools/part-b-penalty-calculator" },

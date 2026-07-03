@@ -29,7 +29,7 @@ export default function BlogsClient() {
         <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
           Medicare & Insurance Blog
         </h1>
-        <p className="text-white/80 text-lg max-w-xl mx-auto mb-8">
+        <p className="text-white/90 text-lg max-w-xl mx-auto mb-8">
           Plain-language articles from a licensed South Florida broker. No jargon, no sales pressure — just the answers you need.
         </p>
         <input
@@ -63,7 +63,7 @@ export default function BlogsClient() {
                   </div>
                 )}
                 <div className="p-6 flex flex-col flex-1">
-                  <div className="flex items-center gap-3 text-xs text-[#9CA3AF] mb-3">
+                  <div className="flex items-center gap-3 text-xs text-[#6B7280] mb-3">
                     {post.date && <span>{post.date}</span>}
                     {post.readTime && (
                       <>
