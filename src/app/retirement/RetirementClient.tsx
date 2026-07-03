@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { PHONE } from "@/lib/constants";
 
@@ -74,21 +75,24 @@ export default function RetirementClient() {
               transition={{ duration: 0.5 }}
             >
               <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">
-                Retirement Planning
+                Retirement Planning · A&E Insurance Agency
               </span>
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#1A1A2E] leading-tight mb-4">
-                Your Retirement,<br className="hidden md:block" /> Your Way
+                Retirement Income Planning<br className="hidden md:block" /> for South Florida Families
               </h1>
-              <p className="text-[#4B5563] text-lg mb-8 leading-relaxed">
+              <p className="text-[#4B5563] text-lg mb-3 leading-relaxed">
                 Retirement is one of the biggest financial transitions of your life. We help you protect what you've built, create income you can count on, and retire with confidence.
               </p>
+              <p className="text-[#6B7280] text-sm mb-8">
+                Guidance from licensed retirement specialist Steve Germain. Serving South Florida families since 2009.
+              </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <a
+                <Link
                   href={NEEDS_ASSESSMENT_URL}
                   className="inline-flex items-center justify-center text-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
                 >
-                  Schedule Your Needs Assessment
-                </a>
+                  Schedule Your Free Assessment
+                </Link>
                 <a
                   href={`tel:${PHONE.replace(/\D/g, "")}`}
                   className="inline-flex items-center justify-center whitespace-nowrap border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A72C0] hover:text-white font-bold uppercase tracking-wide text-sm px-6 py-4 rounded-lg transition-colors min-h-[56px]"
@@ -108,8 +112,8 @@ export default function RetirementClient() {
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="/Steve and Leslie and Jennifer .jpg"
-                  alt="Steve Germain with Leslie and Jennifer at A&E Insurance Agency"
-                  className="w-full h-auto"
+                  alt="Steve Germain with clients at A&E Insurance Agency — South Florida retirement planning"
+                  className="w-full h-[420px] object-cover object-top"
                 />
               </div>
             </motion.div>
@@ -122,18 +126,18 @@ export default function RetirementClient() {
       <section className="py-4 px-4">
         <div className="max-w-3xl mx-auto divide-y divide-[#E5E7EB]">
           {STEPS.map((step, i) => (
-            <AnimatedSection key={step.number} delay={0.05} className="py-16">
+            <AnimatedSection key={step.number} delay={0.05} className="py-14">
               {/* Step header */}
               <div className="flex items-center gap-4 mb-6">
                 <span
-                  className="text-4xl font-extrabold leading-none"
+                  className="text-5xl font-extrabold leading-none"
                   style={{ color: step.color }}
                 >
                   {step.number}
                 </span>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-[#9CA3AF] mb-0.5">
-                    Step {i + 1}
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#6B7280] mb-0.5">
+                    Step {i + 1} of 4
                   </p>
                   <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1A2E]">
                     {step.title}
@@ -147,10 +151,46 @@ export default function RetirementClient() {
                 {step.bullets.map((b) => (
                   <div key={b.label}>
                     <p className="font-extrabold text-[#1A1A2E] mb-1">{b.label}</p>
-                    <p className="text-[#4B5563] leading-relaxed">{b.body}</p>
+                    <p className="text-[#4B5563] leading-relaxed">
+                      {/* Healthcare Costs bullet: link to Medicare page */}
+                      {b.label === "Healthcare Costs" ? (
+                        <>
+                          Healthcare is the single largest unplanned expense in retirement. A couple retiring today can expect to spend over $300,000 on healthcare costs not covered by{" "}
+                          <Link href="/medicare" className="text-[#1A72C0] underline hover:text-[#155fa0]">Medicare</Link>.
+                          {" "}The right Medicare plan, combined with a long-term care strategy, can protect your nest egg from being wiped out by medical bills.
+                        </>
+                      ) : b.label === "Life Insurance in Retirement" ? (
+                        <>
+                          Life insurance isn't just for when you're young. In retirement, it can be used to replace income for a surviving spouse, cover final expenses, or create a tax-free inheritance for your children. We review whether your{" "}
+                          <Link href="/life-insurance" className="text-[#1A72C0] underline hover:text-[#155fa0]">current coverage</Link>
+                          {" "}still fits your current goals.
+                        </>
+                      ) : (
+                        b.body
+                      )}
+                    </p>
                   </div>
                 ))}
               </div>
+
+              {/* Mid-page CTA after Step 2 */}
+              {i === 1 && (
+                <div className="my-8 bg-[#F3F4F6] rounded-2xl px-6 py-7 text-center border border-[#E5E7EB]">
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-2">Free · No Obligation</p>
+                  <p className="text-[#1A1A2E] font-extrabold text-lg mb-2">
+                    Not sure if your retirement plan covers these risks?
+                  </p>
+                  <p className="text-[#4B5563] text-sm mb-5 leading-relaxed">
+                    A free needs assessment takes 30 minutes and gives you a clear picture of where you stand — and what to do next.
+                  </p>
+                  <Link
+                    href={NEEDS_ASSESSMENT_URL}
+                    className="inline-flex items-center justify-center bg-[#1A72C0] hover:bg-[#155fa0] text-white font-extrabold uppercase tracking-wide text-sm px-6 py-3 rounded-lg transition-colors"
+                  >
+                    Schedule Your Free Assessment →
+                  </Link>
+                </div>
+              )}
 
               {/* Bottom line */}
               <div
@@ -174,16 +214,16 @@ export default function RetirementClient() {
           <h2 className="text-3xl font-extrabold text-white mb-4">
             Let's Build Your Retirement Plan Together
           </h2>
-          <p className="text-white/60 text-sm mb-8 leading-relaxed">
+          <p className="text-white/90 text-sm mb-8 leading-relaxed">
             A free needs assessment is the first step. We'll review your income, assets, and goals — and show you exactly what's possible.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
+            <Link
               href={NEEDS_ASSESSMENT_URL}
-              className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-white font-extrabold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors"
+              className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors"
             >
-              Schedule Your Needs Assessment
-            </a>
+              Schedule Your Free Assessment
+            </Link>
             <a
               href={`tel:${PHONE.replace(/\D/g, "")}`}
               className="inline-block border-2 border-white text-white hover:bg-white hover:text-[#1A1A2E] font-bold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors"
