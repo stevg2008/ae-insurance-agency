@@ -137,7 +137,7 @@ export default function LifeInsuranceClient() {
                 <img
                   src="/Steve and Irving .jpeg"
                   alt="Steve Germain meeting with a client at A&E Insurance Agency — South Florida life insurance"
-                  className="w-full h-[420px] object-cover object-center"
+                  className="w-full h-[420px] object-cover object-top"
                 />
               </div>
             </motion.div>
