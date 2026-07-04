@@ -17,9 +17,8 @@ export async function POST(req: NextRequest) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        first_name: firstName,
-        last_name: lastName || "",
-        name: `${firstName} ${lastName || ""}`.trim(),
+        firstName,
+        lastName: lastName || "",
         email,
         phone,
         zip: zip || "",
