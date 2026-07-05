@@ -2,12 +2,11 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Phone, Mail, ArrowLeft, BookOpen, Star, Users, Clock } from "lucide-react";
+import { Phone, Mail, ArrowLeft, BookOpen, Star, Clock } from "lucide-react";
 import { PHONE, EMAIL, WEBINAR_URL } from "@/lib/constants";
 
 const CREDENTIALS = [
-  { icon: Clock,    label: "10+ Years of Medicare Expertise" },
-  { icon: Users,    label: "500+ South Florida Families Served" },
+  { icon: Clock,    label: "Serving South Florida Since 2009" },
   { icon: Star,     label: "5-Star Google Rating" },
   { icon: BookOpen, label: "Author of Medicare Decoded" },
 ];
@@ -77,7 +76,7 @@ export default function SteveBioClient() {
 
             <div className="space-y-4 text-[#4B5563] leading-relaxed mb-8">
               <p>
-                Steve Germain is a licensed independent Medicare insurance broker and author with more than a decade of experience helping over 500 individuals navigate Medicare with clarity and confidence.
+                Steve Germain is a licensed independent Medicare insurance broker and author with more than a decade of experience helping South Florida families navigate Medicare with clarity and confidence.
               </p>
               <p>
                 His commitment to service was shaped early on by accompanying his grandfather to doctor appointments and witnessing firsthand the real challenges people face when trying to understand Medicare. That personal experience became a professional mission: to make Medicare easier to understand and more accessible for everyone.

@@ -10,7 +10,7 @@ const TEAM = [
     image: "/team/steve.jpg",
     bioLink: "/about/steve",
     bio: [
-      "Steve Germain is a licensed independent Medicare insurance broker and author with more than a decade of experience helping more than 4,200 individuals navigate Medicare with clarity and confidence.",
+      "Steve Germain is a licensed independent Medicare insurance broker and author with more than a decade of experience helping South Florida families navigate Medicare with clarity and confidence.",
       "His commitment to service was shaped early on by accompanying his grandfather to doctor appointments and witnessing firsthand the real challenges people face when trying to understand Medicare. That personal experience became a professional mission: to make Medicare easier to understand and more accessible for everyone.",
       "Steve truly enjoys making confusing topics easy to understand and believes every client deserves honest guidance, personalized education, and exceptional service. As the founder of A&E Insurance Agency, LLC, he leads a team dedicated to helping people make informed, confident decisions about their healthcare every step of the way.",
     ],
@@ -19,6 +19,7 @@ const TEAM = [
     name: "Miderve Germain",
     title: "Associate Financial Advisor / Medicare Broker",
     image: "/team/miderve.jpg",
+    bioLink: undefined,
     bio: [
       "Miderve Germain is an Associate Financial Advisor holding both her Series 6 and Series 7 licenses, bringing over 14 years of financial planning experience from her time at Northwestern Mutual.",
       "Now proudly part of the A&E Insurance Agency family, she channels that same depth of expertise into helping our clients approach retirement with clarity, confidence, and a plan they truly understand.",
@@ -41,9 +42,21 @@ export default function AboutClient() {
             Our Team
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Meet the People Behind A&E
+            Licensed Advisors Who Work for You — Not an Insurance Company
           </h1>
         </motion.div>
+      </section>
+
+      {/* Agency context */}
+      <section className="bg-white py-14 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-[#4B5563] text-lg leading-relaxed mb-6">
+            A&E Insurance Agency was founded on a simple belief: people deserve honest, pressure-free guidance when it comes to Medicare. As an independent agency, we aren&apos;t tied to any single insurance company — which means our only job is to find the right coverage for you.
+          </p>
+          <p className="text-[#4B5563] text-lg leading-relaxed">
+            We serve families across South Florida from our Miami office, and we&apos;ve built our reputation one conversation at a time — on patience, transparency, and staying available long after enrollment day.
+          </p>
+        </div>
       </section>
 
       {/* Team members */}
@@ -59,25 +72,32 @@ export default function AboutClient() {
               i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
             } gap-12 items-start`}
           >
-            {/* Photo — clickable, opens bio */}
+            {/* Photo — clickable only if bio page exists */}
             <div className="w-full lg:w-80 flex-shrink-0">
-              <Link href={member.bioLink ?? "/contact"} className="group block">
+              {member.bioLink ? (
+                <Link href={member.bioLink} className="group block">
+                  <div className="relative overflow-hidden rounded-2xl shadow-xl">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full object-cover aspect-[3/4] group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-[#1A72C0]/0 group-hover:bg-[#1A72C0]/20 transition-colors duration-300 flex items-end">
+                      <div className="w-full p-4 bg-gradient-to-t from-black/60 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <p className="text-white text-sm font-semibold text-center">View Full Bio →</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ) : (
                 <div className="relative overflow-hidden rounded-2xl shadow-xl">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full object-cover aspect-[3/4] group-hover:scale-105 transition-transform duration-500"
+                    className="w-full object-cover aspect-[3/4]"
                   />
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-[#1A72C0]/0 group-hover:bg-[#1A72C0]/20 transition-colors duration-300 flex items-end">
-                    <div className="w-full p-4 bg-gradient-to-t from-black/60 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <p className="text-white text-sm font-semibold text-center">
-                        {member.bioLink ? "View Full Bio →" : "Click to get in touch"}
-                      </p>
-                    </div>
-                  </div>
                 </div>
-              </Link>
+              )}
 
               {/* Name + title under photo */}
               <div className="mt-5 text-center lg:text-left">
