@@ -1,13 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, Phone, BookOpen, Map, FileText, CalendarCheck } from "lucide-react";
+import { CheckCircle2, Phone, BookOpen } from "lucide-react";
 import { PHONE, EMAIL } from "@/lib/constants";
-
-const NEXT_STEPS = [
-  { icon: BookOpen, title: "Download Your Free Medicare Guide", desc: "Get Steve's Medicare Decoded book — digital copy below or call to have a printed copy mailed to you.", action: { label: "Download PDF Free", href: "/medicare-decoded-guide.pdf", download: true } },
-  { icon: CalendarCheck, title: "Book Your Free Consultation", desc: "Talk 1-on-1 with Steve. He'll build a personalized Medicare roadmap around your doctors, budget, and needs.", action: { label: "Call " + PHONE, href: `tel:${PHONE.replace(/\D/g, "")}`, download: false } },
-];
 
 export default function VideoClient() {
   return (
@@ -67,76 +62,106 @@ export default function VideoClient() {
             />
           </motion.div>
 
-          {/* Progress hint */}
           <p className="text-center text-[#9CA3AF] text-xs mt-4">
             💡 Tip: Watch until the end — Steve covers how to get your personalized plan at no cost.
           </p>
         </div>
       </section>
 
-      {/* ── Next steps ── */}
-      <section className="py-14 px-4 bg-white">
+      {/* ── Booking Calendar Section ── */}
+      <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1A2E] mb-2">Your Next Steps</h2>
-            <p className="text-[#6B7280]">Everything below is 100% free — no obligation, no pressure.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {NEXT_STEPS.map((step, i) => {
-              const Icon = step.icon;
-              return (
-                <motion.div
-                  key={step.title}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-[#F3F4F6] rounded-2xl p-7 flex flex-col gap-4"
-                >
-                  <div className="w-12 h-12 rounded-full bg-[#DBEAFE] flex items-center justify-center">
-                    <Icon size={20} className="text-[#1A72C0]" />
-                  </div>
-                  <div>
-                    <h3 className="font-extrabold text-[#1A1A2E] mb-2">{step.title}</h3>
-                    <p className="text-[#6B7280] text-sm leading-relaxed mb-4">{step.desc}</p>
-                    <a
-                      href={step.action.href}
-                      {...(step.action.download ? { download: true } : {})}
-                      className="inline-block bg-[#1A72C0] hover:bg-[#155fa0] text-white font-bold uppercase tracking-wide text-xs px-5 py-3 rounded-lg transition-colors"
-                    >
-                      {step.action.label}
-                    </a>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10"
+          >
+            <span className="inline-block bg-[#FEF3C7] text-[#E8A020] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
+              Next Step
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-4">
+              Book Your Free Medicare Review
+            </h2>
+            <p className="text-[#4B5563] text-base max-w-2xl mx-auto leading-relaxed">
+              Steve will build your personalized Medicare roadmap — your doctors, your budget, your timeline.
+              No pressure. No sales pitch. Just honest answers from an independent broker who works for you.
+            </p>
+          </motion.div>
 
-      {/* ── What to expect on your call ── */}
-      <section className="py-14 px-4 bg-[#1A72C0]">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-extrabold text-white mb-3">What to Expect on Your Free Call</h2>
-          <p className="text-white/60 text-sm mb-8">A typical first call with Steve takes 20–30 minutes and covers:</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left mb-10">
+          {/* What you get bullets */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10 max-w-2xl mx-auto"
+          >
             {[
-              "Review of your current health needs and doctors",
               "Side-by-side comparison of your best plan options",
               "Exact enrollment timeline based on your birthday",
+              "Review of your doctors and prescriptions",
               "Answers to every Medicare question you have",
             ].map((item) => (
               <div key={item} className="flex items-start gap-3">
-                <CheckCircle2 size={16} className="text-[#E8A020] flex-shrink-0 mt-0.5" />
-                <span className="text-white/80 text-sm">{item}</span>
+                <CheckCircle2 size={16} className="text-green-500 flex-shrink-0 mt-0.5" />
+                <span className="text-[#4B5563] text-sm">{item}</span>
               </div>
             ))}
-          </div>
-          <a
-            href={`tel:${PHONE.replace(/\D/g, "")}`}
-            className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-white font-bold uppercase tracking-wide text-sm px-10 py-4 rounded-lg transition-colors"
+          </motion.div>
+
+          {/* Embedded Calendar */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="rounded-2xl overflow-hidden shadow-lg border border-[#E5E7EB]"
+            style={{ minHeight: 700 }}
           >
-            📞 Call {PHONE}
-          </a>
+            <iframe
+              src="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"
+              style={{ width: "100%", height: 700, border: "none" }}
+              title="Book a Free Medicare Consultation with Steve Germain"
+              scrolling="yes"
+            />
+          </motion.div>
+
+          {/* Prefer to call */}
+          <p className="text-center text-[#9CA3AF] text-sm mt-6">
+            Prefer to call? Reach Steve directly at{" "}
+            <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="text-[#1A72C0] font-bold hover:underline">
+              {PHONE}
+            </a>
+          </p>
+        </div>
+      </section>
+
+      {/* ── Free Guide CTA ── */}
+      <section className="py-14 px-4 bg-[#F3F4F6]">
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 shadow-sm border border-[#E5E7EB]"
+          >
+            <div className="w-16 h-16 rounded-full bg-[#DBEAFE] flex items-center justify-center flex-shrink-0">
+              <BookOpen size={28} className="text-[#1A72C0]" />
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="text-xl font-extrabold text-[#1A1A2E] mb-2">Download Medicare Decoded — Free</h3>
+              <p className="text-[#6B7280] text-sm leading-relaxed mb-4">
+                Steve&apos;s plain-English guide covers every part of Medicare, common mistakes to avoid, and how to pick the right plan for your situation.
+              </p>
+              <a
+                href="https://assets.cdn.filesafe.space/KQ2C7PNRgoxVKqxmCXlN/media/69964f3ff02fa42d366984e9.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#E8A020] hover:bg-[#D4911B] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-xs px-6 py-3 rounded-lg transition-colors"
+              >
+                Download Free PDF
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
