@@ -56,3 +56,8 @@ body {
 .blog-content figure img { width: 100%; border-radius: 0.75rem; height: auto; }
 .blog-content blockquote { border-left: 4px solid #1A72C0; padding-left: 1rem; margin: 1.5rem 0; color: #6B7280; font-style: italic; }
 .blog-content div[data-rt-embed-type] { display: none; }
+
+/* Funnel pages (watch, book/thank-you) — hide global nav and footer */
+body[data-funnel] #global-announcement,
+body[data-funnel] #global-header,
+body[data-funnel] #global-footer { display: none !important; }

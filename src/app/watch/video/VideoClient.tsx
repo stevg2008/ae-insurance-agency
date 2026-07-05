@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, Phone, BookOpen } from "lucide-react";
+import { CheckCircle2, Phone } from "lucide-react";
 import { PHONE, EMAIL } from "@/lib/constants";
 
 export default function VideoClient() {
@@ -27,7 +27,7 @@ export default function VideoClient() {
         ✅ You&apos;re registered! Your free resources are on the way.
       </div>
 
-      {/* ── Video section ── */}
+      {/* ── STEP 1: Video ── */}
       <section className="py-12 px-4 bg-[#F3F4F6]">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -36,13 +36,18 @@ export default function VideoClient() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <span className="inline-block bg-[#DBEAFE] text-[#1A72C0] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
-              Your Free Workshop
+            <span className="inline-block bg-[#1A72C0] text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+              Step 1 of 2
             </span>
             <h1 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-3">
-              Medicare Made Simple
+              Watch the Medicare 101 Workshop
             </h1>
-            <p className="text-[#4B5563]">Watch the full workshop below. Have questions? Call us at <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="text-[#1A72C0] font-bold">{PHONE}</a>.</p>
+            <p className="text-[#4B5563]">
+              29 minutes. Plain English. No fluff. Have questions?{" "}
+              <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="text-[#1A72C0] font-bold">
+                Call {PHONE}
+              </a>
+            </p>
           </motion.div>
 
           {/* Video embed */}
@@ -63,66 +68,99 @@ export default function VideoClient() {
           </motion.div>
 
           <p className="text-center text-[#9CA3AF] text-xs mt-4">
-            💡 Tip: Watch until the end — Steve covers how to get your personalized plan at no cost.
+            💡 Watch until the end — Steve covers how to get your personalized plan at no cost.
           </p>
         </div>
       </section>
 
-      {/* ── Booking Calendar Section ── */}
-      <section className="py-16 px-4 bg-white">
+      {/* ── Step connector ── */}
+      <div className="flex flex-col items-center py-6 bg-white">
+        <div className="w-px h-8 bg-[#E5E7EB]" />
+        <div className="w-8 h-8 rounded-full bg-[#E8A020] flex items-center justify-center">
+          <span className="text-[#1A1A2E] font-extrabold text-sm">↓</span>
+        </div>
+        <div className="w-px h-8 bg-[#E5E7EB]" />
+      </div>
+
+      {/* ── STEP 2: Book ── */}
+      <section className="pb-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-10"
+            className="text-center mb-8"
           >
-            <span className="inline-block bg-[#FEF3C7] text-[#E8A020] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
-              Next Step
+            <span className="inline-block bg-[#E8A020] text-[#1A1A2E] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+              Step 2 of 2
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-4">
               Book Your Free Medicare Review
             </h2>
-            <p className="text-[#4B5563] text-base max-w-2xl mx-auto leading-relaxed">
-              Steve will build your personalized Medicare roadmap — your doctors, your budget, your timeline.
-              No pressure. No sales pitch. Just honest answers from an independent broker who works for you.
+
+            {/* Bridge paragraph */}
+            <p className="text-[#4B5563] text-base max-w-2xl mx-auto leading-relaxed mb-6">
+              The workshop explains how Medicare works. Your free review applies it to{" "}
+              <strong>you specifically</strong> — your doctors, your prescriptions, your budget, and
+              your retirement timeline. Most people find a better plan and save money they didn&apos;t
+              know they were leaving on the table.
             </p>
+
+            {/* What you get */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 max-w-2xl mx-auto text-left">
+              {[
+                "Side-by-side comparison of your best plan options",
+                "Exact enrollment timeline based on your birthday",
+                "Review of your doctors and prescriptions",
+                "Answers to every Medicare question you have",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <CheckCircle2 size={16} className="text-green-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-[#4B5563] text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Social proof */}
+            <div className="bg-[#F3F4F6] rounded-xl px-6 py-4 max-w-xl mx-auto mb-8 text-left">
+              <p className="text-[#4B5563] text-sm italic leading-relaxed">
+                &ldquo;Steve saved us $180/month. He found a plan our previous broker never even mentioned.&rdquo;
+              </p>
+              <p className="text-[#1A72C0] text-xs font-bold mt-2">— Maria T., Kendall FL ⭐⭐⭐⭐⭐</p>
+            </div>
           </motion.div>
 
-          {/* What you get bullets */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10 max-w-2xl mx-auto"
-          >
-            {[
-              "Side-by-side comparison of your best plan options",
-              "Exact enrollment timeline based on your birthday",
-              "Review of your doctors and prescriptions",
-              "Answers to every Medicare question you have",
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3">
-                <CheckCircle2 size={16} className="text-green-500 flex-shrink-0 mt-0.5" />
-                <span className="text-[#4B5563] text-sm">{item}</span>
-              </div>
-            ))}
-          </motion.div>
-
-          {/* Embedded Calendar */}
+          {/* Embedded Calendar — responsive height */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="rounded-2xl overflow-hidden shadow-lg border border-[#E5E7EB]"
-            style={{ minHeight: 700 }}
           >
-            <iframe
-              src="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"
-              style={{ width: "100%", height: 700, border: "none" }}
-              title="Book a Free Medicare Consultation with Steve Germain"
-              scrolling="yes"
-            />
+            {/* Mobile: link button */}
+            <div className="block md:hidden p-8 text-center bg-[#F3F4F6]">
+              <p className="text-[#4B5563] text-sm mb-5">
+                Tap below to pick a time that works for you — in person or by phone.
+              </p>
+              <a
+                href="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-[#E8A020] hover:bg-[#D4911B] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors w-full max-w-sm"
+              >
+                Choose Your Appointment Time →
+              </a>
+            </div>
+
+            {/* Desktop: embedded iframe */}
+            <div className="hidden md:block">
+              <iframe
+                src="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"
+                style={{ width: "100%", height: 900, border: "none" }}
+                title="Book a Free Medicare Consultation with Steve Germain"
+                scrolling="yes"
+              />
+            </div>
           </motion.div>
 
           {/* Prefer to call */}
@@ -132,36 +170,6 @@ export default function VideoClient() {
               {PHONE}
             </a>
           </p>
-        </div>
-      </section>
-
-      {/* ── Free Guide CTA ── */}
-      <section className="py-14 px-4 bg-[#F3F4F6]">
-        <div className="max-w-3xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="bg-white rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 shadow-sm border border-[#E5E7EB]"
-          >
-            <div className="w-16 h-16 rounded-full bg-[#DBEAFE] flex items-center justify-center flex-shrink-0">
-              <BookOpen size={28} className="text-[#1A72C0]" />
-            </div>
-            <div className="flex-1 text-center md:text-left">
-              <h3 className="text-xl font-extrabold text-[#1A1A2E] mb-2">Download Medicare Decoded — Free</h3>
-              <p className="text-[#6B7280] text-sm leading-relaxed mb-4">
-                Steve&apos;s plain-English guide covers every part of Medicare, common mistakes to avoid, and how to pick the right plan for your situation.
-              </p>
-              <a
-                href="https://assets.cdn.filesafe.space/KQ2C7PNRgoxVKqxmCXlN/media/69964f3ff02fa42d366984e9.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#E8A020] hover:bg-[#D4911B] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-xs px-6 py-3 rounded-lg transition-colors"
-              >
-                Download Free PDF
-              </a>
-            </div>
-          </motion.div>
         </div>
       </section>
 

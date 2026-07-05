@@ -56,6 +56,7 @@ export default function Header() {
 
   return (
     <header
+      id="global-header"
       className={`sticky top-0 z-50 bg-white transition-shadow duration-300 ${
         scrolled ? "shadow-lg" : "shadow-sm"
       }`}

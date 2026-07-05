@@ -5,7 +5,7 @@ import { Phone } from "lucide-react";
 
 export default function AnnouncementBar() {
   return (
-    <div className="bg-[#1A72C0] text-white text-sm py-2 px-4">
+    <div id="global-announcement" className="bg-[#1A72C0] text-white text-sm py-2 px-4">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
         {/* Left: phone */}
         <a
