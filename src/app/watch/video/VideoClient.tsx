@@ -107,11 +107,27 @@ export default function VideoClient() {
             </p>
 
             {/* Social proof */}
-            <div className="bg-[#F3F4F6] rounded-xl px-6 py-4 max-w-xl mx-auto mb-8 text-left">
-              <p className="text-[#4B5563] text-sm italic leading-relaxed">
-                &ldquo;Steve was extremely helpful and patient with my lack of knowledge of Medicare transitioning. He offered insights and opinions that many others never touched on for my situation. He never pushed for or hinted to make a commitment to close the decision. That&apos;s one main reason I came back to him exactly one month later.&rdquo;
-              </p>
-              <p className="text-[#1A72C0] text-xs font-bold mt-2">— Robert M. ⭐⭐⭐⭐⭐ Google Review</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto mb-8 text-left">
+              {[
+                {
+                  quote: "Steve was extremely helpful and patient with my lack of knowledge of Medicare transitioning. He never pushed for or hinted to make a commitment to close the decision. That’s one main reason I came back to him exactly one month later.",
+                  name: "Robert M.",
+                },
+                {
+                  quote: "My experience was the best. Steve Germain was so helpful, professional, and compassionate. He is so knowledgeable, and anyone starting on Medicare should talk to him first. He really cares about people and wants to accommodate his clients.",
+                  name: "Susan D.",
+                },
+                {
+                  quote: "Steve and his secretary Mimi are extremely helpful and honest people. Steve is very knowledgeable about the ins and outs of all the different programs available to seniors. Will not push you to sign up for something that isn’t going to benefit you.",
+                  name: "Peggy P.",
+                },
+              ].map(({ quote, name }) => (
+                <div key={name} className="bg-[#F3F4F6] rounded-xl px-5 py-4">
+                  <p className="text-[#1A72C0] text-xs font-bold mb-2">⭐⭐⭐⭐⭐ Google Review</p>
+                  <p className="text-[#4B5563] text-sm italic leading-relaxed">&ldquo;{quote}&rdquo;</p>
+                  <p className="text-[#6B7280] text-xs font-semibold mt-2">— {name}</p>
+                </div>
+              ))}
             </div>
 
             {/* What you get */}
