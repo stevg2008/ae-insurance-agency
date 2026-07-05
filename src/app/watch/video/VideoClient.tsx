@@ -150,18 +150,11 @@ export default function VideoClient() {
           </motion.div>
 
           {/* Steve bio */}
-          <div className="flex items-center gap-4 max-w-2xl mx-auto mb-6 px-2">
-            <img
-              src="/team/steve.jpg"
-              alt="Steve Germain"
-              className="w-16 h-16 rounded-full object-cover flex-shrink-0 border-2 border-[#E8A020]"
-            />
-            <div className="text-left">
-              <p className="text-[#1A1A2E] font-bold text-sm">Steve Germain — Licensed Medicare Specialist</p>
-              <p className="text-[#4B5563] text-sm leading-relaxed mt-0.5">
-                Serving South Florida since 2009. Independent agent — Steve works for you, not an insurance company.
-              </p>
-            </div>
+          <div className="max-w-2xl mx-auto mb-6 px-2 text-center">
+            <p className="text-[#1A1A2E] font-bold text-sm">Steve Germain — Licensed Medicare Specialist</p>
+            <p className="text-[#4B5563] text-sm leading-relaxed mt-0.5">
+              Serving South Florida since 2009. Independent agent — Steve works for you, not an insurance company.
+            </p>
           </div>
 
           {/* Embedded Calendar — responsive height */}
