@@ -94,9 +94,10 @@ export default function VideoClient() {
             <span className="inline-block bg-[#E8A020] text-[#1A1A2E] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
               Step 2 of 2
             </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-4">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-2">
               Book Your Free Medicare Review
             </h2>
+            <p className="text-[#6B7280] text-sm mb-4">45 minutes &middot; No obligation &middot; No cost to you</p>
 
             {/* Bridge paragraph */}
             <p className="text-[#4B5563] text-base max-w-2xl mx-auto leading-relaxed mb-6">
@@ -133,10 +134,10 @@ export default function VideoClient() {
             {/* What you get */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 max-w-2xl mx-auto text-left">
               {[
-                "Side-by-side comparison of your best plan options",
-                "Exact enrollment timeline based on your birthday",
-                "Review of your doctors and prescriptions",
-                "Answers to every Medicare question you have",
+                "Verify every doctor you see today accepts your new plan",
+                "Know your exact enrollment window so you never pay a late penalty",
+                "See which drugs are covered — and what they'll actually cost you",
+                "Leave with a clear recommendation, not a confusing list of options",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <CheckCircle2 size={16} className="text-green-500 flex-shrink-0 mt-0.5" />
@@ -147,6 +148,21 @@ export default function VideoClient() {
 
 
           </motion.div>
+
+          {/* Steve bio */}
+          <div className="flex items-center gap-4 max-w-2xl mx-auto mb-6 px-2">
+            <img
+              src="/team/steve.jpg"
+              alt="Steve Germain"
+              className="w-16 h-16 rounded-full object-cover flex-shrink-0 border-2 border-[#E8A020]"
+            />
+            <div className="text-left">
+              <p className="text-[#1A1A2E] font-bold text-sm">Steve Germain — Licensed Medicare Specialist</p>
+              <p className="text-[#4B5563] text-sm leading-relaxed mt-0.5">
+                Serving South Florida since 2009. Independent agent — Steve works for you, not an insurance company.
+              </p>
+            </div>
+          </div>
 
           {/* Embedded Calendar — responsive height */}
           <motion.div
