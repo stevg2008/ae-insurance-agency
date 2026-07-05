@@ -106,6 +106,14 @@ export default function VideoClient() {
               know they were leaving on the table.
             </p>
 
+            {/* Social proof */}
+            <div className="bg-[#F3F4F6] rounded-xl px-6 py-4 max-w-xl mx-auto mb-8 text-left">
+              <p className="text-[#4B5563] text-sm italic leading-relaxed">
+                &ldquo;Steve was extremely helpful and patient with my lack of knowledge of Medicare transitioning. He offered insights and opinions that many others never touched on for my situation. He never pushed for or hinted to make a commitment to close the decision. That&apos;s one main reason I came back to him exactly one month later.&rdquo;
+              </p>
+              <p className="text-[#1A72C0] text-xs font-bold mt-2">— Robert M. ⭐⭐⭐⭐⭐ Google Review</p>
+            </div>
+
             {/* What you get */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 max-w-2xl mx-auto text-left">
               {[
