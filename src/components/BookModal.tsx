@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export default function BookModal({ isOpen, onClose }: Props) {
+  const router = useRouter();
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", zip: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -30,9 +32,8 @@ export default function BookModal({ isOpen, onClose }: Props) {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error();
-      // Redirect to PDF download
-      window.open("/medicare-decoded-guide.pdf", "_blank");
       onClose();
+      router.push("/book/thank-you");
     } catch {
       setError("Something went wrong. Please try again.");
     } finally {
