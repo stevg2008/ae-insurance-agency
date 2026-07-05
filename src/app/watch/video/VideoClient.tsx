@@ -3,8 +3,17 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, Phone } from "lucide-react";
 import { PHONE, EMAIL } from "@/lib/constants";
+import { useState, useEffect } from "react";
 
 export default function VideoClient() {
+  const [showBar, setShowBar] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowBar(window.scrollY > 500);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
 
@@ -199,6 +208,23 @@ export default function VideoClient() {
           </p>
         </div>
       </section>
+
+      {/* ── Mobile sticky CTA bar ── */}
+      <div
+        className={`sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#1A1A2E] px-4 py-3 shadow-2xl transition-transform duration-300 ${
+          showBar ? "translate-y-0" : "translate-y-full"
+        }`}
+      >
+        <a
+          href="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 bg-[#E8A020] hover:bg-[#D4911B] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-sm px-6 py-3 rounded-lg transition-colors w-full"
+        >
+          Book Your Free Medicare Review →
+        </a>
+        <p className="text-white/50 text-xs text-center mt-1.5">45 min · No obligation · No cost</p>
+      </div>
 
       {/* ── Minimal Footer ── */}
       <footer className="bg-[#111827] py-6 px-4 text-center">
