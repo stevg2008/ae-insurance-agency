@@ -138,7 +138,7 @@ export default function VideoClient() {
             className="rounded-2xl overflow-hidden shadow-lg border border-[#E5E7EB]"
           >
             {/* Mobile: link button */}
-            <div className="block md:hidden p-8 text-center bg-[#F3F4F6]">
+            <div className="block sm:hidden p-8 text-center bg-[#F3F4F6]">
               <p className="text-[#4B5563] text-sm mb-5">
                 Tap below to pick a time that works for you — in person or by phone.
               </p>
@@ -153,7 +153,7 @@ export default function VideoClient() {
             </div>
 
             {/* Desktop: embedded iframe */}
-            <div className="hidden md:block">
+            <div className="hidden sm:block">
               <iframe
                 src="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"
                 style={{ width: "100%", height: 900, border: "none" }}
