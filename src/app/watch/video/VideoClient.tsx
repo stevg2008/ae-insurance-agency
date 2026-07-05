@@ -121,13 +121,7 @@ export default function VideoClient() {
               ))}
             </div>
 
-            {/* Social proof */}
-            <div className="bg-[#F3F4F6] rounded-xl px-6 py-4 max-w-xl mx-auto mb-8 text-left">
-              <p className="text-[#4B5563] text-sm italic leading-relaxed">
-                &ldquo;Steve saved us $180/month. He found a plan our previous broker never even mentioned.&rdquo;
-              </p>
-              <p className="text-[#1A72C0] text-xs font-bold mt-2">— Maria T., Kendall FL ⭐⭐⭐⭐⭐</p>
-            </div>
+
           </motion.div>
 
           {/* Embedded Calendar — responsive height */}
