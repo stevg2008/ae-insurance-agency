@@ -177,81 +177,6 @@ export const FAQS: FAQ[] = [
     ],
   },
   {
-    slug: "what-is-an-attained-age-policy",
-    title: "What Is an Attained-Age Policy?",
-    excerpt:
-      "Not all Medigap plans are priced the same way. Understanding how your premium is calculated can save you thousands of dollars over your lifetime.",
-    keyTakeaways: [
-      "Attained-age pricing means your premium increases as you get older.",
-      "Issue-age and community-rated plans may start higher but tend to be more stable long-term.",
-      "Always ask how a plan is rated before you enroll.",
-    ],
-    content: [
-      {
-        heading: "The Three Ways Medigap Plans Are Priced",
-        body: [
-          "When you shop for a Medigap plan, the monthly premium isn't just determined by which plan letter you choose — it's also determined by how the insurance company calculates your rate. There are three pricing methods: attained-age, issue-age, and community-rated.",
-          "Understanding the difference can have a major impact on what you pay over the long run, especially as you get further into retirement.",
-        ],
-      },
-      {
-        heading: "How Attained-Age Pricing Works",
-        body: [
-          "With an attained-age policy, your premium is based on your current age — the age you've \"attained\" — at any given point in time. This means that as you get older, your premium will increase simply because of your age, in addition to any general rate increases the insurer applies.",
-          "Attained-age plans often have the lowest premiums when you first enroll, which makes them attractive to people starting on Medicare at 65. However, the compounding effect of age-based increases means premiums can climb considerably by your 70s and 80s.",
-        ],
-      },
-      {
-        heading: "How Issue-Age Pricing Works",
-        body: [
-          "With an issue-age policy, your premium is locked in based on the age at which you first purchase the plan — your \"issue age.\" Your premium may still increase over time due to inflation and medical costs, but it won't go up simply because you're getting older.",
-          "These plans tend to start at a slightly higher premium than attained-age plans, but they can be more cost-effective in the long run because you avoid the age-based increases.",
-        ],
-      },
-      {
-        heading: "How Community-Rated Pricing Works",
-        body: [
-          "Community-rated plans charge the same premium to everyone in a geographic area, regardless of age. A 65-year-old and a 78-year-old pay the same monthly rate. Premiums can still increase due to overall cost trends, but age alone doesn't drive them up.",
-          "Florida is not a community-rated state, so most plans available here use attained-age or issue-age pricing. Knowing which type of pricing applies to any plan you're considering is essential to making a smart long-term decision.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "what-is-a-medicare-select-policy",
-    title: "What Is a Medicare SELECT Policy?",
-    excerpt:
-      "Medicare SELECT is a type of Medigap plan that operates within a network of hospitals and providers. Here's how it differs from standard Medigap and when it might make sense.",
-    keyTakeaways: [
-      "Medicare SELECT plans offer the same benefits as standard Medigap but require you to use specific network hospitals for non-emergency care.",
-      "Premiums are typically lower than comparable standard Medigap plans.",
-      "Emergency care is always covered, even outside the network.",
-    ],
-    content: [
-      {
-        heading: "How Medicare SELECT Differs from Standard Medigap",
-        body: [
-          "Standard Medigap plans allow you to see any doctor or use any hospital that accepts Medicare, anywhere in the country — with no network restrictions. Medicare SELECT plans offer the same standardized coverage (Plan A, Plan G, etc.) but add one condition: for non-emergency inpatient hospital care, you must use a hospital within the plan's network to receive full benefits.",
-          "If you use an out-of-network hospital for non-emergency care with a SELECT plan, the plan may not pay its share — leaving you responsible for costs that a standard Medigap plan would have covered.",
-        ],
-      },
-      {
-        heading: "Why Would Someone Choose a SELECT Plan?",
-        body: [
-          "The primary reason people choose Medicare SELECT plans is cost. Because the insurer can direct beneficiaries toward specific facilities, they're able to offer lower monthly premiums than comparable standard Medigap plans. For someone who lives near their preferred hospital and rarely travels, a SELECT plan can offer meaningful savings.",
-          "Emergency services are always covered regardless of which hospital you use — SELECT plans cannot deny emergency coverage based on network status.",
-        ],
-      },
-      {
-        heading: "Is a SELECT Plan Right for You?",
-        body: [
-          "Medicare SELECT plans tend to work best for people who have a strong relationship with a local hospital that's in-network, don't travel frequently, and want to reduce their monthly premium without sacrificing too much flexibility.",
-          "If you travel often, split time between two states, or want the freedom to use any hospital in the country, a standard Medigap plan is likely the better fit — even at a slightly higher premium. An independent broker can help you compare both options side by side.",
-        ],
-      },
-    ],
-  },
-  {
     slug: "can-i-change-my-supplement-plan-during-annual-enrollment",
     title: "Can I Change My Medicare Supplement Plan During Annual Enrollment?",
     excerpt:
@@ -288,47 +213,6 @@ export const FAQS: FAQ[] = [
         body: [
           "Some states have special rules that allow beneficiaries to change Medigap plans without underwriting at certain times — such as on their policy anniversary. Florida is not one of those states, so in most cases, health underwriting will apply if you try to switch plans after your initial Open Enrollment Period.",
           "That said, there are special enrollment situations — like losing employer coverage — where guaranteed issue rights may apply. We can review your specific situation and let you know what options are available.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "do-i-need-part-b",
-    title: "Do I Need Medicare Part B?",
-    excerpt:
-      "Most people should enroll in Part B when they first become eligible — but there are situations where delaying makes sense. Here's how to know which applies to you.",
-    keyTakeaways: [
-      "Part B covers doctor visits, outpatient services, and preventive care.",
-      "If you have qualifying employer coverage, you may be able to delay Part B penalty-free.",
-      "Delaying without qualifying coverage results in a permanent late enrollment penalty.",
-    ],
-    content: [
-      {
-        heading: "What Does Part B Cover?",
-        body: [
-          "Medicare Part B is your medical insurance — it covers outpatient services like doctor visits, lab work, imaging, preventive screenings, durable medical equipment, and some home health services. Part B covers 80% of Medicare-approved costs after your annual deductible ($283 in 2026).",
-          "Part B has a monthly premium — $202.90 in 2026 for most beneficiaries — and is separate from Part A, which covers hospital stays. Together, Parts A and B form what's known as Original Medicare.",
-        ],
-      },
-      {
-        heading: "Can I Delay Part B?",
-        body: [
-          "Yes — but only under specific circumstances. If you are still actively working and covered by a group health plan through your employer (or your spouse's employer), and that employer has 20 or more employees, you may delay Part B enrollment without penalty. In this case, you can sign up for Part B penalty-free during a Special Enrollment Period after your employer coverage ends.",
-          "It's important to note that COBRA coverage and retiree health insurance do NOT qualify as \"active employer coverage\" for the purposes of delaying Part B. Enrolling late while on COBRA or retiree insurance can result in a penalty.",
-        ],
-      },
-      {
-        heading: "What Happens If I Don't Enroll on Time?",
-        body: [
-          "If you don't enroll in Part B when first eligible and don't have a qualifying reason to delay, you'll face a late enrollment penalty of 10% added to your Part B premium for every 12-month period you were without coverage. This penalty is permanent — it stays with you for as long as you have Medicare.",
-          "For example, if you delay enrollment for three years without a qualifying reason, your Part B premium increases by 30% for life. This is one of the most costly Medicare mistakes we see, and it's entirely avoidable with a quick conversation before you turn 65.",
-        ],
-      },
-      {
-        heading: "When Should I Sign Up?",
-        body: [
-          "If you don't have qualifying employer coverage, the safest approach is to sign up for Part B during your Initial Enrollment Period — the seven-month window surrounding your 65th birthday. Enrolling on time protects you from penalties and ensures your coverage begins without gaps.",
-          "Every situation is different. Before making any decision about delaying Part B, call us. We'll review your coverage and help you make the right call — at no cost to you.",
         ],
       },
     ],
@@ -1155,6 +1039,170 @@ export const FAQS: FAQ[] = [
         body: [
           "The $35 cap only applies to insulin products that are on your plan's formulary. If your specific insulin is not included in your Part D plan's drug list, you won't have access to the capped price through that plan. This is one reason why reviewing your plan's formulary each year — particularly during Annual Enrollment — is so important.",
           "We help our clients review how their insulin is delivered, confirm that their Part D or Medicare Advantage plan covers the right products, and make sure they're getting access to the $35 cap they're entitled to. If you manage diabetes and take insulin, this is a conversation worth having before your next enrollment period.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "what-is-medicare-advantage",
+    title: "What Is Medicare Advantage?",
+    excerpt:
+      "Medicare Advantage is an alternative to Original Medicare offered by private insurers. It can look attractive on paper — but the trade-offs matter. Here's what you need to know before enrolling.",
+    keyTakeaways: [
+      "Medicare Advantage replaces Original Medicare and is run by private insurance companies under contract with the federal government.",
+      "Most plans have networks, require referrals, and use prior authorization — limiting your freedom to choose providers.",
+      "Plans may offer extra benefits like dental and vision, but coverage can change significantly from year to year.",
+    ],
+    content: [
+      {
+        heading: "What Is Medicare Advantage?",
+        body: [
+          "Medicare Advantage — also called Medicare Part C — is an alternative way to receive your Medicare benefits. Instead of getting coverage directly through the federal government (Original Medicare), you enroll in a private insurance plan that contracts with Medicare to provide your Part A and Part B benefits, and usually Part D (prescription drugs) as well.",
+          "Enrollment in Medicare Advantage has grown significantly over the past decade. As of 2025, more than half of all Medicare beneficiaries are enrolled in a Medicare Advantage plan. The appeal is understandable: many plans have $0 premiums and include extras like dental, vision, hearing, and gym memberships that Original Medicare doesn't cover.",
+        ],
+      },
+      {
+        heading: "HMO vs. PPO: How Networks Work",
+        body: [
+          "Most Medicare Advantage plans operate as either an HMO (Health Maintenance Organization) or a PPO (Preferred Provider Organization). With an HMO, you must use doctors and hospitals within the plan's network and typically need a primary care physician referral to see a specialist. Going out of network usually means you pay the full cost yourself.",
+          "PPO plans offer more flexibility — you can see out-of-network providers, but at a higher cost. Even with a PPO, you'll generally pay less by staying in-network. If you have established relationships with specific doctors or specialists, verifying that they're in-network before enrolling is critical.",
+        ],
+      },
+      {
+        heading: "Prior Authorization: The Hidden Trade-Off",
+        body: [
+          "One of the most significant — and least discussed — features of Medicare Advantage is prior authorization. Before approving many services, procedures, or specialist referrals, the insurance company requires advance approval. Studies have consistently shown that prior authorization denials are common, and the appeals process can be slow and stressful when you need care quickly.",
+          "With Original Medicare, there is no prior authorization requirement for most covered services. If Medicare covers it and your doctor orders it, you generally get it. This difference in control over your own healthcare is a major reason many people with complex medical needs prefer Original Medicare paired with a Medigap plan.",
+        ],
+      },
+      {
+        heading: "How Medicare Advantage Compares to Medigap",
+        body: [
+          "The choice between Medicare Advantage and Original Medicare + Medigap comes down to what you value most. Medicare Advantage often has lower upfront costs and includes extra benefits — but comes with networks, prior authorization, and coverage that can change each January 1. Original Medicare + Medigap offers broader provider access and more predictable costs, but at a higher monthly premium.",
+          "There is no single right answer — the best choice depends on your health, your doctors, your prescriptions, and your budget. An independent broker can walk you through a side-by-side comparison based on your specific situation, at no cost to you.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "what-is-irmaa",
+    title: "What Is IRMAA?",
+    excerpt:
+      "Higher-income Medicare beneficiaries pay more for Part B and Part D. This surcharge is called IRMAA — and many people are surprised to learn they owe it. Here's how it works and what you can do if your income has changed.",
+    keyTakeaways: [
+      "IRMAA is an income-related monthly adjustment amount added to your Part B and Part D premiums if your income exceeds certain thresholds.",
+      "The Social Security Administration determines your IRMAA based on your tax return from two years ago.",
+      "If your income has dropped due to a qualifying life event, you can appeal using Form SSA-44.",
+    ],
+    content: [
+      {
+        heading: "What Is IRMAA?",
+        body: [
+          "IRMAA stands for Income-Related Monthly Adjustment Amount. It's a surcharge added to your standard Medicare Part B and Part D premiums if your income exceeds a certain threshold. The Social Security Administration (SSA) determines whether you owe IRMAA based on your modified adjusted gross income (MAGI) from your most recent federal tax return on file — typically two years prior.",
+          "For 2026, the standard Part B premium is $202.90 per month. Beneficiaries subject to IRMAA pay anywhere from $264.90 to $594.00 per month depending on their income bracket. Part D IRMAA is assessed separately and added on top of whatever your drug plan's premium is.",
+        ],
+      },
+      {
+        heading: "Who Pays IRMAA?",
+        body: [
+          "IRMAA applies to individuals whose MAGI exceeds $106,000 per year (or $212,000 for married couples filing jointly) based on the two-year-old tax return SSA has on file. If your income was above those thresholds in 2024, you may receive an IRMAA determination letter from Social Security before or shortly after your Medicare coverage begins.",
+          "The surcharge is tiered — higher income brackets pay progressively more. SSA sends a notice called an IRMAA determination letter that tells you exactly what you owe and when it will take effect.",
+        ],
+      },
+      {
+        heading: "What If Your Income Has Changed?",
+        body: [
+          "Because IRMAA is based on income from two years ago, it can feel unfair when your circumstances have changed significantly. If you've experienced a qualifying life event — such as retirement, divorce, the death of a spouse, loss of income-producing property, or reduced work hours — you may be able to appeal your IRMAA determination and have it based on a more recent year's income instead.",
+          "To appeal, you file Form SSA-44 (Medicare Income-Related Monthly Adjustment Amount — Life-Changing Event) with your local Social Security office. You'll need to provide documentation of the life event and an estimate or proof of your more recent income. If approved, your IRMAA surcharge will be adjusted — sometimes eliminated entirely.",
+        ],
+      },
+      {
+        heading: "Planning Around IRMAA",
+        body: [
+          "For people approaching Medicare who are still working or drawing down retirement accounts, income in the years just before age 65 can directly affect what you pay for Medicare. Large Roth conversions, capital gains events, or required minimum distributions can push you into a higher IRMAA bracket — sometimes by a significant amount.",
+          "Working with a financial advisor on Medicare-aware income planning before you turn 65 can help you avoid unnecessary IRMAA surcharges. And if you believe you've been assessed IRMAA incorrectly, don't hesitate to appeal — the SSA-44 process exists precisely for situations where the two-year lookback produces an unfair result.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "veterans-and-medicare",
+    title: "Veterans and Medicare: What You Need to Know",
+    excerpt:
+      "If you're a veteran with VA benefits, you might assume Medicare is redundant. That assumption can be costly. Here's how VA coverage and Medicare interact — and why having both often makes sense.",
+    keyTakeaways: [
+      "VA benefits do NOT count as creditable coverage for Medicare — failing to enroll on time can result in permanent Part B penalties.",
+      "VA drug coverage IS creditable for Part D, meaning you can delay Part D without penalty as long as you maintain VA drug benefits.",
+      "Having both VA and Medicare gives you more flexibility — especially for care outside the VA system.",
+    ],
+    content: [
+      {
+        heading: "VA Benefits Are Not a Substitute for Medicare Enrollment",
+        body: [
+          "Many veterans assume that because they have VA healthcare benefits, they can skip Medicare enrollment without consequences. This is one of the most expensive Medicare misconceptions we encounter. The VA is a separate healthcare system — it does not count as Medicare-equivalent coverage for the purpose of Medicare's enrollment rules.",
+          "If you delay enrolling in Medicare Part B without a qualifying reason (such as active employer coverage), you will face a permanent late enrollment penalty of 10% per year of delay. VA benefits, TRICARE for Life, and other military healthcare programs generally do not protect against this penalty on their own.",
+        ],
+      },
+      {
+        heading: "VA Drug Coverage and Part D",
+        body: [
+          "There is one important exception: VA prescription drug coverage IS considered creditable coverage for Medicare Part D. This means that if you receive prescription drugs through the VA and you're satisfied with that coverage, you can delay enrolling in a standalone Part D plan without incurring a late enrollment penalty — for as long as you maintain your VA drug benefits.",
+          "If you ever lose VA drug eligibility or want to switch to a Part D plan, you'll have a Special Enrollment Period to do so without penalty. Keep documentation of your VA drug coverage in case you need to prove creditable coverage status later.",
+        ],
+      },
+      {
+        heading: "Why Having Both VA and Medicare Makes Sense",
+        body: [
+          "Even veterans who receive most of their care through the VA can benefit from having Medicare. VA coverage generally only applies to care received at VA facilities or authorized through the VA. If you need to see a specialist outside the VA system, receive emergency care away from a VA facility, or want access to a broader network of providers, Medicare becomes essential.",
+          "Medicare also provides a safety net during VA wait times, when traveling, or when you simply prefer to see a community provider. For veterans eligible for TRICARE for Life, having Medicare Part B is actually required to maintain that coverage — another reason to enroll on time.",
+        ],
+      },
+      {
+        heading: "The Bottom Line for Veterans",
+        body: [
+          "If you're a veteran approaching Medicare eligibility, don't assume your VA benefits cover everything Medicare would. Enroll in Part A and Part B on time to avoid permanent penalties. Then decide whether to add a Medigap plan, Medicare Advantage, or Part D coverage based on how you use your VA benefits and where you receive care.",
+          "Every veteran's situation is different. We work with many veterans in South Florida and can help you sort out exactly what you need — and what you can skip — at no cost to you.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "does-medicare-cover-travel",
+    title: "Does Medicare Cover Medical Care While Traveling?",
+    excerpt:
+      "Planning a trip? Understanding how Medicare works — and doesn't work — outside your home area can help you avoid a very expensive surprise.",
+    keyTakeaways: [
+      "Original Medicare covers you anywhere in the United States — including U.S. territories.",
+      "Medicare generally does NOT cover medical care outside the United States, with very narrow exceptions.",
+      "Medicare Plan G includes a foreign travel emergency benefit that covers 80% of emergency care abroad, up to $50,000 lifetime.",
+    ],
+    content: [
+      {
+        heading: "Domestic Travel: You're Covered",
+        body: [
+          "If you travel within the United States — including Alaska, Hawaii, and U.S. territories like Puerto Rico and the U.S. Virgin Islands — Original Medicare travels with you. Medicare is a federal program, so any provider who accepts Medicare anywhere in the country must treat you at Medicare rates. You don't need to notify Medicare or do anything special before traveling domestically.",
+          "This is one of the key advantages of Original Medicare paired with a Medigap plan. Unlike Medicare Advantage plans, which typically have narrow regional networks, Original Medicare gives you access to any Medicare-participating provider in the country — useful if you travel frequently or split time between states.",
+        ],
+      },
+      {
+        heading: "International Travel: Generally Not Covered",
+        body: [
+          "Outside the United States, Original Medicare generally does not pay for medical care. If you get sick or injured in another country, you will typically be responsible for 100% of the cost unless you have supplemental coverage that includes foreign travel benefits.",
+          "There are narrow exceptions: Medicare may cover care in a foreign hospital if you're in the U.S. and the foreign hospital is closer than the nearest U.S. hospital that can treat your condition, or if you're traveling through Canada between Alaska and another U.S. state. These exceptions are uncommon in practice.",
+        ],
+      },
+      {
+        heading: "Plan G's Foreign Travel Emergency Benefit",
+        body: [
+          "Medicare Supplement Plan G includes a foreign travel emergency benefit that many beneficiaries don't realize they have. After a $250 calendar-year deductible, Plan G covers 80% of the cost of medically necessary emergency care outside the United States — up to a $50,000 lifetime maximum.",
+          "To qualify, the care must be an emergency that begins during the first 60 days of each trip outside the U.S. This benefit won't replace dedicated international travel insurance for extended trips, but it provides meaningful protection for shorter international travel — a cruise, a European vacation, or a trip to visit family abroad.",
+        ],
+      },
+      {
+        heading: "Medicare Advantage and Travel",
+        body: [
+          "If you have a Medicare Advantage plan, your coverage outside your plan's service area is generally limited to emergency and urgent care — and even that may involve higher cost-sharing or prior authorization requirements. Routine or non-urgent care outside your area will typically not be covered.",
+          "For people who travel frequently, this network restriction is one of the most common reasons to reconsider Medicare Advantage in favor of Original Medicare with a Medigap plan. If international travel is a regular part of your retirement, it's worth discussing your travel habits when reviewing your Medicare options.",
         ],
       },
     ],

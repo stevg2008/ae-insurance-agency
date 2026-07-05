@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FAQS, getFAQBySlug } from "@/lib/faqs";
 import { ChevronLeft } from "lucide-react";
 import { PHONE, WEBINAR_URL } from "@/lib/constants";
+import FAQSchema from "@/components/seo/FAQSchema";
 
 export async function generateStaticParams() {
   return FAQS.map((faq) => ({ slug: faq.slug }));
@@ -40,6 +41,10 @@ export default async function FAQDetailPage({
 
   return (
     <div className="bg-white min-h-screen">
+      <FAQSchema faqs={faq.content.map((section) => ({
+        question: section.heading,
+        answer: section.body.join(" "),
+      }))} />
 
       {/* ── Hero ── */}
       <section className="bg-[#1A72C0] py-16 px-4">
