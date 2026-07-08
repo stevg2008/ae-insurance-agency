@@ -147,7 +147,7 @@ export default function HealthInsuranceClient() {
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="/Oudoor family pic .jpg"
+                  src="/Family pic.jpg"
                   alt="South Florida family with health insurance coverage — A&E Insurance Agency"
                   className="w-full h-[420px] object-cover object-center"
                 />
