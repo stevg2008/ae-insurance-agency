@@ -93,6 +93,7 @@ export default function Hero() {
               transition={{ duration: 0.6 }}
               className="absolute inset-0 w-full h-full object-cover"
               style={{ objectPosition: SLIDES[current].pos }}
+              fetchPriority={current === 0 ? "high" : undefined}
             />
           </AnimatePresence>
 
