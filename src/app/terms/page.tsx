@@ -57,7 +57,7 @@ export default function TermsPage() {
               Standard message and data rates may apply.
             </p>
             <p className="mt-3">
-              Steve Germain, National Producer Number (NPN): <strong>19921707</strong>. Licensed in Florida and multiple additional states. License status can be verified through the Florida Department of Financial Services at <a href="https://www.myfloridacfo.com" target="_blank" rel="noopener noreferrer" className="text-[#1A72C0] underline">myfloridacfo.com</a> or through the NIPR at <a href="https://www.nipr.com" target="_blank" rel="noopener noreferrer" className="text-[#1A72C0] underline">nipr.com</a>.
+              Steve Germain, National Producer Number (NPN): <strong>19921707</strong>. Licensed in Florida and 35 additional states. License status can be verified through the Florida Department of Financial Services at <a href="https://www.myfloridacfo.com" target="_blank" rel="noopener noreferrer" className="text-[#1A72C0] underline">myfloridacfo.com</a> or through the NIPR at <a href="https://www.nipr.com" target="_blank" rel="noopener noreferrer" className="text-[#1A72C0] underline">nipr.com</a>.
             </p>
           </section>
 

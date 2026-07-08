@@ -109,7 +109,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="space-y-3 text-center">
             <p className="text-blue-100 text-xs leading-relaxed max-w-4xl mx-auto">
-              This is a solicitation for insurance. Submitting information or calling numbers listed on this website will direct you to a licensed Agent/Broker. Steve Germain, NPN 19921707. Licensed in FL and multiple states.
+              This is a solicitation for insurance. Submitting information or calling numbers listed on this website will direct you to a licensed Agent/Broker. Steve Germain, NPN 19921707. Licensed in FL and 35 states.
             </p>
             <p className="text-blue-100 text-xs leading-relaxed max-w-4xl mx-auto">
               <strong className="text-blue-100">Important disclosures about Medicare Plans:</strong> Medicare has neither endorsed nor reviewed this information. Not connected or affiliated with any United States Government or State agency. We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact <a href="https://www.medicare.gov" className="underline hover:text-white transition-colors">Medicare.gov</a> or 1-800-MEDICARE to get information on all of your options.
