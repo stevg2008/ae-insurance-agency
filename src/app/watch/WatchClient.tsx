@@ -181,8 +181,8 @@ export default function WatchClient() {
                 </button>
               </form>
 
-              <p className="text-white/40 text-xs text-center mt-4">
-                🔒 Your info is 100% secure. No spam, ever.
+              <p className="text-white/40 text-xs text-center mt-4 leading-relaxed">
+                By submitting, you consent to receive calls, emails, and texts from A&amp;E Insurance Agency, including via automated systems. Consent is not required to purchase. Reply STOP to opt out.
               </p>
 
               <div className="flex flex-wrap justify-center gap-2 mt-5">

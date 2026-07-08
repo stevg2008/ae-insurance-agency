@@ -117,17 +117,42 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">8. Your Rights (Florida Residents)</h2>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">8. Health Information & HIPAA</h2>
             <p>
-              Florida residents may have rights under applicable state law, including the right to
-              access, correct, or delete personal information we hold about you. To exercise these
-              rights, please contact us using the information below. We will respond within a
-              reasonable timeframe.
+              As an independent insurance broker, we may receive or discuss health-related information
+              in connection with your insurance needs — such as Medicare eligibility, coverage gaps,
+              or prescription information. We treat all health-related information with the same
+              care as personal information and share it only as necessary to fulfill your request
+              (e.g., obtaining quotes or enrolling you in a plan). When we work with insurance
+              carriers who are HIPAA-covered entities, those carriers&apos; own HIPAA privacy notices apply
+              to information they hold about you. We implement reasonable safeguards for any
+              health-related data we receive.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">9. Children's Privacy</h2>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">9. Do Not Sell My Personal Information</h2>
+            <p>
+              We do not sell, rent, or trade your personal information to third parties for their
+              own marketing purposes. This applies to residents of all states, including California
+              (CCPA) and other states with similar consumer privacy laws. If you have questions
+              about how your information is used, please contact us using the information below.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">10. Your Rights (Florida &amp; Other Residents)</h2>
+            <p>
+              Depending on your state of residence, you may have rights including the right to
+              access, correct, or delete personal information we hold about you. To exercise these
+              rights, please contact us using the information below. We will respond within
+              <strong> 45 days</strong> of receiving your request, as required under applicable law.
+              In some cases, we may need to verify your identity before fulfilling a request.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">11. Children's Privacy</h2>
             <p>
               Our website is not directed to children under the age of 13. We do not knowingly
               collect personal information from children. If you believe we have inadvertently
@@ -136,7 +161,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">10. Third-Party Links</h2>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">12. Third-Party Links</h2>
             <p>
               Our website may contain links to third-party websites such as Medicare.gov, CMS.gov,
               and SSA.gov. We are not responsible for the privacy practices of these sites and
@@ -145,7 +170,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">11. Security</h2>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">13. Security</h2>
             <p>
               We implement reasonable administrative, technical, and physical safeguards to protect
               your personal information. However, no method of transmission over the internet is
@@ -154,7 +179,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">12. Changes to This Policy</h2>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">14. Changes to This Policy</h2>
             <p>
               We may update this Privacy Policy from time to time. The updated version will be
               indicated by a revised "Last updated" date at the top of this page. Continued use of
@@ -163,7 +188,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">13. Contact Us</h2>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">15. Contact Us</h2>
             <p>
               If you have questions about this Privacy Policy or wish to exercise your rights,
               please contact us:

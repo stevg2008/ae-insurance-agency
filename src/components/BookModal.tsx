@@ -136,6 +136,9 @@ export default function BookModal({ isOpen, onClose }: Props) {
           >
             {loading ? "Sending…" : "Get Your Free Guide"}
           </button>
+          <p className="text-[#9CA3AF] text-xs text-center leading-relaxed mt-3">
+            By submitting, you consent to receive calls, emails, and texts from A&amp;E Insurance Agency, including via automated systems. Consent is not required to purchase. Reply STOP to opt out.
+          </p>
         </form>
       </div>
     </div>

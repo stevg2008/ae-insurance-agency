@@ -49,12 +49,15 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">4. Solicitation Disclosure</h2>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">4. Solicitation Disclosure & Licensing</h2>
             <p>
               This website is a solicitation for insurance. By submitting a form, calling our office,
               or requesting information, you consent to being contacted by a licensed insurance agent
               regarding your insurance needs. We may contact you by phone, email, or text message.
               Standard message and data rates may apply.
+            </p>
+            <p className="mt-3">
+              Steve Germain, National Producer Number (NPN): <strong>19921707</strong>. Licensed in Florida and multiple additional states. License status can be verified through the Florida Department of Financial Services at <a href="https://www.myfloridacfo.com" target="_blank" rel="noopener noreferrer" className="text-[#1A72C0] underline">myfloridacfo.com</a> or through the NIPR at <a href="https://www.nipr.com" target="_blank" rel="noopener noreferrer" className="text-[#1A72C0] underline">nipr.com</a>.
             </p>
           </section>
 
@@ -81,7 +84,33 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">7. Intellectual Property</h2>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">7. Plan Availability</h2>
+            <p>
+              Not all plans, carriers, or products mentioned on this website are available in all
+              states or service areas. Plan availability, premiums, benefits, and network coverage
+              vary by location. We do not offer every plan available in your area. Any information
+              we provide is limited to plans we offer in your area. Please contact{" "}
+              <a href="https://www.medicare.gov" target="_blank" rel="noopener noreferrer" className="text-[#1A72C0] underline">Medicare.gov</a>{" "}
+              or 1-800-MEDICARE (1-800-633-4227) to get information on all of your options.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">8. Calculator & Tool Disclaimer</h2>
+            <p>
+              Interactive tools and calculators on this website — including Medicare enrollment
+              calculators, penalty estimators, and IRMAA calculators — are provided for
+              illustrative and educational purposes only. Results are estimates based on information
+              you provide and publicly available data. They do not constitute insurance, financial,
+              or legal advice. Actual premiums, penalties, and eligibility determinations are made
+              by the Centers for Medicare & Medicaid Services (CMS) and Social Security
+              Administration (SSA). Always verify your specific situation with a licensed broker
+              or government agency before making enrollment decisions.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">9. Intellectual Property</h2>
             <p>
               All content on this website — including text, graphics, logos, and downloadable
               materials — is the property of {COMPANY_NAME} or its content suppliers and is
@@ -91,7 +120,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">8. Third-Party Links</h2>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">10. Third-Party Links</h2>
             <p>
               This website may contain links to third-party websites, including Medicare.gov,
               CMS.gov, and SSA.gov. These links are provided for convenience only. We are not
@@ -100,7 +129,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">9. Limitation of Liability</h2>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">11. Limitation of Liability</h2>
             <p>
               To the fullest extent permitted by law, {COMPANY_NAME} shall not be liable for any
               direct, indirect, incidental, or consequential damages arising from your use of this
@@ -109,7 +138,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">10. Changes to These Terms</h2>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">12. Changes to These Terms</h2>
             <p>
               We reserve the right to update these Terms of Use at any time. Changes are effective
               immediately upon posting. Continued use of this website after changes are posted
@@ -118,7 +147,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">11. Governing Law</h2>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">13. Governing Law</h2>
             <p>
               These Terms of Use are governed by the laws of the State of Florida, without regard
               to its conflict of law provisions.
@@ -126,7 +155,7 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">12. Contact Us</h2>
+            <h2 className="text-xl font-extrabold text-[#1A1A2E] mb-3">14. Contact Us</h2>
             <p>
               If you have questions about these Terms of Use, please contact us:
             </p>

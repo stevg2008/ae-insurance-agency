@@ -185,8 +185,8 @@ export default function ContactClient() {
                   {loading ? "Sending…" : "Send Message — We'll Call You Back"}
                 </button>
 
-                <p className="text-[#6B7280] text-xs text-center">
-                  No spam. No sales pressure. We&apos;ll only contact you to help.
+                <p className="text-[#6B7280] text-xs text-center leading-relaxed">
+                  By submitting this form, you consent to receive calls, emails, and text messages from A&amp;E Insurance Agency, including via automated systems. Consent is not required to purchase. Reply STOP to opt out of texts. <a href="/terms" className="underline">Terms</a> · <a href="/privacy" className="underline">Privacy</a>
                 </p>
               </form>
             )}
