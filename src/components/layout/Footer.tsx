@@ -114,7 +114,7 @@ export default function Footer() {
             <p className="text-blue-100 text-xs leading-relaxed max-w-4xl mx-auto">
               <strong className="text-blue-100">Important disclosures about Medicare Plans:</strong> Medicare has neither endorsed nor reviewed this information. Not connected or affiliated with any United States Government or State agency. We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact <a href="https://www.medicare.gov" className="underline hover:text-white transition-colors">Medicare.gov</a> or 1-800-MEDICARE to get information on all of your options.
             </p>
-            <p className="text-blue-200 text-xs">
+            <p className="text-blue-200 text-xs" suppressHydrationWarning>
               &copy; {currentYear} {COMPANY_NAME}. All Rights Reserved.
             </p>
           </div>

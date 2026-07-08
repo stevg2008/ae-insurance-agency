@@ -228,7 +228,7 @@ export default function VideoClient() {
 
       {/* ── Minimal Footer ── */}
       <footer className="bg-[#111827] py-6 px-4 text-center">
-        <p className="text-white/40 text-xs">
+        <p className="text-white/40 text-xs" suppressHydrationWarning>
           © {new Date().getFullYear()} A&E Insurance Agency · {PHONE} · {EMAIL}
         </p>
         <p className="text-white/30 text-xs mt-2 max-w-2xl mx-auto">

@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   title: "Medicare Resources & FAQ",
   description:
     "Free Medicare guides, FAQs, and tools from A&E Insurance Agency. Get plain-English answers to the most common Medicare questions — from costs and coverage to enrollment and supplements.",
-  alternates: { canonical: "/resources" },
+  alternates: { canonical: "https://www.aeinsurancefl.com/resources" },
   openGraph: {
-    url: "/resources",
+    url: "https://www.aeinsurancefl.com/resources",
     title: "Free Medicare Resources & FAQ | A&E Insurance Agency",
     description:
       "Plain-English answers to the Medicare questions South Florida families are actually asking.",
