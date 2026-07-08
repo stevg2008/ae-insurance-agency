@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/about",                                      priority: 0.7, changeFrequency: "monthly" },
     { url: "/about/steve",                                priority: 0.7, changeFrequency: "monthly" },
     { url: "/contact",                                    priority: 0.8, changeFrequency: "monthly" },
-    { url: "/resources",                                  priority: 0.6, changeFrequency: "monthly" },
+    { url: "/resources",                                  priority: 0.7, changeFrequency: "monthly" },
     { url: "/blogs",                                      priority: 0.7, changeFrequency: "weekly"  },
     { url: "/tools/medicare-enrollment-calculator",       priority: 0.8, changeFrequency: "yearly"  },
     { url: "/tools/part-b-penalty-calculator",            priority: 0.8, changeFrequency: "yearly"  },

@@ -4,6 +4,7 @@ import SteveBioClient from "./SteveBioClient";
 export const metadata: Metadata = {
   title: "Steve Germain — Founder & Licensed Medicare Broker | A&E Insurance Agency",
   description: "Meet Steve Germain, founder of A&E Insurance Agency and author of Medicare Decoded. Over 10 years helping South Florida families navigate Medicare with clarity and confidence.",
+  alternates: { canonical: "https://www.aeinsurancefl.com/about/steve" },
 };
 
 export default function StevePage() {

@@ -89,6 +89,8 @@ export default function Footer() {
                 { label: "Retirement", href: "/retirement" },
                 { label: "Life Insurance", href: "/life-insurance" },
                 { label: "Critical Illness", href: "/critical-illness" },
+                { label: "About Us", href: "/about" },
+                { label: "Blog", href: "/blogs" },
                 { label: "FAQ", href: "/resources" },
                 { label: "Contact", href: "/contact" },
               ].map((link) => (
