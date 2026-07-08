@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/medicare-broker-kendall`,
     title: "Medicare Broker in Kendall, FL | A&E Insurance Agency",
     description:
-      "In-person Medicare consultations in Kendall, FL. Independent broker — free, no pressure, same price as going direct.",
+      "In-person Medicare consultations in Kendall, FL. Independent broker — 25+ carriers compared, same price as going direct. Serving West Miami-Dade since 2009.",
   },
 };
 
@@ -53,7 +53,7 @@ export default function KendallBrokerPage() {
                   Medicare Broker in Kendall, FL
                 </h1>
                 <p className="text-[#4B5563] text-lg mb-8 leading-relaxed">
-                  A&E Insurance Agency is located at 12855 SW 136th Avenue — right in Kendall. We help West Miami-Dade families compare Medicare plans in person, by phone, or by video at no cost and no pressure.
+                  A&E Insurance Agency is located at 12855 SW 136th Avenue — right in Kendall. We help West Miami-Dade families compare Medicare plans in person, by phone, or by video at no cost to you.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                   <Link
@@ -185,7 +185,7 @@ export default function KendallBrokerPage() {
           <div className="max-w-xl mx-auto">
             <span className="inline-block text-[#E8A020] font-bold text-xs uppercase tracking-widest mb-4">Your Local Kendall Medicare Broker</span>
             <h2 className="text-3xl font-extrabold text-white mb-4">Talk to Steve — Right in Your Neighborhood</h2>
-            <p className="text-white/70 text-sm mb-8">In-person at our Kendall office or by phone. Free, no pressure, same week.</p>
+            <p className="text-white/70 text-sm mb-8">In-person at our Kendall office or by phone. Free to you. Same week.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/contact" className="inline-flex items-center justify-center bg-[#E8A020] hover:bg-[#d08f18] text-white font-extrabold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors">
                 Book Free Consultation

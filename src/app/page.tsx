@@ -6,13 +6,13 @@ import Hero from "@/components/sections/Hero";
 export const metadata: Metadata = {
   title: "A&E Insurance Agency | Medicare & Retirement Planning — Miami, FL",
   description:
-    "South Florida's trusted independent Medicare insurance agency. We help Miami families choose the right Medicare plan — at no cost to you. No fees, no bias, same price.",
+    "South Florida's trusted independent Medicare insurance agency. We compare plans from 25+ carriers and find the right fit for your doctors, your budget, and your life. Licensed in 35 states. Call (954) 281-5622.",
   alternates: { canonical: SITE_URL },
   openGraph: {
     url: SITE_URL,
     title: "A&E Insurance Agency | Medicare & Retirement Planning — Miami, FL",
     description:
-      "South Florida's trusted independent Medicare insurance agency. We help Miami families choose the right Medicare plan — at no cost to you.",
+      "South Florida's trusted independent Medicare insurance agency. 25+ carriers compared. Licensed in 35 states. Steve Germain, author of Medicare Decoded.",
   },
 };
 import ThreeTruths from "@/components/sections/ThreeTruths";
@@ -36,7 +36,7 @@ export default function HomePage() {
       {/* ── Bottom CTA ── */}
       <section className="bg-[#1A1A2E] py-20 px-4 text-center">
         <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-4">
-          No Cost. No Pressure. No Obligation.
+          Free to You · 25+ Carriers · Since 2009
         </p>
         <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-5 max-w-2xl mx-auto leading-tight">
           Ready to Get Your Medicare Right?

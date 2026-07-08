@@ -120,7 +120,7 @@ export default function HealthInsuranceClient() {
                 Whether you need Individual & Family coverage, an ACA Marketplace plan, private health insurance, or options as a self-employed professional — we compare plans from multiple carriers and find the right fit for your doctors, your budget, and your life.
               </p>
               <p className="text-[#6B7280] text-sm mb-8">
-                Independent health insurance broker Steve Germain. No fees, no bias — same price as going direct. Serving Miami and South Florida since 2009.
+                Licensed health insurance broker Steve Germain. Serving Miami and South Florida since 2009 — same price as going direct.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <Link
@@ -190,7 +190,7 @@ export default function HealthInsuranceClient() {
               {/* Mid-page CTA after plan 2 */}
               {i === 1 && (
                 <div className="my-8 bg-[#F3F4F6] rounded-2xl px-6 py-7 text-center border border-[#E5E7EB]">
-                  <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-2">Free · No Obligation</p>
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-2">Free to You · Same Price as Going Direct</p>
                   <p className="text-[#1A1A2E] font-extrabold text-lg mb-2">
                     Not sure if you qualify for ACA subsidies?
                   </p>
@@ -223,12 +223,12 @@ export default function HealthInsuranceClient() {
       {/* ── CTA ── */}
       <section className="bg-[#1A72C0] py-16 px-4 text-center">
         <AnimatedSection className="max-w-xl mx-auto">
-          <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">No Cost. No Pressure. No Obligation.</p>
+          <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">Free to You · 25+ Carriers · Since 2009</p>
           <h2 className="text-3xl font-extrabold text-white mb-4">
             Let&apos;s Find the Right Plan for You
           </h2>
           <p className="text-white/90 text-sm mb-8 leading-relaxed">
-            We compare plans from multiple carriers across every coverage type — Marketplace, private, individual, and family. Tell us your situation and we&apos;ll show you your options in plain English.
+            We compare plans from multiple carriers across every coverage type — Marketplace, private, individual, and family. Tell us your situation and we&apos;ll show you your options.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/retirement`,
     title: "Retirement Income Planning | A&E Insurance Agency — Miami, FL",
     description:
-      "Step-by-step retirement planning guidance from a licensed South Florida specialist. Income strategies, asset protection, Social Security optimization, and legacy planning — all explained in plain English.",
+      "Step-by-step retirement planning guidance from licensed South Florida specialist Steve Germain. Income strategies, asset protection, Social Security optimization, and legacy planning.",
   },
 };
 

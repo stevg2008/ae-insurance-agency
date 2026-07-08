@@ -232,7 +232,7 @@ export default function CriticalIllnessClient() {
       {/* ── CTA ── */}
       <section className="bg-[#1A72C0] py-16 px-4 text-center">
         <AnimatedSection className="max-w-xl mx-auto">
-          <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">No Cost. No Pressure. No Obligation.</p>
+          <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">Free to You · 25+ Carriers · Since 2009</p>
           <h2 className="text-3xl font-extrabold text-white mb-4">
             Don&apos;t Wait for a Diagnosis to Find Out What You&apos;re Missing
           </h2>

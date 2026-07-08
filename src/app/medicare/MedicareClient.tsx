@@ -290,7 +290,7 @@ export default function MedicareClient() {
                 Medicare Explained:<br className="hidden md:block" /> Parts A, B, C & D
               </h1>
               <p className="text-[#4B5563] text-lg mb-2 leading-relaxed">
-                A plain-English, step-by-step guide to how Medicare works — from enrollment timing and Original Medicare to plan options and prescription coverage.
+                A complete guide to how Medicare works — from enrollment timing and Original Medicare to plan options and prescription coverage.
               </p>
               <p className="text-[#6B7280] text-sm mb-8 leading-relaxed">
                 Written by licensed Medicare broker Steve Germain. Serving South Florida families since 2009.
@@ -554,7 +554,7 @@ export default function MedicareClient() {
       <section className="bg-[#1A72C0] py-16 px-4 text-center">
         <AnimatedSection className="max-w-xl mx-auto">
           <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">
-            No Cost. No Pressure. No Bias.
+            Free to You · 25+ Carriers · Since 2009
           </p>
           <h2 className="text-3xl font-extrabold text-white mb-4">
             Ready to Choose Your Medicare Plan?

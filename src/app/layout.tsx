@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | A&E Insurance Agency",
   },
   description:
-    "South Florida's trusted independent Medicare insurance agency. No fees, no bias, same price. We help Miami families navigate Medicare with clarity and confidence. Call " +
+    "South Florida's trusted independent Medicare insurance agency. We compare plans from 25+ carriers and find the right fit for your doctors, your budget, and your life. Call " +
     PHONE +
     ".",
   keywords: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "A&E Insurance Agency",
     title: "A&E Insurance Agency | Medicare & Retirement Planning — Miami, FL",
     description:
-      "South Florida's trusted independent Medicare insurance agency. No fees, no bias, same price. Navigate Medicare with clarity and confidence.",
+      "South Florida's trusted independent Medicare insurance agency. 25+ carriers compared. Steve Germain, licensed in 35 states, author of Medicare Decoded.",
     images: [
       {
         url: "/og-image.jpg",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "A&E Insurance Agency | Medicare & Retirement Planning — Miami, FL",
     description:
-      "South Florida's trusted independent Medicare insurance agency. No fees, no bias, same price.",
+      "South Florida's trusted independent Medicare insurance agency. 25+ carriers. Licensed in 35 states.",
     images: ["/og-image.jpg"],
   },
   robots: {

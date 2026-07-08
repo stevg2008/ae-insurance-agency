@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/medicare-broker-miami`,
     title: "Medicare Broker in Miami, FL | A&E Insurance Agency",
     description:
-      "Free Medicare plan comparison in Miami, FL. Independent broker — no fees, no pressure, same price as going direct.",
+      "Free Medicare plan comparison in Miami, FL. Independent broker — 25+ carriers compared, same price as going direct. Serving South Florida since 2009.",
   },
 };
 
@@ -192,7 +192,7 @@ export default function MiamiBrokerPage() {
         {/* ── Bottom CTA (dark — consistent with site inner pages) ── */}
         <section className="bg-[#1A1A2E] py-16 px-4 text-center">
           <div className="max-w-xl mx-auto">
-            <span className="inline-block text-[#E8A020] font-bold text-xs uppercase tracking-widest mb-4">No Cost · No Pressure · No Obligation</span>
+            <span className="inline-block text-[#E8A020] font-bold text-xs uppercase tracking-widest mb-4">Free to You · 25+ Carriers · Since 2009</span>
             <h2 className="text-3xl font-extrabold text-white mb-4">
               Ready to find the right Medicare plan in Miami?
             </h2>

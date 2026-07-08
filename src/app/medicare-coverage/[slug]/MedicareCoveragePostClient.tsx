@@ -33,7 +33,7 @@ export default function MedicareCoveragePostClient({ post }: { post: MedicareCov
         {/* CTA */}
         <div className="mt-14 bg-[#1A72C0] rounded-2xl p-8 text-center">
           <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-2">
-            No Cost · No Pressure · No Obligation
+            Free Guidance · 25+ Carriers · Since 2009
           </p>
           <h2 className="text-2xl font-extrabold text-white mb-3">
             Ready to Find the Right Medicare Plan?

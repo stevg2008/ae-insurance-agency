@@ -129,7 +129,7 @@ export default function MedicareBrokerNearMePage() {
             <div className="py-14">
               <div className="flex items-center gap-4 mb-5">
                 <span className="text-4xl font-extrabold leading-none text-[#E8A020]">03</span>
-                <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1A2E]">No Fees. No Pressure. No Reason Not to Call.</h2>
+                <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1A2E]">Carriers Pay the Broker Fee — You Pay the Same Either Way.</h2>
               </div>
               <p className="text-[#4B5563] leading-relaxed mb-3">
                 Medicare brokers are paid by the insurance carriers. You pay zero fees. The plan costs exactly the same whether you use a broker or call the carrier directly.
@@ -207,7 +207,7 @@ export default function MedicareBrokerNearMePage() {
         {/* ── Bottom CTA ── */}
         <section className="bg-[#1A1A2E] py-16 px-4 text-center">
           <div className="max-w-xl mx-auto">
-            <span className="inline-block text-[#E8A020] font-bold text-xs uppercase tracking-widest mb-4">Free · Independent · No Pressure</span>
+            <span className="inline-block text-[#E8A020] font-bold text-xs uppercase tracking-widest mb-4">Free to You · 25+ Carriers · Since 2009</span>
             <h2 className="text-3xl font-extrabold text-white mb-4">Talk to a Medicare Broker — Wherever You Are</h2>
             <p className="text-white/70 text-sm mb-8 leading-relaxed">
               In person in South Florida or by phone and video anywhere in the country. Same price as going direct.

@@ -53,7 +53,7 @@ export default function HealthInsuranceMiamiPage() {
                   Health Insurance Broker in Miami, FL
                 </h1>
                 <p className="text-[#4B5563] text-lg mb-8 leading-relaxed">
-                  A&E Insurance Agency is an independent insurance broker in Miami specializing in Medicare and senior health coverage. Since 2009, Steve Germain has helped South Florida families compare plans from 25+ carriers — at no cost and no pressure.
+                  A&E Insurance Agency is an independent insurance broker in Miami specializing in Medicare and senior health coverage. Since 2009, Steve Germain has helped 3,000+ South Florida families compare plans from 25+ carriers — at no cost to you.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                   <Link
@@ -183,7 +183,7 @@ export default function HealthInsuranceMiamiPage() {
         {/* ── Bottom CTA ── */}
         <section className="bg-[#1A1A2E] py-16 px-4 text-center">
           <div className="max-w-xl mx-auto">
-            <span className="inline-block text-[#E8A020] font-bold text-xs uppercase tracking-widest mb-4">No Cost · No Pressure</span>
+            <span className="inline-block text-[#E8A020] font-bold text-xs uppercase tracking-widest mb-4">Free to You · 25+ Carriers · Since 2009</span>
             <h2 className="text-3xl font-extrabold text-white mb-4">Ready to compare your options?</h2>
             <p className="text-white/70 text-sm mb-8 leading-relaxed">
               One conversation with Steve and you'll know exactly what's available in Miami and what fits your situation.

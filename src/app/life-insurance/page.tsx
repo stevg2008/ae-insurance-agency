@@ -5,13 +5,13 @@ import LifeInsuranceClient from "./LifeInsuranceClient";
 export const metadata: Metadata = {
   title: "Life Insurance & Annuities for South Florida Families | A&E Insurance Agency — Miami, FL",
   description:
-    "Plain-English guide to life insurance and annuities — Term, Whole, Universal, IUL, Final Expense, and retirement annuities explained by licensed specialist Steve Germain. Free quotes, no obligation. Serving South Florida since 2009.",
+    "Life insurance and annuities guide — Term, Whole, Universal, IUL, Final Expense, and retirement annuities explained by licensed specialist Steve Germain. Free quotes. Serving South Florida since 2009.",
   alternates: { canonical: `${SITE_URL}/life-insurance` },
   openGraph: {
     url: `${SITE_URL}/life-insurance`,
     title: "Life Insurance & Annuities | A&E Insurance Agency — Miami, FL",
     description:
-      "Term, Whole, Universal, IUL, Final Expense, and Annuities — all explained in plain English by a licensed South Florida life insurance specialist. Free quotes, no pressure.",
+      "Term, Whole, Universal, IUL, Final Expense, and Annuities — explained by licensed South Florida specialist Steve Germain. Free quotes, same price as going direct.",
   },
 };
 

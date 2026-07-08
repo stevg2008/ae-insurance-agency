@@ -105,7 +105,7 @@ export default function LifeInsuranceClient() {
                 Life Insurance & Annuities<br className="hidden md:block" /> for South Florida Families
               </h1>
               <p className="text-[#4B5563] text-lg mb-3 leading-relaxed">
-                Whether you need affordable term coverage, permanent protection, or a guaranteed income stream in retirement — we'll help you understand every option and make a confident decision, in plain English, at no cost to you.
+                Whether you need affordable term coverage, permanent protection, or a guaranteed income stream in retirement — we'll help you understand every option and make a confident decision, at no cost to you.
               </p>
               <p className="text-[#6B7280] text-sm mb-8">
                 Guidance from licensed life insurance specialist Steve Germain. Serving South Florida families since 2009.
@@ -193,7 +193,7 @@ export default function LifeInsuranceClient() {
               {/* Mid-page CTA after product 3 */}
               {i === 2 && (
                 <div className="my-8 bg-[#F3F4F6] rounded-2xl px-6 py-7 text-center border border-[#E5E7EB]">
-                  <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-2">Free · No Obligation</p>
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-2">Free to You · Same Price as Going Direct</p>
                   <p className="text-[#1A1A2E] font-extrabold text-lg mb-2">
                     Not sure which type of coverage is right for you?
                   </p>
@@ -226,12 +226,12 @@ export default function LifeInsuranceClient() {
       {/* ── CTA ── */}
       <section className="bg-[#1A72C0] py-16 px-4 text-center">
         <AnimatedSection className="max-w-xl mx-auto">
-          <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">No Cost. No Pressure. No Obligation.</p>
+          <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">Free to You · 25+ Carriers · Since 2009</p>
           <h2 className="text-3xl font-extrabold text-white mb-4">
             Not Sure Which Option Is Right for You?
           </h2>
           <p className="text-white/90 text-sm mb-8 leading-relaxed">
-            Every person's situation is different. We'll take the time to understand your goals, answer your questions, and explain your options in plain English — so you can protect what matters most.
+            Every person's situation is different. We'll take the time to understand your goals, answer your questions, and explain your options — so you can protect what matters most.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link

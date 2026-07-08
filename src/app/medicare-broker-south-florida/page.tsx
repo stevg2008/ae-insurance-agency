@@ -53,7 +53,7 @@ export default function SouthFloridaBrokerPage() {
                   Medicare Broker in South Florida
                 </h1>
                 <p className="text-[#4B5563] text-lg mb-8 leading-relaxed">
-                  A&E Insurance Agency is South Florida's independent Medicare broker. We've helped families across Miami-Dade, Broward, and Palm Beach counties compare every available plan — Advantage, Medigap, and Part D — at no cost and no pressure since 2009.
+                  A&E Insurance Agency is South Florida's independent Medicare broker. We've helped 3,000+ families across Miami-Dade, Broward, and Palm Beach counties compare every available plan — Advantage, Medigap, and Part D — at no cost to you since 2009.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                   <Link

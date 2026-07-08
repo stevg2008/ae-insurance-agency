@@ -5,13 +5,13 @@ import HealthInsuranceClient from "./HealthInsuranceClient";
 export const metadata: Metadata = {
   title: "Health Insurance Broker Miami, FL | Individual, Family & Private Plans | A&E Insurance Agency",
   description:
-    "Independent health insurance broker serving Miami and South Florida. We compare Individual & Family, ACA Marketplace, private health insurance, and self-employed plans from top carriers — free quotes, no pressure. Call (954) 281-5622.",
+    "Independent health insurance broker serving Miami and South Florida. We compare Individual & Family, ACA Marketplace, private health insurance, and self-employed plans from top carriers. Free quotes. Call (954) 281-5622.",
   alternates: { canonical: `${SITE_URL}/health-insurance` },
   openGraph: {
     url: `${SITE_URL}/health-insurance`,
     title: "Health Insurance Broker Miami, FL | A&E Insurance Agency",
     description:
-      "Compare Individual, Family, ACA Marketplace, and private health insurance plans in South Florida. Licensed independent broker — free quotes, no obligation.",
+      "Compare Individual, Family, ACA Marketplace, and private health insurance plans in South Florida. Licensed independent broker — same price as going direct.",
   },
 };
 

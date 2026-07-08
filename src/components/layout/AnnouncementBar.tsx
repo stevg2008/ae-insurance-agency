@@ -18,7 +18,7 @@ export default function AnnouncementBar() {
 
         {/* Center: serving statement */}
         <span className="text-white/90 text-center font-medium">
-          Trusted Medicare Guidance — No Cost to You
+          Independent Medicare Broker — Same Price as Going Direct
         </span>
 
         {/* Right: email */}

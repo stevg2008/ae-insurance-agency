@@ -30,7 +30,7 @@ export default function BlogsClient() {
           Medicare & Insurance Blog
         </h1>
         <p className="text-white/90 text-lg max-w-xl mx-auto mb-8">
-          Plain-language articles from a licensed South Florida broker. No jargon, no sales pressure — just the answers you need.
+          Written by Steve Germain — licensed Medicare broker, author of Medicare Decoded, and someone who has answered these same questions for real South Florida clients since 2009.
         </p>
         <input
           type="search"

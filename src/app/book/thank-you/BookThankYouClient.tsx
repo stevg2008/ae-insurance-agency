@@ -45,7 +45,7 @@ export default function BookThankYouClient() {
 
         {/* Consultation CTA */}
         <p className="text-[#4B5563] text-sm mb-4">
-          Have questions after reading? Talk to Steve directly — no pressure, no sales pitch.
+          Have questions after reading? Talk to Steve directly — your questions, straight answers.
         </p>
         <a
           href="https://link.aeinsurancefl.com/widget/booking/gnH26nD1h46Zd5rO88gz"

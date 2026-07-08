@@ -8,7 +8,7 @@ import { PHONE } from "@/lib/constants";
 import { analytics } from "@/lib/analytics";
 
 const LEARN_POINTS = [
-  "How Medicare Part A & B actually work — in plain English",
+  "How Medicare Part A & B actually work — and what most people get wrong",
   "Medicare Supplement vs. Medicare Advantage: which is right for you",
   "How to avoid the most costly Medicare enrollment mistakes",
   "Strategies to close coverage gaps and reduce out-of-pocket costs",
@@ -20,14 +20,14 @@ const FREE_RESOURCES = [
   { icon: BookOpen,     title: "Medicare Decoded Book",        desc: "Steve's step-by-step guide — digital or printed copy mailed to you free" },
   { icon: Map,          title: "Personalized Medicare Roadmap", desc: "A custom plan built around your doctors, budget, and health needs" },
   { icon: FileText,     title: "Medicare Cost Summary",         desc: "Side-by-side breakdown of your real options and costs" },
-  { icon: CalendarCheck, title: "Free 1-on-1 Consultation",    desc: "Private call with Steve — no pressure, no sales pitch" },
+  { icon: CalendarCheck, title: "Free 1-on-1 Consultation",    desc: "Private call with Steve — your questions, straight answers" },
 ];
 
 const TRUST_BADGES = [
   { icon: Star,   label: "5-Star Google Rating" },
   { icon: Users,  label: "Serving South Florida Since 2009" },
   { icon: Clock,  label: "10+ Years Experience" },
-  { icon: Shield, label: "100% Free — No Obligation" },
+  { icon: Shield, label: "Free — Carriers Pay, Not You" },
 ];
 
 const MONTHS_OPTIONS = [
@@ -208,7 +208,7 @@ export default function WatchClient() {
           <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1A2E] mb-2">
             Everything Included — 100% Free
           </h2>
-          <p className="text-[#4B5563] mb-10">No cost. No catch. No obligation.</p>
+          <p className="text-[#4B5563] mb-10">Everything here is included when you work with Steve — carriers pay broker fees, not you.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {FREE_RESOURCES.map((r) => {
               const Icon = r.icon;
@@ -247,7 +247,7 @@ export default function WatchClient() {
               <h2 className="text-2xl font-extrabold text-[#1A1A2E] mb-1">Steve Germain</h2>
               <p className="text-[#1A72C0] font-semibold text-sm mb-4">Founder & Licensed Medicare Broker · A&E Insurance Agency</p>
               <p className="text-[#4B5563] text-sm leading-relaxed mb-5">
-                Steve Germain is a licensed independent Medicare broker and author of <em>Medicare Decoded</em>. Based in Miami, he has served South Florida families since 2009 with education-first guidance — no pressure, no bias, no fees.
+                Steve Germain is a licensed independent Medicare broker and author of <em>Medicare Decoded</em>. Based in Miami, he has helped more than 3,000 South Florida families get their Medicare right since 2009.
               </p>
               <ul className="space-y-2">
                 {[
@@ -271,7 +271,7 @@ export default function WatchClient() {
       <section className="py-12 px-4 bg-[#1A72C0] text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="text-2xl font-extrabold text-white mb-3">Have Questions? Call Us Directly.</h2>
-          <p className="text-white/60 text-sm mb-6">No pressure, no fees — ever.</p>
+          <p className="text-white/60 text-sm mb-6">Every question gets a straight answer.</p>
           <a
             href={`tel:${PHONE.replace(/\D/g, "")}`}
             className="inline-block bg-[#E8A020] hover:bg-[#d08f18] text-white font-bold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors"

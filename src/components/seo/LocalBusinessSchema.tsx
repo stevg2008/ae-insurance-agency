@@ -11,7 +11,7 @@ export default function LocalBusinessSchema() {
         name: COMPANY_NAME,
         alternateName: "A&E Insurance",
         description:
-          "Independent Medicare insurance broker serving Miami, South Florida, and 35+ states since 2009. Steve Germain helps individuals turning 65 choose the right Medicare plan — Advantage, Supplement (Medigap), and Part D — at no cost, no pressure, same price as going direct.",
+          "Independent Medicare insurance broker serving Miami, South Florida, and 35+ states since 2009. Steve Germain has helped 3,000+ families choose the right Medicare plan — Advantage, Supplement (Medigap), and Part D — at the same price as going direct.",
         url: SITE_URL,
         telephone: PHONE,
         email: EMAIL,
@@ -155,7 +155,7 @@ export default function LocalBusinessSchema() {
         familyName: "Germain",
         jobTitle: "Licensed Medicare Insurance Broker & Agency Owner",
         description:
-          "Steve Germain is the founder of A&E Insurance Agency and author of 'Medicare Decoded.' A licensed Medicare broker serving South Florida since 2009, Steve is licensed in 35+ states and has helped hundreds of families navigate Medicare Advantage, Medigap, and Part D. Known for his concierge-style, no-pressure approach and bilingual service in English and Spanish.",
+          "Steve Germain is the founder of A&E Insurance Agency and author of 'Medicare Decoded.' A licensed Medicare broker serving South Florida since 2009, Steve is licensed in 35+ states and has helped 3,000+ families navigate Medicare Advantage, Medigap, and Part D. Bilingual service in English and Spanish.",
         url: `${SITE_URL}/about/steve`,
         image: `${SITE_URL}/team/steve.jpg`,
         worksFor: { "@id": `${SITE_URL}/#organization` },
@@ -194,7 +194,7 @@ export default function LocalBusinessSchema() {
         url: SITE_URL,
         name: COMPANY_NAME,
         description:
-          "Medicare broker serving Miami, South Florida, and 35 states. Free consultations. No fees. No bias. Same price as going direct.",
+          "Medicare broker serving Miami, South Florida, and 35 states. Free consultations. 25+ carriers compared. Same price as going direct.",
         publisher: { "@id": `${SITE_URL}/#organization` },
         inLanguage: ["en-US", "es"],
         potentialAction: {
