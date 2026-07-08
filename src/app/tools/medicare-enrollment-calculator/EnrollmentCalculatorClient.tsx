@@ -48,17 +48,12 @@ function firstDayOfMonth(date: Date): Date {
 }
 
 function calculate(month: number, day: number, year: number): Result {
-  const dob = new Date(year, month - 1, day);
-
   // Medicare rule: if born on the 1st of the month, your Medicare
   // "birthday month" is treated as the PREVIOUS calendar month.
   const bornOnFirst = day === 1;
 
   // The year the person turns 65
   const birthdayYear = year + 65;
-
-  // Their actual 65th birthday date
-  const birthday65 = new Date(birthdayYear, month - 1, day);
 
   // Medicare birthday month — shifts back one month if born on 1st
   const medicareBirthdayMonth = bornOnFirst

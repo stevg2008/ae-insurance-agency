@@ -88,7 +88,15 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-ZG55M8F9H5" strategy="afterInteractive" />
+        <Script id="ga4-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-ZG55M8F9H5', { page_path: window.location.pathname });
+        `}</Script>
         <Script src="https://link.aeinsurancefl.com/js/form_embed.js" strategy="lazyOnload" />
+        <Script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a4bf42b20a37cbac4bc8e75" strategy="lazyOnload" />
       </body>
     </html>
   );

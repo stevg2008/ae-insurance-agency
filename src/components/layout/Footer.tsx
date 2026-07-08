@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import BBBSeal from "@/components/ui/BBBSeal";
 import {
   COMPANY_NAME,
   PHONE,
@@ -25,6 +26,11 @@ export default function Footer() {
               alt="A&E Insurance Agency"
               className="h-24 w-auto object-contain mb-5 brightness-0 invert"
             />
+            {/* BBB Accreditation Seal */}
+            <div className="mt-5 mb-2">
+              <BBBSeal />
+            </div>
+
             <div className="flex gap-4 mt-2">
               <a href={SOCIAL.facebook} aria-label="Facebook" className="text-blue-100 hover:text-[#E8A020] transition-colors">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -79,6 +85,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { label: "Medicare", href: "/medicare" },
+                { label: "Health Insurance", href: "/health-insurance" },
                 { label: "Retirement", href: "/retirement" },
                 { label: "Life Insurance", href: "/life-insurance" },
                 { label: "Critical Illness", href: "/critical-illness" },

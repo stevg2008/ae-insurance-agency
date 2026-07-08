@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { PHONE, EMAIL, LOCATIONS, BUSINESS_HOURS, SOCIAL } from "@/lib/constants";
 import GoogleReviews from "@/components/sections/GoogleReviews";
+import { analytics } from "@/lib/analytics";
 
 const BEST_TIMES = ["Morning (9am–12pm)", "Afternoon (12pm–4pm)", "Evening (4pm–6pm)", "Anytime"];
 
@@ -29,6 +30,7 @@ export default function ContactClient() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error();
+      analytics.contactFormSubmitted();
       setSubmitted(true);
     } catch {
       setError("Something went wrong. Please call us at " + PHONE);
@@ -60,7 +62,7 @@ export default function ContactClient() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h2 className="text-sm font-extrabold uppercase tracking-widest text-[#1A72C0] mb-4 leading-snug">
-              We're here to simplify the process and ensure your future is protected.
+              We&apos;re here to simplify the process and ensure your future is protected.
             </h2>
             <p className="text-[#4B5563] text-base leading-relaxed">
               At A&E Insurance Agency, we treat our clients like family. Reach out today to schedule a
@@ -82,7 +84,7 @@ export default function ContactClient() {
           >
             <p className="text-[#1A72C0] text-xs font-bold uppercase tracking-widest mb-2">Free · No Pressure · No Obligation</p>
             <h2 className="text-2xl font-extrabold text-[#1A1A2E] mb-2">Send Us a Message</h2>
-            <p className="text-[#4B5563] text-sm mb-8">Leave your info and we'll call you back — usually within one business day.</p>
+            <p className="text-[#4B5563] text-sm mb-8">Leave your info and we&apos;ll call you back — usually within one business day.</p>
 
             {submitted ? (
               <div className="bg-[#F0FDF4] border border-green-200 rounded-2xl p-8 text-center">
@@ -97,8 +99,9 @@ export default function ContactClient() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">First Name *</label>
+                    <label htmlFor="contact-firstName" className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">First Name *</label>
                     <input
+                      id="contact-firstName"
                       type="text"
                       required
                       placeholder="John"
@@ -108,8 +111,9 @@ export default function ContactClient() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">Last Name</label>
+                    <label htmlFor="contact-lastName" className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">Last Name</label>
                     <input
+                      id="contact-lastName"
                       type="text"
                       placeholder="Smith"
                       value={form.lastName}
@@ -120,8 +124,9 @@ export default function ContactClient() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">Phone Number *</label>
+                  <label htmlFor="contact-phone" className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">Phone Number *</label>
                   <input
+                    id="contact-phone"
                     type="tel"
                     required
                     placeholder="(954) 555-1234"
@@ -132,8 +137,9 @@ export default function ContactClient() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">Email Address</label>
+                  <label htmlFor="contact-email" className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">Email Address</label>
                   <input
+                    id="contact-email"
                     type="email"
                     placeholder="john@email.com"
                     value={form.email}
@@ -143,8 +149,9 @@ export default function ContactClient() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">Best Time to Call</label>
+                  <label htmlFor="contact-bestTime" className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">Best Time to Call</label>
                   <select
+                    id="contact-bestTime"
                     value={form.bestTime}
                     onChange={set("bestTime")}
                     className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors bg-white"
@@ -157,8 +164,9 @@ export default function ContactClient() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">Message (optional)</label>
+                  <label htmlFor="contact-message" className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">Message (optional)</label>
                   <textarea
+                    id="contact-message"
                     rows={3}
                     placeholder="Tell us a little about your situation or what you need help with..."
                     value={form.message}
@@ -178,7 +186,7 @@ export default function ContactClient() {
                 </button>
 
                 <p className="text-[#6B7280] text-xs text-center">
-                  No spam. No sales pressure. We'll only contact you to help.
+                  No spam. No sales pressure. We&apos;ll only contact you to help.
                 </p>
               </form>
             )}

@@ -12,6 +12,7 @@ const navLinks = [
     href: "#",
     children: [
       { label: "Medicare", href: "/medicare" },
+      { label: "Health Insurance", href: "/health-insurance" },
       { label: "Retirement", href: "/retirement" },
       { label: "Life Insurance", href: "/life-insurance" },
       { label: "Critical Illness", href: "/critical-illness" },
@@ -139,6 +140,7 @@ export default function Header() {
             className="lg:hidden p-2 text-[#1A1A2E]"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

@@ -61,13 +61,14 @@ export default function RetirementPlanning() {
             </AnimatedSection>
           </div>
 
-          {/* Right: 40% — Photo placeholder */}
+          {/* Right: 40% */}
           <AnimatedSection delay={0.2} className="w-full lg:w-2/5">
-            <div className="bg-gray-200 rounded-2xl aspect-[4/5] flex items-center justify-center">
-              <p className="text-gray-500 font-medium text-center px-8">
-                {/* EDIT: Replace with actual team or client photo */}
-                [REPLACE WITH TEAM/CLIENT PHOTO]
-              </p>
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src="/Steve and Mr Heinrich.JPG"
+                alt="Steve Germain meeting with a client to discuss retirement planning — A&E Insurance Agency"
+                className="w-full h-auto object-cover object-top"
+              />
             </div>
           </AnimatedSection>
         </div>

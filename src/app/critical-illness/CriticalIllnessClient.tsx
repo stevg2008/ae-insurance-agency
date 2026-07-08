@@ -191,7 +191,7 @@ export default function CriticalIllnessClient() {
           <div className="text-center mb-12">
             <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">Critical Illness Coverage</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A2E] mb-4">
-              The Reality of "The Big 3"
+              The Reality of &ldquo;The Big 3&rdquo;
             </h2>
             <p className="text-[#4B5563] leading-relaxed max-w-xl mx-auto">
               Cancer, heart attack, and stroke are the three most common critical illnesses — and the financial impact goes far beyond what Medicare will ever cover.
@@ -234,10 +234,10 @@ export default function CriticalIllnessClient() {
         <AnimatedSection className="max-w-xl mx-auto">
           <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">No Cost. No Pressure. No Obligation.</p>
           <h2 className="text-3xl font-extrabold text-white mb-4">
-            Don't Wait for a Diagnosis to Find Out What You're Missing
+            Don&apos;t Wait for a Diagnosis to Find Out What You&apos;re Missing
           </h2>
           <p className="text-white/90 text-sm mb-8 leading-relaxed">
-            We'll review your current coverage, identify your gaps, and show you exactly what it would cost to close them. Most people are surprised by how affordable the protection is.
+            We&apos;ll review your current coverage, identify your gaps, and show you exactly what it would cost to close them. Most people are surprised by how affordable the protection is.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link

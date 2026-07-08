@@ -44,7 +44,7 @@ export default function BlogsClient() {
       {/* Grid */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         {visible.length === 0 ? (
-          <p className="text-center text-[#6B7280] py-20">No articles found for "{search}"</p>
+          <p className="text-center text-[#6B7280] py-20">No articles found for &ldquo;{search}&rdquo;</p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {visible.map((post) => (

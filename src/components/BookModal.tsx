@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
+import { analytics } from "@/lib/analytics";
 
 interface Props {
   isOpen: boolean;
@@ -32,6 +33,7 @@ export default function BookModal({ isOpen, onClose }: Props) {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error();
+      analytics.bookModalSubmitted();
       onClose();
       router.push("/book/thank-you");
     } catch {

@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     { url: "/",                                           priority: 1.0, changeFrequency: "weekly"  },
     { url: "/medicare",                                   priority: 0.9, changeFrequency: "monthly" },
+    { url: "/health-insurance",                           priority: 0.9, changeFrequency: "monthly" },
     { url: "/retirement",                                 priority: 0.9, changeFrequency: "monthly" },
     { url: "/life-insurance",                             priority: 0.9, changeFrequency: "monthly" },
     { url: "/critical-illness",                           priority: 0.8, changeFrequency: "monthly" },

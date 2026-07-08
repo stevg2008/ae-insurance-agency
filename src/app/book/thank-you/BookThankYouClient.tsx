@@ -7,8 +7,9 @@ import Link from "next/link";
 export default function BookThankYouClient() {
   useEffect(() => {
     // Fire conversion event if pixel is present
-    if (typeof window !== "undefined" && (window as any).fbq) {
-      (window as any).fbq("track", "Lead");
+    const w = window as Window & { fbq?: (event: string, name: string) => void };
+    if (w.fbq) {
+      w.fbq("track", "Lead");
     }
   }, []);
 

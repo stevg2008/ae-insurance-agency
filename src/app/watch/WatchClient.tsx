@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { CheckCircle2, Phone, Star, Shield, Clock, Users, BookOpen, Map, FileText, CalendarCheck } from "lucide-react";
-import { PHONE, EMAIL } from "@/lib/constants";
+import { CheckCircle2, Star, Shield, Clock, Users, BookOpen, Map, FileText, CalendarCheck } from "lucide-react";
+import { PHONE } from "@/lib/constants";
+import { analytics } from "@/lib/analytics";
 
 const LEARN_POINTS = [
   "How Medicare Part A & B actually work — in plain English",
@@ -24,7 +25,7 @@ const FREE_RESOURCES = [
 
 const TRUST_BADGES = [
   { icon: Star,   label: "5-Star Google Rating" },
-  { icon: Users,  label: "500+ Clients Served" },
+  { icon: Users,  label: "Serving South Florida Since 2009" },
   { icon: Clock,  label: "10+ Years Experience" },
   { icon: Shield, label: "100% Free — No Obligation" },
 ];
@@ -57,6 +58,7 @@ export default function WatchClient() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Submission failed");
+      analytics.watchRegistered();
       router.push("/watch/video");
     } catch {
       setError("Something went wrong. Please call us at " + PHONE);
@@ -245,7 +247,7 @@ export default function WatchClient() {
               <h2 className="text-2xl font-extrabold text-[#1A1A2E] mb-1">Steve Germain</h2>
               <p className="text-[#1A72C0] font-semibold text-sm mb-4">Founder & Licensed Medicare Broker · A&E Insurance Agency</p>
               <p className="text-[#4B5563] text-sm leading-relaxed mb-5">
-                Steve Germain has helped over 500 South Florida families navigate Medicare with clarity and confidence. As the author of <em>Medicare Decoded</em>, Steve believes in education-first guidance — no pressure, no bias, no fees.
+                Steve Germain is a licensed independent Medicare broker and author of <em>Medicare Decoded</em>. Based in Miami, he has served South Florida families since 2009 with education-first guidance — no pressure, no bias, no fees.
               </p>
               <ul className="space-y-2">
                 {[

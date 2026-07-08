@@ -61,3 +61,27 @@ body {
 body[data-funnel] #global-announcement,
 body[data-funnel] #global-header,
 body[data-funnel] #global-footer { display: none !important; }
+
+/* BBB Seal — layout and responsive scaling */
+.bbb-seal-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 61px;
+}
+.bbb-seal-inner {
+  max-width: 293px;
+  width: 293px;
+  height: 61px;
+  overflow: hidden;
+  margin: 0 auto;
+  transform: translateZ(0);
+}
+@media (max-width: 310px) {
+  .bbb-seal-inner {
+    transform: scale(0.82) translateZ(0);
+    transform-origin: center center;
+    margin: -6px auto;
+  }
+}
