@@ -18,6 +18,8 @@ const navLinks = [
       { label: "Critical Illness", href: "/critical-illness" },
     ],
   },
+  { label: "About", href: "/about" },
+  { label: "Blog", href: "/blogs" },
   {
     label: "Learn",
     href: "#",
@@ -29,8 +31,6 @@ const navLinks = [
       { label: "IRMAA Calculator", href: "/tools/irmaa-calculator" },
     ],
   },
-  { label: "Blog", href: "/blogs" },
-  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
