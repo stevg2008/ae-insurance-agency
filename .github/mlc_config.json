@@ -1,0 +1,12 @@
+{
+  "ignorePatterns": [
+    { "pattern": "^https://www\\.google\\.com" },
+    { "pattern": "^https://maps\\.google\\.com" },
+    { "pattern": "^https://link\\.aeinsurancefl\\.com" },
+    { "pattern": "^https://assets\\.cdn\\.filesafe" },
+    { "pattern": "^https://widgets\\.leadconnectorhq\\.com" },
+    { "pattern": "^mailto:" },
+    { "pattern": "^tel:" },
+    { "pattern": "localhost" }
+  ]
+}
