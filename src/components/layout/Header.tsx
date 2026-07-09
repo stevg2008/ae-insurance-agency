@@ -137,7 +137,7 @@ export default function Header() {
 
           {/* Mobile Hamburger */}
           <button
-            className="lg:hidden p-2 text-[#1A1A2E]"
+            className="lg:hidden p-2.5 text-[#1A1A2E] min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
@@ -161,7 +161,7 @@ export default function Header() {
                 <div key={link.label}>
                   <Link
                     href={link.href}
-                    className="block py-2 text-[#1A1A2E] hover:text-[#1A72C0] font-medium"
+                    className="block py-3 text-[#1A1A2E] hover:text-[#1A72C0] font-medium min-h-[44px] flex items-center"
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}
@@ -170,7 +170,7 @@ export default function Header() {
                     <Link
                       key={child.label}
                       href={child.href}
-                      className="block py-1.5 pl-4 text-sm text-[#6B7280] hover:text-[#1A72C0]"
+                      className="block py-2.5 pl-4 text-sm text-[#6B7280] hover:text-[#1A72C0] min-h-[44px] flex items-center"
                       onClick={() => setMobileOpen(false)}
                     >
                       {child.label}

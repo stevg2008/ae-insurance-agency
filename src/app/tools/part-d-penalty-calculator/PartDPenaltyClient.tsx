@@ -135,7 +135,7 @@ export default function PartDPenaltyClient() {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleCalculate()}
               placeholder="e.g. 18"
-              className="flex-1 border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0]"
+              className="flex-1 border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0]"
             />
             <button
               onClick={handleCalculate}

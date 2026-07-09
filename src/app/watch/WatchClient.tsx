@@ -131,7 +131,7 @@ export default function WatchClient() {
                     placeholder="John Smith"
                     value={form.name}
                     onChange={set("name")}
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-[#E8A020] transition-colors"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 text-base focus:outline-none focus:border-[#E8A020] transition-colors"
                   />
                 </div>
                 <div>
@@ -142,7 +142,7 @@ export default function WatchClient() {
                     placeholder="john@email.com"
                     value={form.email}
                     onChange={set("email")}
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-[#E8A020] transition-colors"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 text-base focus:outline-none focus:border-[#E8A020] transition-colors"
                   />
                 </div>
                 <div>
@@ -153,7 +153,7 @@ export default function WatchClient() {
                     placeholder="(954) 555-1234"
                     value={form.phone}
                     onChange={set("phone")}
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-[#E8A020] transition-colors"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 text-base focus:outline-none focus:border-[#E8A020] transition-colors"
                   />
                 </div>
                 <div>
@@ -161,7 +161,7 @@ export default function WatchClient() {
                   <select
                     value={form.months}
                     onChange={set("months")}
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#E8A020] transition-colors"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white text-base focus:outline-none focus:border-[#E8A020] transition-colors"
                   >
                     <option value="" className="bg-[#1A72C0]">Select one...</option>
                     {MONTHS_OPTIONS.map((o) => (

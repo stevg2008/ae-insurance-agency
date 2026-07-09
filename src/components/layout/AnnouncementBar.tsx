@@ -10,7 +10,7 @@ export default function AnnouncementBar() {
         {/* Left: phone */}
         <a
           href={`tel:${PHONE.replace(/\D/g, "")}`}
-          className="flex items-center gap-1.5 hover:text-[#E8A020] transition-colors font-medium"
+          className="flex items-center gap-1.5 hover:text-[#E8A020] transition-colors font-medium min-h-[36px] py-1"
         >
           <Phone size={13} />
           {PHONE}

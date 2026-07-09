@@ -222,7 +222,7 @@ export default function IrmaaClient() {
               <select
                 value={bracketIndex}
                 onChange={(e) => handleBracketChange(e.target.value)}
-                className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white mb-1"
+                className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white mb-1"
               >
                 <option value="">— Select Income Bracket —</option>
                 {BRACKETS.map((b, i) => (
@@ -244,7 +244,7 @@ export default function IrmaaClient() {
               <select
                 value={mfsBracketIndex}
                 onChange={(e) => { setMfsBracketIndex(e.target.value === "" ? "" : Number(e.target.value)); setKnowsPartD(""); setPartDPremiumInput(""); }}
-                className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white mb-1"
+                className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white mb-1"
               >
                 <option value="">— Select Income Bracket —</option>
                 {MFS_PART_D_BRACKETS.map((b, i) => (
@@ -340,7 +340,7 @@ export default function IrmaaClient() {
                       value={partDPremiumInput}
                       onChange={(e) => handlePartDInput(e.target.value)}
                       placeholder="e.g. 42.50"
-                      className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0]"
+                      className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0]"
                     />
                     {partDError && (
                       <div className="flex items-center gap-2 text-red-600 text-xs mt-2">

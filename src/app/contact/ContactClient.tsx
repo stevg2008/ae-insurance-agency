@@ -97,7 +97,7 @@ export default function ContactClient() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="contact-firstName" className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">First Name *</label>
                     <input
@@ -107,7 +107,7 @@ export default function ContactClient() {
                       placeholder="John"
                       value={form.firstName}
                       onChange={set("firstName")}
-                      className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
+                      className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
                     />
                   </div>
                   <div>
@@ -118,7 +118,7 @@ export default function ContactClient() {
                       placeholder="Smith"
                       value={form.lastName}
                       onChange={set("lastName")}
-                      className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
+                      className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
                     />
                   </div>
                 </div>
@@ -132,7 +132,7 @@ export default function ContactClient() {
                     placeholder="(954) 555-1234"
                     value={form.phone}
                     onChange={set("phone")}
-                    className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
+                    className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
                   />
                 </div>
 
@@ -144,7 +144,7 @@ export default function ContactClient() {
                     placeholder="john@email.com"
                     value={form.email}
                     onChange={set("email")}
-                    className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
+                    className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
                   />
                 </div>
 
@@ -154,7 +154,7 @@ export default function ContactClient() {
                     id="contact-bestTime"
                     value={form.bestTime}
                     onChange={set("bestTime")}
-                    className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors bg-white"
+                    className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors bg-white"
                   >
                     <option value="">Select a time...</option>
                     {BEST_TIMES.map((t) => (
@@ -171,7 +171,7 @@ export default function ContactClient() {
                     placeholder="Tell us a little about your situation or what you need help with..."
                     value={form.message}
                     onChange={set("message")}
-                    className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors resize-none"
+                    className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors resize-none"
                   />
                 </div>
 

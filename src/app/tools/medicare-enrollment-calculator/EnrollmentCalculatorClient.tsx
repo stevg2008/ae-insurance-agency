@@ -157,7 +157,7 @@ export default function EnrollmentCalculatorClient() {
               <select
                 value={month}
                 onChange={(e) => { setMonth(e.target.value); setDay(""); }}
-                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white"
+                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white"
               >
                 <option value="">Month</option>
                 {MONTHS.map((m, i) => (
@@ -173,7 +173,7 @@ export default function EnrollmentCalculatorClient() {
                 value={day}
                 onChange={(e) => setDay(e.target.value)}
                 disabled={!month}
-                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white disabled:opacity-40"
+                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white disabled:opacity-40"
               >
                 <option value="">Day</option>
                 {availableDays.map((d) => (
@@ -188,7 +188,7 @@ export default function EnrollmentCalculatorClient() {
               <select
                 value={year}
                 onChange={(e) => setYear(e.target.value)}
-                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-3 text-sm text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white"
+                className="w-full border border-[#D1D5DB] rounded-lg px-3 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] bg-white"
               >
                 <option value="">Year</option>
                 {YEARS.map((y) => (

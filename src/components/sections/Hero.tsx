@@ -47,10 +47,10 @@ export default function Hero() {
           <p className="text-xs font-bold uppercase tracking-widest text-[#1558A0] mb-3">
             Independent Medicare Brokers — Serving South Florida Since 2009
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A1A2E] leading-tight mb-5">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A1A2E] leading-tight mb-5">
             Get Your Medicare Right<br className="hidden sm:block" /> the First Time.
           </h1>
-          <p className="text-[#374151] text-xl leading-relaxed mb-5 max-w-2xl">
+          <p className="text-[#374151] text-lg sm:text-xl leading-relaxed mb-5 max-w-2xl">
             As an independent Medicare broker, we compare Medicare Supplement, Medicare Advantage, and Prescription Drug Plans from over 25 carriers — then recommend the one that fits your doctors, your budget, and your life. Expert guidance, at no cost to you.
           </p>
           <p className="text-[#4B5563] text-base mb-10 max-w-xl leading-relaxed">
@@ -59,13 +59,13 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href={`tel:${PHONE.replace(/\D/g, "")}`}
-              className="inline-flex items-center justify-center bg-[#E8A020] hover:bg-[#D4911B] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-base px-10 py-4 rounded-lg transition-colors shadow-lg whitespace-nowrap"
+              className="inline-flex items-center justify-center bg-[#E8A020] hover:bg-[#D4911B] text-[#1A1A2E] font-extrabold uppercase tracking-wide text-base px-8 py-4 rounded-lg transition-colors shadow-lg min-h-[52px]"
             >
               Call {PHONE}
             </a>
             <Link
               href={WEBINAR_URL}
-              className="inline-flex items-center justify-center border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A1A2E] hover:text-white font-bold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors text-center whitespace-nowrap"
+              className="inline-flex items-center justify-center border-2 border-[#1A1A2E] text-[#1A1A2E] hover:bg-[#1A1A2E] hover:text-white font-bold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors text-center min-h-[52px]"
             >
               Watch Free Medicare Workshop
             </Link>
@@ -77,8 +77,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative w-full overflow-hidden rounded-t-xl"
-          style={{ height: 620 }}
+          className="relative w-full overflow-hidden rounded-t-xl h-[280px] sm:h-[420px] md:h-[520px] lg:h-[620px]"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
