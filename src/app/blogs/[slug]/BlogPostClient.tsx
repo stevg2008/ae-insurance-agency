@@ -14,6 +14,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         slug={post.slug}
         image={post.image}
         datePublished={post.date}
+        dateModified={post.updated}
       />
       {/* Back link */}
       <div className="bg-[#F3F4F6] border-b border-[#E5E7EB] py-3 px-4">
@@ -29,6 +30,12 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         {/* Meta */}
         <div className="flex items-center gap-3 text-xs text-[#9CA3AF] mb-4">
           {post.date && <span>{post.date}</span>}
+          {post.updated && (
+            <>
+              <span>·</span>
+              <span>Updated {post.updated}</span>
+            </>
+          )}
           {post.readTime && (
             <>
               <span>·</span>

@@ -6,9 +6,16 @@ interface Props {
   slug: string;
   image?: string;
   datePublished: string;
+  dateModified?: string;
 }
 
-export default function BlogPostingSchema({ title, excerpt, slug, image, datePublished }: Props) {
+/** Human-readable dates ("December 1, 2025") → ISO 8601 for schema.org validity. */
+function toISO(date: string): string {
+  const parsed = new Date(date);
+  return isNaN(parsed.getTime()) ? date : parsed.toISOString().split("T")[0];
+}
+
+export default function BlogPostingSchema({ title, excerpt, slug, image, datePublished, dateModified }: Props) {
   const url = `${SITE_URL}/blogs/${slug}`;
   const schema = {
     "@context": "https://schema.org",
@@ -17,8 +24,8 @@ export default function BlogPostingSchema({ title, excerpt, slug, image, datePub
     headline: title,
     description: excerpt,
     url,
-    datePublished,
-    dateModified: datePublished,
+    datePublished: toISO(datePublished),
+    dateModified: toISO(dateModified ?? datePublished),
     author: {
       "@type": "Person",
       "@id": `${SITE_URL}/#steve-germain`,

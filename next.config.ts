@@ -102,6 +102,22 @@ const nextConfig: NextConfig = {
       { source: "/our-blog/:slug*", destination: "/blogs/:slug*", permanent: true },
       // Webflow broken nested URL pattern found in GSC
       { source: "/blog-your-spouse-isnt-eligible-for-medicare-yet-now-what/:slug*", destination: "/blogs/:slug*", permanent: true },
+      // Legacy Webflow service subpages (404ing with live rankings — see docs/2026-07-content-audit.md §3).
+      // Specific medicare-coverage slugs map to their closest existing guide; everything else
+      // rolls up to its service page. Catch-alls stay LAST within each section so the
+      // slug-specific rules above them win.
+      // ⚠️ If real subpages are ever added under /retirement, /life-insurance, or
+      // /critical-illness (roadmap: May 2027), replace that section's catch-all with
+      // per-slug redirects first — redirects run before routes and would shadow the new pages.
+      { source: "/medicare-coverage/what-is-medicare-supplement-medigap-insurance", destination: "/medicare-coverage/medicare-supplement-plans-medigap", permanent: true },
+      { source: "/medicare-coverage/different-types-of-medicare-advantage-plans", destination: "/medicare-coverage/medicare-advantage-plans", permanent: true },
+      { source: "/retirement/:slug+", destination: "/retirement", permanent: true },
+      { source: "/life-insurance/:slug+", destination: "/life-insurance", permanent: true },
+      { source: "/critical-illness/:slug+", destination: "/critical-illness", permanent: true },
+      // Legacy Webflow standalone pages
+      { source: "/home", destination: "/", permanent: true },
+      { source: "/home/:slug+", destination: "/contact", permanent: true },
+      { source: "/webinarregistration", destination: "/watch", permanent: true },
     ];
   },
 };

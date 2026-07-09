@@ -17,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/about/steve",                                priority: 0.7, changeFrequency: "monthly" },
     { url: "/contact",                                    priority: 0.8, changeFrequency: "monthly" },
     { url: "/resources",                                  priority: 0.7, changeFrequency: "monthly" },
+    { url: "/resources/faq",                              priority: 0.7, changeFrequency: "monthly" },
+    { url: "/book",                                       priority: 0.8, changeFrequency: "monthly" },
     { url: "/blogs",                                      priority: 0.7, changeFrequency: "weekly"  },
     { url: "/tools/medicare-enrollment-calculator",       priority: 0.8, changeFrequency: "yearly"  },
     { url: "/tools/part-b-penalty-calculator",            priority: 0.8, changeFrequency: "yearly"  },
@@ -38,10 +40,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority,
   }));
 
-  // Blog posts
+  // Blog posts — lastModified reflects the update date if set, else original publish date
   const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${SITE_URL}/blogs/${post.slug}`,
-    lastModified: now,
+    lastModified: new Date(post.updated ?? post.date),
     changeFrequency: "yearly" as const,
     priority: 0.6,
   }));
