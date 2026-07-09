@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/constants";
 import { blogPosts } from "@/lib/blogPosts";
 import { medicareCoveragePosts } from "@/lib/medicareCoveragePosts";
+import { FAQS } from "@/lib/faqs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -17,8 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/about/steve",                                priority: 0.7, changeFrequency: "monthly" },
     { url: "/contact",                                    priority: 0.8, changeFrequency: "monthly" },
     { url: "/resources",                                  priority: 0.7, changeFrequency: "monthly" },
-    { url: "/resources/faq",                              priority: 0.7, changeFrequency: "monthly" },
-    { url: "/book",                                       priority: 0.8, changeFrequency: "monthly" },
     { url: "/blogs",                                      priority: 0.7, changeFrequency: "weekly"  },
     { url: "/tools/medicare-enrollment-calculator",       priority: 0.8, changeFrequency: "yearly"  },
     { url: "/tools/part-b-penalty-calculator",            priority: 0.8, changeFrequency: "yearly"  },
@@ -56,5 +55,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...blogEntries, ...medicareEntries];
+  // Individual FAQ pages (statically generated at /resources/faq/[slug])
+  const faqEntries: MetadataRoute.Sitemap = FAQS.map((faq) => ({
+    url: `${SITE_URL}/resources/faq/${faq.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticEntries, ...blogEntries, ...medicareEntries, ...faqEntries];
 }
