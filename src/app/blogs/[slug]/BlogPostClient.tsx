@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { BlogPost } from "@/lib/blogPosts";
 import { PHONE } from "@/lib/constants";
 import BlogPostingSchema from "@/components/seo/BlogPostingSchema";
+import FAQSchema from "@/components/seo/FAQSchema";
 
 export default function BlogPostClient({ post }: { post: BlogPost }) {
   return (
@@ -16,6 +17,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         datePublished={post.date}
         dateModified={post.updated}
       />
+      {post.faqs && post.faqs.length > 0 && <FAQSchema faqs={post.faqs} />}
       {/* Back link */}
       <div className="bg-[#F3F4F6] border-b border-[#E5E7EB] py-3 px-4">
         <div className="max-w-3xl mx-auto">
@@ -28,8 +30,20 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
       {/* Article */}
       <article className="max-w-3xl mx-auto px-4 py-12">
         {/* Meta */}
-        <div className="flex items-center gap-3 text-xs text-[#9CA3AF] mb-4">
-          {post.date && <span>{post.date}</span>}
+        <div className="flex flex-wrap items-center gap-3 text-xs text-[#9CA3AF] mb-4">
+          <span>
+            By{" "}
+            <Link href="/about/steve" className="text-[#1A72C0] font-medium hover:underline">
+              Steve Germain
+            </Link>
+            , Licensed Insurance Broker
+          </span>
+          {post.date && (
+            <>
+              <span>·</span>
+              <span>{post.date}</span>
+            </>
+          )}
           {post.updated && (
             <>
               <span>·</span>

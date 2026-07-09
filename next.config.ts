@@ -79,6 +79,19 @@ const blogSlugs = [
   "medicare-in-miami-2026",
 ];
 
+// Approved content pruning (docs/redirect-final-review.md): retired lifestyle posts.
+// Their /blog/ and /blogs/ URLs both 301 straight to /blogs — no chains.
+// walk-first-wander-later is NOT here yet: it redirects to the travel article
+// only after that article's Phase 3 rewrite ships (approved sequencing).
+const retiredSlugs = [
+  "breathe-easy-the-surprising-benefits-of-houseplants-in-your-home",
+  "rip-tides-what-they-are-how-to-spot-them-and-what-to-do-if-youre-caught-in-one",
+  "ocean-lakes-and-pools-oh-my-tips-for-a-safe-summer-around-water",
+  "the-ultimate-spring-bucket-list-fun-activities-to-enjoy-the-season",
+  "top-10-u-s-roadside-attractions-to-visit-this-summer",
+  "bikes-kayaks-and-rooftop-gear-what-your-insurance-covers",
+];
+
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
@@ -91,11 +104,19 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // Blog redirects: old Webflow /blog/[slug] → new /blogs/[slug]
-      ...blogSlugs.map((slug) => ({
-        source: `/blog/${slug}`,
-        destination: `/blogs/${slug}`,
-        permanent: true,
-      })),
+      // (retired slugs excluded — they get direct-to-index rules below to avoid chains)
+      ...blogSlugs
+        .filter((slug) => !retiredSlugs.includes(slug))
+        .map((slug) => ({
+          source: `/blog/${slug}`,
+          destination: `/blogs/${slug}`,
+          permanent: true,
+        })),
+      // Retired lifestyle posts → blog index (single hop from both URL generations)
+      ...retiredSlugs.flatMap((slug) => [
+        { source: `/blog/${slug}`, destination: "/blogs", permanent: true },
+        { source: `/blogs/${slug}`, destination: "/blogs", permanent: true },
+      ]),
       // Webflow root /blog → /blogs
       { source: "/blog", destination: "/blogs", permanent: true },
       // Alternate /our-blog/ path found in GSC

@@ -56,6 +56,13 @@ body {
 .blog-content figure img { width: 100%; border-radius: 0.75rem; height: auto; }
 .blog-content blockquote { border-left: 4px solid #1A72C0; padding-left: 1rem; margin: 1.5rem 0; color: #6B7280; font-style: italic; }
 .blog-content div[data-rt-embed-type] { display: none; }
+.blog-content table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+.blog-content th, .blog-content td { border: 1px solid #E5E7EB; padding: 0.6rem 0.75rem; text-align: left; vertical-align: top; }
+.blog-content th { background: #F3F4F6; color: #1A1A2E; font-weight: 700; }
+.blog-content tbody tr:nth-child(even) { background: #F9FAFB; }
+@media (max-width: 640px) {
+  .blog-content table { display: block; overflow-x: auto; }
+}
 
 /* Funnel pages (watch, book/thank-you) — hide global nav and footer */
 body[data-funnel] #global-announcement,
