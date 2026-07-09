@@ -45,7 +45,7 @@ export default function Hero() {
           className="mb-10"
         >
           <p className="text-xs font-bold uppercase tracking-widest text-[#1558A0] mb-3">
-            Independent Medicare Brokers — Serving South Florida Since 2009
+            Independent Medicare Broker · Licensed in 35 States · Since 2009
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A1A2E] leading-tight mb-5">
             Get Your Medicare Right<br className="hidden sm:block" /> the First Time.
