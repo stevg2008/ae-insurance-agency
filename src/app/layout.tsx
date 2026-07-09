@@ -95,6 +95,9 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('config', 'G-ZG55M8F9H5', { page_path: window.location.pathname });
         `}</Script>
+        <Script id="microsoft-clarity" strategy="afterInteractive">{`
+          (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","xjsmlrckr2");
+        `}</Script>
         <Script src="https://link.aeinsurancefl.com/js/form_embed.js" strategy="lazyOnload" />
         <Script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a4bf42b20a37cbac4bc8e75" strategy="lazyOnload" />
       </body>
