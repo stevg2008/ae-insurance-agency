@@ -37,10 +37,15 @@ input, select, textarea {
   font-size: max(16px, 1em);
 }
 
-/* Ensure images never overflow their container */
-img {
-  max-width: 100%;
-  height: auto;
+/* Ensure images never overflow their container.
+   Must live in @layer base so Tailwind utility classes (h-*, max-h-*, etc.)
+   take precedence. In Tailwind v4, unlayered CSS wins over @layer utilities,
+   which caused the header logo to expand to its full intrinsic size on mobile. */
+@layer base {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @keyframes shimmer {
