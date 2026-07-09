@@ -95,7 +95,15 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('config', 'G-ZG55M8F9H5', { page_path: window.location.pathname });
         `}</Script>
-        <Script id="search-atlas" strategy="afterInteractive" data-uuid="a6df8d47-deb9-4a0b-8d1a-a21118fad746" src="data:text/javascript;base64,dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3NjcmlwdC5zZXRBdHRyaWJ1dGUoIm5vd3Byb2NrZXQiLCAiIik7c2NyaXB0LnNldEF0dHJpYnV0ZSgibml0cm8tZXhjbHVkZSIsICIiKTtzY3JpcHQuc3JjID0gImh0dHBzOi8vZGFzaGJvYXJkLnNlYXJjaGF0bGFzLmNvbS9zY3JpcHRzL2R5bmFtaWNfb3B0aW1pemF0aW9uLmpzIjtzY3JpcHQuZGF0YXNldC51dWlkID0gImE2ZGY4ZDQ3LWRlYjktNGEwYi04ZDFhLWEyMTExOGZhZDc0NiI7c2NyaXB0LmlkID0gInNhLWR5bmFtaWMtb3B0aW1pemF0aW9uLWxvYWRlciI7ZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzY3JpcHQpOw==" />
+        <Script id="search-atlas" strategy="afterInteractive">{`
+          var script = document.createElement("script");
+          script.setAttribute("nowprocket", "");
+          script.setAttribute("nitro-exclude", "");
+          script.src = "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
+          script.dataset.uuid = "a6df8d47-deb9-4a0b-8d1a-a21118fad746";
+          script.id = "sa-dynamic-optimization-loader";
+          document.head.appendChild(script);
+        `}</Script>
         <Script id="microsoft-clarity" strategy="afterInteractive">{`
           (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","xjsmlrckr2");
         `}</Script>
