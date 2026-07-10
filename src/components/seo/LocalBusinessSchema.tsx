@@ -81,6 +81,11 @@ export default function LocalBusinessSchema() {
         },
         founder: { "@id": `${SITE_URL}/#steve-germain` },
         employee: { "@id": `${SITE_URL}/#steve-germain` },
+        identifier: {
+          "@type": "PropertyValue",
+          propertyID: "NPN",
+          value: "19921707",
+        },
         sameAs: [
           SOCIAL.facebook,
           SOCIAL.instagram,
@@ -177,11 +182,6 @@ export default function LocalBusinessSchema() {
             "@type": "Organization",
             name: "Florida Department of Financial Services",
           },
-        },
-        identifier: {
-          "@type": "PropertyValue",
-          propertyID: "NPN",
-          value: "19921707",
         },
         sameAs: [
           SOCIAL.facebook,
