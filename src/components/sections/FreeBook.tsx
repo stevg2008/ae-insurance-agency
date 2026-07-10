@@ -23,7 +23,7 @@ export default function FreeBook() {
                 <span className="text-[#1A72C0]">Medicare Decoded</span>
               </h2>
               <p className="text-[#374151] text-lg leading-relaxed mb-8">
-                Steve Germain's guide to understanding Medicare Supplement, Medicare Advantage, and Prescription Drug Plans — written specifically for people turning 65 in South Florida.
+                Steve Germain's guide to understanding Medicare Supplement, Medicare Advantage, and Prescription Drug Plans — written for anyone navigating Medicare for the first time.
               </p>
               <button
                 onClick={() => setModalOpen(true)}
