@@ -14,6 +14,7 @@ export const LOCATIONS = [
   { city: "Miami, FL", address: "12855 SW 136th Avenue, Suite 105, Miami, FL 33186" },
 ];
 export const BUSINESS_HOURS = "Monday – Friday: 9:00 AM – 5:00 PM";
+export const REVIEW_COUNT = "126"; // Update this when Google review count changes (also update LocalBusinessSchema.tsx)
 export const SOCIAL = {
   facebook: "https://www.facebook.com/AEinsuranceFL/",
   instagram: "https://www.instagram.com/aeinsurancefl/",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { medicareCoveragePosts, getMedicareCoveragePost } from "@/lib/medicareCoveragePosts";
+import { SITE_URL } from "@/lib/constants";
 import MedicareCoveragePostClient from "./MedicareCoveragePostClient";
 
 export function generateStaticParams() {
@@ -18,9 +19,9 @@ export async function generateMetadata({
   return {
     title: `${post.title} | A&E Insurance Agency`,
     description: post.excerpt,
-    alternates: { canonical: `/medicare-coverage/${post.slug}` },
+    alternates: { canonical: `${SITE_URL}/medicare-coverage/${post.slug}` },
     openGraph: {
-      url: `/medicare-coverage/${post.slug}`,
+      url: `${SITE_URL}/medicare-coverage/${post.slug}`,
       title: post.title,
       description: post.excerpt,
     },

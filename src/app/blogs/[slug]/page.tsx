@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts, getBlogPost } from "@/lib/blogPosts";
+import { SITE_URL } from "@/lib/constants";
 import BlogPostClient from "./BlogPostClient";
 
 export function generateStaticParams() {
@@ -18,12 +19,17 @@ export async function generateMetadata({
   return {
     title: `${post.title} | A&E Insurance Agency`,
     description: post.excerpt,
-    alternates: { canonical: `/blogs/${post.slug}` },
+    alternates: { canonical: `${SITE_URL}/blogs/${post.slug}` },
     openGraph: {
-      url: `/blogs/${post.slug}`,
+      url: `${SITE_URL}/blogs/${post.slug}`,
       title: post.title,
       description: post.excerpt,
       images: post.image ? [{ url: post.image }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
     },
   };
 }

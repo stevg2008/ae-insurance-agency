@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { FAQS, getFAQBySlug } from "@/lib/faqs";
 import { ChevronLeft } from "lucide-react";
-import { PHONE, WEBINAR_URL } from "@/lib/constants";
+import { PHONE, WEBINAR_URL, SITE_URL } from "@/lib/constants";
 import FAQSchema from "@/components/seo/FAQSchema";
 
 export async function generateStaticParams() {
@@ -21,9 +21,9 @@ export async function generateMetadata({
   return {
     title: faq.title,
     description: faq.excerpt,
-    alternates: { canonical: `/resources/faq/${faq.slug}` },
+    alternates: { canonical: `${SITE_URL}/resources/faq/${faq.slug}` },
     openGraph: {
-      url: `/resources/faq/${faq.slug}`,
+      url: `${SITE_URL}/resources/faq/${faq.slug}`,
       title: `${faq.title} | A&E Insurance Agency`,
       description: faq.excerpt,
     },

@@ -85,6 +85,11 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { label: "Medicare", href: "/medicare" },
+                { label: "Medicare Broker Miami", href: "/medicare-broker-miami" },
+                { label: "Medicare Broker Kendall", href: "/medicare-broker-kendall" },
+                { label: "Medicare Broker Near Me", href: "/medicare-broker-near-me" },
+                { label: "Medicare Broker South Florida", href: "/medicare-broker-south-florida" },
+                { label: "Health Insurance Broker Miami", href: "/health-insurance-broker-miami" },
                 { label: "Health Insurance", href: "/health-insurance" },
                 { label: "Retirement", href: "/retirement" },
                 { label: "Life Insurance", href: "/life-insurance" },

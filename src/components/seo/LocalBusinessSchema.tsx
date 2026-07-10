@@ -1,4 +1,4 @@
-import { SITE_URL, COMPANY_NAME, PHONE, EMAIL, SOCIAL } from "@/lib/constants";
+import { SITE_URL, COMPANY_NAME, PHONE, EMAIL, SOCIAL, REVIEW_COUNT } from "@/lib/constants";
 
 export default function LocalBusinessSchema() {
   const schema = {
@@ -75,7 +75,7 @@ export default function LocalBusinessSchema() {
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: "5.0",
-          reviewCount: "126",
+          reviewCount: REVIEW_COUNT,
           bestRating: "5",
           worstRating: "1",
         },
@@ -178,12 +178,18 @@ export default function LocalBusinessSchema() {
             name: "Florida Department of Financial Services",
           },
         },
+        identifier: {
+          "@type": "PropertyValue",
+          propertyID: "NPN",
+          value: "19921707",
+        },
         sameAs: [
           SOCIAL.facebook,
           SOCIAL.instagram,
           SOCIAL.youtube,
           SOCIAL.tiktok,
           "https://www.linkedin.com/company/a-e-insurance-agency-llc/",
+          "https://apps.fldfs.com/licenseSearch/",
         ],
       },
 
@@ -196,7 +202,7 @@ export default function LocalBusinessSchema() {
         description:
           "Medicare broker serving Miami, South Florida, and 35 states. Free consultations. 25+ carriers compared. Same price as going direct.",
         publisher: { "@id": `${SITE_URL}/#organization` },
-        inLanguage: ["en-US", "es"],
+        inLanguage: ["en-US"],
         potentialAction: {
           "@type": "SearchAction",
           target: {
