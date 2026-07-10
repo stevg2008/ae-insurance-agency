@@ -53,7 +53,7 @@ export default function Hero() {
           <p className="text-[#374151] text-lg sm:text-xl leading-relaxed mb-5 max-w-2xl">
             As an independent Medicare broker, we compare Medicare Supplement, Medicare Advantage, and Prescription Drug Plans from over 25 carriers — then recommend the one that fits your doctors, your budget, and your life. Expert guidance, at no cost to you.
           </p>
-          <p className="text-[#4B5563] text-base mb-10 max-w-xl leading-relaxed">
+          <p className="text-[#4B5563] text-sm mb-10 whitespace-nowrap">
             Independent Medicare Broker · Licensed in 35 States
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
