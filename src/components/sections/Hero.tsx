@@ -54,7 +54,7 @@ export default function Hero() {
             As an independent Medicare broker, we compare Medicare Supplement, Medicare Advantage, and Prescription Drug Plans from over 25 carriers — then recommend the one that fits your doctors, your budget, and your life. Expert guidance, at no cost to you.
           </p>
           <p className="text-[#4B5563] text-base mb-10 max-w-xl leading-relaxed">
-            Licensed Independent Broker · Author of <em>Medicare Decoded</em> · Serving South Florida Since 2009
+            Licensed Independent Broker · Author of <em>Medicare Decoded</em>
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
