@@ -17,7 +17,7 @@ export async function generateMetadata({
   const post = getMedicareCoveragePost(slug);
   if (!post) return {};
   return {
-    title: `${post.title} | A&E Insurance Agency`,
+    title: post.title,
     description: post.excerpt,
     alternates: { canonical: `${SITE_URL}/medicare-coverage/${post.slug}` },
     openGraph: {
