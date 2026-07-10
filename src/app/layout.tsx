@@ -115,6 +115,23 @@ export default function RootLayout({
         `}</Script>
         <Script src="https://link.aeinsurancefl.com/js/form_embed.js" strategy="lazyOnload" />
         <Script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a4bf42b20a37cbac4bc8e75" strategy="lazyOnload" />
+        <Script id="chat-mobile-fix" strategy="lazyOnload">{`
+          (function() {
+            if (window.innerWidth < 768) {
+              var style = document.createElement('style');
+              style.textContent = '.chat-window-container[data-open="true"] { display: none !important; } .chat-bubble { display: flex !important; }';
+              document.head.appendChild(style);
+              var observer = new MutationObserver(function() {
+                var chatWindow = document.querySelector('.chat-window-container');
+                if (chatWindow && chatWindow.getAttribute('data-open') === 'true') {
+                  chatWindow.setAttribute('data-open', 'false');
+                  observer.disconnect();
+                }
+              });
+              observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['data-open'] });
+            }
+          })();
+        `}</Script>
       </body>
     </html>
   );
