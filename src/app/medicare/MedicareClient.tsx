@@ -88,8 +88,11 @@ function CoverageGapVisual() {
         </div>
         <div className="p-4 bg-[#FEF2F2] rounded-lg border-l-4 border-[#DC2626]">
           <p className="text-sm text-[#374151] leading-relaxed">
-            <strong className="text-[#DC2626]">There is no out-of-pocket maximum.</strong>{" "}
-            A $200,000 hospital stay means you personally owe $40,000 — with nothing to stop the bill from growing. That gap is exactly why supplemental coverage exists.
+            <strong className="text-[#DC2626]">There is no annual out-of-pocket maximum for Original Medicare Part B.</strong>{" "}
+            If you have a $200,000 Medicare-approved Part B surgery or procedure, Medicare would generally pay approximately $160,000 (80%), leaving you responsible for approximately $40,000 (20%) unless you have additional coverage, such as a Medicare Supplement plan.
+          </p>
+          <p className="text-[11px] text-[#6B7280] mt-3 leading-relaxed">
+            *Example assumes the full $200,000 is the Medicare-approved amount and does not include the annual Part B deductible. Actual costs depend on the Medicare-approved amount and your specific circumstances.*
           </p>
         </div>
       </div>
@@ -222,11 +225,11 @@ const STEPS: Step[] = [
       },
       {
         label: "Part B — Medical Coverage",
-        body: "Part B covers doctor visits, outpatient services, preventive care, and durable medical equipment. Part B charges a standard monthly premium set by the government each year. It covers 80% of approved medical costs after your annual deductible — which means you are responsible for the remaining 20%.",
+        body: "Part B covers doctor visits, outpatient services, preventive care, durable medical equipment, and many outpatient surgeries and procedures. After you meet your annual Part B deductible, Medicare generally pays 80% of the Medicare-approved amount, and you are responsible for the remaining 20%.",
       },
       {
         label: "The 20% gap — with no cap",
-        body: "Here's what surprises most people: Original Medicare leaves you personally responsible for 20% of every approved medical cost — with no out-of-pocket maximum. That gap is exactly why supplemental coverage is so important.",
+        body: "Here's what surprises most people: Original Medicare leaves you responsible for 20% of the Medicare-approved amount for Part B services, and there is no annual out-of-pocket maximum for those costs.",
       },
     ],
     bottomLine:
