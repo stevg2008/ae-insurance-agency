@@ -16,14 +16,14 @@ export default function AnnouncementBar() {
           {PHONE}
         </a>
 
-        {/* Center: serving statement */}
+        {/* Center: value statement */}
         <span className="text-white/90 text-center font-medium">
-          Independent Medicare Broker — Same Price as Going Direct
+          Independent Medicare Broker — Licensed in 35 States
         </span>
 
-        {/* Right: email */}
+        {/* Right: trust signal */}
         <span className="text-white/80 hidden sm:block text-xs">
-          Serving South Florida Since 2009
+          25+ Carriers Compared
         </span>
       </div>
     </div>
