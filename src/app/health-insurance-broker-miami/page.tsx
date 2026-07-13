@@ -70,7 +70,7 @@ export default function HealthInsuranceMiamiPage() {
                   </a>
                 </div>
                 <p className="mt-6 text-xs text-[#9CA3AF] text-center lg:text-left">
-                  ⭐ 5.0 · 126 Google Reviews &nbsp;·&nbsp; Independent — 25+ Carriers &nbsp;·&nbsp; Free · No Fees
+                  ⭐ 5.0 · 126 Google Reviews &nbsp;·&nbsp; Independent — 25+ Carriers
                 </p>
               </div>
 
