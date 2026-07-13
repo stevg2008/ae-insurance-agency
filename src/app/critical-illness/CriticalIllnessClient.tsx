@@ -104,7 +104,7 @@ export default function CriticalIllnessClient() {
                 Medicare is excellent coverage — but it was never designed to cover everything. Here are the three biggest financial exposures that catch people off guard, and how to protect yourself from each one.
               </p>
               <p className="text-[#6B7280] text-sm mb-8">
-                Guidance from licensed insurance specialist Steve Germain. Serving South Florida families since 2009.
+                Guidance from licensed insurance specialist <span className="whitespace-nowrap">Steve Germain</span>. Independent — licensed in 35 states.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <Link

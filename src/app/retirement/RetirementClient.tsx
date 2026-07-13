@@ -84,7 +84,7 @@ export default function RetirementClient() {
                 Retirement is one of the biggest financial transitions of your life. We help you protect what you've built, create income you can count on, and retire with confidence.
               </p>
               <p className="text-[#6B7280] text-sm mb-8">
-                Guidance from licensed retirement specialist Steve Germain. Serving South Florida families since 2009.
+                Guidance from licensed retirement specialist <span className="whitespace-nowrap">Steve Germain</span>. Independent — licensed in 35 states.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <Link

@@ -296,7 +296,7 @@ export default function MedicareClient() {
                 A complete guide to how Medicare works — from enrollment timing and Original Medicare to plan options and prescription coverage.
               </p>
               <p className="text-[#6B7280] text-sm mb-8 leading-relaxed">
-                Written by licensed Medicare broker Steve Germain. Serving South Florida families since 2009.
+                Written by licensed Medicare broker <span className="whitespace-nowrap">Steve Germain</span>. Independent — licensed in 35 states.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <Link

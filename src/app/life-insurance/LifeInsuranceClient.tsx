@@ -108,7 +108,7 @@ export default function LifeInsuranceClient() {
                 Whether you need affordable term coverage, permanent protection, or a guaranteed income stream in retirement — we'll help you understand every option and make a confident decision, at no cost to you.
               </p>
               <p className="text-[#6B7280] text-sm mb-8">
-                Guidance from licensed life insurance specialist Steve Germain. Serving South Florida families since 2009.
+                Guidance from licensed life insurance specialist <span className="whitespace-nowrap">Steve Germain</span>. Independent — licensed in 35 states.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <Link
