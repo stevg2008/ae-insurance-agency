@@ -53,7 +53,7 @@ export default function MedicareBrokerNearMePage() {
                   Medicare Broker Near Me
                 </h1>
                 <p className="text-[#4B5563] text-lg mb-8 leading-relaxed">
-                  A&E Insurance Agency offers in-person Medicare consultations at our Kendall office and virtual appointments by phone or video for clients across 35+ states. Free, independent, same price as going direct.
+                  A&E Insurance Agency offers in-person Medicare consultations at our Kendall office and virtual appointments by phone or video for clients across 35+ states. Free, independent — no broker fees.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                   <Link

@@ -1,0 +1,44 @@
+source_url,destination_url,anchor_text,link_location,is_dofollow
+ALL PAGES,/medicare,Medicare,Header — Services dropdown,yes
+ALL PAGES,/health-insurance,Health Insurance,Header — Services dropdown,yes
+ALL PAGES,/retirement,Retirement,Header — Services dropdown,yes
+ALL PAGES,/life-insurance,Life Insurance,Header — Services dropdown,yes
+ALL PAGES,/critical-illness,Critical Illness,Header — Services dropdown,yes
+ALL PAGES,/about,About,Header — top nav,yes
+ALL PAGES,/blogs,Blog,Header — top nav,yes
+ALL PAGES,/resources,FAQ,Header — Learn dropdown,yes
+ALL PAGES,/tools/medicare-enrollment-calculator,Enrollment Calculator,Header — Learn dropdown,yes
+ALL PAGES,/tools/part-b-penalty-calculator,Part B Penalty Calculator,Header — Learn dropdown,yes
+ALL PAGES,/tools/part-d-penalty-calculator,Part D Penalty Calculator,Header — Learn dropdown,yes
+ALL PAGES,/tools/irmaa-calculator,IRMAA Calculator,Header — Learn dropdown,yes
+ALL PAGES,/contact,Contact,Header — top nav + CTA button,yes
+ALL PAGES,/medicare,Medicare,Footer — Quick Links,yes
+ALL PAGES,/health-insurance,Health Insurance,Footer — Quick Links,yes
+ALL PAGES,/retirement,Retirement,Footer — Quick Links,yes
+ALL PAGES,/life-insurance,Life Insurance,Footer — Quick Links,yes
+ALL PAGES,/critical-illness,Critical Illness,Footer — Quick Links,yes
+ALL PAGES,/about,About Us,Footer — Quick Links,yes
+ALL PAGES,/blogs,Blog,Footer — Quick Links,yes
+ALL PAGES,/resources,FAQ,Footer — Quick Links,yes
+ALL PAGES,/contact,Contact,Footer — Quick Links,yes
+ALL PAGES,/terms,Terms of Use,Footer — Legal,yes
+ALL PAGES,/privacy,Privacy Policy,Footer — Legal,yes
+ALL PAGES,https://www.medicare.gov,Medicare.gov,Footer — Medicare disclaimer,yes (external)
+ALL PAGES,/watch,Watch Medicare Made Simple — Free Workshop (webinar CTA),AnnouncementBar,yes
+/,/contact,Schedule a Free Consultation,Home — bottom CTA section,yes
+/,/watch,Watch Our Free Workshop,Home — Hero,yes
+/,/contact,Book a Free Consultation,Home — Hero,yes
+/medicare-coverage/medicare-advantage-plans,https://www.aeinsurancefl.com/blog/how-does-medicare-part-c-compare-to-original-medicare-in-florida,Medicare Advantage (Part C),In-content link (anchor),yes
+/blogs/medicare-advantage-vs-medicare-supplement-plans-in-florida-which-is-right-for-you,(multiple internal links in content),various,In-content blog HTML,yes
+/blogs/how-does-medicare-part-c-compare-to-original-medicare-in-florida,(multiple internal links in content),various,In-content blog HTML,yes
+/resources,/resources/faq/[slug] (29 links),FAQ question titles,Resources index page — FAQ list,yes
+/about,/about/steve,Steve Germain,About page — team section,yes
+/about/steve,/about,About Us,Steve bio page — breadcrumb/nav,yes
+/watch,/watch/video,(redirect after form submit via JavaScript),Webinar opt-in form action (client-side),yes
+ORPHAN_PAGE_RISK,/major-exposures,None detected in nav/footer/content,,n/a — potential orphan
+ORPHAN_PAGE_RISK,/book/thank-you,Reached only via /api/book redirect after form submission,,n/a — intentional gated
+ORPHAN_PAGE_RISK,/watch/video,Reached only via /api/register redirect after registration,,n/a — intentional gated
+NOTES_ON_INTERNAL_LINKING,,,All service pages (health-insurance/retirement/life-insurance/critical-illness) appear only in nav and footer. They do not heavily cross-link to blog posts covering their topics. Most blog posts lack internal links back to service pages.,
+NOTES_ON_INTERNAL_LINKING,,,Local landing pages (/medicare-broker-miami etc.) are in sitemap.ts but NOT in the main Header navigation or Footer Quick Links — they receive internal links ONLY from the sitemap and potentially from each other's content.,
+NOTES_ON_INTERNAL_LINKING,,,The /tools/* pages appear only in the Header Learn dropdown and sitemap — not linked from any service pages or blog posts contextually.,
+NOTES_ON_INTERNAL_LINKING,,,FAQ pages (/resources/faq/*) are linked from /resources index page only — not contextually linked from related blog posts or service pages.,

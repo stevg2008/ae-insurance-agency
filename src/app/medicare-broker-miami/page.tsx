@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/medicare-broker-miami`,
     title: "Medicare Broker in Miami, FL | A&E Insurance Agency",
     description:
-      "Free Medicare plan comparison in Miami, FL. Independent broker — 25+ carriers compared, same price as going direct. Serving South Florida since 2009.",
+      "Free Medicare plan comparison in Miami, FL. Independent broker — 25+ carriers compared, no broker fees.",
   },
 };
 

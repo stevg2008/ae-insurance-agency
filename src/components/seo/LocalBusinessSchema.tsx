@@ -11,7 +11,7 @@ export default function LocalBusinessSchema() {
         name: COMPANY_NAME,
         alternateName: "A&E Insurance",
         description:
-          "Independent Medicare insurance broker serving Miami, South Florida, and 35+ states since 2009. Steve Germain has helped 3,000+ families choose the right Medicare plan — Advantage, Supplement (Medigap), and Part D — at the same price as going direct.",
+          "Independent Medicare insurance broker licensed in 35+ states. Steve Germain has helped 3,000+ families choose the right Medicare plan — Advantage, Supplement (Medigap), and Part D — with no broker fees.",
         url: SITE_URL,
         telephone: PHONE,
         email: EMAIL,

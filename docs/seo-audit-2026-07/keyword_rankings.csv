@@ -1,0 +1,30 @@
+keyword_id,keyword,current_position,previous_position,position_change,search_volume,url,device,location,movement,notes
+3376943,licensed health insurance broker,null,null,null,880,null,desktop,United States,not_ranking,KRT project 70164 — all 25 tracked keywords show null positions as of 2026-07-10. Possible issues: (1) keywords tracked at national US level — site may rank locally in Miami/South Florida but not appear in national results; (2) rank tracker not yet populated with data; (3) keywords genuinely not ranking.
+3376944,medicare insurance broker near me,null,null,null,6600,null,desktop,United States,not_ranking,High commercial intent keyword (6600 SV). Not ranking nationally. Local pack ranking unknown.
+3376945,medicare broker near me,null,null,null,9900,null,desktop,United States,not_ranking,Highest SV keyword in tracker (9900). Not ranking nationally.
+3376946,medicare agent near me,null,null,null,9900,null,desktop,United States,not_ranking,High SV (9900). Not ranking nationally.
+3376947,medicare insurance agent near me,null,null,null,6600,null,desktop,United States,not_ranking,High SV (6600). Not ranking nationally.
+3376948,medicare advantage vs supplement plan,null,null,null,null,null,desktop,United States,not_ranking,Core comparison keyword — site has pillar content for this but not ranking nationally.
+3376949,florida medicare supplement plans,null,null,null,null,null,desktop,United States,not_ranking,Florida-specific. GSC shows this keyword appearing for /blog/medicare-advantage-vs-medicare-supplement... at pos 37 (28 total keywords) — but the legacy /blog/ URL not the live /blogs/ URL.
+3376950,medicare supplement plans for florida,null,null,null,null,null,desktop,United States,not_ranking,Variation of above.
+3376951,medicare medical advantage plans,null,null,null,null,null,desktop,United States,not_ranking,
+3376952,plans medicare advantage,null,null,null,null,null,desktop,United States,not_ranking,
+3376953,medicare part c advantage plans,null,null,null,null,null,desktop,United States,not_ranking,
+3376954,top rated medicare advantage plans,null,null,null,null,null,desktop,United States,not_ranking,
+3376955,best advantage medicare plans,null,null,null,null,null,desktop,United States,not_ranking,
+3376956,medicare advantage plans comparison,null,null,null,null,null,desktop,United States,not_ranking,
+3376957,advantage plans for medicare,null,null,null,null,null,desktop,United States,not_ranking,
+3376958,best rated medicare advantage plans,null,null,null,null,null,desktop,United States,not_ranking,
+3376959,term insurance life insurance,null,null,null,null,null,desktop,United States,not_ranking,
+3376960,insurance term life,null,null,null,null,null,desktop,United States,not_ranking,
+3376961,term policies in life insurance,null,null,null,null,null,desktop,United States,not_ranking,
+3376962,term insurance life,null,null,null,null,null,desktop,United States,not_ranking,
+3376963,term life policy insurance,null,null,null,null,null,desktop,United States,not_ranking,
+3376964,term insurance for life,null,null,null,null,null,desktop,United States,not_ranking,
+3376965,insurance policy for life,null,null,null,null,null,desktop,United States,not_ranking,
+3376966,permanent life insurance,null,null,null,null,null,desktop,United States,not_ranking,
+3376967,best permanent life insurance,null,null,null,null,null,desktop,United States,not_ranking,
+RANKING_SUMMARY,KRT Ranking Report Summary,,,,,,,,,Period: 2026-06-01 to 2026-07-10. Total tracked keywords: 25. All 25 show not_ranking (null positions). Top competitors in KRT by keywords_in_top_10: aflac.com (9) allstate.com (8) anthem.com (5) bannerlife.com (5) aetna.com (4) aarp.org (2) askchapter.org (2). Distribution: all zeros across pos_1 through pos_51_100. avg_position: 0 (not ranking). visibility_score: null. Action required: Reconfigure KRT to track Miami FL local search locations and add more targeted Florida-specific keywords.
+GSC_KEYWORD_INTEL_TOP_PAGE_1,/blog/medicare-advantage-vs-medicare-supplement... — top keywords from GSC,,,,,,,,,florida medicare supplement plans comparison (pos 17 / 12 imp); florida medicare supplement plans (pos 37 / 103 imp); medicare supplemental insurance florida (pos 34 / 12 imp); medigap plan g vs. medicare advantage plans in florida (pos 24 / 2 imp); florida medicare supplement (pos 30 / 6 imp). NOTE: these are the old /blog/ URL receiving impressions — the live /blogs/ URL may have different position data not captured in GSC because Google is still indexing the redirect source.
+GSC_KEYWORD_INTEL_HOMEPAGE,Homepage — top keywords from GSC,,,,,,,,,ae insurance (pos 5 / 26 imp); ae insurance agency (pos 9 / 6 imp); medicare insurance agency near me (pos 9 / 4 imp); health insurance agents miami fl (pos 18 / 105 imp — ZERO clicks); life insurance miami fl 33178 (pos 24 / 28 imp).
+GSC_KEYWORD_INTEL_RETIREMENT_TOOLS,/retirement/retirement-planning-tools (legacy Webflow URL) top keywords,,,,,,,,,how to calculate how much money i need to retire (pos 1 / 1 imp / 1 click); social security average payment 2026 (pos 1 / 1 imp); is the gulf of mexico now the gulf of america (pos 2 / 1 imp) — this page is receiving highly diverse low-volume retirement/finance queries across 21 keywords at strong positions before redirecting.

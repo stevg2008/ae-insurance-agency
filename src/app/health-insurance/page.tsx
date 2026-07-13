@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/health-insurance`,
     title: "Health Insurance Broker Miami, FL | A&E Insurance Agency",
     description:
-      "Compare Individual, Family, ACA Marketplace, and private health insurance plans in South Florida. Licensed independent broker — same price as going direct.",
+      "Compare Individual, Family, ACA Marketplace, and private health insurance plans. Licensed independent broker — no broker fees.",
   },
 };
 

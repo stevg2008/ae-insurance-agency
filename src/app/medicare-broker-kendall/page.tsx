@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/medicare-broker-kendall`,
     title: "Medicare Broker in Kendall, FL | A&E Insurance Agency",
     description:
-      "In-person Medicare consultations in Kendall, FL. Independent broker — 25+ carriers compared, same price as going direct. Serving West Miami-Dade since 2009.",
+      "In-person Medicare consultations in Kendall, FL. Independent broker — 25+ carriers compared, no broker fees.",
   },
 };
 

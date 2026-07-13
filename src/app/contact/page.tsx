@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     url: "https://www.aeinsurancefl.com/contact",
     title: "Contact A&E Insurance Agency | Medicare Help in Miami, FL",
     description:
-      "Reach licensed Medicare broker Steve Germain — serving South Florida since 2009. 25+ carriers compared, same price as going direct.",
+      "Reach licensed Medicare broker Steve Germain — licensed in 35 states. 25+ carriers compared, no broker fees.",
   },
 };
 

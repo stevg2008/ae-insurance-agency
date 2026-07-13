@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/life-insurance`,
     title: "Life Insurance & Annuities | A&E Insurance Agency — Miami, FL",
     description:
-      "Term, Whole, Universal, IUL, Final Expense, and Annuities — explained by licensed South Florida specialist Steve Germain. Free quotes, same price as going direct.",
+      "Term, Whole, Universal, IUL, Final Expense, and Annuities — explained by licensed specialist Steve Germain. Free quotes, no broker fees.",
   },
 };
 

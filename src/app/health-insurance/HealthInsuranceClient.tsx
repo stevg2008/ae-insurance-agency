@@ -120,7 +120,7 @@ export default function HealthInsuranceClient() {
                 Whether you need Individual & Family coverage, an ACA Marketplace plan, private health insurance, or options as a self-employed professional — we compare plans from multiple carriers and find the right fit for your doctors, your budget, and your life.
               </p>
               <p className="text-[#6B7280] text-sm mb-8">
-                Licensed health insurance broker Steve Germain. Serving Miami and South Florida since 2009 — same price as going direct.
+                Licensed health insurance broker Steve Germain. Independent — 25+ carriers, no broker fees.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <Link

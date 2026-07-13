@@ -162,7 +162,7 @@ export default function VideoClient() {
           <div className="max-w-2xl mx-auto mb-6 px-2 text-center">
             <p className="text-[#1A1A2E] font-bold text-sm">Steve Germain — Licensed Medicare Specialist</p>
             <p className="text-[#4B5563] text-sm leading-relaxed mt-0.5">
-              Serving South Florida since 2009. Independent agent — Steve works for you, not an insurance company.
+              Licensed in 35 states. Independent agent — Steve works for you, not an insurance company.
             </p>
           </div>
 

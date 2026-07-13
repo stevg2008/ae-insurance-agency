@@ -1,0 +1,43 @@
+page_url,element_type,element_text,destination,location_on_page,conversion_goal,notes
+ALL PAGES,phone_number_click_to_call,(954) 281-5622,tel:9542815622,AnnouncementBar (top of every page),Call conversion,Blue bar top of page — high visibility. Lucide Phone icon included.
+ALL PAGES,webinar_cta,Watch Medicare Made Simple — Free Workshop,/watch,AnnouncementBar (top of every page) — right side,Webinar registration,Paired with phone number in top bar
+ALL PAGES,nav_cta_button,Contact Us,/contact,Header — right of nav (desktop only hidden on mobile),Contact/lead form,Amber/gold button (#E8A020). Desktop only — mobile has separate mobile menu CTA.
+ALL PAGES,nav_cta_mobile,Contact,/contact,Header — mobile menu (at bottom of mobile nav),Contact/lead form,Full-width orange button in mobile menu
+ALL PAGES,footer_phone,tel link (954) 281-5622,tel:9542815622,Footer — Contact column,Call conversion,
+ALL PAGES,footer_email,info@aeinsurancefl.com,mailto:info@aeinsurancefl.com,Footer — Contact column,Email contact,
+/,hero_cta_primary,Book a Free Consultation,/contact,Hero — below tagline,Lead form,Dark navy background with gold CTA button
+/,hero_cta_secondary,Watch Our Free Workshop,/watch,Hero — below tagline (secondary button),Webinar registration,White/outline button variant
+/,section_cta,Ready to Get Your Medicare Right? / Schedule Your Free Consultation,/contact,Homepage — bottom dark navy section,Lead form,Full-width dark CTA section at bottom of homepage
+/,lead_magnet_section,Medicare Decoded — Free PDF Guide,/public/medicare-decoded-guide.pdf (PDF download) or /book thank-you,FreeBook section (mid-page),Lead generation/PDF download,Medicare Decoded book offered as free resource
+/,trust_section,Google Reviews display,n/a (display only),GoogleReviews section,Trust building / conversion assist,5.0 rating 126 reviews displayed
+/medicare,page_cta,Get a Free Medicare Consultation / Call (954) 281-5622,/contact,Bottom of Medicare service page,Lead form / call,Standard dark section CTA
+/health-insurance,page_cta,Get a Free Health Insurance Quote,/contact,Bottom of Health Insurance page,Lead form,
+/retirement,page_cta,Schedule a Retirement Planning Call,/contact,Bottom of Retirement page,Lead form,
+/life-insurance,page_cta,Get a Free Life Insurance Quote,/contact,Bottom of Life Insurance page,Lead form,
+/critical-illness,page_cta,Talk to a Critical Illness Expert,/contact,Bottom of Critical Illness page,Lead form,
+/about,page_cta,(schedule consultation CTA),/contact,Bottom of About page,Lead form,
+/about/steve,page_cta,(contact Steve CTA),/contact,Bottom of Steve bio page,Lead form,
+/contact,contact_form,Contact form (fields: name email phone message likely),POST /api/contact,Main content area,Primary lead capture,API route at /api/contact sends leads. Form fields not confirmed — ContactClient.tsx not fully read.
+/watch,webinar_registration_form,Watch Now / Register,POST /api/register → /watch/video,Hero/main content area,Webinar opt-in,GoHighLevel webhook integration. After registration redirects to /watch/video.
+/watch,book_lead_magnet_button,Get Your Free Medicare Guide,/book/thank-you (via BookModal or direct),Watch page — below form possibly,Book/PDF lead capture,BookModal component referenced
+/watch/video,video_embed,Medicare Made Simple Workshop (YouTube embed),YouTube iframe,Main content,Workshop consumption,Post-optin page. noindexed.
+/book/thank-you,pdf_download,Download Medicare Decoded,/public/medicare-decoded-guide.pdf,Main content,PDF download,Post-optin thank you page
+/blogs/[slug],blog_post_cta,(CTA at end of each post — implied from pattern),/contact,End of blog post content,Lead form,BlogPostClient likely renders CTA section below article content
+/resources,faq_hub_cta,(contact CTA on resources page),/contact,Bottom of page,Lead form,
+/resources/faq/[slug],faq_page_cta,(contact CTA on each FAQ page),/contact,Bottom of FAQ page,Lead form,
+/tools/medicare-enrollment-calculator,calculator_cta,(consultation CTA after result),/contact,Below calculator result,Lead form,Calculator pages likely have CTAs tied to results — IrmaaClient and EnrollmentCalculatorClient not fully read
+/tools/part-b-penalty-calculator,calculator_cta,(consultation CTA after result),/contact,Below calculator result,Lead form,
+/tools/part-d-penalty-calculator,calculator_cta,(consultation CTA after result),/contact,Below calculator result,Lead form,
+/tools/irmaa-calculator,calculator_cta,(consultation CTA after result),/contact,Below calculator result,Lead form,
+/medicare-broker-miami,local_page_cta,Schedule a Free Medicare Consultation,/contact,Bottom of local landing page,Lead form,
+/medicare-broker-south-florida,local_page_cta,Schedule a Free Medicare Consultation,/contact,Bottom of local landing page,Lead form,
+/medicare-broker-kendall,local_page_cta,Schedule a Free Medicare Consultation,/contact,Bottom of local landing page,Lead form,
+/medicare-broker-near-me,local_page_cta,Schedule a Free Medicare Consultation,/contact,Bottom of local landing page,Lead form,
+/health-insurance-broker-miami,local_page_cta,Schedule a Free Health Insurance Consultation,/contact,Bottom of local landing page,Lead form,
+COMPONENTS,trust_badge,BBB Accreditation Seal,https://www.bbb.org (implied),Footer — below logo,Trust building,BBBSeal component — SVG or image not confirmed as inline or linked to BBB verification page
+COMPONENTS,modal,BookModal component,/book/thank-you or form action,Site-wide — triggered from FreeBook section and possibly /watch,Lead capture for book/PDF,BookModal.tsx exists — fields not fully confirmed
+MISSING_CRO,chat_widget,No live chat widget found in codebase,n/a,n/a,n/a,No Intercom LiveChat Drift or similar widget found
+MISSING_CRO,calendar_booking_widget,No Calendly or booking widget found,n/a,n/a,n/a,All CTAs go to /contact form — no direct calendar embed found in codebase
+MISSING_CRO,sticky_cta,No sticky bottom CTA bar found,n/a,n/a,n/a,AnnouncementBar at top is effectively sticky but no bottom sticky element
+MISSING_CRO,exit_intent_popup,No exit intent popup found,n/a,n/a,n/a,
+MISSING_CRO,text_message_cta,No SMS CTA found,n/a,n/a,n/a,Phone is listed but no text/SMS shortcode
