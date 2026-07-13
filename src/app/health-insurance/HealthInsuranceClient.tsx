@@ -190,7 +190,7 @@ export default function HealthInsuranceClient() {
               {/* Mid-page CTA after plan 2 */}
               {i === 1 && (
                 <div className="my-8 bg-[#F3F4F6] rounded-2xl px-6 py-7 text-center border border-[#E5E7EB]">
-                  <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-2">Free to You · Same Price as Going Direct</p>
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-2">Independent · No Broker Fees</p>
                   <p className="text-[#1A1A2E] font-extrabold text-lg mb-2">
                     Not sure if you qualify for ACA subsidies?
                   </p>
@@ -223,7 +223,7 @@ export default function HealthInsuranceClient() {
       {/* ── CTA ── */}
       <section className="bg-[#1A72C0] py-16 px-4 text-center">
         <AnimatedSection className="max-w-xl mx-auto">
-          <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">Free to You · 25+ Carriers · Since 2009</p>
+          <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">Independent · 25+ Carriers</p>
           <h2 className="text-3xl font-extrabold text-white mb-4">
             Let&apos;s Find the Right Plan for You
           </h2>

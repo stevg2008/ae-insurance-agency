@@ -82,7 +82,7 @@ export default function ContactClient() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-[#1A72C0] text-xs font-bold uppercase tracking-widest mb-2">Free to You · Same Price as Going Direct</p>
+            <p className="text-[#1A72C0] text-xs font-bold uppercase tracking-widest mb-2">Independent · No Broker Fees</p>
             <h2 className="text-2xl font-extrabold text-[#1A1A2E] mb-2">Send Us a Message</h2>
             <p className="text-[#4B5563] text-sm mb-8">Leave your info and we&apos;ll call you back — usually within one business day.</p>
 

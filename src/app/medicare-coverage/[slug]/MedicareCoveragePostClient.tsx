@@ -33,13 +33,13 @@ export default function MedicareCoveragePostClient({ post }: { post: MedicareCov
         {/* CTA */}
         <div className="mt-14 bg-[#1A72C0] rounded-2xl p-8 text-center">
           <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-2">
-            Free Guidance · 25+ Carriers · Since 2009
+            Free Guidance · 25+ Carriers
           </p>
           <h2 className="text-2xl font-extrabold text-white mb-3">
             Ready to Find the Right Medicare Plan?
           </h2>
           <p className="text-white/70 text-sm mb-6">
-            Steve Germain is a licensed Medicare broker serving South Florida. We compare every major plan so you don't have to — and it's always free.
+            Steve Germain is a licensed Medicare broker licensed in 35 states. We compare every major plan so you don't have to — and it's always free.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link

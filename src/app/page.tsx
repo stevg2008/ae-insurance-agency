@@ -36,7 +36,7 @@ export default function HomePage() {
       {/* ── Bottom CTA ── */}
       <section className="bg-[#1A1A2E] py-20 px-4 text-center">
         <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-4">
-          Free to You · 25+ Carriers · Since 2009
+          Independent · 25+ Carriers
         </p>
         <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-5 max-w-2xl mx-auto leading-tight">
           Ready to Get Your Medicare Right?

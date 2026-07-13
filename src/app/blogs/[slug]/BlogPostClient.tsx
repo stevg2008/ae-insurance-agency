@@ -71,13 +71,13 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         {/* CTA */}
         <div className="mt-14 bg-[#1A72C0] rounded-2xl p-8 text-center">
           <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-2">
-            Free Guidance · 25+ Carriers · Since 2009
+            Free Guidance · 25+ Carriers
           </p>
           <h2 className="text-2xl font-extrabold text-white mb-3">
             Have Questions About Your Medicare Options?
           </h2>
           <p className="text-white/70 text-sm mb-6">
-            Steve Germain is a licensed Medicare broker serving South Florida. Call or schedule a free consultation — same price as going direct.
+            Steve Germain is a licensed Medicare broker licensed in 35 states. Call or schedule a free consultation — no broker fees, ever.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link

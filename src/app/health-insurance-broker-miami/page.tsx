@@ -183,7 +183,7 @@ export default function HealthInsuranceMiamiPage() {
         {/* ── Bottom CTA ── */}
         <section className="bg-[#1A1A2E] py-16 px-4 text-center">
           <div className="max-w-xl mx-auto">
-            <span className="inline-block text-[#E8A020] font-bold text-xs uppercase tracking-widest mb-4">Free to You · 25+ Carriers · Since 2009</span>
+            <span className="inline-block text-[#E8A020] font-bold text-xs uppercase tracking-widest mb-4">Independent · 25+ Carriers</span>
             <h2 className="text-3xl font-extrabold text-white mb-4">Ready to compare your options?</h2>
             <p className="text-white/70 text-sm mb-8 leading-relaxed">
               One conversation with Steve and you'll know exactly what's available in Miami and what fits your situation.

@@ -557,7 +557,7 @@ export default function MedicareClient() {
       <section className="bg-[#1A72C0] py-16 px-4 text-center">
         <AnimatedSection className="max-w-xl mx-auto">
           <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">
-            Free to You · 25+ Carriers · Since 2009
+            Independent · 25+ Carriers
           </p>
           <h2 className="text-3xl font-extrabold text-white mb-4">
             Ready to Choose Your Medicare Plan?

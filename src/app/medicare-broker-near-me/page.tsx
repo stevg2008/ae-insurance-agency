@@ -207,10 +207,10 @@ export default function MedicareBrokerNearMePage() {
         {/* ── Bottom CTA ── */}
         <section className="bg-[#1A1A2E] py-16 px-4 text-center">
           <div className="max-w-xl mx-auto">
-            <span className="inline-block text-[#E8A020] font-bold text-xs uppercase tracking-widest mb-4">Free to You · 25+ Carriers · Since 2009</span>
+            <span className="inline-block text-[#E8A020] font-bold text-xs uppercase tracking-widest mb-4">Independent · 25+ Carriers</span>
             <h2 className="text-3xl font-extrabold text-white mb-4">Talk to a Medicare Broker — Wherever You Are</h2>
             <p className="text-white/70 text-sm mb-8 leading-relaxed">
-              In person in South Florida or by phone and video anywhere in the country. Same price as going direct.
+              Available in person or by phone and video anywhere in the country — no broker fees, ever.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/contact" className="inline-flex items-center justify-center bg-[#E8A020] hover:bg-[#d08f18] text-white font-extrabold uppercase tracking-wide text-sm px-8 py-4 rounded-lg transition-colors">
