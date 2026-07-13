@@ -287,7 +287,7 @@ export default function MedicareClient() {
               transition={{ duration: 0.5 }}
             >
               <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">
-                Your Complete Medicare Guide · A&E Insurance Agency
+                Your Complete Medicare Guide
               </span>
               <h1 className="text-4xl md:text-5xl font-extrabold text-[#1A1A2E] leading-tight mb-4">
                 Medicare Explained:<br className="hidden md:block" /> Parts A, B, C & D

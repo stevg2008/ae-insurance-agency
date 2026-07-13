@@ -16,8 +16,8 @@ export default function AnnouncementBar() {
           {PHONE}
         </a>
 
-        {/* Center: value statement */}
-        <span className="text-white/90 text-center font-medium">
+        {/* Center: value statement — hidden on mobile to prevent wrapping */}
+        <span className="text-white/90 text-center font-medium hidden sm:block">
           Independent Medicare Broker — Licensed in 35 States
         </span>
 
