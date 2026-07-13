@@ -1,6 +1,6 @@
 "use client";
 
-import { WEBINAR_URL, WEBINAR_LABEL, PHONE } from "@/lib/constants";
+import { PHONE } from "@/lib/constants";
 import { Phone } from "lucide-react";
 
 export default function AnnouncementBar() {
