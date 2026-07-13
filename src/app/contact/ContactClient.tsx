@@ -1,43 +1,117 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import { PHONE, EMAIL, LOCATIONS, BUSINESS_HOURS, SOCIAL } from "@/lib/constants";
 import GoogleReviews from "@/components/sections/GoogleReviews";
 import { analytics } from "@/lib/analytics";
+import { RE_PHONE, RE_EMAIL } from "@/lib/formValidation";
+import TurnstileWidget from "@/components/TurnstileWidget";
 
 const BEST_TIMES = ["Morning (9am–12pm)", "Afternoon (12pm–4pm)", "Evening (4pm–6pm)", "Anytime"];
 
-export default function ContactClient() {
-  const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", bestTime: "", message: "" });
-  const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState("");
+type Fields = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  bestTime: string;
+  message: string;
+};
+type Errors = Partial<Record<"firstName" | "lastName" | "email" | "phone", string>>;
 
-  const set = (field: string) =>
-    (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
+function validate(f: Fields): Errors {
+  const e: Errors = {};
+  if (!f.firstName.trim())                          e.firstName = "First name is required.";
+  if (!f.phone.trim() || !RE_PHONE.test(f.phone))  e.phone     = "Enter a valid U.S. phone number.";
+  if (f.email && !RE_EMAIL.test(f.email.trim()))    e.email     = "Enter a valid email address.";
+  return e;
+}
+
+export default function ContactClient() {
+  const [form, setForm] = useState<Fields>({
+    firstName: "", lastName: "", email: "", phone: "", bestTime: "", message: "",
+  });
+  const [errors, setErrors]       = useState<Errors>({});
+  const [honeypot, setHoneypot]   = useState("");
+  const [cfToken, setCfToken]     = useState<string | null>(null);
+  const [tsReset, setTsReset]     = useState(0);
+  const [loading, setLoading]     = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  const loadedAt = useRef(0);
+
+  useEffect(() => { loadedAt.current = Date.now(); }, []);
+
+  const handleToken  = useCallback((t: string) => setCfToken(t), []);
+  const handleExpire = useCallback(() => setCfToken(null), []);
+
+  const set =
+    (field: keyof Fields) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
       setForm((f) => ({ ...f, [field]: e.target.value }));
+      if (field in (errors as object)) {
+        setErrors((prev) => {
+          const next = { ...prev };
+          delete next[field as keyof Errors];
+          return next;
+        });
+      }
+    };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError("");
+    setSubmitError("");
+
+    const fieldErrors = validate(form);
+    if (Object.keys(fieldErrors).length) {
+      setErrors(fieldErrors);
+      return;
+    }
+
     setLoading(true);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          _hp:      honeypot,
+          _t:       Date.now() - loadedAt.current,
+          cf_token: cfToken ?? "",
+        }),
       });
+
+      if (res.status === 429) {
+        setSubmitError("Too many attempts. Please wait a moment and try again.");
+        setTsReset((n) => n + 1);
+        return;
+      }
+      if (res.status === 403) {
+        setSubmitError("Security check failed. Please refresh the page and try again.");
+        setTsReset((n) => n + 1);
+        return;
+      }
       if (!res.ok) throw new Error();
+
       analytics.contactFormSubmitted();
       setSubmitted(true);
     } catch {
-      setError("Something went wrong. Please call us at " + PHONE);
+      setSubmitError("Something went wrong. Please call us at " + PHONE);
+      setTsReset((n) => n + 1);
     } finally {
       setLoading(false);
     }
   };
+
+  function inputClass(field: keyof Errors) {
+    return `w-full border rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none transition-colors ${
+      errors[field]
+        ? "border-red-400 focus:border-red-400 bg-red-50"
+        : "border-[#D1D5DB] focus:border-[#1A72C0]"
+    }`;
+  }
 
   return (
     <div className="bg-white min-h-screen">
@@ -86,29 +160,48 @@ export default function ContactClient() {
             <h2 className="text-2xl font-extrabold text-[#1A1A2E] mb-2">Send Us a Message</h2>
             <p className="text-[#4B5563] text-sm mb-8">Leave your info and we&apos;ll call you back — usually within one business day.</p>
 
+            {/* Honeypot */}
+            <div aria-hidden="true" className="absolute opacity-0 pointer-events-none w-0 h-0 overflow-hidden">
+              <input
+                tabIndex={-1}
+                name="website"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+
             {submitted ? (
               <div className="bg-[#F0FDF4] border border-green-200 rounded-2xl p-8 text-center">
                 <CheckCircle2 size={40} className="text-green-500 mx-auto mb-4" />
                 <h3 className="text-lg font-extrabold text-[#1A1A2E] mb-2">We got your message!</h3>
                 <p className="text-[#4B5563] text-sm leading-relaxed">
-                  We'll reach out{form.bestTime ? ` during your preferred time (${form.bestTime})` : " shortly"}. If you need us sooner, call us at{" "}
+                  We&apos;ll reach out{form.bestTime ? ` during your preferred time (${form.bestTime})` : " shortly"}. If you need us sooner, call us at{" "}
                   <a href={`tel:${PHONE.replace(/\D/g, "")}`} className="text-[#1A72C0] font-semibold hover:underline">{PHONE}</a>.
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5" noValidate>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="contact-firstName" className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">First Name *</label>
+                    <label htmlFor="contact-firstName" className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">
+                      First Name <span className="text-red-500" aria-hidden="true">*</span>
+                    </label>
                     <input
                       id="contact-firstName"
                       type="text"
-                      required
                       placeholder="John"
                       value={form.firstName}
                       onChange={set("firstName")}
-                      className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
+                      autoComplete="given-name"
+                      aria-required="true"
+                      aria-invalid={!!errors.firstName}
+                      aria-describedby={errors.firstName ? "cf-firstName-err" : undefined}
+                      className={inputClass("firstName")}
                     />
+                    {errors.firstName && (
+                      <p id="cf-firstName-err" role="alert" className="text-red-500 text-xs mt-1">{errors.firstName}</p>
+                    )}
                   </div>
                   <div>
                     <label htmlFor="contact-lastName" className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">Last Name</label>
@@ -118,22 +211,32 @@ export default function ContactClient() {
                       placeholder="Smith"
                       value={form.lastName}
                       onChange={set("lastName")}
+                      autoComplete="family-name"
                       className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="contact-phone" className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">Phone Number *</label>
+                  <label htmlFor="contact-phone" className="block text-xs font-semibold text-[#1A1A2E] mb-1.5">
+                    Phone Number <span className="text-red-500" aria-hidden="true">*</span>
+                  </label>
                   <input
                     id="contact-phone"
                     type="tel"
-                    required
+                    inputMode="tel"
                     placeholder="(954) 555-1234"
                     value={form.phone}
                     onChange={set("phone")}
-                    className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
+                    autoComplete="tel-national"
+                    aria-required="true"
+                    aria-invalid={!!errors.phone}
+                    aria-describedby={errors.phone ? "cf-phone-err" : undefined}
+                    className={inputClass("phone")}
                   />
+                  {errors.phone && (
+                    <p id="cf-phone-err" role="alert" className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                  )}
                 </div>
 
                 <div>
@@ -141,11 +244,21 @@ export default function ContactClient() {
                   <input
                     id="contact-email"
                     type="email"
+                    inputMode="email"
                     placeholder="john@email.com"
                     value={form.email}
                     onChange={set("email")}
-                    className="w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
+                    autoComplete="email"
+                    aria-invalid={!!errors.email}
+                    aria-describedby={errors.email ? "cf-email-err" : undefined}
+                    className={errors.email
+                      ? "w-full border border-red-400 bg-red-50 rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-red-400 transition-colors"
+                      : "w-full border border-[#D1D5DB] rounded-lg px-4 py-3 text-base text-[#1A1A2E] focus:outline-none focus:border-[#1A72C0] transition-colors"
+                    }
                   />
+                  {errors.email && (
+                    <p id="cf-email-err" role="alert" className="text-red-500 text-xs mt-1">{errors.email}</p>
+                  )}
                 </div>
 
                 <div>
@@ -175,7 +288,16 @@ export default function ContactClient() {
                   />
                 </div>
 
-                {error && <p className="text-red-500 text-sm">{error}</p>}
+                {/* Turnstile */}
+                <TurnstileWidget
+                  onToken={handleToken}
+                  onExpire={handleExpire}
+                  resetKey={tsReset}
+                />
+
+                {submitError && (
+                  <p role="alert" className="text-red-500 text-sm">{submitError}</p>
+                )}
 
                 <button
                   type="submit"
@@ -186,7 +308,8 @@ export default function ContactClient() {
                 </button>
 
                 <p className="text-[#6B7280] text-xs text-center leading-relaxed">
-                  By submitting this form, you consent to receive calls, emails, and text messages from A&amp;E Insurance Agency, including via automated systems. Consent is not required to purchase. Reply STOP to opt out of texts. <a href="/terms" className="underline">Terms</a> · <a href="/privacy" className="underline">Privacy</a>
+                  By submitting this form, you consent to receive calls, emails, and text messages from A&amp;E Insurance Agency, including via automated systems. Consent is not required to purchase. Reply STOP to opt out of texts.{" "}
+                  <a href="/terms" className="underline">Terms</a> · <a href="/privacy" className="underline">Privacy</a>
                 </p>
               </form>
             )}
@@ -199,7 +322,7 @@ export default function ContactClient() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
           >
-            {/* Prefer to book? */}
+            {/* Book online */}
             <div className="bg-[#1A1A2E] rounded-2xl p-7 text-center">
               <p className="text-[#E8A020] text-xs font-bold uppercase tracking-widest mb-3">Ready to Book Now?</p>
               <p className="text-white text-lg font-extrabold mb-2">Pick a time that works for you</p>
@@ -247,22 +370,22 @@ export default function ContactClient() {
               <p className="text-xs font-bold uppercase tracking-widest text-[#1A72C0] mb-3">Follow Us</p>
               <div className="flex items-center gap-4">
                 <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" className="text-[#4B5563] hover:text-[#1A72C0] transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                   </svg>
                 </a>
                 <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" className="text-[#4B5563] hover:text-[#1A72C0] transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                   </svg>
                 </a>
                 <a href={SOCIAL.youtube} target="_blank" rel="noopener noreferrer" className="text-[#4B5563] hover:text-[#1A72C0] transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/>
                   </svg>
                 </a>
                 <a href={SOCIAL.tiktok} target="_blank" rel="noopener noreferrer" className="text-[#4B5563] hover:text-[#1A72C0] transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
                   </svg>
                 </a>

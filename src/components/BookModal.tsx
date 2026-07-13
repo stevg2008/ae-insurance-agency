@@ -1,52 +1,62 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { X } from "lucide-react";
 import { analytics } from "@/lib/analytics";
+import { RE_EMAIL, RE_PHONE, RE_ZIP } from "@/lib/formValidation";
+import TurnstileWidget from "@/components/TurnstileWidget";
 
 interface Props {
   isOpen: boolean;
   onClose: () => void;
 }
 
-type Fields = { firstName: string; lastName: string; email: string; phone: string; zip: string };
+type Fields = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  zip: string;
+};
 type Errors = Partial<Record<keyof Fields, string>>;
-
-const RE_EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const RE_PHONE = /^\+?1?\s*[-.]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
-const RE_ZIP = /^\d{5}$/;
 
 function validate(f: Fields): Errors {
   const e: Errors = {};
-  if (!f.firstName.trim()) e.firstName = "First name is required.";
-  if (!f.lastName.trim()) e.lastName = "Last name is required.";
-  if (!RE_EMAIL.test(f.email.trim())) e.email = "Enter a valid email address.";
-  if (!RE_PHONE.test(f.phone.trim())) e.phone = "Enter a valid U.S. phone number.";
-  if (!RE_ZIP.test(f.zip.trim())) e.zip = "Enter a valid 5-digit ZIP code.";
+  if (!f.firstName.trim())          e.firstName = "First name is required.";
+  if (!f.lastName.trim())           e.lastName  = "Last name is required.";
+  if (!RE_EMAIL.test(f.email.trim())) e.email   = "Enter a valid email address.";
+  if (!RE_PHONE.test(f.phone.trim())) e.phone   = "Enter a valid U.S. phone number.";
+  if (!RE_ZIP.test(f.zip.trim()))     e.zip     = "Enter a valid 5-digit ZIP code.";
   return e;
 }
 
 export default function BookModal({ isOpen, onClose }: Props) {
   const router = useRouter();
-  const [form, setForm] = useState<Fields>({ firstName: "", lastName: "", email: "", phone: "", zip: "" });
-  const [errors, setErrors] = useState<Errors>({});
-  const [honeypot, setHoneypot] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState<Fields>({
+    firstName: "", lastName: "", email: "", phone: "", zip: "",
+  });
+  const [errors, setErrors]       = useState<Errors>({});
+  const [honeypot, setHoneypot]   = useState("");
+  const [cfToken, setCfToken]     = useState<string | null>(null);
+  const [tsReset, setTsReset]     = useState(0);
+  const [loading, setLoading]     = useState(false);
   const [submitError, setSubmitError] = useState("");
   const loadedAt = useRef(0);
 
-  // Stamp the time the modal became visible — used for bot speed detection
+  // Stamp open time for bot speed detection
   useEffect(() => {
     if (isOpen) loadedAt.current = Date.now();
   }, [isOpen]);
+
+  const handleToken  = useCallback((t: string) => setCfToken(t), []);
+  const handleExpire = useCallback(() => setCfToken(null), []);
 
   if (!isOpen) return null;
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = e.target;
     setForm((f) => ({ ...f, [name]: value }));
-    // Clear the per-field error as the user types
     if (name in (errors as object)) {
       setErrors((prev) => {
         const next = { ...prev };
@@ -73,22 +83,30 @@ export default function BookModal({ isOpen, onClose }: Props) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           firstName: form.firstName.trim(),
-          lastName: form.lastName.trim(),
-          email: form.email.trim(),
-          phone: form.phone.trim(),
-          zip: form.zip.trim(),
-          _hp: honeypot,
-          _t: Date.now() - loadedAt.current,
+          lastName:  form.lastName.trim(),
+          email:     form.email.trim(),
+          phone:     form.phone.trim(),
+          zip:       form.zip.trim(),
+          _hp:       honeypot,
+          _t:        Date.now() - loadedAt.current,
+          cf_token:  cfToken ?? "",
         }),
       });
 
       if (res.status === 429) {
         setSubmitError("Too many attempts. Please wait a moment and try again.");
+        setTsReset((n) => n + 1);
+        return;
+      }
+      if (res.status === 403) {
+        setSubmitError("Security check failed. Please refresh the page and try again.");
+        setTsReset((n) => n + 1);
         return;
       }
       if (res.status === 400) {
         const data = await res.json() as { error?: string };
         setSubmitError(data.error ?? "Please check your information and try again.");
+        setTsReset((n) => n + 1);
         return;
       }
       if (!res.ok) throw new Error("server");
@@ -98,6 +116,7 @@ export default function BookModal({ isOpen, onClose }: Props) {
       router.push("/book/thank-you");
     } catch {
       setSubmitError("Something went wrong. Please try again or call us directly.");
+      setTsReset((n) => n + 1);
     } finally {
       setLoading(false);
     }
@@ -133,7 +152,7 @@ export default function BookModal({ isOpen, onClose }: Props) {
           Enter your information below to receive your comprehensive Medicare guide.
         </p>
 
-        {/* Honeypot — invisible to real users, bots fill it in */}
+        {/* Honeypot — hidden from real users */}
         <div aria-hidden="true" className="absolute opacity-0 pointer-events-none w-0 h-0 overflow-hidden">
           <input
             tabIndex={-1}
@@ -164,7 +183,9 @@ export default function BookModal({ isOpen, onClose }: Props) {
                 className={inputClass("firstName")}
               />
               {errors.firstName && (
-                <p id="bm-firstName-err" className="text-red-500 text-xs mt-1">{errors.firstName}</p>
+                <p id="bm-firstName-err" role="alert" className="text-red-500 text-xs mt-1">
+                  {errors.firstName}
+                </p>
               )}
             </div>
             <div>
@@ -184,7 +205,9 @@ export default function BookModal({ isOpen, onClose }: Props) {
                 className={inputClass("lastName")}
               />
               {errors.lastName && (
-                <p id="bm-lastName-err" className="text-red-500 text-xs mt-1">{errors.lastName}</p>
+                <p id="bm-lastName-err" role="alert" className="text-red-500 text-xs mt-1">
+                  {errors.lastName}
+                </p>
               )}
             </div>
           </div>
@@ -209,7 +232,9 @@ export default function BookModal({ isOpen, onClose }: Props) {
               className={inputClass("email")}
             />
             {errors.email && (
-              <p id="bm-email-err" className="text-red-500 text-xs mt-1">{errors.email}</p>
+              <p id="bm-email-err" role="alert" className="text-red-500 text-xs mt-1">
+                {errors.email}
+              </p>
             )}
           </div>
 
@@ -233,7 +258,9 @@ export default function BookModal({ isOpen, onClose }: Props) {
               className={inputClass("phone")}
             />
             {errors.phone && (
-              <p id="bm-phone-err" className="text-red-500 text-xs mt-1">{errors.phone}</p>
+              <p id="bm-phone-err" role="alert" className="text-red-500 text-xs mt-1">
+                {errors.phone}
+              </p>
             )}
           </div>
 
@@ -257,12 +284,24 @@ export default function BookModal({ isOpen, onClose }: Props) {
               className={inputClass("zip")}
             />
             {errors.zip && (
-              <p id="bm-zip-err" className="text-red-500 text-xs mt-1">{errors.zip}</p>
+              <p id="bm-zip-err" role="alert" className="text-red-500 text-xs mt-1">
+                {errors.zip}
+              </p>
             )}
           </div>
 
+          {/* Turnstile security widget */}
+          <TurnstileWidget
+            onToken={handleToken}
+            onExpire={handleExpire}
+            resetKey={tsReset}
+            theme="light"
+          />
+
           {submitError && (
-            <p role="alert" className="text-red-500 text-xs">{submitError}</p>
+            <p role="alert" className="text-red-500 text-xs">
+              {submitError}
+            </p>
           )}
 
           <button

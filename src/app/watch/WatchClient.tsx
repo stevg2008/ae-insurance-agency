@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { CheckCircle2, Star, Shield, Clock, Users, BookOpen, Map, FileText, CalendarCheck } from "lucide-react";
 import { PHONE } from "@/lib/constants";
 import { analytics } from "@/lib/analytics";
+import { RE_EMAIL, RE_PHONE } from "@/lib/formValidation";
+import TurnstileWidget from "@/components/TurnstileWidget";
 
 const LEARN_POINTS = [
   "How Medicare Part A & B actually work — and what most people get wrong",
@@ -38,30 +40,74 @@ const MONTHS_OPTIONS = [
   "Just researching",
 ];
 
+type WatchFields = { name: string; email: string; phone: string; months: string };
+type WatchErrors = Partial<Record<"name" | "email" | "phone", string>>;
+
+function validateWatch(f: WatchFields): WatchErrors {
+  const e: WatchErrors = {};
+  if (!f.name.trim())                           e.name  = "Full name is required.";
+  if (!RE_EMAIL.test(f.email.trim()))           e.email = "Enter a valid email address.";
+  if (!f.phone.trim() || !RE_PHONE.test(f.phone)) e.phone = "Enter a valid U.S. phone number.";
+  return e;
+}
+
 export default function WatchClient() {
   const router = useRouter();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", months: "" });
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [form, setForm]           = useState<WatchFields>({ name: "", email: "", phone: "", months: "" });
+  const [errors, setErrors]       = useState<WatchErrors>({});
+  const [honeypot, setHoneypot]   = useState("");
+  const [cfToken, setCfToken]     = useState<string | null>(null);
+  const [tsReset, setTsReset]     = useState(0);
+  const [loading, setLoading]     = useState(false);
+  const [error, setError]         = useState("");
+  const loadedAt                  = useRef(0);
 
-  const set = (field: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
+  useEffect(() => { loadedAt.current = Date.now(); }, []);
+
+  const handleToken  = useCallback((t: string) => setCfToken(t), []);
+  const handleExpire = useCallback(() => setCfToken(null), []);
+
+  const set = (field: keyof WatchFields) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setForm((f) => ({ ...f, [field]: e.target.value }));
+    if (field in (errors as object)) {
+      setErrors((prev) => { const n = { ...prev }; delete n[field as keyof WatchErrors]; return n; });
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
+
+    const fieldErrors = validateWatch(form);
+    if (Object.keys(fieldErrors).length) {
+      setErrors(fieldErrors);
+      return;
+    }
+
     setLoading(true);
     try {
       const res = await fetch("/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          _hp:      honeypot,
+          _t:       Date.now() - loadedAt.current,
+          cf_token: cfToken ?? "",
+        }),
       });
+      if (res.status === 429) {
+        setError("Too many attempts. Please wait a moment and try again.");
+        setTsReset((n) => n + 1);
+        setLoading(false);
+        return;
+      }
       if (!res.ok) throw new Error("Submission failed");
       analytics.watchRegistered();
       router.push("/watch/video");
     } catch {
       setError("Something went wrong. Please call us at " + PHONE);
+      setTsReset((n) => n + 1);
       setLoading(false);
     }
   };
@@ -122,43 +168,69 @@ export default function WatchClient() {
                 </h2>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Honeypot */}
+              <div aria-hidden="true" className="absolute opacity-0 pointer-events-none w-0 h-0 overflow-hidden">
+                <input tabIndex={-1} name="website" value={honeypot} onChange={(e) => setHoneypot(e.target.value)} autoComplete="off" />
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                 <div>
-                  <label className="block text-white/70 text-xs font-semibold mb-1.5">Full Name *</label>
+                  <label htmlFor="watch-name" className="block text-white/70 text-xs font-semibold mb-1.5">
+                    Full Name <span className="text-[#E8A020]" aria-hidden="true">*</span>
+                  </label>
                   <input
+                    id="watch-name"
                     type="text"
-                    required
                     placeholder="John Smith"
                     value={form.name}
                     onChange={set("name")}
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 text-base focus:outline-none focus:border-[#E8A020] transition-colors"
+                    autoComplete="name"
+                    aria-required="true"
+                    aria-invalid={!!errors.name}
+                    className={`w-full rounded-lg px-4 py-3 text-white placeholder-white/40 text-base focus:outline-none transition-colors ${errors.name ? "bg-red-900/30 border border-red-400 focus:border-red-400" : "bg-white/10 border border-white/20 focus:border-[#E8A020]"}`}
                   />
+                  {errors.name && <p role="alert" className="text-red-300 text-xs mt-1">{errors.name}</p>}
                 </div>
                 <div>
-                  <label className="block text-white/70 text-xs font-semibold mb-1.5">Email Address *</label>
+                  <label htmlFor="watch-email" className="block text-white/70 text-xs font-semibold mb-1.5">
+                    Email Address <span className="text-[#E8A020]" aria-hidden="true">*</span>
+                  </label>
                   <input
+                    id="watch-email"
                     type="email"
-                    required
+                    inputMode="email"
                     placeholder="john@email.com"
                     value={form.email}
                     onChange={set("email")}
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 text-base focus:outline-none focus:border-[#E8A020] transition-colors"
+                    autoComplete="email"
+                    aria-required="true"
+                    aria-invalid={!!errors.email}
+                    className={`w-full rounded-lg px-4 py-3 text-white placeholder-white/40 text-base focus:outline-none transition-colors ${errors.email ? "bg-red-900/30 border border-red-400 focus:border-red-400" : "bg-white/10 border border-white/20 focus:border-[#E8A020]"}`}
                   />
+                  {errors.email && <p role="alert" className="text-red-300 text-xs mt-1">{errors.email}</p>}
                 </div>
                 <div>
-                  <label className="block text-white/70 text-xs font-semibold mb-1.5">Phone Number *</label>
+                  <label htmlFor="watch-phone" className="block text-white/70 text-xs font-semibold mb-1.5">
+                    Phone Number <span className="text-[#E8A020]" aria-hidden="true">*</span>
+                  </label>
                   <input
+                    id="watch-phone"
                     type="tel"
-                    required
+                    inputMode="tel"
                     placeholder="(954) 555-1234"
                     value={form.phone}
                     onChange={set("phone")}
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 text-base focus:outline-none focus:border-[#E8A020] transition-colors"
+                    autoComplete="tel-national"
+                    aria-required="true"
+                    aria-invalid={!!errors.phone}
+                    className={`w-full rounded-lg px-4 py-3 text-white placeholder-white/40 text-base focus:outline-none transition-colors ${errors.phone ? "bg-red-900/30 border border-red-400 focus:border-red-400" : "bg-white/10 border border-white/20 focus:border-[#E8A020]"}`}
                   />
+                  {errors.phone && <p role="alert" className="text-red-300 text-xs mt-1">{errors.phone}</p>}
                 </div>
                 <div>
-                  <label className="block text-white/70 text-xs font-semibold mb-1.5">How soon do you need Medicare?</label>
+                  <label htmlFor="watch-months" className="block text-white/70 text-xs font-semibold mb-1.5">How soon do you need Medicare?</label>
                   <select
+                    id="watch-months"
                     value={form.months}
                     onChange={set("months")}
                     className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white text-base focus:outline-none focus:border-[#E8A020] transition-colors"
@@ -170,7 +242,10 @@ export default function WatchClient() {
                   </select>
                 </div>
 
-                {error && <p className="text-red-400 text-xs text-center">{error}</p>}
+                {/* Turnstile */}
+                <TurnstileWidget onToken={handleToken} onExpire={handleExpire} resetKey={tsReset} theme="dark" />
+
+                {error && <p role="alert" className="text-red-400 text-xs text-center">{error}</p>}
 
                 <button
                   type="submit"
