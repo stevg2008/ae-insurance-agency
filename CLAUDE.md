@@ -90,4 +90,12 @@ This site is run as an ongoing organic-growth program. Before making content or 
 Medicare content is YMYL: every dollar figure must trace to CMS/SSA/Medicare.gov, and annual figures should be flagged for the November sweep. Content pruning (redirects/removals/merges) always requires Steve's explicit approval first.
 
 ### Blog preview gate (required)
-**Never push a new or substantially rewritten blog post to `main` without Steve reviewing a rendered preview first.** Workflow: stage the post locally → run the dev server → show Steve screenshots of the rendered page (top/hero, any tables, FAQ, CTA) plus the draft copy → wait for his explicit approval → then commit, push, and verify live. Minor mechanical edits (typo fixes, link additions, date stamps, schema wiring) don't need the gate; anything a reader would notice as new or changed content does.
+**Never push a new or substantially rewritten blog post to `main` without Steve reviewing a rendered preview first.** Minor mechanical edits (typo fixes, link additions, date stamps, schema wiring) don't need the gate; anything a reader would notice as new or changed content does.
+
+Preview workflow (private Vercel URL):
+1. Stage the post on a branch named `draft/<short-name>` (**keep the name short — the full branch slug must stay ≤ ~19 chars** or the branch-alias URL exceeds DNS's 63-char label limit) and push it.
+2. Vercel builds a preview at `https://ae-insurance-agency-git-draft-<short-name>-ae-insurance.vercel.app` — verify the URL responds (302 → vercel.com/sso-api is correct: Deployment Protection is ON, so only Steve, logged into Vercel, can view; previews are also `x-robots-tag: noindex`). If the alias doesn't resolve, get the exact deployment URL via `npx vercel ls ae-insurance-agency`.
+3. Send Steve the preview link (deep-link straight to `/blogs/<slug>`) plus screenshots in chat.
+4. On his explicit approval: merge the branch into `main`, push, verify live, delete the branch.
+
+The repo is linked to Vercel (`.vercel/project.json`, team `ae-insurance`); the CLI is authenticated — use `npx vercel`.
