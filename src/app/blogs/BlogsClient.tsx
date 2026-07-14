@@ -6,11 +6,16 @@ import { blogPosts } from "@/lib/blogPosts";
 
 const POSTS_PER_PAGE = 12;
 
+// Newest first by original publish date; same-date posts keep their existing order.
+const sortedPosts = [...blogPosts].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+
 export default function BlogsClient() {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
 
-  const filtered = blogPosts.filter(
+  const filtered = sortedPosts.filter(
     (p) =>
       p.title.toLowerCase().includes(search.toLowerCase()) ||
       p.excerpt.toLowerCase().includes(search.toLowerCase())
