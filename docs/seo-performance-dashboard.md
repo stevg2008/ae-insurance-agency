@@ -25,7 +25,7 @@ Priority score = (impressions momentum × position proximity to page 1 × busine
 
 | URL (/blogs/…) | Primary keyword | Pos | Impr | Clicks | Published | Next review | Priority | Notes |
 |---|---|---|---|---|---|---|---|---|
-| uhealth-preferred-care-network-out-of-network-sept-2026 | uhealth preferred care network out of network | — new | 0 | 0 | Jul 13 2026 | **Jul 20 (weekly)** | **90** | News post, sourced from UHealth 6/23 statement + UHC 7/13 broker comm. ⚠️ UPDATE SAME-DAY if agreement announced or Sept 1 passes. Watch news + GSC "uhealth" queries weekly. Steve: request indexing in GSC UI (fastest free path). Follow-up post opportunity when dispute resolves |
+| uhealth-preferred-care-network-out-of-network-sept-2026 | uhealth preferred care network out of network | — new | 0 | 0 | Jul 13 2026 | **Jul 20 (weekly)** | **90** | News post, sourced from UHealth 6/23 statement + UHC 7/13 broker comm. ⚠️ UPDATE SAME-DAY if agreement announced or Sept 1 passes. Watch news + GSC "uhealth" queries weekly. GSC indexing requested Jul 13 (priority crawl queue) — verify indexed at Jul 20 review. Follow-up post opportunity when dispute resolves |
 
 *Listing change Jul 13: /blogs now sorts newest-first by publish date (was alphabetical) — timely posts surface on page 1 of the listing.*
 
