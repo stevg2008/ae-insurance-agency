@@ -21,6 +21,14 @@ Priority score = (impressions momentum × position proximity to page 1 × busine
 | concierge-medical-care-a-new-way-to-better-health | concierge medicine medicare | 33 | 8 | 0 | 0% | ⬜ | Low-medium | 1 in / 3 out | Jul 9 2026 | Oct 9 | 45 | HSA accuracy fix shipped (YMYL) |
 | understanding-the-unique-challenge | life insurance special needs child | — | 0 | 0 | — | ⬜ | Medium — niche life intent | 0 in / 1 out | Jul 9 2026 | Oct 9 | 40 | Retitled to actual topic; expect first impressions post-recrawl |
 
+## Timely / news content (weekly review until resolved)
+
+| URL (/blogs/…) | Primary keyword | Pos | Impr | Clicks | Published | Next review | Priority | Notes |
+|---|---|---|---|---|---|---|---|---|
+| uhealth-preferred-care-network-out-of-network-sept-2026 | uhealth preferred care network out of network | — new | 0 | 0 | Jul 13 2026 | **Jul 20 (weekly)** | **90** | News post, sourced from UHealth 6/23 statement + UHC 7/13 broker comm. ⚠️ UPDATE SAME-DAY if agreement announced or Sept 1 passes. Watch news + GSC "uhealth" queries weekly. Steve: request indexing in GSC UI (fastest free path). Follow-up post opportunity when dispute resolves |
+
+*Listing change Jul 13: /blogs now sorts newest-first by publish date (was alphabetical) — timely posts surface on page 1 of the listing.*
+
 ## Tier 2 — Striking-distance watchlist (no changes yet; next up in Phase 2)
 
 | URL | Primary keyword | Pos | Impr | Priority | Planned action |
