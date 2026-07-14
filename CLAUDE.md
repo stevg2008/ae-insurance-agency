@@ -62,6 +62,16 @@ Global layout wraps every page with `AnnouncementBar → Header → <main> → F
 ### Webinar Funnel
 `/watch` (gated opt-in form) → POST `/api/register` → GoHighLevel webhook (`GHL_WEBHOOK_URL` in `.env.local`) → client redirects to `/watch/video` (YouTube embed).
 
+### Form Protection (all three public forms)
+Every API route (`/api/book`, `/api/contact`, `/api/register`) runs the same layered anti-spam pipeline in order: IP rate limit → honeypot → speed check (< 3 s = silent reject) → Cloudflare Turnstile server verification → field validation → bot value detection.
+
+Shared libraries:
+- `src/lib/formValidation.ts` — regex constants, normalizers, `isBotValue()` — safe to import from client or server
+- `src/lib/spam.ts` — `isRateLimited`, `verifyTurnstile`, `logRejection`, `getClientIp` — server-only
+- `src/components/TurnstileWidget.tsx` — reusable CF widget, no npm package; renders `null` when `NEXT_PUBLIC_TURNSTILE_SITE_KEY` is unset (dev)
+
+Required env vars: `NEXT_PUBLIC_TURNSTILE_SITE_KEY` (client-safe) and `TURNSTILE_SECRET_KEY` (server-only). Both are in `.env.local` and must be set in Vercel. Honeypot/speed rejections return silent `{ success: true }` so bots learn nothing; Turnstile failures return `403`. All rejections log to Vercel functions as `[SPAM_BLOCK]`.
+
 ### Inner Page Content Pattern
 Medicare, Retirement, Life Insurance, and Critical Illness pages share one layout: minimal intro + two CTAs, numbered items (`01`, `02`…) separated by `divide-y divide-[#E5E7EB]`, "The Bottom Line" callout per item, dark navy CTA section at bottom.
 
@@ -78,3 +88,6 @@ This site is run as an ongoing organic-growth program. Before making content or 
 - `ANNUAL_UPDATE.md` — every November: update Medicare constants (Part B premium, Part D parameters, IRMAA brackets) in the 4 calculator tools under `src/app/tools/`. Current verified 2026 figures live there — reuse them in article content rather than re-deriving.
 
 Medicare content is YMYL: every dollar figure must trace to CMS/SSA/Medicare.gov, and annual figures should be flagged for the November sweep. Content pruning (redirects/removals/merges) always requires Steve's explicit approval first.
+
+### Blog preview gate (required)
+**Never push a new or substantially rewritten blog post to `main` without Steve reviewing a rendered preview first.** Workflow: stage the post locally → run the dev server → show Steve screenshots of the rendered page (top/hero, any tables, FAQ, CTA) plus the draft copy → wait for his explicit approval → then commit, push, and verify live. Minor mechanical edits (typo fixes, link additions, date stamps, schema wiring) don't need the gate; anything a reader would notice as new or changed content does.
