@@ -6,13 +6,13 @@ import Hero from "@/components/sections/Hero";
 export const metadata: Metadata = {
   title: "Independent Medicare Broker Miami | A&E Insurance Agency",
   description:
-    "Steve Germain compares plans from 25+ carriers so you choose Medicare with confidence. Independent broker serving South Florida since 2009. Licensed in 35 states.",
+    "Compare Medicare plans from 25+ carriers with an independent broker you can trust. Steve Germain, author of Medicare Decoded, serving South Florida since 2009.",
   alternates: { canonical: SITE_URL },
   openGraph: {
     url: SITE_URL,
     title: "Get Your Medicare Right the First Time | A&E Insurance Agency",
     description:
-      "Steve Germain compares plans from 25+ carriers so you choose Medicare with confidence. Independent broker serving South Florida since 2009. Licensed in 35 states.",
+      "Compare Medicare plans from 25+ carriers with an independent broker you can trust. Steve Germain, author of Medicare Decoded, serving South Florida since 2009.",
   },
 };
 import ThreeTruths from "@/components/sections/ThreeTruths";

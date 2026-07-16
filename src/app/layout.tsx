@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | A&E Insurance Agency",
   },
   description:
-    "Steve Germain compares plans from 25+ carriers so you choose Medicare with confidence. Independent broker serving South Florida since 2009. Licensed in 35 states.",
+    "Compare Medicare plans from 25+ carriers with an independent broker you can trust. Steve Germain, author of Medicare Decoded, serving South Florida since 2009.",
   keywords: [
     "Medicare broker Miami",
     "Medicare insurance Miami",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "A&E Insurance Agency",
     title: "Get Your Medicare Right the First Time | A&E Insurance Agency",
     description:
-      "Steve Germain compares plans from 25+ carriers so you choose Medicare with confidence. Independent broker serving South Florida since 2009. Licensed in 35 states.",
+      "Compare Medicare plans from 25+ carriers with an independent broker you can trust. Steve Germain, author of Medicare Decoded, serving South Florida since 2009.",
     images: [
       {
         url: "/opengraph-image",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Get Your Medicare Right the First Time | A&E Insurance Agency",
     description:
-      "Steve Germain compares plans from 25+ carriers so you choose Medicare with confidence. Independent broker serving South Florida since 2009. Licensed in 35 states.",
+      "Compare Medicare plans from 25+ carriers with an independent broker you can trust. Steve Germain, author of Medicare Decoded, serving South Florida since 2009.",
     images: ["/opengraph-image"],
   },
   robots: {

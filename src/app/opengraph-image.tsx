@@ -30,7 +30,7 @@ export default function OGImage() {
             top: 0,
             left: 0,
             right: 0,
-            height: "7px",
+            height: "10px",
             backgroundColor: "#E8A020",
             display: "flex",
           }}
@@ -52,7 +52,7 @@ export default function OGImage() {
         {/* Brand eyebrow */}
         <div
           style={{
-            fontSize: "18px",
+            fontSize: "21px",
             fontWeight: "700",
             color: "#E8A020",
             letterSpacing: "5px",
@@ -83,7 +83,7 @@ export default function OGImage() {
         {/* Trust signal row */}
         <div
           style={{
-            fontSize: "22px",
+            fontSize: "25px",
             color: "#94A3B8",
             marginBottom: "52px",
             display: "flex",
