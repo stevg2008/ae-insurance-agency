@@ -19,13 +19,11 @@ export const viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "A&E Insurance Agency | Medicare & Retirement Planning — Miami, FL",
+    default: "Independent Medicare Broker Miami | A&E Insurance Agency",
     template: "%s | A&E Insurance Agency",
   },
   description:
-    "South Florida's trusted independent Medicare insurance agency. We compare plans from 25+ carriers and find the right fit for your doctors, your budget, and your life. Call " +
-    PHONE +
-    ".",
+    "Steve Germain compares plans from 25+ carriers so you choose Medicare with confidence. Independent broker serving South Florida since 2009. Licensed in 35 states.",
   keywords: [
     "Medicare broker Miami",
     "Medicare insurance Miami",
@@ -38,7 +36,7 @@ export const metadata: Metadata = {
     "retirement planning Miami",
     "A&E Insurance Agency",
   ],
-  authors: [{ name: "A&E Insurance Agency" }],
+  authors: [{ name: "Steve Germain" }],
   creator: "A&E Insurance Agency",
   publisher: "A&E Insurance Agency",
   openGraph: {
@@ -46,24 +44,24 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "A&E Insurance Agency",
-    title: "A&E Insurance Agency | Medicare & Retirement Planning — Miami, FL",
+    title: "Get Your Medicare Right the First Time | A&E Insurance Agency",
     description:
-      "South Florida's trusted independent Medicare insurance agency. 25+ carriers compared. Steve Germain, licensed in 35 states, author of Medicare Decoded.",
+      "Steve Germain compares plans from 25+ carriers so you choose Medicare with confidence. Independent broker serving South Florida since 2009. Licensed in 35 states.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "A&E Insurance Agency — Medicare & Retirement Planning, Miami FL",
+        alt: "A&E Insurance Agency — Independent Medicare Broker, South Florida Since 2009",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "A&E Insurance Agency | Medicare & Retirement Planning — Miami, FL",
+    title: "Get Your Medicare Right the First Time | A&E Insurance Agency",
     description:
-      "South Florida's trusted independent Medicare insurance agency. 25+ carriers. Licensed in 35 states.",
-    images: ["/og-image.jpg"],
+      "Steve Germain compares plans from 25+ carriers so you choose Medicare with confidence. Independent broker serving South Florida since 2009. Licensed in 35 states.",
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,

@@ -4,15 +4,15 @@ import { SITE_URL, PHONE } from "@/lib/constants";
 import Hero from "@/components/sections/Hero";
 
 export const metadata: Metadata = {
-  title: "A&E Insurance Agency | Medicare & Retirement Planning — Miami, FL",
+  title: "Independent Medicare Broker Miami | A&E Insurance Agency",
   description:
-    "South Florida's trusted independent Medicare insurance agency. We compare plans from 25+ carriers and find the right fit for your doctors, your budget, and your life. Licensed in 35 states. Call (954) 281-5622.",
+    "Steve Germain compares plans from 25+ carriers so you choose Medicare with confidence. Independent broker serving South Florida since 2009. Licensed in 35 states.",
   alternates: { canonical: SITE_URL },
   openGraph: {
     url: SITE_URL,
-    title: "A&E Insurance Agency | Medicare & Retirement Planning — Miami, FL",
+    title: "Get Your Medicare Right the First Time | A&E Insurance Agency",
     description:
-      "South Florida's trusted independent Medicare insurance agency. 25+ carriers compared. Licensed in 35 states. Steve Germain, author of Medicare Decoded.",
+      "Steve Germain compares plans from 25+ carriers so you choose Medicare with confidence. Independent broker serving South Florida since 2009. Licensed in 35 states.",
   },
 };
 import ThreeTruths from "@/components/sections/ThreeTruths";
