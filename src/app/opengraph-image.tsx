@@ -61,7 +61,7 @@ export default function OGImage() {
             display: "flex",
           }}
         >
-          A&amp;E INSURANCE AGENCY · EST. 2009
+          A&amp;E INSURANCE AGENCY · SOUTH FLORIDA SINCE 2009
         </div>
 
         {/* Main headline */}
@@ -90,7 +90,7 @@ export default function OGImage() {
             letterSpacing: "0.3px",
           }}
         >
-          Independent Broker&nbsp;·&nbsp;25+ Carriers&nbsp;·&nbsp;Licensed in 35 States
+          Independent Medicare Broker&nbsp;·&nbsp;25+ Carriers&nbsp;·&nbsp;Licensed in 35 States
         </div>
 
         {/* Author attribution */}

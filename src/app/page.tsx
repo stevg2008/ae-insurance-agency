@@ -4,7 +4,7 @@ import { SITE_URL, PHONE } from "@/lib/constants";
 import Hero from "@/components/sections/Hero";
 
 export const metadata: Metadata = {
-  title: "Independent Medicare Broker Miami | A&E Insurance Agency",
+  title: "Independent Medicare Broker South Florida | A&E Insurance",
   description:
     "Compare Medicare plans from 25+ carriers with an independent broker you can trust. Steve Germain, author of Medicare Decoded, serving South Florida since 2009.",
   alternates: { canonical: SITE_URL },

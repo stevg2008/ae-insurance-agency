@@ -19,7 +19,7 @@ export const viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Independent Medicare Broker Miami | A&E Insurance Agency",
+    default: "Independent Medicare Broker South Florida | A&E Insurance",
     template: "%s | A&E Insurance Agency",
   },
   description:
