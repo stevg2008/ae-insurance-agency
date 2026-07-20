@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { PHONE } from "@/lib/constants";
-import { useState, useEffect } from "react";
 
 const NEEDS_ASSESSMENT_URL = "/contact";
 
@@ -60,9 +59,6 @@ const STEPS = [
 ];
 
 export default function RetirementClient() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-
   return (
     <div className="bg-white min-h-screen">
 
@@ -74,8 +70,8 @@ export default function RetirementClient() {
             {/* Text */}
             <motion.div
               className="flex-1 text-center lg:text-left"
-              initial={mounted ? { opacity: 0, y: 16 } : false}
-              animate={mounted ? { opacity: 1, y: 0 } : undefined}
+              initial={false}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
               <span className="inline-block text-[#1A72C0] font-bold text-xs uppercase tracking-widest mb-3">
@@ -109,8 +105,8 @@ export default function RetirementClient() {
             {/* Photo */}
             <motion.div
               className="w-full lg:w-[440px] flex-shrink-0"
-              initial={mounted ? { opacity: 0, x: 20 } : false}
-              animate={mounted ? { opacity: 1, x: 0 } : undefined}
+              initial={false}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
             >
               <div className="rounded-2xl overflow-hidden shadow-xl">
