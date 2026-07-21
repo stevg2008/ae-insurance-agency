@@ -92,10 +92,9 @@ body[data-funnel] #global-announcement,
 body[data-funnel] #global-header,
 body[data-funnel] #global-footer { display: none !important; }
 
-/* Elfsight Google Reviews — force widget heading to white on blue background */
-.elfsight-app-ccce4a10-d499-45b6-a309-ce72ab2fb977 .es-widget-title-container,
-.elfsight-app-ccce4a10-d499-45b6-a309-ce72ab2fb977 .es-widget-title-container * {
-  color: #ffffff !important;
+/* Elfsight Google Reviews — hide duplicate widget heading, keep our own */
+.elfsight-app-ccce4a10-d499-45b6-a309-ce72ab2fb977 .es-widget-title-container {
+  display: none !important;
 }
 
 /* BBB Seal — layout and responsive scaling */
