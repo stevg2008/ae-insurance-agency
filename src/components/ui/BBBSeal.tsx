@@ -19,11 +19,13 @@ export default function BBBSeal() {
           title="Better Business Bureau Accredited Business"
           loading="lazy"
           src="https://seal-seflorida.bbb.org/frame/blue-seal-293-61-whitetxt-bbb-92035845.png?chk=8D1510C4D2"
+          scrolling="no"
           style={{
             border: "none",
             width: "293px",
             height: "61px",
             display: "block",
+            overflow: "hidden",
           }}
         />
       </div>
