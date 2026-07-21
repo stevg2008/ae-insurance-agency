@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export default function GoogleReviews() {
   return (
-    <section className="py-20 bg-[#1A1A2E]">
+    <section className="py-20 bg-[#1A72C0]">
       <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-10">
