@@ -92,6 +92,13 @@ body[data-funnel] #global-announcement,
 body[data-funnel] #global-header,
 body[data-funnel] #global-footer { display: none !important; }
 
+/* Elfsight Google Reviews — force widget heading to white on blue background */
+.elfsight-app-ccce4a10-d499-45b6-a309-ce72ab2fb977 [class*="title"],
+.elfsight-app-ccce4a10-d499-45b6-a309-ce72ab2fb977 [class*="header"],
+.elfsight-app-ccce4a10-d499-45b6-a309-ce72ab2fb977 [class*="heading"] {
+  color: #ffffff !important;
+}
+
 /* BBB Seal — layout and responsive scaling */
 .bbb-seal-outer {
   display: flex;
