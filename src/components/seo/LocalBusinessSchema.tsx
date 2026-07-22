@@ -11,11 +11,10 @@ export default function LocalBusinessSchema() {
         name: COMPANY_NAME,
         alternateName: "A&E Insurance",
         description:
-          "Independent Medicare insurance broker licensed in 35+ states. Steve Germain has helped 3,000+ families choose the right Medicare plan — Advantage, Supplement (Medigap), and Part D — with no broker fees.",
+          "Independent Medicare insurance broker licensed in 35+ states. Steve Germain helps families choose the right Medicare plan — Advantage, Supplement (Medigap), and Part D — with no broker fees.",
         url: SITE_URL,
         telephone: PHONE,
         email: EMAIL,
-        foundingDate: "2009",
         address: {
           "@type": "PostalAddress",
           streetAddress: "12855 SW 136th Avenue, Suite 105",
@@ -160,7 +159,7 @@ export default function LocalBusinessSchema() {
         familyName: "Germain",
         jobTitle: "Licensed Medicare Insurance Broker & Agency Owner",
         description:
-          "Steve Germain is the founder of A&E Insurance Agency and author of 'Medicare Decoded.' A licensed Medicare broker serving South Florida since 2009, Steve is licensed in 35+ states and has helped 3,000+ families navigate Medicare Advantage, Medigap, and Part D. Bilingual service in English and Spanish.",
+          "Steve Germain is the founder of A&E Insurance Agency and author of 'Medicare Decoded.' A licensed Medicare broker serving South Florida since 2013, Steve is licensed in 35+ states and helps families navigate Medicare Advantage, Medigap, and Part D. Bilingual service in English and Spanish.",
         url: `${SITE_URL}/about/steve`,
         image: `${SITE_URL}/team/steve.jpg`,
         worksFor: { "@id": `${SITE_URL}/#organization` },

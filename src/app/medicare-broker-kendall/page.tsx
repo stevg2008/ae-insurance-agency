@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Medicare Broker in Kendall, FL | A&E Insurance Agency",
   description:
-    "Local Medicare broker with an office in Kendall, FL. In-person appointments at 12855 SW 136th Ave. Free, independent, 5-star rated since 2009.",
+    "Local Medicare broker with an office in Kendall, FL. In-person appointments at 12855 SW 136th Ave. Free, independent, and 5-star rated.",
   alternates: { canonical: `${SITE_URL}/medicare-broker-kendall` },
   openGraph: {
     url: `${SITE_URL}/medicare-broker-kendall`,

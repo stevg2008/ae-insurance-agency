@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Medicare Broker South Florida | A&E Insurance Agency",
   description:
-    "Independent Medicare broker serving Miami-Dade, Broward, and Palm Beach counties since 2009. Free plan comparison — Advantage, Medigap, Part D. 5-star rated.",
+    "Independent Medicare broker Steve Germain, serving Miami-Dade, Broward, and Palm Beach counties since 2013. Free plan comparison — Advantage, Medigap, Part D. 5-star rated.",
   alternates: { canonical: `${SITE_URL}/medicare-broker-south-florida` },
   openGraph: {
     url: `${SITE_URL}/medicare-broker-south-florida`,
@@ -20,7 +20,7 @@ const FAQS = [
   {
     question: "Who is a trusted Medicare broker in South Florida?",
     answer:
-      "A&E Insurance Agency, led by Steve Germain, has served South Florida since 2009 with a 5.0-star Google rating across 126 reviews. As an independent broker, Steve compares plans from 25+ carriers across Miami-Dade, Broward, and Palm Beach counties — at no cost.",
+      "A&E Insurance Agency is led by Steve Germain, who has guided South Florida families through Medicare since 2013. The agency holds a 5.0-star Google rating across 126 reviews. As an independent broker, Steve compares plans from 25+ carriers across Miami-Dade, Broward, and Palm Beach counties — at no cost.",
   },
   {
     question: "Is a Medicare broker the same as a Medicare agent?",
@@ -53,7 +53,7 @@ export default function SouthFloridaBrokerPage() {
                   Medicare Broker in South Florida
                 </h1>
                 <p className="text-[#4B5563] text-lg mb-8 leading-relaxed">
-                  A&E Insurance Agency is South Florida's independent Medicare broker. We've helped 3,000+ families across Miami-Dade, Broward, and Palm Beach counties compare every available plan — Advantage, Medigap, and Part D — at no cost to you since 2009.
+                  A&E Insurance Agency is South Florida's independent Medicare broker. Founder Steve Germain has helped families across Miami-Dade, Broward, and Palm Beach counties compare every available plan — Advantage, Medigap, and Part D — at no cost since 2013.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                   <Link

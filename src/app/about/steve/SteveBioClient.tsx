@@ -6,7 +6,7 @@ import { Phone, Mail, ArrowLeft, BookOpen, Star, Clock } from "lucide-react";
 import { PHONE, EMAIL, WEBINAR_URL } from "@/lib/constants";
 
 const CREDENTIALS = [
-  { icon: Clock,    label: "Serving South Florida Since 2009" },
+  { icon: Clock,    label: "Medicare Broker Since 2013" },
   { icon: Star,     label: "5-Star Google Rating" },
   { icon: BookOpen, label: "Author of Medicare Decoded" },
 ];

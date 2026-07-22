@@ -5,6 +5,7 @@ import type { BlogPost } from "@/lib/blogPosts";
 import { PHONE } from "@/lib/constants";
 import BlogPostingSchema from "@/components/seo/BlogPostingSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
+import AuthorCard from "@/components/ui/AuthorCard";
 
 export default function BlogPostClient({ post }: { post: BlogPost }) {
   return (
@@ -67,6 +68,8 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
           className="blog-content"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
+
+        <AuthorCard />
 
         {/* CTA */}
         <div className="mt-14 bg-[#1A72C0] rounded-2xl p-8 text-center">

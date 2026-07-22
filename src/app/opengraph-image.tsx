@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "A&E Insurance Agency — Independent Medicare Broker, South Florida Since 2009";
+  "A&E Insurance Agency — Independent Medicare Broker in South Florida";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
