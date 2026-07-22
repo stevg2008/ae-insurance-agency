@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Medicare Broker in Miami, FL | A&E Insurance Agency",
   description:
-    "Local Medicare broker in Miami since 2013. Steve Germain compares every plan in Miami-Dade at no cost — Advantage, Medigap, Part D. 5-star rated. Free consultation.",
+    "Local Medicare broker Steve Germain has served Miami since 2013. He compares every plan in Miami-Dade at no cost — Advantage, Medigap, Part D. 5-star rated. Free consultation.",
   alternates: { canonical: `${SITE_URL}/medicare-broker-miami` },
   openGraph: {
     url: `${SITE_URL}/medicare-broker-miami`,
@@ -54,7 +54,7 @@ export default function MiamiBrokerPage() {
                   Medicare Broker in Miami, FL
                 </h1>
                 <p className="text-[#4B5563] text-lg mb-8 leading-relaxed">
-                  A&E Insurance Agency has helped Miami families navigate Medicare since 2013. As an independent broker, Steve Germain compares every plan available in Miami-Dade County — Advantage, Medigap, and Part D — at no cost. Same price as going direct.
+                  Steve Germain has helped Miami families navigate Medicare since 2013. As an independent broker, he compares every plan available in Miami-Dade County — Advantage, Medigap, and Part D — at no cost. Same price as going direct.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                   <Link

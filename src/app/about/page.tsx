@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     url: "https://www.aeinsurancefl.com/about",
     title: "Meet Our Team | A&E Insurance Agency",
     description:
-      "Licensed Medicare brokers serving South Florida. Helping South Florida families since 2013. 25+ carriers compared. Same price as going direct.",
+      "Licensed Medicare brokers serving South Florida. Steve Germain has helped families since 2013. 25+ carriers compared. Same price as going direct.",
   },
 };
 

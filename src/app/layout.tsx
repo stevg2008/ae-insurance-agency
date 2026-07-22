@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "A&E Insurance Agency — Independent Medicare Broker, South Florida Since 2013",
+        alt: "A&E Insurance Agency — Independent Medicare Broker in South Florida",
       },
     ],
   },

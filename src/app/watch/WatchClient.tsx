@@ -27,7 +27,7 @@ const FREE_RESOURCES = [
 
 const TRUST_BADGES = [
   { icon: Star,   label: "5-Star Google Rating" },
-  { icon: Users,  label: "Serving South Florida Since 2013" },
+  { icon: Users,  label: "Medicare Broker Since 2013" },
   { icon: Clock,  label: "10+ Years Experience" },
   { icon: Shield, label: "Free — Carriers Pay, Not You" },
 ];

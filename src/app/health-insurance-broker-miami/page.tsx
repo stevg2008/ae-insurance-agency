@@ -6,13 +6,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Health Insurance Broker in Miami, FL | A&E Insurance Agency",
   description:
-    "Independent health and Medicare insurance broker in Miami since 2013. Steve Germain compares Medicare Advantage, Medigap, life insurance, and critical illness plans — free, 5-star rated.",
+    "Independent Medicare insurance broker Steve Germain has served Miami since 2013. He compares Medicare Advantage, Medigap, life insurance, and critical illness plans — free, 5-star rated.",
   alternates: { canonical: `${SITE_URL}/health-insurance-broker-miami` },
   openGraph: {
     url: `${SITE_URL}/health-insurance-broker-miami`,
     title: "Health Insurance Broker in Miami, FL | A&E Insurance Agency",
     description:
-      "Compare health and Medicare insurance in Miami with a local independent broker. Free consultations. No fees. 5-star rated since 2013.",
+      "Compare health and Medicare insurance in Miami with a local independent broker. Free consultations. No fees. 5-star rated.",
   },
 };
 
