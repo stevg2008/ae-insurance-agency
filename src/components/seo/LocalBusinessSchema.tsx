@@ -15,7 +15,6 @@ export default function LocalBusinessSchema() {
         url: SITE_URL,
         telephone: PHONE,
         email: EMAIL,
-        foundingDate: "2020",
         address: {
           "@type": "PostalAddress",
           streetAddress: "12855 SW 136th Avenue, Suite 105",
