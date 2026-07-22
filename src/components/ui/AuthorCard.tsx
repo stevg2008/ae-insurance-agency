@@ -17,9 +17,9 @@ export default function AuthorCard() {
           Licensed Medicare Broker · Miami, FL
         </p>
         <p className="text-[#4B5563] text-sm leading-relaxed mb-3">
-          Steve has helped more than 3,000 South Florida families make sense of Medicare since
-          2009. He wrote <em>Medicare Decoded</em> for people turning 65 — and he answers his own
-          phone.
+          Steve has spent his career helping families make sense of Medicare — more than 3,000
+          clients since 2009, from his home base in Miami. He wrote <em>Medicare Decoded</em> for
+          people turning 65, and he answers his own phone.
         </p>
         <p className="text-xs text-[#9CA3AF]">
           NPN 19921707 · Licensed in 35 states ·{" "}
