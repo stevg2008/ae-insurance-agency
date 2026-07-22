@@ -5,7 +5,7 @@ import CriticalIllnessClient from "./CriticalIllnessClient";
 export const metadata: Metadata = {
   title: "Critical Illness Insurance & Medicare Gap Coverage | A&E Insurance Agency — Miami, FL",
   description:
-    "The 3 biggest gaps Medicare doesn't cover — the 20% exposure, long-term care costs, and critical illness expenses — explained by licensed specialist Steve Germain. Free coverage review. Serving South Florida since 2009.",
+    "The 3 biggest gaps Medicare doesn't cover — the 20% exposure, long-term care costs, and critical illness expenses — explained by licensed specialist Steve Germain. Free coverage review. Serving South Florida since 2013.",
   alternates: { canonical: `${SITE_URL}/critical-illness` },
   openGraph: {
     url: `${SITE_URL}/critical-illness`,

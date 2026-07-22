@@ -5,7 +5,7 @@ import RetirementClient from "./RetirementClient";
 export const metadata: Metadata = {
   title: "Retirement Income Planning for South Florida Families | A&E Insurance Agency — Miami, FL",
   description:
-    "A complete guide to retirement income planning — Social Security timing, 401(k) strategy, healthcare costs, and legacy planning. Free guidance from licensed retirement specialist Steve Germain, serving South Florida since 2009.",
+    "A complete guide to retirement income planning — Social Security timing, 401(k) strategy, healthcare costs, and legacy planning. Free guidance from licensed retirement specialist Steve Germain, serving South Florida since 2013.",
   alternates: { canonical: `${SITE_URL}/retirement` },
   openGraph: {
     url: `${SITE_URL}/retirement`,

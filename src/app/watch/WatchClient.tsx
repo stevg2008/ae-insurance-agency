@@ -27,7 +27,7 @@ const FREE_RESOURCES = [
 
 const TRUST_BADGES = [
   { icon: Star,   label: "5-Star Google Rating" },
-  { icon: Users,  label: "Serving South Florida Since 2009" },
+  { icon: Users,  label: "Serving South Florida Since 2013" },
   { icon: Clock,  label: "10+ Years Experience" },
   { icon: Shield, label: "Free — Carriers Pay, Not You" },
 ];
@@ -322,7 +322,7 @@ export default function WatchClient() {
               <h2 className="text-2xl font-extrabold text-[#1A1A2E] mb-1">Steve Germain</h2>
               <p className="text-[#1A72C0] font-semibold text-sm mb-4">Founder & Licensed Medicare Broker · A&E Insurance Agency</p>
               <p className="text-[#4B5563] text-sm leading-relaxed mb-5">
-                Steve Germain is a licensed independent Medicare broker and author of <em>Medicare Decoded</em>. Based in Miami, he has helped more than 3,000 South Florida families get their Medicare right since 2009.
+                Steve Germain is a licensed independent Medicare broker and author of <em>Medicare Decoded</em>. Based in Miami, he has helped South Florida families get their Medicare right since 2013.
               </p>
               <ul className="space-y-2">
                 {[

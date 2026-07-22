@@ -5,7 +5,7 @@ import LifeInsuranceClient from "./LifeInsuranceClient";
 export const metadata: Metadata = {
   title: "Life Insurance & Annuities for South Florida Families | A&E Insurance Agency — Miami, FL",
   description:
-    "Life insurance and annuities guide — Term, Whole, Universal, IUL, Final Expense, and retirement annuities explained by licensed specialist Steve Germain. Free quotes. Serving South Florida since 2009.",
+    "Life insurance and annuities guide — Term, Whole, Universal, IUL, Final Expense, and retirement annuities explained by licensed specialist Steve Germain. Free quotes. Serving South Florida since 2013.",
   alternates: { canonical: `${SITE_URL}/life-insurance` },
   openGraph: {
     url: `${SITE_URL}/life-insurance`,

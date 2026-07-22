@@ -5,7 +5,7 @@ import MedicareClient from "./MedicareClient";
 export const metadata: Metadata = {
   title: "Medicare Explained: Parts A, B, C & D Guide | A&E Insurance Agency — Miami, FL",
   description:
-    "A complete Medicare guide covering enrollment timing, Original Medicare Parts A & B, Medicare Supplement vs. Medicare Advantage, and Part D drug coverage. Free guidance from licensed broker Steve Germain — serving South Florida since 2009.",
+    "A complete Medicare guide covering enrollment timing, Original Medicare Parts A & B, Medicare Supplement vs. Medicare Advantage, and Part D drug coverage. Free guidance from licensed broker Steve Germain — serving South Florida since 2013.",
   alternates: { canonical: `${SITE_URL}/medicare` },
   openGraph: {
     url: `${SITE_URL}/medicare`,

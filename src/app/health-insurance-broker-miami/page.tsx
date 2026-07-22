@@ -6,13 +6,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Health Insurance Broker in Miami, FL | A&E Insurance Agency",
   description:
-    "Independent health and Medicare insurance broker in Miami since 2009. Steve Germain compares Medicare Advantage, Medigap, life insurance, and critical illness plans — free, 5-star rated.",
+    "Independent health and Medicare insurance broker in Miami since 2013. Steve Germain compares Medicare Advantage, Medigap, life insurance, and critical illness plans — free, 5-star rated.",
   alternates: { canonical: `${SITE_URL}/health-insurance-broker-miami` },
   openGraph: {
     url: `${SITE_URL}/health-insurance-broker-miami`,
     title: "Health Insurance Broker in Miami, FL | A&E Insurance Agency",
     description:
-      "Compare health and Medicare insurance in Miami with a local independent broker. Free consultations. No fees. 5-star rated since 2009.",
+      "Compare health and Medicare insurance in Miami with a local independent broker. Free consultations. No fees. 5-star rated since 2013.",
   },
 };
 
@@ -53,7 +53,7 @@ export default function HealthInsuranceMiamiPage() {
                   Health Insurance Broker in Miami, FL
                 </h1>
                 <p className="text-[#4B5563] text-lg mb-8 leading-relaxed">
-                  A&E Insurance Agency is an independent insurance broker in Miami specializing in Medicare and senior health coverage. Since 2009, Steve Germain has helped 3,000+ South Florida families compare plans from 25+ carriers — at no cost to you.
+                  A&E Insurance Agency is an independent insurance broker in Miami specializing in Medicare and senior health coverage. Since 2013, Steve Germain has helped South Florida families compare plans from 25+ carriers — at no cost to you.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                   <Link
