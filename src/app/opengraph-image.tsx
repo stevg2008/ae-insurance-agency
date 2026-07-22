@@ -61,7 +61,7 @@ export default function OGImage() {
             display: "flex",
           }}
         >
-          A&amp;E INSURANCE AGENCY · SOUTH FLORIDA SINCE 2013
+          A&amp;E INSURANCE AGENCY · SOUTH FLORIDA
         </div>
 
         {/* Main headline */}
