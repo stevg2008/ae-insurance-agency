@@ -122,6 +122,8 @@ const nextConfig: NextConfig = {
       // Alternate /our-blog/ path found in GSC
       { source: "/our-blog/:slug*", destination: "/blogs/:slug*", permanent: true },
       // Webflow broken nested URL pattern found in GSC
+      // Specific slug override first: legacy omits "er-" prefix, destination slug has it
+      { source: "/blog-your-spouse-isnt-eligible-for-medicare-yet-now-what/urgent-care-or-virtual-visit-where-to-go-and-what-itll-cost-you", destination: "/blogs/er-urgent-care-or-virtual-visit-where-to-go-and-what-itll-cost-you", permanent: true },
       { source: "/blog-your-spouse-isnt-eligible-for-medicare-yet-now-what/:slug*", destination: "/blogs/:slug*", permanent: true },
       // Legacy Webflow service subpages (404ing with live rankings — see docs/2026-07-content-audit.md §3).
       // Specific medicare-coverage slugs map to their closest existing guide; everything else
