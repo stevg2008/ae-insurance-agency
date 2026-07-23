@@ -1,12 +1,22 @@
 # SEO Performance Dashboard
 
-**Purpose:** the operating dashboard for all SEO decisions. Updated at every monthly review; every recommendation must cite a row here. As GA4, Search Atlas rank-tracking, Ubersuggest, and backlink data come online, columns get filled — assumption-driven cells are marked ⬜.
+**Purpose:** the operating dashboard for all SEO decisions. Updated at every monthly review; every recommendation must cite a row here. As GA4 and backlink data come online, columns get filled — assumption-driven cells are marked ⬜.
 
-**Data snapshot:** GSC Apr 9 – Jul 8 2026 (US), pulled Jul 9 2026. Legacy `/blog/` URL data attributed to current `/blogs/` URLs by slug.
+**Data snapshot:** GSC Apr 9 – Jul 8 2026 (US), pulled Jul 9 2026. Legacy `/blog/` URL data attributed to current `/blogs/` URLs by slug. **Ubersuggest connected Jul 23 2026** — volume, seasonality, difficulty, and competitor DA now grounding every priority call below (see reality check).
 **Site baseline:** 260 clicks · 66.4k impressions · avg position 40 · 5,220 queries.
+**Domain baseline (Ubersuggest, Jul 23):** Domain Authority **8** · 100 backlinks · 25 referring domains (32 follow / 68 nofollow) · 157 organic keywords ranking.
 **Next full refresh due:** Aug 9 2026 (monthly review).
 
-Priority score = (impressions momentum × position proximity to page 1 × business intent), 1–100 scale, recalculated at each review.
+Priority score = (impressions momentum × position proximity to page 1 × business intent **× competitive winnability**), 1–100 scale, recalculated at each review.
+
+## Domain Authority reality check (added Jul 23 2026 — read before setting any new priority)
+
+Our DA is **8**. SERP analysis on two representative head terms shows exactly what that means in practice:
+
+- **"What does Medicare Part A and B cover" (14,800/mo):** page 1 is medicare.gov (DA 74) ×2, ncdoi.gov (52), medicareadvocacy.org (59), healthpartners/anthem/humana/uhc/ssa.gov (62–81). Floor DA on page 1 is **52**. An AI Overview sits above all of it. **This is not winnable at our authority level — retracted as a priority**, regardless of volume.
+- **"Medicare Supplement Plans Florida" (1,600/mo, seasonal to 5,400):** page 1 includes floir.gov (DA 34) and medigapseminars.org (**DA 31**) — a small specialist site outranking UnitedHealthcare and Forbes. **This is winnable.** DA 8→31 is a real climb but a climb, not a wall.
+
+**The operating rule going forward:** national educational head terms (however high the volume) are deprioritized until DA improves. Local/commercial terms with difficulty ≤20 — where we're already ranking 13–19 — get pulled forward, because they convert better per search anyway ($12–29 CPC vs $1–3) and we can actually win them now. **Link building is now an explicit priority stream**, not a someday item — it's the only lever that raises the ceiling on everything else.
 
 ## Tier 1 — Priority articles (Phase 1, updated Jul 9 2026)
 
@@ -32,15 +42,23 @@ Priority score = (impressions momentum × position proximity to page 1 × busine
 
 ## Tier 2 — Striking-distance watchlist (no changes yet; next up in Phase 2)
 
-| URL | Primary keyword | Pos | Impr | Priority | Planned action |
-|---|---|---|---|---|---|
-| /health-insurance-broker-miami | health insurance broker miami | 16 | 313 | 82 | On-page pass + local schema (Phase 2) |
-| /blogs/which-medicare-plan-is-best-for-people-with-chronic-conditions-in-florida | best medicare plans chronic conditions florida 2026 | 17 | 438 | 78 | EXPAND (Phase 2) — C-SNP section |
-| /blogs/how-does-medicare-part-c-compare-to-original-medicare-in-florida | florida part c plan | 14 | 437 | 76 | UPDATE (Phase 2) |
-| /retirement (recovering SS-coordination equity) | social security medicare coordination | 6–17 | ~150 | 90 | **NEW article rebuild (Phase 2)** — highest-confidence win |
-| /medicare-broker-near-me | medicare insurance brokers near me | 9 | 31 | 74 | Monitor; internal links from Phase 1 posts |
-| /blogs/term-insurance-a-smart-way-to-secure-your-familys-future | term life insurance miami | 20 | ~20 | 60 | EXPAND (Phase 4) |
-| /tools (retirement calculator queries) | medicare retirement calculator | 19 | 90 | 65 | Retirement cluster rebuild (May 2027 / earlier if approved) |
+| URL | Primary keyword | Pos | Impr/Vol | Difficulty | Priority | Planned action |
+|---|---|---|---|---|---|---|
+| **/** (homepage) | **health insurance agents miami** | **13** | 90/mo, $12.07 CPC | **17** | **92** | Low-difficulty, high-CPC, already close — on-page + local schema push (Phase 2, moved up) |
+| **/** (homepage) | **health insurance brokers miami** | **17** | 90/mo, $12.07 CPC | **14** | **90** | Same page as above; easiest win on the board — difficulty 14 |
+| **/medicare-coverage/medicare-advantage-plans** | **medicare advantage plans miami dade** | **17** | 40/mo, $3.01 CPC | **17** | 82 | Low difficulty; local intent match (Phase 2) |
+| /health-insurance-broker-miami | health insurance broker miami | 16 | 313 | ⬜ | 82 | On-page pass + local schema (Phase 2) |
+| /blogs/which-medicare-plan-is-best-for-people-with-chronic-conditions-in-florida | best medicare plans chronic conditions florida 2026 | 17 | 438 | ⬜ | 78 | EXPAND (Phase 2) — C-SNP section |
+| /blogs/how-does-medicare-part-c-compare-to-original-medicare-in-florida | florida part c plan | 14 | 437 | ⬜ | 76 | UPDATE (Phase 2) |
+| **NEW article needed** | **medicare part d florida** | not ranking | 210/mo → **18,100 in Nov (86×)** | 26 | **88** | Biggest seasonal spike on the board with zero competing page today — must ship before Oct |
+| /medicare-coverage/medicare-supplement-plans-medigap + blog cluster | medicare supplement plans florida | 30–37 | 1,600/mo → 5,400 Oct (6×) | ⬜ (page 1 has DA 31–34 sites — **validated winnable**) | 85 | Depth pass + FAQ + AEP timing; SERP-confirmed reachable at higher DA |
+| ~~/retirement (recovering SS-coordination equity)~~ | ~~social security medicare coordination~~ | 6–17 | **0/mo confirmed (Ubersuggest)** | — | **12 (demoted)** | **Retracted as priority Jul 23** — ranks well only because almost nobody searches it. Low-effort content maintenance only, not a roadmap anchor |
+| /medicare-broker-near-me | medicare insurance brokers near me | 9 | 31 | ⬜ | 74 | Monitor; internal links from Phase 1 posts |
+| /blogs/term-insurance-a-smart-way-to-secure-your-familys-future | term life insurance miami | 20 | ~20 | ⬜ | 60 | EXPAND (Phase 4) |
+| /tools (retirement calculator queries) | medicare retirement calculator | 19 | 90 | ⬜ | 65 | Retirement cluster rebuild (May 2027 / earlier if approved) |
+| ⬜ new page, later | medicare en español | not ranking | 1,000/mo, $8.06 CPC | 49 | 55 | Real but modest — after AEP prep, not before. (One-off "planes medicare en miami" ranking was a 0-volume fluke, not a signal of a bigger Spanish opportunity) |
+
+**Retracted Jul 23, 2026:** "what does medicare part a and b cover" (14,800/mo) and similar Part A/B national definitional terms — SERP is a wall of DA 52–81 .gov/carrier sites plus an AI Overview. Not pursuing at current DA regardless of volume.
 
 ## Tier 3 — Pillars (medicare-coverage guides)
 
@@ -52,21 +70,32 @@ Priority score = (impressions momentum × position proximity to page 1 × busine
 | /medicare-coverage/part-d-prescription-drug-plans | 60 | 865 | 70 | Part D cluster is thin — roadmap Sep |
 | /medicare-coverage/medicare-advantage-plans | 41 | 697 | 74 | Best position of the pillars; expand first |
 
+## Off-site / authority building (new priority stream, Jul 23 2026)
+
+DA 8 is the binding constraint on every national/competitive term on this page — content alone cannot fix it. This is now tracked as its own workstream, not an afterthought:
+
+1. **Local press from the UHealth story** — pitch outstanding to Herald/Sun-Sentinel/local TV health reporters (see Jul 13 press-pitch plan). A single news-domain link would move DA more than any single blog post could.
+2. **Directory/citation cleanup** — insurance directories, Miami-Dade chamber, better Google Business Profile linkage. Cheap, slow-compounding.
+3. **Author entity strength** — *Medicare Decoded* Amazon author page linked from site; consistent NAP across all mentions.
+4. **Target: 25 → 50 referring domains** as the next visible milestone; report progress each monthly review alongside keyword positions.
+
 ## Data integration status
 
 | Source | Status | Feeds |
 |---|---|---|
 | GSC (via Search Atlas) | ✅ Connected (`country_code: "US"` required) | Position, impressions, clicks, CTR |
+| Ubersuggest | ✅ **Connected Jul 23 2026** | Volume, seasonality (monthly trend), CPC, difficulty, DA, SERP competitor analysis, backlink/referring-domain counts |
 | GA4 | ⬜ Not yet wired into reviews — events exist (docs/tracking-events.md) | Organic traffic, conversions, engagement |
 | Search Atlas rank tracker (krt) | ⬜ Proposed — needs project setup approval | Daily positions for Tier 1/2 keywords |
 | Search Atlas LLM visibility (llmv) | ⬜ Proposed | AI citation tracking (ChatGPT/Perplexity/AIO) |
-| Ubersuggest | ⬜ Awaiting exports from Steve | Volume, difficulty, competitor gaps |
-| Backlink index (Ahrefs connector) | ⬜ Not authorized | Backlink columns |
+| Backlink index (Ahrefs connector) | ⬜ Not authorized | Deeper backlink columns (Ubersuggest gives top-line counts only) |
 
 ## Review protocol (monthly)
 
 1. Re-pull GSC for every row; update Pos/Impr/Clicks/CTR; recalculate priority scores.
-2. Flag movers: any Tier 1 row ±5 positions gets a note and, if declining, a diagnosis.
-3. Page-1 freeze rule: rows reaching position ≤10 on primary keyword → status KEEP, remaining planned work cancelled.
-4. Promote/demote between tiers based on data, not plans.
-5. Log decisions with dates in the Notes column — this file is the audit trail.
+2. **Before adding any new keyword target: check Ubersuggest volume AND run `serp_analysis` to check competitor DA.** A GSC position with 0 confirmed search volume is not a priority (see SS-coordination retraction, Jul 23). A high-volume term with a page-1 DA floor above ~35–40 is not winnable yet — log it as "watch, not pursue" rather than prioritizing it.
+3. Flag movers: any Tier 1 row ±5 positions gets a note and, if declining, a diagnosis.
+4. Page-1 freeze rule: rows reaching position ≤10 on primary keyword → status KEEP, remaining planned work cancelled.
+5. Promote/demote between tiers based on data, not plans.
+6. Track referring-domain count each review (Ubersuggest `domain_overview`) alongside keyword positions — authority-building is now a first-class metric, not a footnote.
+7. Log decisions with dates in the Notes column — this file is the audit trail.
