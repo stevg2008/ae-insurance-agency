@@ -27,11 +27,6 @@ const FAQS = [
     answer:
       "Miami-Dade County has one of the most competitive Medicare markets in the U.S. You can choose from Medicare Advantage (HMO and PPO, many at $0 premium), Medicare Supplement (Medigap Plan G or Plan N), and standalone Part D prescription drug plans. A local broker compares every option side-by-side.",
   },
-  {
-    question: "Can I get Medicare help in Spanish in Miami?",
-    answer:
-      "Yes. A&E Insurance Agency provides consultations in English and Spanish. We serve Miami's diverse communities including Kendall, Doral, Hialeah, and Coral Gables.",
-  },
 ];
 
 export default function MiamiBrokerPage() {
